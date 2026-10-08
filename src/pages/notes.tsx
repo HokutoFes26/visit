@@ -1,7 +1,7 @@
-import { Card,PageTitle } from "@/components/ui";
+import { Card, PageTitle } from "@/components/ui";
 import { companies } from "@/data";
 import { useStorage } from "@/state/visit-storage";
-import { Download,Save } from "lucide-react";
+import { Download, Save } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 export default function NotesPage() {
   const { notes } = useStorage();

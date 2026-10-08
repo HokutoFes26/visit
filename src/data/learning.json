@@ -1,20 +1,82 @@
 [
   {
-    "companyId": "aoba",
-    "basics": ["事前に知っておきたいことを入力"],
+    "companyId": "members",
+    "basics": [
+      "株式会社メンバーズの事業概要を事前に調べる（配布資料に詳細な企業概要はありません）。"
+    ],
     "checklist": [
-      { "id": "overview", "text": "会社概要を確認" },
-      { "id": "highlights", "text": "注目ポイントを確認" },
-      { "id": "questions", "text": "質問を準備" }
+      {
+        "id": "overview",
+        "text": "事業概要を調べた"
+      },
+      {
+        "id": "interests",
+        "text": "知りたいことを整理した"
+      },
+      {
+        "id": "questions",
+        "text": "質問を準備した"
+      }
     ]
   },
   {
-    "companyId": "minato",
-    "basics": ["事前に知っておきたいことを入力"],
+    "companyId": "sus",
+    "basics": [
+      "株式会社エスユーエスの事業概要を事前に調べる（配布資料に詳細な企業概要はありません）。"
+    ],
     "checklist": [
-      { "id": "overview", "text": "会社概要を確認" },
-      { "id": "highlights", "text": "注目ポイントを確認" },
-      { "id": "questions", "text": "質問を準備" }
+      {
+        "id": "overview",
+        "text": "事業概要を調べた"
+      },
+      {
+        "id": "interests",
+        "text": "知りたいことを整理した"
+      },
+      {
+        "id": "questions",
+        "text": "質問を準備した"
+      }
+    ]
+  },
+  {
+    "companyId": "toko",
+    "basics": [
+      "東港金属の事業概要を事前に調べる（配布資料に詳細な企業概要はありません）。"
+    ],
+    "checklist": [
+      {
+        "id": "overview",
+        "text": "事業概要を調べた"
+      },
+      {
+        "id": "interests",
+        "text": "知りたいことを整理した"
+      },
+      {
+        "id": "questions",
+        "text": "質問を準備した"
+      }
+    ]
+  },
+  {
+    "companyId": "nec",
+    "basics": [
+      "NECの事業概要を事前に調べる（配布資料に詳細な企業概要はありません）。"
+    ],
+    "checklist": [
+      {
+        "id": "overview",
+        "text": "事業概要を調べた"
+      },
+      {
+        "id": "interests",
+        "text": "知りたいことを整理した"
+      },
+      {
+        "id": "questions",
+        "text": "質問を準備した"
+      }
     ]
   }
 ]

@@ -32,7 +32,7 @@ export default function Layout({ logout }: { logout: () => void }) {
         <footer>
           FACTORY VISIT GUIDE{" "}
           <span>
-            掲載内容は架空のサンプルです。{" "}
+            発表概要に基づく案内です。{" "}
             <Link to="/guide">
               見学ガイド
               <ArrowUpRight size={12} />

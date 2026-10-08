@@ -1,11 +1,16 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-10-21",
   "timezone": "Asia/Tokyo",
-  "version": "0.1",
-  "isSample": true,
+  "version": "0.2",
+  "isSample": false,
   "meetingTime": "09:00",
-  "meetingPlace": "集合場所・駅名を入力",
-  "meetingNote": "集合時の注意事項を入力",
+  "meetingPlace": "富山駅",
+  "meetingNote": "駅構内の詳細な集合位置は未発表です。9:26発の新幹線で東京へ移動します。",
   "passwordHint": "デモ用パスワード：factory2026",
-  "arrivalNote": "集合時刻の補足を入力"
+  "arrivalNote": "詳細な集合位置は未発表",
+  "endDate": "2026-10-23",
+  "hotel": "品川プリンス（資料表記）",
+  "source": "県外企業見学.pdf",
+  "sourceNote": "発表概要に基づく案内です。未発表の項目は未定としています。",
+  "dateConfirmed": true
 }

@@ -1,13 +1,13 @@
 import { event } from "@/data";
 import {
-ArrowRight,
-Eye,
-EyeOff,
-Factory,
-LockKeyhole,
-ShieldCheck,
+  ArrowRight,
+  Eye,
+  EyeOff,
+  Factory,
+  LockKeyhole,
+  ShieldCheck,
 } from "lucide-react";
-import { useState,type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 const password = import.meta.env.VITE_VISIT_PASSWORD || "factory2026";
 export default function Login({ onLogin }: { onLogin: () => void }) {
   const [value, setValue] = useState("");
@@ -26,7 +26,7 @@ export default function Login({ onLogin }: { onLogin: () => void }) {
       <div className="login-art" />
       <div className="login-intro">
         <h1>工場見学</h1>
-        <span className="badge">架空の見学プログラム · サンプル版</span>
+        <span className="badge">県外企業見学 · 発表概要版</span>
       </div>
       <form onSubmit={submit} className="glass-card login-panel">
         <span className="brand-icon">

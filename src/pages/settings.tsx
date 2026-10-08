@@ -1,4 +1,4 @@
-import { Card,PageTitle } from "@/components/ui";
+import { Card, PageTitle } from "@/components/ui";
 import { PwaSettings } from "@/pwa";
 import { LogOut } from "lucide-react";
 export default function SettingsPage({ logout }: { logout: () => void }) {
@@ -6,7 +6,7 @@ export default function SettingsPage({ logout }: { logout: () => void }) {
     <>
       <PageTitle
         title="設定・このアプリについて"
-        description="Factory Visit Guide · サンプル版 v0.1"
+        description="Factory Visit Guide · 発表概要版 v0.2"
       />
       <Card>
         <h2>閲覧ゲートについて</h2>

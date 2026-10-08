@@ -1,10 +1,10 @@
 import Timeline from "@/components/Timeline";
-import { Card,EmptyState,PageTitle,SectionTitle } from "@/components/ui";
+import { Card, EmptyState, PageTitle, SectionTitle } from "@/components/ui";
 import { assetUrl } from "@/config/assets";
-import { companies,schedule } from "@/data";
+import { companies, schedule } from "@/data";
 import { useNow } from "@/hooks/useNow";
-import { ArrowRight,ArrowUpRight,Check } from "lucide-react";
-import { Link,useParams } from "react-router-dom";
+import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
+import { Link, useParams } from "react-router-dom";
 export default function CompanyDetail() {
   const { id } = useParams();
   const c = companies.find((c) => c.id === id);
@@ -23,7 +23,7 @@ export default function CompanyDetail() {
       <PageTitle eyebrow={c.industry} title={c.name} />
       <div className="detail-hero">
         <img src={assetUrl(c.image)} alt="工場の仮イメージ" />
-        <span className="badge">架空の企業 / 仮イメージ</span>
+        <span className="badge">仮イラスト（実際の訪問先とは異なります）</span>
       </div>
       <div className="detail-grid">
         <Card>
@@ -33,11 +33,11 @@ export default function CompanyDetail() {
             <dt>企業名</dt>
             <dd>{c.legalName}</dd>
             <dt>主な事業</dt>
-            <dd>{c.business.join(" / ")}</dd>
+            <dd>{c.business.join(" / ") || "資料に記載なし"}</dd>
             <dt>製品・サービス</dt>
-            <dd>{c.products.join(" / ")}</dd>
+            <dd>{c.products.join(" / ") || "資料に記載なし"}</dd>
           </dl>
-          <h3>工場で行っていること</h3>
+          <h3>見学内容</h3>
           <p>{c.factory}</p>
           {c.website && /^https?:\/\//.test(c.website) ? (
             <a
@@ -55,6 +55,9 @@ export default function CompanyDetail() {
         </Card>
         <Card>
           <SectionTitle title="見学の注目ポイント" />
+          {!c.highlights.length && (
+            <p>事前学習で知りたいことを整理してください。</p>
+          )}
           <ul className="feature-list">
             {c.highlights.map((h) => (
               <li key={h}>
@@ -65,6 +68,9 @@ export default function CompanyDetail() {
           </ul>
           <details open>
             <summary>事前に考えておきたい質問</summary>
+            {!c.questions.length && (
+              <p>事業概要を調べ、質問を準備してください。</p>
+            )}
             <ul>
               {c.questions.map((q) => (
                 <li key={q}>{q}</li>

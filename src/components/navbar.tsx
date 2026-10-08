@@ -25,7 +25,7 @@ export function Sidebar({ logout }: { logout: () => void }) {
           <LogOut size={18} />
           ログアウト
         </button>
-        <small>サンプル版 · v0.1</small>
+        <small>発表概要版 · v0.2</small>
       </div>
     </aside>
   );
@@ -40,7 +40,7 @@ export function Navbar() {
         工場見学 <span className="header-sub">電子パンフレット</span>
       </div>
       <div className="header-actions">
-        <span className="sample-pill">SAMPLE</span>
+        <span className="sample-pill">概要版</span>
         <Link
           className="icon-button notification"
           to="/announcements"

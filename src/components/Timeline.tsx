@@ -1,7 +1,7 @@
 import { assetUrl } from "@/config/assets";
-import { ArrowUpRight,Bus,MapPin } from "lucide-react";
+import { ArrowUpRight, Bus, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import { companies,scheduleState,type Schedule } from "../data";
+import { companies, scheduleState, type Schedule } from "../data";
 export default function Timeline({
   items,
   now,
@@ -20,8 +20,13 @@ export default function Timeline({
           return (
             <article className={`timeline-item ${state}`} key={item.id}>
               <div className="timeline-time">
-                <strong>{item.startTime}</strong>
-                <span>{item.endTime}</span>
+                <strong>{item.startTime || "未定"}</strong>
+                {item.endTime && (
+                  <span>
+                    {item.endTime}
+                    {item.id === "train" ? "頃" : ""}
+                  </span>
+                )}
               </div>
               <div className="timeline-dot" />
               <div className="glass-card timeline-content">
@@ -29,6 +34,8 @@ export default function Timeline({
                   <span className="badge blue">現在の予定</span>
                 )}
                 <h2>{item.title}</h2>
+                {item.timeNote && <p className="quiet-note">{item.timeNote}</p>}
+                <p className="meta">{item.date.slice(5).replace("-", "/")}</p>
                 <p className="meta">
                   <MapPin size={15} />
                   {item.location}
@@ -37,7 +44,10 @@ export default function Timeline({
                 {item.transport && (
                   <span className="meta">
                     <Bus size={16} />
-                    {item.transport} · 約{item.travelMinutes}分
+                    {item.transport}
+                    {item.travelMinutes > 0
+                      ? ` · 約${item.travelMinutes}分`
+                      : ""}
                   </span>
                 )}
                 {company && (
@@ -47,7 +57,7 @@ export default function Timeline({
                   >
                     <img
                       src={assetUrl(company.image)}
-                      alt="架空の工場のイメージ"
+                      alt="仮イラスト（実際の訪問先とは異なります）"
                     />
                     <span>
                       {company.name}

@@ -15,8 +15,10 @@ export interface Company {
 export interface Schedule {
   id: string;
   date: string;
-  startTime: string;
-  endTime: string;
+  startTime: string | null;
+  endTime: string | null;
+  order: number;
+  timeNote: string;
   title: string;
   location: string;
   description: string;

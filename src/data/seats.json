@@ -1,168 +1,647 @@
 {
-  "rows": 6,
-  "columns": ["A", "B", "aisle", "C", "D"],
-  "isSample": true,
+  "rows": 20,
+  "columns": ["A", "B", "C", "aisle", "D", "E"],
+  "isSample": false,
+  "title": "新幹線 2号車",
+  "description": "配布資料の座席図に基づく配置です。個人別の座席・班の割り当ては未定です。",
   "groups": [
     {
-      "id": "a",
-      "label": "A班",
+      "id": "participant",
+      "label": "水色席・割当未定",
       "color": "blue"
     },
     {
-      "id": "b",
-      "label": "B班",
+      "id": "teacher",
+      "label": "教員",
       "color": "mint"
     },
     {
-      "id": "c",
-      "label": "C班",
+      "id": "luggage",
+      "label": "荷物置き",
       "color": "violet"
+    },
+    {
+      "id": "unavailable",
+      "label": "×（資料表記）",
+      "color": "gray"
     }
+  ],
+  "groupPlan": [
+    {
+      "size": 4,
+      "count": 6
+    },
+    {
+      "size": 5,
+      "count": 3
+    }
+  ],
+  "notes": [
+    "1D・1Eは荷物置き、8D・8E・9Dは教員席です。",
+    "水色の39席は個人の割り当てが未定です。×の表示は資料の表記をそのまま示しています。",
+    "トイレは1号車へ。東京駅で乗車する際は、原図の矢印側の扉が開く予定です。",
+    "10月22日の貸切バス座席は未発表です。"
   ],
   "seats": [
     {
       "number": "1A",
       "row": 1,
       "column": "A",
-      "groupId": "a"
+      "groupId": "participant"
     },
     {
       "number": "1B",
       "row": 1,
       "column": "B",
-      "groupId": "a"
+      "groupId": "participant"
     },
     {
       "number": "1C",
       "row": 1,
       "column": "C",
-      "groupId": "a"
+      "groupId": "participant"
     },
     {
       "number": "1D",
       "row": 1,
       "column": "D",
-      "groupId": "a"
+      "groupId": "luggage"
+    },
+    {
+      "number": "1E",
+      "row": 1,
+      "column": "E",
+      "groupId": "luggage"
     },
     {
       "number": "2A",
       "row": 2,
       "column": "A",
-      "groupId": "a"
+      "groupId": "participant"
     },
     {
       "number": "2B",
       "row": 2,
       "column": "B",
-      "groupId": "a"
+      "groupId": "participant"
     },
     {
       "number": "2C",
       "row": 2,
       "column": "C",
-      "groupId": "a"
+      "groupId": "participant"
     },
     {
       "number": "2D",
       "row": 2,
       "column": "D",
-      "groupId": "a"
+      "groupId": "participant"
+    },
+    {
+      "number": "2E",
+      "row": 2,
+      "column": "E",
+      "groupId": "participant"
     },
     {
       "number": "3A",
       "row": 3,
       "column": "A",
-      "groupId": "b"
+      "groupId": "participant"
     },
     {
       "number": "3B",
       "row": 3,
       "column": "B",
-      "groupId": "b"
+      "groupId": "participant"
     },
     {
       "number": "3C",
       "row": 3,
       "column": "C",
-      "groupId": "b"
+      "groupId": "participant"
     },
     {
       "number": "3D",
       "row": 3,
       "column": "D",
-      "groupId": "b"
+      "groupId": "participant"
+    },
+    {
+      "number": "3E",
+      "row": 3,
+      "column": "E",
+      "groupId": "participant"
     },
     {
       "number": "4A",
       "row": 4,
       "column": "A",
-      "groupId": "b"
+      "groupId": "participant"
     },
     {
       "number": "4B",
       "row": 4,
       "column": "B",
-      "groupId": "b"
+      "groupId": "participant"
     },
     {
       "number": "4C",
       "row": 4,
       "column": "C",
-      "groupId": "b"
+      "groupId": "participant"
     },
     {
       "number": "4D",
       "row": 4,
       "column": "D",
-      "groupId": "b"
+      "groupId": "participant"
+    },
+    {
+      "number": "4E",
+      "row": 4,
+      "column": "E",
+      "groupId": "participant"
     },
     {
       "number": "5A",
       "row": 5,
       "column": "A",
-      "groupId": "c"
+      "groupId": "participant"
     },
     {
       "number": "5B",
       "row": 5,
       "column": "B",
-      "groupId": "c"
+      "groupId": "participant"
     },
     {
       "number": "5C",
       "row": 5,
       "column": "C",
-      "groupId": "c"
+      "groupId": "participant"
     },
     {
       "number": "5D",
       "row": 5,
       "column": "D",
-      "groupId": "c"
+      "groupId": "participant"
+    },
+    {
+      "number": "5E",
+      "row": 5,
+      "column": "E",
+      "groupId": "participant"
     },
     {
       "number": "6A",
       "row": 6,
       "column": "A",
-      "groupId": "c"
+      "groupId": "participant"
     },
     {
       "number": "6B",
       "row": 6,
       "column": "B",
-      "groupId": "c"
+      "groupId": "participant"
     },
     {
       "number": "6C",
       "row": 6,
       "column": "C",
-      "groupId": "c"
+      "groupId": "participant"
     },
     {
       "number": "6D",
       "row": 6,
       "column": "D",
-      "groupId": "c"
+      "groupId": "participant"
+    },
+    {
+      "number": "6E",
+      "row": 6,
+      "column": "E",
+      "groupId": "participant"
+    },
+    {
+      "number": "7A",
+      "row": 7,
+      "column": "A",
+      "groupId": "participant"
+    },
+    {
+      "number": "7B",
+      "row": 7,
+      "column": "B",
+      "groupId": "participant"
+    },
+    {
+      "number": "7C",
+      "row": 7,
+      "column": "C",
+      "groupId": "participant"
+    },
+    {
+      "number": "7D",
+      "row": 7,
+      "column": "D",
+      "groupId": "participant"
+    },
+    {
+      "number": "7E",
+      "row": 7,
+      "column": "E",
+      "groupId": "participant"
+    },
+    {
+      "number": "8A",
+      "row": 8,
+      "column": "A",
+      "groupId": "participant"
+    },
+    {
+      "number": "8B",
+      "row": 8,
+      "column": "B",
+      "groupId": "participant"
+    },
+    {
+      "number": "8C",
+      "row": 8,
+      "column": "C",
+      "groupId": "participant"
+    },
+    {
+      "number": "8D",
+      "row": 8,
+      "column": "D",
+      "groupId": "teacher"
+    },
+    {
+      "number": "8E",
+      "row": 8,
+      "column": "E",
+      "groupId": "teacher"
+    },
+    {
+      "number": "9A",
+      "row": 9,
+      "column": "A",
+      "groupId": "participant"
+    },
+    {
+      "number": "9B",
+      "row": 9,
+      "column": "B",
+      "groupId": "participant"
+    },
+    {
+      "number": "9C",
+      "row": 9,
+      "column": "C",
+      "groupId": "participant"
+    },
+    {
+      "number": "9D",
+      "row": 9,
+      "column": "D",
+      "groupId": "teacher"
+    },
+    {
+      "number": "9E",
+      "row": 9,
+      "column": "E",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "10A",
+      "row": 10,
+      "column": "A",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "10B",
+      "row": 10,
+      "column": "B",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "10C",
+      "row": 10,
+      "column": "C",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "10D",
+      "row": 10,
+      "column": "D",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "10E",
+      "row": 10,
+      "column": "E",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "11A",
+      "row": 11,
+      "column": "A",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "11B",
+      "row": 11,
+      "column": "B",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "11C",
+      "row": 11,
+      "column": "C",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "11D",
+      "row": 11,
+      "column": "D",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "11E",
+      "row": 11,
+      "column": "E",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "12A",
+      "row": 12,
+      "column": "A",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "12B",
+      "row": 12,
+      "column": "B",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "12C",
+      "row": 12,
+      "column": "C",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "12D",
+      "row": 12,
+      "column": "D",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "12E",
+      "row": 12,
+      "column": "E",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "13A",
+      "row": 13,
+      "column": "A",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "13B",
+      "row": 13,
+      "column": "B",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "13C",
+      "row": 13,
+      "column": "C",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "13D",
+      "row": 13,
+      "column": "D",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "13E",
+      "row": 13,
+      "column": "E",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "14A",
+      "row": 14,
+      "column": "A",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "14B",
+      "row": 14,
+      "column": "B",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "14C",
+      "row": 14,
+      "column": "C",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "14D",
+      "row": 14,
+      "column": "D",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "14E",
+      "row": 14,
+      "column": "E",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "15A",
+      "row": 15,
+      "column": "A",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "15B",
+      "row": 15,
+      "column": "B",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "15C",
+      "row": 15,
+      "column": "C",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "15D",
+      "row": 15,
+      "column": "D",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "15E",
+      "row": 15,
+      "column": "E",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "16A",
+      "row": 16,
+      "column": "A",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "16B",
+      "row": 16,
+      "column": "B",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "16C",
+      "row": 16,
+      "column": "C",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "16D",
+      "row": 16,
+      "column": "D",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "16E",
+      "row": 16,
+      "column": "E",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "17A",
+      "row": 17,
+      "column": "A",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "17B",
+      "row": 17,
+      "column": "B",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "17C",
+      "row": 17,
+      "column": "C",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "17D",
+      "row": 17,
+      "column": "D",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "17E",
+      "row": 17,
+      "column": "E",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "18A",
+      "row": 18,
+      "column": "A",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "18B",
+      "row": 18,
+      "column": "B",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "18C",
+      "row": 18,
+      "column": "C",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "18D",
+      "row": 18,
+      "column": "D",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "18E",
+      "row": 18,
+      "column": "E",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "19A",
+      "row": 19,
+      "column": "A",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "19B",
+      "row": 19,
+      "column": "B",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "19C",
+      "row": 19,
+      "column": "C",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "19D",
+      "row": 19,
+      "column": "D",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "19E",
+      "row": 19,
+      "column": "E",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "20A",
+      "row": 20,
+      "column": "A",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "20B",
+      "row": 20,
+      "column": "B",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "20C",
+      "row": 20,
+      "column": "C",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "20D",
+      "row": 20,
+      "column": "D",
+      "groupId": "unavailable"
+    },
+    {
+      "number": "20E",
+      "row": 20,
+      "column": "E",
+      "groupId": "unavailable"
     }
   ]
 }

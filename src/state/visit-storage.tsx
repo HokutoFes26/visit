@@ -1,10 +1,10 @@
 import {
-createContext,
-useContext,
-useEffect,
-useRef,
-useState,
-type ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode,
 } from "react";
 const NOTES_KEY = "factory-visit:notes:v1";
 const CHECKS_KEY = "factory-visit:learning:v1";

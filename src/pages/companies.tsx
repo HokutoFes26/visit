@@ -1,7 +1,7 @@
-import { EmptyState,PageTitle } from "@/components/ui";
+import { EmptyState, PageTitle } from "@/components/ui";
 import { assetUrl } from "@/config/assets";
 import { companies } from "@/data";
-import { ArrowRight,ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function CompaniesPage() {
   return (

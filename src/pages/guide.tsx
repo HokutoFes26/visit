@@ -1,6 +1,6 @@
-import { Card,PageTitle,SectionTitle } from "@/components/ui";
-import { event,formatDate,guide } from "@/data";
-import { Backpack,MapPin,Shirt } from "lucide-react";
+import { Card, PageTitle, SectionTitle } from "@/components/ui";
+import { event, formatDate, guide } from "@/data";
+import { Backpack, MapPin, Shirt } from "lucide-react";
 export default function GuidePage() {
   return (
     <>
@@ -18,6 +18,18 @@ export default function GuidePage() {
           <p>{event.meetingNote}</p>
         </div>
       </Card>
+      <div className="detail-grid">
+        {guide.sections.map((section) => (
+          <Card key={section.title}>
+            <SectionTitle title={section.title} />
+            <ul className="feature-list">
+              {section.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </Card>
+        ))}
+      </div>
       <div className="detail-grid">
         <Card>
           <SectionTitle title="持ち物リスト" />

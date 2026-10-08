@@ -1,27 +1,28 @@
-import { Card,SectionTitle } from "@/components/ui";
+import { Card, SectionTitle } from "@/components/ui";
 import { assetUrl } from "@/config/assets";
 import { shortcuts } from "@/config/site";
 import {
-announcements,
-companies,
-event,
-formatDate,
-guide,
-schedule,
-scheduleState,
+  announcements,
+  companies,
+  event,
+  formatDate,
+  timestamp,
+  guide,
+  schedule,
+  scheduleState,
 } from "@/data";
 import { useNow } from "@/hooks/useNow";
 import {
-ArrowRight,
-ArrowUpRight,
-Backpack,
-Building2,
-CalendarDays,
-ChevronRight,
-Clock3,
-MapPin,
-ShieldCheck,
-Shirt,
+  ArrowRight,
+  ArrowUpRight,
+  Backpack,
+  Building2,
+  CalendarDays,
+  ChevronRight,
+  Clock3,
+  MapPin,
+  ShieldCheck,
+  Shirt,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function Home() {
@@ -38,7 +39,8 @@ export default function Home() {
           <div className="hero-meta">
             <span>
               <CalendarDays size={17} />
-              {event.date.slice(0, 4)}年 {formatDate(event.date)}
+              {event.date.slice(0, 4)}年 {formatDate(event.date)}〜
+              {formatDate(event.endDate)}
             </span>
             <span>
               <Building2 size={17} />
@@ -50,7 +52,7 @@ export default function Home() {
             <ArrowRight size={18} />
           </Link>
         </div>
-        <span className="hero-caption">SAMPLE PROGRAM / 仮イメージ</span>
+        <span className="hero-caption">建物は仮イラスト</span>
       </section>
       <div className="overview-grid">
         <Card className="now-card">
@@ -60,10 +62,19 @@ export default function Home() {
           <div className="current-plan">
             <div>
               <span className="eyebrow">
-                {current ? "現在の予定" : next ? "次の予定" : "終了"}
+                {current
+                  ? "現在の予定"
+                  : next
+                    ? "次の予定"
+                    : now < timestamp(event.endDate, "00:00") + 86400000
+                      ? "時刻未定の予定あり"
+                      : "終了"}
               </span>
               <h2>
-                {(current || next)?.title || "すべての予定が終了しました"}
+                {(current || next)?.title ||
+                  (now < timestamp(event.endDate, "00:00") + 86400000
+                    ? "詳細はスケジュールを確認"
+                    : "見学日程は終了しました")}
               </h2>
               <p className="meta">
                 <MapPin size={15} />
@@ -73,7 +84,12 @@ export default function Home() {
             {(current || next) && (
               <div className="plan-time">
                 <strong>{(current || next)!.startTime}</strong>
-                <span>— {(current || next)!.endTime}</span>
+                {(current || next)!.endTime && (
+                  <span>
+                    — {(current || next)!.endTime}
+                    {(current || next)!.id === "train" ? "頃" : ""}
+                  </span>
+                )}
               </div>
             )}
           </div>
@@ -131,7 +147,7 @@ export default function Home() {
               <Backpack size={20} />
               <span>
                 <strong>持ち物</strong>
-                <small>{guide.belongings.slice(0, 2).join("・")}</small>
+                <small>{guide.belongings[0]}</small>
               </span>
             </div>
             <div>

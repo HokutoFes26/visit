@@ -1,4 +1,4 @@
-import { Card,PageTitle } from "@/components/ui";
+import { Card, PageTitle } from "@/components/ui";
 import { announcements } from "@/data";
 export default function AnnouncementsPage() {
   return (
@@ -12,12 +12,14 @@ export default function AnnouncementsPage() {
           <h2>{a.title}</h2>
           <p>{a.body}</p>
           <small>
-            掲載：
-            {new Date(a.publishedAt).toLocaleString("ja-JP", {
-              timeZone: "Asia/Tokyo",
-            })}{" "}
-            / 更新：
-            {new Date(a.updatedAt).toLocaleString("ja-JP", {
+            資料の掲載日：
+            {a.publishedAt
+              ? new Date(a.publishedAt).toLocaleDateString("ja-JP", {
+                  timeZone: "Asia/Tokyo",
+                })
+              : "記載なし"}{" "}
+            / サイト反映日：
+            {new Date(a.updatedAt).toLocaleDateString("ja-JP", {
               timeZone: "Asia/Tokyo",
             })}
           </small>

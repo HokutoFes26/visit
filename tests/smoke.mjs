@@ -93,8 +93,8 @@ try {
   for (const instant of [
     at(schedules[0], "startTime") - 86400000,
     at(schedules[0], "startTime"),
-    at(schedules[2], "startTime"),
-    at(schedules.at(-1), "endTime"),
+    at(schedules.find(s => s.startTime && s.endTime), "startTime"),
+    at(schedules.filter(s => s.endTime).at(-1), "endTime"),
   ]) {
     await page.clock.setFixedTime(new Date(instant));
     await page.goto(`${base}/#/schedule`);

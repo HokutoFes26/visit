@@ -1,12 +1,17 @@
 import Timeline from "@/components/Timeline";
 import { PageTitle } from "@/components/ui";
-import { event,formatDate,schedule } from "@/data";
+import { event, formatDate, schedule } from "@/data";
 import { useNow } from "@/hooks/useNow";
 import { Info } from "lucide-react";
 import { useState } from "react";
 export default function SchedulePage() {
   const days = [...new Set(schedule.map((s) => s.date))];
-  const [day, setDay] = useState(days[0] || event.date);
+  const [day, setDay] = useState(() => {
+    const today = new Intl.DateTimeFormat("sv-SE", {
+      timeZone: "Asia/Tokyo",
+    }).format(new Date());
+    return days.includes(today) ? today : days[0] || event.date;
+  });
   const now = useNow();
   return (
     <>

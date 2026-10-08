@@ -1,4 +1,4 @@
-import { PwaProvider,PwaStatus } from "@/pwa";
+import { PwaProvider, PwaStatus } from "@/pwa";
 import { VisitStorageProvider } from "@/state/visit-storage";
 import React from "react";
 class ErrorBoundary extends React.Component<

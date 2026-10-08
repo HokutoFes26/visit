@@ -1827,3 +1827,50 @@ button:disabled {
 .sidebar {
   overflow-y: auto;
 }
+.group-gray {
+  background: #e8ebef;
+  color: #606c7b;
+}
+.group-plan,
+.preparation {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+.train {
+  max-width: 570px;
+}
+.train .seat small {
+  font-size: 10px;
+}
+.train .bus-front {
+  gap: 10px;
+  font-size: 11px;
+  padding: 5px 0 22px;
+}
+.train .bus-front span:last-child {
+  padding: 10px;
+  white-space: nowrap;
+}
+.announcement-mini {
+  padding: 6px 0;
+}
+@media (max-width: 600px) {
+  .train {
+    padding: 20px 8px;
+  }
+  .train .seat-grid {
+    gap: 9px 3px;
+  }
+  .train .seat strong {
+    font-size: 14px;
+  }
+  .train .seat {
+    min-width: 0;
+  }
+  .train .seat small {
+    font-size: 8px;
+  }
+  .train .aisle {
+    font-size: 8px;
+  }
+}

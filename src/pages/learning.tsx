@@ -1,5 +1,5 @@
-import { Card,EmptyState,PageTitle } from "@/components/ui";
-import { companies } from "@/data";
+import { Card, EmptyState, PageTitle } from "@/components/ui";
+import { companies, guide } from "@/data";
 import learning from "@/data/learning.json";
 import { useStorage } from "@/state/visit-storage";
 import { Link } from "react-router-dom";
@@ -8,6 +8,16 @@ export default function LearningPage() {
   return (
     <>
       <PageTitle title="事前学習" />
+      <Card className="preparation">
+        <h2>当日までの準備</h2>
+        <ul>
+          {guide.sections
+            .find((s) => s.title === "当日までの準備")
+            ?.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+        </ul>
+      </Card>
       {checks.error && (
         <Card>
           <p className="error" role="alert">
@@ -48,12 +58,20 @@ export default function LearningPage() {
                 <p>未登録</p>
               )}
               <h3>見学の注目ポイント</h3>
+              {!company.highlights.length && (
+                <p>知りたいことを事前に整理してください。</p>
+              )}
               <ul>
                 {company.highlights.map((text, i) => (
                   <li key={i}>{text}</li>
                 ))}
               </ul>
               <h3>事前質問例</h3>
+              {!company.questions.length && (
+                <p>
+                  資料に具体例はありません。事業概要を調べて質問を準備してください。
+                </p>
+              )}
               <ul>
                 {company.questions.map((text, i) => (
                   <li key={i}>{text}</li>

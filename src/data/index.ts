@@ -1,16 +1,16 @@
-import type { Company,Schedule } from "@/types";
+import type { Company, Schedule } from "@/types";
 import companyData from "./companies.json";
 import eventData from "./event.json";
 import learningData from "./learning.json";
 import scheduleData from "./schedule.json";
 import seatData from "./seats.json";
-export type { Company,Schedule } from "@/types";
+export type { Company, Schedule } from "@/types";
 export { default as announcements } from "./announcements.json";
 export { default as guide } from "./guide.json";
 
 export const event = eventData;
 export const companies: Company[] = companyData;
-export const timestamp = (date: string, time: string) =>
+export const timestamp = (date: string, time: string | null) =>
   Date.parse(`${date}T${time}:00+09:00`);
 export const validDate = (date: string) => {
   const parsed = new Date(`${date}T00:00:00Z`);
@@ -21,14 +21,18 @@ export const validDate = (date: string) => {
   );
 };
 export const schedule: Schedule[] = [...scheduleData].sort(
-  (a, b) => timestamp(a.date, a.startTime) - timestamp(b.date, b.startTime),
+  (a, b) => a.date.localeCompare(b.date) || a.order - b.order,
 );
-export const scheduleState = (item: Schedule, now: number) =>
-  now < timestamp(item.date, item.startTime)
-    ? "upcoming"
-    : now < timestamp(item.date, item.endTime)
-      ? "current"
-      : "past";
+export const scheduleState = (item: Schedule, now: number) => {
+  if (!item.startTime)
+    return now >= timestamp(item.date, "00:00") + 86400000
+      ? "past"
+      : "unspecified";
+  if (now < timestamp(item.date, item.startTime)) return "upcoming";
+  if (item.endTime && now < timestamp(item.date, item.endTime))
+    return "current";
+  return "past";
+};
 export const formatDate = (date: string) =>
   new Intl.DateTimeFormat("ja-JP", {
     timeZone: "Asia/Tokyo",
@@ -57,10 +61,13 @@ export function validateData(): string[] {
       !s.id ||
       !s.title ||
       !validDate(s.date) ||
-      !/^([01]\d|2[0-3]):[0-5]\d$/.test(s.startTime) ||
-      !/^([01]\d|2[0-3]):[0-5]\d$/.test(s.endTime) ||
-      !Number.isFinite(start) ||
-      !(end > start)
+      !Number.isInteger(s.order) ||
+      (s.startTime !== null &&
+        !/^([01]\d|2[0-3]):[0-5]\d$/.test(s.startTime)) ||
+      (s.endTime !== null &&
+        (!s.startTime ||
+          !/^([01]\d|2[0-3]):[0-5]\d$/.test(s.endTime) ||
+          !(end > start)))
     )
       errors.push(`予定 ${s.id} の日時・必須項目を確認してください。`);
     if (s.companyId && !companies.some((c) => c.id === s.companyId))
@@ -77,7 +84,9 @@ export function validateData(): string[] {
     errors.push("座席の行数・列設定を確認してください。");
   if (
     new Set(seatData.groups.map((g) => g.id)).size !== seatData.groups.length ||
-    seatData.groups.some((g) => !["blue", "mint", "violet"].includes(g.color))
+    seatData.groups.some(
+      (g) => !["blue", "mint", "violet", "gray"].includes(g.color),
+    )
   )
     errors.push("座席グループのID・色を確認してください。");
   if (

@@ -138,7 +138,7 @@ try {
     fullPage: true,
   });
   await go("/seats");
-  await expect(page.locator(".seat")).toHaveCount(24);
+  await expect(page.locator(".seat")).toHaveCount(100);
   await page.screenshot({
     path: "test-results/seats-mobile.png",
     fullPage: true,
@@ -249,7 +249,7 @@ try {
   assert.deepEqual(errors, []);
   assert.deepEqual(unexpectedPaths, [], 'No assets should escape the deployment directory');
   console.log(
-    "PASS: manifest, precache readiness, offline login/reload/images/9 routes, notes separation/persistence/export/offline edits, checklist, 24 seats, real SW update with changed content, notes retained, cache loss and repair, storage failure/retry/export, cold offline failure.",
+    "PASS: manifest, precache readiness, offline login/reload/images/9 routes, notes separation/persistence/export/offline edits, checklist, 100 train positions, real SW update with changed content, notes retained, cache loss and repair, storage failure/retry/export, cold offline failure.",
   );
 } finally {
   await browser.close();

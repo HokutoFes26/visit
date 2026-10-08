@@ -13,7 +13,7 @@ import SchedulePage from "@/pages/schedule";
 import SeatsPage from "@/pages/seats";
 import SettingsPage from "@/pages/settings";
 import { useState } from "react";
-import { Navigate,Route,Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 const AUTH_KEY = "factory-visit:gate:v1";
 export default function App() {
   const [authenticated, setAuthenticated] = useState(() => {
