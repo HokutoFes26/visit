@@ -22,9 +22,10 @@ export default function SchedulePage() {
             key={d}
             className={day === d ? "selected" : ""}
             aria-pressed={day === d}
+            aria-label={formatDate(d)}
             onClick={() => setDay(d)}
           >
-            {formatDate(d)}
+            {formatDate(d).replace("月", "/").replace("日", "")}
           </button>
         ))}
       </div>
