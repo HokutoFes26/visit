@@ -752,21 +752,27 @@ footer a {
   max-width: 720px;
 }
 .day-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  max-width: 870px;
+  border-bottom: 1px solid var(--border);
 }
 .day-tabs button {
-  border: 1px solid #d5e3f5;
-  background: white;
-  padding: 10px 18px;
-  border-radius: 10px;
-  min-height: 44px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  padding: 12px 4px;
+  border-radius: 0;
+  min-height: 48px;
+  min-width: 0;
+  font-size: 15px;
+  white-space: nowrap;
 }
 .day-tabs button.selected {
-  background: #337bee;
-  color: white;
-  border-color: #337bee;
+  color: #2563c9;
+  border-bottom-color: var(--blue);
+  font-weight: 700;
 }
 .timeline {
   max-width: 870px;
