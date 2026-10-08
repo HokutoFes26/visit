@@ -1,27 +1,46 @@
-import { Navbar } from "@/components/navbar";
+import { BottomNavigation, Navbar, Sidebar } from "@/components/navbar";
+import { ArrowUpRight } from "lucide-react";
+import { useEffect, useRef } from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
-export default function DefaultLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ logout }: { logout: () => void }) {
+  const { pathname } = useLocation();
+  const main = useRef<HTMLElement>(null);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    main.current?.focus({ preventScroll: true });
+  }, [pathname]);
   return (
-    <div className="relative flex flex-col h-screen">
-      <Navbar />
-      <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
-        {children}
-      </main>
-      <footer className="w-full flex items-center justify-center py-3">
-        <a
-          className="flex items-center gap-1 text-current no-underline"
-          href="https://heroui.com?utm_source=vite-template"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <span className="text-muted">Powered by</span>
-          <p className="text-accent">HeroUI</p>
-        </a>
-      </footer>
-    </div>
+    <>
+      <a
+        className="skip-link"
+        href="#main"
+        onClick={(e) => {
+          e.preventDefault();
+          main.current?.focus();
+          main.current?.scrollIntoView();
+        }}
+      >
+        本文へ移動
+      </a>
+      <Sidebar logout={logout} />
+      <div className="workspace">
+        <Navbar />
+        <main id="main" tabIndex={-1} ref={main}>
+          <Outlet />
+        </main>
+        <footer>
+          FACTORY VISIT GUIDE{" "}
+          <span>
+            掲載内容は架空のサンプルです。{" "}
+            <Link to="/guide">
+              見学ガイド
+              <ArrowUpRight size={12} />
+            </Link>
+          </span>
+        </footer>
+      </div>
+      <BottomNavigation />
+    </>
   );
 }

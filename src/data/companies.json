@@ -1,0 +1,30 @@
+[
+  {
+    "id": "aoba",
+    "name": "会社名1を入力",
+    "legalName": "正式な会社名を入力",
+    "industry": "業種を入力",
+    "description": "会社概要を入力",
+    "image": "/images/factory.svg",
+    "business": ["事業内容を入力"],
+    "products": ["製品・サービスを入力"],
+    "factory": "工場で行っていることを入力",
+    "highlights": ["見学の注目ポイントを入力"],
+    "questions": ["質問例を入力"],
+    "website": null
+  },
+  {
+    "id": "minato",
+    "name": "会社名2を入力",
+    "legalName": "正式な会社名を入力",
+    "industry": "業種を入力",
+    "description": "会社概要を入力",
+    "image": "/images/factory.svg",
+    "business": ["事業内容を入力"],
+    "products": ["製品・サービスを入力"],
+    "factory": "工場で行っていることを入力",
+    "highlights": ["見学の注目ポイントを入力"],
+    "questions": ["質問例を入力"],
+    "website": null
+  }
+]

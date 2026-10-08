@@ -1,0 +1,20 @@
+[
+  {
+    "companyId": "aoba",
+    "basics": ["事前に知っておきたいことを入力"],
+    "checklist": [
+      { "id": "overview", "text": "会社概要を確認" },
+      { "id": "highlights", "text": "注目ポイントを確認" },
+      { "id": "questions", "text": "質問を準備" }
+    ]
+  },
+  {
+    "companyId": "minato",
+    "basics": ["事前に知っておきたいことを入力"],
+    "checklist": [
+      { "id": "overview", "text": "会社概要を確認" },
+      { "id": "highlights", "text": "注目ポイントを確認" },
+      { "id": "questions", "text": "質問を準備" }
+    ]
+  }
+]

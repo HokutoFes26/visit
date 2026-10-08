@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-20",
+  "timezone": "Asia/Tokyo",
+  "version": "0.1",
+  "isSample": true,
+  "meetingTime": "09:00",
+  "meetingPlace": "集合場所・駅名を入力",
+  "meetingNote": "集合時の注意事項を入力",
+  "passwordHint": "デモ用パスワード：factory2026",
+  "arrivalNote": "集合時刻の補足を入力"
+}

@@ -1,0 +1,168 @@
+{
+  "rows": 6,
+  "columns": ["A", "B", "aisle", "C", "D"],
+  "isSample": true,
+  "groups": [
+    {
+      "id": "a",
+      "label": "A班",
+      "color": "blue"
+    },
+    {
+      "id": "b",
+      "label": "B班",
+      "color": "mint"
+    },
+    {
+      "id": "c",
+      "label": "C班",
+      "color": "violet"
+    }
+  ],
+  "seats": [
+    {
+      "number": "1A",
+      "row": 1,
+      "column": "A",
+      "groupId": "a"
+    },
+    {
+      "number": "1B",
+      "row": 1,
+      "column": "B",
+      "groupId": "a"
+    },
+    {
+      "number": "1C",
+      "row": 1,
+      "column": "C",
+      "groupId": "a"
+    },
+    {
+      "number": "1D",
+      "row": 1,
+      "column": "D",
+      "groupId": "a"
+    },
+    {
+      "number": "2A",
+      "row": 2,
+      "column": "A",
+      "groupId": "a"
+    },
+    {
+      "number": "2B",
+      "row": 2,
+      "column": "B",
+      "groupId": "a"
+    },
+    {
+      "number": "2C",
+      "row": 2,
+      "column": "C",
+      "groupId": "a"
+    },
+    {
+      "number": "2D",
+      "row": 2,
+      "column": "D",
+      "groupId": "a"
+    },
+    {
+      "number": "3A",
+      "row": 3,
+      "column": "A",
+      "groupId": "b"
+    },
+    {
+      "number": "3B",
+      "row": 3,
+      "column": "B",
+      "groupId": "b"
+    },
+    {
+      "number": "3C",
+      "row": 3,
+      "column": "C",
+      "groupId": "b"
+    },
+    {
+      "number": "3D",
+      "row": 3,
+      "column": "D",
+      "groupId": "b"
+    },
+    {
+      "number": "4A",
+      "row": 4,
+      "column": "A",
+      "groupId": "b"
+    },
+    {
+      "number": "4B",
+      "row": 4,
+      "column": "B",
+      "groupId": "b"
+    },
+    {
+      "number": "4C",
+      "row": 4,
+      "column": "C",
+      "groupId": "b"
+    },
+    {
+      "number": "4D",
+      "row": 4,
+      "column": "D",
+      "groupId": "b"
+    },
+    {
+      "number": "5A",
+      "row": 5,
+      "column": "A",
+      "groupId": "c"
+    },
+    {
+      "number": "5B",
+      "row": 5,
+      "column": "B",
+      "groupId": "c"
+    },
+    {
+      "number": "5C",
+      "row": 5,
+      "column": "C",
+      "groupId": "c"
+    },
+    {
+      "number": "5D",
+      "row": 5,
+      "column": "D",
+      "groupId": "c"
+    },
+    {
+      "number": "6A",
+      "row": 6,
+      "column": "A",
+      "groupId": "c"
+    },
+    {
+      "number": "6B",
+      "row": 6,
+      "column": "B",
+      "groupId": "c"
+    },
+    {
+      "number": "6C",
+      "row": 6,
+      "column": "C",
+      "groupId": "c"
+    },
+    {
+      "number": "6D",
+      "row": 6,
+      "column": "D",
+      "groupId": "c"
+    }
+  ]
+}

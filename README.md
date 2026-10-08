@@ -1,28 +1,23 @@
-# Vite & HeroUI Template
+# Factory Visit Guide
 
-This is a template for creating applications using Vite and HeroUI (v3).
-
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/vite-template)
+A factory visit guide built with Vite, React, and TypeScript, with offline PWA support.
 
 ## Technologies Used
 
-- [Vite](https://vitejs.dev/guide/)
-- [HeroUI v3](https://heroui.com)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org)
+- Vite
+- React
+- TypeScript
+- React Router
+- Lucide React
+- vite-plugin-pwa / Workbox
+- Playwright
 
 ## How to Use
 
-To clone the project, run the following command:
-
-```bash
-git clone https://github.com/heroui-inc/vite-template.git
-```
+Download and extract the project, then open its folder in a terminal.
+Node.js 24 and npm are recommended.
 
 ### Install dependencies
-
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
 
 ```bash
 npm install
@@ -34,6 +29,24 @@ npm install
 npm run dev
 ```
 
+Open the URL shown in the terminal. The demo password is `factory2026`.
+
+### Build and preview
+
+```bash
+npm run build
+npm run preview
+```
+
+Use the production preview to check offline support. Wait for the offline-ready status before disconnecting.
+
+### Edit content and deploy
+
+Edit the files in `src/data/` to change visit information.
+See the [Japanese guide](docs/GUIDE.md) for content editing, password configuration, testing, and GitHub Pages deployment.
+
+The shared password is only a viewing gate, not secure authentication. Do not include personal or confidential information.
+
 ## License
 
-Licensed under the [MIT license](https://github.com/heroui-inc/vite-template/blob/main/LICENSE).
+A license for this project has not been specified.

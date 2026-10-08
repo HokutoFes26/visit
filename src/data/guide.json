@@ -1,0 +1,5 @@
+{
+  "belongings": ["持ち物を入力"],
+  "clothing": ["服装を入力"],
+  "precautions": ["注意事項を入力"]
+}
