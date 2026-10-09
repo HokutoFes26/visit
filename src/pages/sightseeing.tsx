@@ -45,7 +45,7 @@ export default function SightseeingPage() {
     <>
       <PageTitle
         eyebrow="EXPLORE TOKYO"
-        title={t("東京の寄り道ガイド")}
+        title={t("東京観光")}
         description={t(
           "東京駅・品川・浅草など、自由時間に行ってみたい場所を探そう。",
         )}
