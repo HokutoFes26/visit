@@ -57,7 +57,7 @@ try {
       "/more",
       "/announcements",
       "/settings",
-      "/notes",
+      "/sightseeing",
       "/seats",
       "/learning",
     ]) {

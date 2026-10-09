@@ -305,5 +305,7 @@
   "公式サイト": "Official website",
   "情報の出典": "Source",
   "このエリアのスポットはまだ登録されていません。": "No places have been added for this area yet.",
-  "東京駅・品川・浅草など、自由時間に行ってみたい場所を探そう。": "Discover places around Tokyo Station, Shinagawa, Asakusa and beyond to visit in your free time."
+  "東京駅・品川・浅草など、自由時間に行ってみたい場所を探そう。": "Discover places around Tokyo Station, Shinagawa, Asakusa and beyond to visit in your free time.",
+  "未保存のチェック状態があります。保存を再試行してから更新してください。": "Some checklist changes are unsaved. Retry saving before updating.",
+  "未保存のチェック状態があります。先に保存を再試行してください。": "Some checklist changes are unsaved. Retry saving before updating."
 }

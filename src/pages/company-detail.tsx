@@ -82,8 +82,8 @@ export default function CompanyDetail() {
               ))}
             </ul>
           </details>
-          <Link className="button secondary" to={`/notes?company=${c.id}`}>
-            {t("見学メモ")}
+          <Link className="button secondary" to="/sightseeing">
+            {t("東京観光")}
             <ArrowRight size={17} />
           </Link>
         </Card>

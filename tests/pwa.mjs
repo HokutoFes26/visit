@@ -106,29 +106,6 @@ try {
       (i) => i.sizes === "512x512" && i.purpose === "maskable",
     ),
   );
-  await go(`/notes?company=${companies[0].id}`);
-  await page.getByRole("textbox").fill("一社目のメモ\n日本語の保存テスト");
-  await expect(
-    page.getByRole("status").filter({ hasText: "端末に保存済み" }),
-  ).toBeVisible();
-  await page.getByLabel("企業", { exact: true }).selectOption(companies[1].id);
-  await page.getByRole("textbox").fill("二社目のメモ");
-  await page.reload();
-  await expect(page.getByRole("textbox")).toHaveValue("二社目のメモ");
-  await page.getByLabel("企業", { exact: true }).selectOption(companies[0].id);
-  await expect(page.getByRole("textbox")).toHaveValue(
-    "一社目のメモ\n日本語の保存テスト",
-  );
-  await page.screenshot({
-    path: "test-results/notes-mobile.png",
-    fullPage: true,
-  });
-  const downloading = page.waitForEvent("download");
-  await page.getByRole("button", { name: "すべてのメモを書き出す" }).click();
-  const download = await downloading;
-  const content = await readFile(await download.path(), "utf8");
-  assert.match(content, /一社目のメモ/);
-  assert.match(content, /二社目のメモ/);
   await go("/learning");
   await page.getByRole("checkbox").first().check();
   await page.reload();
@@ -161,7 +138,7 @@ try {
     "/announcements",
     "/seats",
     "/learning",
-    "/notes",
+    "/sightseeing",
   ]) {
     await go(route);
     await page.reload();
@@ -177,9 +154,10 @@ try {
       .evaluateAll((imgs) => imgs.some((i) => !i.complete || !i.naturalWidth));
     assert.equal(missingImages, false, route);
   }
-  await page.getByRole("textbox").fill("オフラインで編集");
+  await go("/learning");
+  await page.getByRole("checkbox").first().uncheck();
   await page.reload();
-  await expect(page.getByRole("textbox")).toHaveValue("オフラインで編集");
+  await expect(page.getByRole("checkbox").first()).not.toBeChecked();
   await context.setOffline(false);
   await ready();
   // An actual second SW version and changed app bundle should prompt, then activate.
@@ -195,8 +173,8 @@ try {
   await expect(
     page.getByRole("heading", { name: "更新テスト会社", exact: true }),
   ).toBeVisible();
-  await go("/notes");
-  await expect(page.getByRole("textbox")).toHaveValue("オフラインで編集");
+  await go("/learning");
+  await expect(page.getByRole("checkbox").first()).not.toBeChecked();
   await ready();
   // Cache deletion must retract readiness and permit re-preparation.
   await page.evaluate(async () => {
@@ -215,33 +193,27 @@ try {
   await page.reload();
   await expect(page.locator("main h1")).toBeVisible();
   await context.setOffline(false);
-  // Failure path: keep draft across SPA navigation, export it, then retry persistence.
-  await go("/notes");
+  // Failure path: keep checklist changes across SPA navigation, then retry persistence.
+  await go("/learning");
   await page.evaluate(() => {
     window.originalSetItem = Storage.prototype.setItem;
     Storage.prototype.setItem = function (k, v) {
-      if (k.startsWith("factory-visit:notes"))
+      if (k.startsWith("factory-visit:learning"))
         throw new DOMException("full", "QuotaExceededError");
       return window.originalSetItem.call(this, k, v);
     };
   });
-  await page.getByRole("textbox").fill("保存失敗でも残すメモ");
+  await page.getByRole("checkbox").first().check();
   await expect(page.getByRole("alert")).toContainText("端末に保存できません");
   await go("/companies");
-  await go("/notes");
-  await expect(page.getByRole("textbox")).toHaveValue("保存失敗でも残すメモ");
-  const failedDownload = page.waitForEvent("download");
-  await page.getByRole("button", { name: "すべてのメモを書き出す" }).click();
-  assert.match(
-    await readFile(await (await failedDownload).path(), "utf8"),
-    /保存失敗でも残すメモ/,
-  );
+  await go("/learning");
+  await expect(page.getByRole("checkbox").first()).toBeChecked();
   await page.evaluate(
     () => (Storage.prototype.setItem = window.originalSetItem),
   );
   await page.getByRole("button", { name: "保存を再試行" }).click();
   await page.reload();
-  await expect(page.getByRole("textbox")).toHaveValue("保存失敗でも残すメモ");
+  await expect(page.getByRole("checkbox").first()).toBeChecked();
   const fresh = await browser.newContext({ offline: true });
   const cold = await fresh.newPage();
   await assert.rejects(() => cold.goto(base));
@@ -249,7 +221,7 @@ try {
   assert.deepEqual(errors, []);
   assert.deepEqual(unexpectedPaths, [], 'No assets should escape the deployment directory');
   console.log(
-    "PASS: manifest, precache readiness, offline login/reload/images/9 routes, notes separation/persistence/export/offline edits, checklist, 100 train positions, real SW update with changed content, notes retained, cache loss and repair, storage failure/retry/export, cold offline failure.",
+    "PASS: manifest, precache readiness, offline login/reload/images/9 routes, checklist persistence/offline edits, 100 train positions, real SW update with changed content, checklist retained, cache loss and repair, storage failure/retry, cold offline failure.",
   );
 } finally {
   await browser.close();

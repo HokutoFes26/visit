@@ -149,7 +149,7 @@ export function PwaProvider({ children }: { children: ReactNode }) {
     // Drafts are persisted synchronously; failed saves must not be discarded.
     if (document.querySelector('[data-unsaved="true"]')) {
       setError(
-        "未保存の入力があります。メモは保存または書き出し、チェック状態は保存を再試行してから更新してください。",
+        "未保存のチェック状態があります。保存を再試行してから更新してください。",
       );
       return;
     }
@@ -204,7 +204,7 @@ export function PwaProvider({ children }: { children: ReactNode }) {
           }
           if (document.querySelector('[data-unsaved="true"]')) {
             setError(
-              "未保存の入力があります。保存またはメモの書き出しを先に行ってください。",
+              "未保存のチェック状態があります。先に保存を再試行してください。",
             );
             return;
           }

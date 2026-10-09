@@ -108,7 +108,8 @@ try {
     .getByLabel("見学用パスワード")
     .fill(process.env.TEST_PASSWORD || "factory2026");
   await page.getByRole("button", { name: "見学ガイドをひらく" }).click();
-  await page.locator(".sightseeing-home-link").click();
+  await expect(page.locator('a[href="#/notes"]')).toHaveCount(0);
+  await page.locator(".shortcut-grid").getByRole("link", { name: "東京観光", exact: true }).click();
   await expect(
     page.getByRole("heading", { name: "東京の寄り道ガイド" }),
   ).toBeVisible();
@@ -264,6 +265,9 @@ try {
       page.getByRole("heading", { name: "東京の寄り道ガイド" }),
     ).toBeVisible();
   }
+  await page.goto(`${base}/#/notes?company=members`);
+  await expect(page).toHaveURL(/#\/sightseeing$/);
+  await expect(page.locator('a[href="#/notes"]')).toHaveCount(0);
   assert.deepEqual(errors, []);
   console.log(
     `PASS: sightseeing data, filters, ${data.spots.length} map pins, directions, links, Japanese/English × light/dark × 4 widths, offline reload, mobile map navigation, browser errors. Live map tiles: ${loadedMap}.`,

@@ -9,7 +9,6 @@ import Home from "@/pages/index";
 import LearningPage from "@/pages/learning";
 import Login from "@/pages/login";
 import MorePage from "@/pages/more";
-import NotesPage from "@/pages/notes";
 import SchedulePage from "@/pages/schedule";
 import SeatsPage from "@/pages/seats";
 import SettingsPage from "@/pages/settings";
@@ -76,7 +75,10 @@ export default function App() {
           <Route path="seats" element={<SeatsPage />} />
           <Route path="learning" element={<LearningPage />} />
           <Route path="sightseeing" element={<SightseeingPage />} />
-          <Route path="notes" element={<NotesPage />} />
+          <Route
+            path="notes"
+            element={<Navigate to="/sightseeing" replace />}
+          />
           <Route path="more" element={<MorePage />} />
           <Route path="settings" element={<SettingsPage logout={logout} />} />
           <Route path="*" element={<Navigate to="/" replace />} />

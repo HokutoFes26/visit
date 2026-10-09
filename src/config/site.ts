@@ -4,7 +4,6 @@ import {
   Building2,
   CalendarDays,
   Compass,
-  StickyNote,
   Users,
 } from "lucide-react";
 export const shortcuts = [
@@ -12,7 +11,7 @@ export const shortcuts = [
   { to: "/companies", title: "企業情報", icon: Building2, color: "cyan" },
   { to: "/seats", title: "座席案内", icon: Users, color: "violet" },
   { to: "/learning", title: "事前学習", icon: BookOpen, color: "amber" },
-  { to: "/notes", title: "見学メモ", icon: StickyNote, color: "mint" },
+  { to: "/sightseeing", title: "東京観光", icon: Compass, color: "mint" },
   { to: "/announcements", title: "お知らせ", icon: Bell, color: "rose" },
 ];
 
@@ -25,11 +24,10 @@ export const desktopLinks = [
   { to: "/seats", label: "座席案内", icon: Users },
   { to: "/learning", label: "事前学習", icon: BookOpen },
   { to: "/sightseeing", label: "東京観光", icon: Compass },
-  { to: "/notes", label: "見学メモ", icon: StickyNote },
   { to: "/more", label: "その他", icon: Ellipsis },
 ];
 export const mobileLinks = [
   ...desktopLinks.slice(0, 3),
-  { to: "/notes", label: "メモ", icon: StickyNote },
+  { to: "/sightseeing", label: "東京観光", icon: Compass },
   { to: "/more", label: "その他", icon: Ellipsis },
 ];

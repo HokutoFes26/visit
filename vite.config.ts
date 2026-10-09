@@ -21,7 +21,7 @@ export default defineConfig({
       manifest: {
         name: "県外企業見学 電子パンフレット",
         short_name: "県外企業見学",
-        description: "スケジュール・企業情報・見学メモ",
+        description: "スケジュール・企業情報・東京観光",
         lang: "ja",
         start_url: "./",
         scope: "./",

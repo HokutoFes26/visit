@@ -6,7 +6,6 @@ import {
   useState,
   type ReactNode,
 } from "react";
-const NOTES_KEY = "factory-visit:notes:v1";
 const CHECKS_KEY = "factory-visit:learning:v1";
 function readRecord<T extends string | boolean>(
   key: string,
@@ -42,7 +41,6 @@ function useRecord<T extends string | boolean>(
   const [error, setError] = useState(initial.error);
   const [dirty, setDirty] = useState(false);
   const [saved, setSaved] = useState(false);
-  const [backedUp, setBackedUp] = useState(false);
   function save(next = latest.current) {
     try {
       localStorage.setItem(key, JSON.stringify(next));
@@ -61,7 +59,6 @@ function useRecord<T extends string | boolean>(
     const next = { ...latest.current, [id]: text };
     latest.current = next;
     setValue(next);
-    setBackedUp(false);
     save(next);
   }
   return {
@@ -69,16 +66,12 @@ function useRecord<T extends string | boolean>(
     error,
     dirty,
     saved,
-    backedUp,
     change,
     save: () => save(),
-    backup: () => setBackedUp(true),
   };
 }
-type NotesStore = ReturnType<typeof useRecord<string>>;
 type ChecksStore = ReturnType<typeof useRecord<boolean>>;
 const StorageContext = createContext<{
-  notes: NotesStore;
   checks: ChecksStore;
 } | null>(null);
 export function useStorage() {
@@ -87,9 +80,8 @@ export function useStorage() {
   return state;
 }
 export function VisitStorageProvider({ children }: { children: ReactNode }) {
-  const notes = useRecord<string>(NOTES_KEY, "string");
   const checks = useRecord<boolean>(CHECKS_KEY, "boolean");
-  const unsaved = (notes.dirty && !notes.backedUp) || checks.dirty;
+  const unsaved = checks.dirty;
   useEffect(() => {
     if (!unsaved) return;
     const warn = (e: BeforeUnloadEvent) => {
@@ -100,7 +92,7 @@ export function VisitStorageProvider({ children }: { children: ReactNode }) {
     return () => window.removeEventListener("beforeunload", warn);
   }, [unsaved]);
   return (
-    <StorageContext.Provider value={{ notes, checks }}>
+    <StorageContext.Provider value={{ checks }}>
       <div data-unsaved={unsaved}>{children}</div>
     </StorageContext.Provider>
   );

@@ -41,7 +41,7 @@ try {
       "/guide",
       "/seats",
       "/learning",
-      "/notes",
+      "/sightseeing",
       "/more",
       "/announcements",
       "/settings",
@@ -61,28 +61,6 @@ try {
       );
     }
   }
-  await page.goto(base + "/#/notes");
-  await page
-    .getByLabel("Notes for Members Co., Ltd.")
-    .fill("日本語で書いたメモ / user note");
-  await page
-    .getByRole("button", { name: "日本語", exact: true })
-    .first()
-    .click();
-  assert.equal(
-    await page.locator("textarea").inputValue(),
-    "日本語で書いたメモ / user note",
-  );
-  await toggleLanguage();
-  assert.equal(
-    await page.locator("textarea").inputValue(),
-    "日本語で書いたメモ / user note",
-  );
-  await page.reload();
-  assert.equal(
-    await page.locator("textarea").inputValue(),
-    "日本語で書いたメモ / user note",
-  );
   await page.goto(base + "/#/learning");
   await page.getByRole("checkbox").first().check();
   await page
@@ -117,7 +95,7 @@ try {
   });
   assert.deepEqual(errors, []);
   console.log(
-    "PASS: translation on 11 routes × 4 widths, theme, persisted preferences, preserved notes and checklist, browser errors.",
+    "PASS: translation on 11 routes × 4 widths, theme, persisted preferences, preserved checklist, browser errors.",
   );
 } catch (e) {
   console.log(page.url(), errors, await page.locator("body").innerText());

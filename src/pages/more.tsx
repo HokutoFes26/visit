@@ -11,7 +11,6 @@ export default function MorePage() {
       <div className="shortcut-grid">
         {[
           { to: "/guide", title: "集合・持ち物・注意事項" },
-          { to: "/sightseeing", title: "東京観光" },
           ...shortcuts.slice(2),
           { to: "/settings", title: "設定" },
         ].map((s) => (
