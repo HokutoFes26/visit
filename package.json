@@ -10,7 +10,8 @@
     "test": "node tests/smoke.mjs",
     "test:pwa": "node tests/pwa.mjs",
     "test:pages": "node tests/pwa.mjs --pages",
-    "format": "prettier --write src vite.config.ts"
+    "format": "prettier --write src vite.config.ts",
+    "test:preferences": "node tests/preferences.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

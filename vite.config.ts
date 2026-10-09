@@ -19,8 +19,8 @@ export default defineConfig({
         ],
       },
       manifest: {
-        name: "工場見学 電子パンフレット",
-        short_name: "工場見学",
+        name: "県外企業見学 電子パンフレット",
+        short_name: "県外企業見学",
         description: "スケジュール・企業情報・見学メモ",
         lang: "ja",
         start_url: "./",
