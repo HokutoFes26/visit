@@ -79,6 +79,7 @@ export function BottomNavigation() {
                 "/guide",
                 "/seats",
                 "/learning",
+                "/sightseeing",
                 "/announcements",
                 "/settings",
               ].includes(pathname))

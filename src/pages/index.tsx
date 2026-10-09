@@ -21,6 +21,7 @@ import {
   CalendarDays,
   ChevronRight,
   Clock3,
+  Compass,
   MapPin,
   ShieldCheck,
   Shirt,
@@ -163,6 +164,16 @@ export default function Home() {
           </Link>
         ))}
       </div>
+      <Link className="sightseeing-home-link glass-card" to="/sightseeing">
+        <span className="shortcut-icon cyan">
+          <Compass size={24} />
+        </span>
+        <span>
+          <strong>{t("東京観光")}</strong>
+          <small>{t("東京駅・品川・浅草を地図で巡る")}</small>
+        </span>
+        <ArrowRight size={20} />
+      </Link>
       <div className="home-bottom">
         <Card>
           <SectionTitle title={t("出発前のチェック")} to="/guide" />

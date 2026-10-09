@@ -3,6 +3,7 @@ import {
   BookOpen,
   Building2,
   CalendarDays,
+  Compass,
   StickyNote,
   Users,
 } from "lucide-react";
@@ -23,6 +24,7 @@ export const desktopLinks = [
   { to: "/guide", label: "見学ガイド", icon: BookOpen },
   { to: "/seats", label: "座席案内", icon: Users },
   { to: "/learning", label: "事前学習", icon: BookOpen },
+  { to: "/sightseeing", label: "東京観光", icon: Compass },
   { to: "/notes", label: "見学メモ", icon: StickyNote },
   { to: "/more", label: "その他", icon: Ellipsis },
 ];

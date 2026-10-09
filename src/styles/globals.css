@@ -2147,3 +2147,350 @@ html[lang="en"] .hero h1 {
   color: #a7cdff;
   border-color: #80b4ff;
 }
+/* Tokyo sightseeing: one data file drives filters, maps and place cards. */
+.sightseeing-home-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 18px 22px;
+}
+.sightseeing-home-link strong,
+.sightseeing-home-link small {
+  display: block;
+}
+.sightseeing-home-link > svg {
+  margin-left: auto;
+  color: var(--blue);
+}
+.sightseeing-intro {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px;
+  border-radius: 18px;
+  background: #e0edfce6;
+  border: 1px solid #d2e2f5;
+}
+.sightseeing-intro > div {
+  flex: 1;
+  min-width: 0;
+}
+.sightseeing-intro strong {
+  font-size: 15px;
+}
+.sightseeing-intro p {
+  margin: 5px 0 0;
+  font-size: 12px;
+}
+.sightseeing-intro > a {
+  flex-shrink: 0;
+}
+.sightseeing-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 25px 0 12px;
+}
+.sightseeing-filters button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 10px 17px;
+  border: 1px solid var(--border);
+  background: #ffffffb3;
+  border-radius: 12px;
+  font-size: 13px;
+}
+.sightseeing-filters button > span {
+  font-size: 11px;
+  opacity: 0.7;
+}
+.sightseeing-filters button[aria-pressed="true"] {
+  background: #337bee;
+  border-color: #337bee;
+  color: white;
+}
+.sightseeing-area-note {
+  min-height: 24px;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+.sightseeing-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  gap: 22px;
+  align-items: start;
+}
+.sightseeing-map-panel {
+  position: sticky;
+  top: 18px;
+  min-width: 0;
+  scroll-margin-top: 18px;
+}
+.sightseeing-map-card {
+  padding: 20px;
+}
+.sightseeing-map-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.sightseeing-map-heading > svg {
+  color: var(--blue);
+}
+.sightseeing-map-heading h2 {
+  margin: 3px 0 0;
+  font-size: 16px;
+}
+.sightseeing-map-heading .eyebrow {
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+.sightseeing-map {
+  display: block;
+  width: 100%;
+  height: 360px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #dae8df;
+}
+.sightseeing-map-offline {
+  min-height: 300px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: #edf4ff;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+.sightseeing-map-offline p {
+  margin: 0;
+  font-size: 12px;
+}
+.sightseeing-map-credit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 9px;
+  font-size: 10px;
+  color: var(--muted);
+}
+.sightseeing-map-credit a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.sightseeing-map-card .field-label {
+  font-size: 12px;
+}
+.sightseeing-directions {
+  display: flex;
+  width: 100%;
+  margin-top: 12px;
+  gap: 8px;
+}
+.sightseeing-map-card .quiet-note {
+  margin-bottom: 0;
+  font-size: 11px;
+}
+.sightseeing-checked {
+  margin: 12px 8px 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+.sightseeing-spots {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+.sightseeing-spot {
+  padding: 23px;
+  border: 1px solid var(--border);
+}
+.sightseeing-spot.is-selected {
+  border-color: #337bee;
+  box-shadow:
+    inset 3px 0 #337bee,
+    0 8px 32px #1f41720b;
+}
+.sightseeing-spot-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+  margin-bottom: 12px;
+}
+.spot-map-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 11px;
+  padding: 8px 10px;
+  min-height: 36px;
+  border-radius: 9px;
+  color: #225fad;
+  background: #edf4ff;
+  border: 1px solid #d9e6fa;
+}
+.spot-map-button[aria-pressed="true"] {
+  background: #e3efff;
+  color: #1953ad;
+  border-color: #b3cffa;
+}
+.sightseeing-spot h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.sightseeing-spot > p {
+  font-size: 13px;
+}
+.sightseeing-facts {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0;
+}
+.sightseeing-facts > div {
+  display: grid;
+  grid-template-columns: 98px minmax(0, 1fr);
+  gap: 12px;
+}
+.sightseeing-facts dt {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.sightseeing-facts dt svg {
+  margin-top: 2px;
+}
+.sightseeing-facts dd {
+  margin: 0;
+  font-size: 12px;
+}
+.sightseeing-spot .sightseeing-spot-note {
+  font-size: 11px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #edf4ff;
+  margin-bottom: 15px;
+}
+.sightseeing-spot-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.sightseeing-spot-links > a:last-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--muted);
+}
+[data-theme="dark"] .sightseeing-intro {
+  background: #203a56;
+  border-color: #405d83;
+}
+[data-theme="dark"]
+  :is(
+    .sightseeing-filters button:not([aria-pressed="true"]),
+    .sightseeing-map-offline,
+    .sightseeing-spot .sightseeing-spot-note
+  ) {
+  background: #22364e;
+  color: #c9dcf4;
+}
+[data-theme="dark"] .spot-map-button {
+  background: #254266;
+  color: #a7cdff;
+  border-color: #405d83;
+}
+[data-theme="dark"] .spot-map-button[aria-pressed="true"] {
+  background: #2f527e;
+  color: #dcecff;
+  border-color: #689ce1;
+}
+[data-theme="dark"] .sightseeing-spot.is-selected {
+  border-color: #80b4ff;
+  box-shadow: inset 3px 0 #80b4ff;
+}
+@media (max-width: 1000px) {
+  .sightseeing-layout {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 16px;
+  }
+  .sightseeing-facts > div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+}
+@media (max-width: 850px) {
+  .sightseeing-layout {
+    grid-template-columns: 1fr;
+  }
+  .sightseeing-map-panel {
+    position: static;
+  }
+  .sightseeing-map {
+    height: 310px;
+  }
+  .sightseeing-facts > div {
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .sightseeing-intro {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px;
+  }
+  .sightseeing-intro > a {
+    margin-left: 55px;
+  }
+  .sightseeing-filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sightseeing-map-card {
+    padding: 16px;
+  }
+  .sightseeing-map {
+    height: 280px;
+  }
+  .sightseeing-spot {
+    padding: 19px;
+  }
+  .sightseeing-facts > div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+  .sightseeing-home-link {
+    padding: 17px;
+    gap: 12px;
+  }
+  .sightseeing-home-link small {
+    font-size: 11px;
+  }
+}
+@media (max-width: 600px) {
+  .sightseeing-intro > div {
+    flex-basis: calc(100% - 55px);
+  }
+}

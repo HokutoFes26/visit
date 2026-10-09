@@ -10,9 +10,7 @@ function readPreferences(): {
   theme: Theme;
   error: boolean;
 } {
-  const theme = window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
+  const theme: Theme = "light";
   try {
     const saved = JSON.parse(localStorage.getItem(KEY) || "null");
     return {

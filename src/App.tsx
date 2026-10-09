@@ -13,6 +13,7 @@ import NotesPage from "@/pages/notes";
 import SchedulePage from "@/pages/schedule";
 import SeatsPage from "@/pages/seats";
 import SettingsPage from "@/pages/settings";
+import SightseeingPage from "@/pages/sightseeing";
 import { useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 const AUTH_KEY = "factory-visit:gate:v1";
@@ -74,6 +75,7 @@ export default function App() {
           <Route path="announcements" element={<AnnouncementsPage />} />
           <Route path="seats" element={<SeatsPage />} />
           <Route path="learning" element={<LearningPage />} />
+          <Route path="sightseeing" element={<SightseeingPage />} />
           <Route path="notes" element={<NotesPage />} />
           <Route path="more" element={<MorePage />} />
           <Route path="settings" element={<SettingsPage logout={logout} />} />

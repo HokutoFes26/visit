@@ -2,6 +2,7 @@ import { t, usePreferences } from "@/state/preferences";
 import { Card, PageTitle, SectionTitle } from "@/components/ui";
 import { event, formatDate, guide } from "@/data";
 import { Backpack, MapPin, Shirt } from "lucide-react";
+import { Link } from "react-router-dom";
 export default function GuidePage() {
   usePreferences();
   return (
@@ -30,6 +31,11 @@ export default function GuidePage() {
                 <li key={item}>{t(item)}</li>
               ))}
             </ul>
+            {section.title === "当日までの準備" && (
+              <Link className="text-link" to="/sightseeing">
+                {t("地図で東京の観光スポットを探す")}
+              </Link>
+            )}
           </Card>
         ))}
       </div>

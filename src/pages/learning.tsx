@@ -19,6 +19,9 @@ export default function LearningPage() {
               <li key={item}>{t(item)}</li>
             ))}
         </ul>
+        <Link className="text-link" to="/sightseeing">
+          {t("地図で東京の観光スポットを探す")}
+        </Link>
       </Card>
       {checks.error && (
         <Card>
