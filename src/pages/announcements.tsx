@@ -1,27 +1,40 @@
+import { getLanguage, t, usePreferences } from "@/state/preferences";
 import { Card, PageTitle } from "@/components/ui";
 import { announcements } from "@/data";
 export default function AnnouncementsPage() {
+  usePreferences();
   return (
     <>
-      <PageTitle title="お知らせ" />
+      <PageTitle title={t("お知らせ")} />
       {announcements.map((a) => (
         <Card key={a.id}>
           <span className="badge">
-            {a.importance === "high" ? "重要" : "ご案内"}
+            {t(a.importance === "high" ? "重要" : "ご案内")}
           </span>
-          <h2>{a.title}</h2>
-          <p>{a.body}</p>
+          <h2>{t(a.title)}</h2>
+          <p>{t(a.body)}</p>
           <small>
-            資料の掲載日：
-            {a.publishedAt
-              ? new Date(a.publishedAt).toLocaleDateString("ja-JP", {
+            {t("資料の掲載日：")}
+            {t(
+              a.publishedAt
+                ? new Date(a.publishedAt).toLocaleDateString(
+                    getLanguage() === "ja" ? "ja-JP" : "en-US",
+                    {
+                      timeZone: "Asia/Tokyo",
+                    },
+                  )
+                : "記載なし",
+            )}
+            {t(" ")}
+            {t("/ サイト反映日：")}
+            {t(
+              new Date(a.updatedAt).toLocaleDateString(
+                getLanguage() === "ja" ? "ja-JP" : "en-US",
+                {
                   timeZone: "Asia/Tokyo",
-                })
-              : "記載なし"}{" "}
-            / サイト反映日：
-            {new Date(a.updatedAt).toLocaleDateString("ja-JP", {
-              timeZone: "Asia/Tokyo",
-            })}
+                },
+              ),
+            )}
           </small>
         </Card>
       ))}

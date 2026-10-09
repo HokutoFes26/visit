@@ -1,3 +1,4 @@
+import { t, usePreferences } from "@/state/preferences";
 import {
   createContext,
   useContext,
@@ -26,6 +27,7 @@ const PwaContext = createContext({
 export const usePwa = () => useContext(PwaContext);
 
 export function PwaProvider({ children }: { children: ReactNode }) {
+  usePreferences();
   const [online, setOnline] = useState(navigator.onLine);
   const [ready, setReady] = useState(false);
   const [checking, setChecking] = useState(false);
@@ -223,28 +225,31 @@ export function PwaProvider({ children }: { children: ReactNode }) {
 }
 
 export function PwaStatus() {
+  usePreferences();
   const pwa = usePwa();
   return (
     <div className="pwa-status">
       <span role="status">
-        {!pwa.online ? "オフライン · " : ""}
-        {import.meta.env.DEV
-          ? "オフライン対応は本番プレビューで確認できます"
-          : pwa.ready
-            ? "オフライン準備完了"
-            : "オフライン未準備"}
+        {t(!pwa.online ? "オフライン · " : "")}
+        {t(
+          import.meta.env.DEV
+            ? "オフライン対応は本番プレビューで確認できます"
+            : pwa.ready
+              ? "オフライン準備完了"
+              : "オフライン未準備",
+        )}
       </span>
       {pwa.update && (
         <div className="update-notice">
-          <span>新しい情報があります。</span>
+          <span>{t("新しい情報があります。")}</span>
           <button className="button primary" onClick={pwa.apply}>
-            更新を適用
+            {t("更新を適用")}
           </button>
         </div>
       )}
       {pwa.error && (
         <p role="alert" className="error">
-          {pwa.error}
+          {t(pwa.error)}
         </p>
       )}
     </div>
@@ -252,34 +257,39 @@ export function PwaStatus() {
 }
 
 export function PwaSettings() {
+  usePreferences();
   const pwa = usePwa();
   return (
     <>
-      <h2>オフライン対応</h2>
+      <h2>{t("オフライン対応")}</h2>
       <PwaStatus />
       <p>
-        初回はオンラインで開き、「オフライン準備完了」を確認してください。ブラウザのデータを削除すると再準備が必要です。外部サイトはオンライン接続が必要です。
+        {t(
+          "初回はオンラインで開き、「オフライン準備完了」を確認してください。ブラウザのデータを削除すると再準備が必要です。外部サイトはオンライン接続が必要です。",
+        )}
       </p>
       <button
         className="button secondary"
         disabled={pwa.checking}
         onClick={() => void pwa.check()}
       >
-        {pwa.checking ? "確認中…" : "キャッシュ・更新を確認"}
+        {t(pwa.checking ? "確認中…" : "キャッシュ・更新を確認")}
       </button>
       {!import.meta.env.DEV && !pwa.ready && (
         <button className="button secondary" onClick={() => void pwa.repair()}>
-          オフラインを再準備
+          {t("オフラインを再準備")}
         </button>
       )}
-      <h2>ホーム画面に追加</h2>
+      <h2>{t("ホーム画面に追加")}</h2>
       {pwa.installable ? (
         <button className="button primary" onClick={() => void pwa.install()}>
-          アプリをインストール
+          {t("アプリをインストール")}
         </button>
       ) : (
         <p>
-          対応ブラウザのメニューから「アプリをインストール」または「ホーム画面に追加」を選択してください。iPhoneではSafariの共有メニューをご利用ください。
+          {t(
+            "対応ブラウザのメニューから「アプリをインストール」または「ホーム画面に追加」を選択してください。iPhoneではSafariの共有メニューをご利用ください。",
+          )}
         </p>
       )}
     </>

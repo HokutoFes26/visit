@@ -1,3 +1,4 @@
+import { t, usePreferences } from "@/state/preferences";
 import { PwaProvider, PwaStatus } from "@/pwa";
 import { VisitStorageProvider } from "@/state/visit-storage";
 import React from "react";
@@ -16,9 +17,9 @@ class ErrorBoundary extends React.Component<
   render() {
     return this.state.failed ? (
       <div className="error-screen">
-        <h1>画面を表示できませんでした</h1>
-        <p>データや設定を確認し、再読み込みしてください。</p>
-        <button onClick={() => location.reload()}>再読み込み</button>
+        <h1>{t("画面を表示できませんでした")}</h1>
+        <p>{t("データや設定を確認し、再読み込みしてください。")}</p>
+        <button onClick={() => location.reload()}>{t("再読み込み")}</button>
       </div>
     ) : (
       this.props.children
@@ -27,6 +28,7 @@ class ErrorBoundary extends React.Component<
 }
 
 export function Provider({ children }: { children: React.ReactNode }) {
+  usePreferences();
   return (
     <ErrorBoundary>
       <PwaProvider>

@@ -1,9 +1,11 @@
+import { t, usePreferences } from "@/state/preferences";
 import { BottomNavigation, Navbar, Sidebar } from "@/components/navbar";
 import { ArrowUpRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 
 export default function Layout({ logout }: { logout: () => void }) {
+  usePreferences();
   const { pathname } = useLocation();
   const main = useRef<HTMLElement>(null);
   useEffect(() => {
@@ -21,7 +23,7 @@ export default function Layout({ logout }: { logout: () => void }) {
           main.current?.scrollIntoView();
         }}
       >
-        本文へ移動
+        {t("本文へ移動")}
       </a>
       <Sidebar logout={logout} />
       <div className="workspace">
@@ -30,11 +32,12 @@ export default function Layout({ logout }: { logout: () => void }) {
           <Outlet />
         </main>
         <footer>
-          FACTORY VISIT GUIDE{" "}
+          COMPANY VISIT GUIDE{t(" ")}
           <span>
-            発表概要に基づく案内です。{" "}
+            {t("発表概要に基づく案内です。")}
+            {t(" ")}
             <Link to="/guide">
-              見学ガイド
+              {t("見学ガイド")}
               <ArrowUpRight size={12} />
             </Link>
           </span>

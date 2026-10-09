@@ -1,30 +1,33 @@
+import { t, usePreferences } from "@/state/preferences";
 import { Card, PageTitle, SectionTitle } from "@/components/ui";
 import { event, formatDate, guide } from "@/data";
 import { Backpack, MapPin, Shirt } from "lucide-react";
 export default function GuidePage() {
+  usePreferences();
   return (
     <>
-      <PageTitle title="見学ガイド" />
+      <PageTitle title={t("見学ガイド")} />
       <Card className="guide-meeting">
         <span className="shortcut-icon blue">
           <MapPin />
         </span>
         <div>
-          <span className="eyebrow">集合場所</span>
-          <h2>{event.meetingPlace}</h2>
+          <span className="eyebrow">{t("集合場所")}</span>
+          <h2>{t(event.meetingPlace)}</h2>
           <p>
-            {formatDate(event.date)} · {event.meetingTime} 集合
+            {t(formatDate(event.date))} · {t(event.meetingTime)}
+            {t("集合")}
           </p>
-          <p>{event.meetingNote}</p>
+          <p>{t(event.meetingNote)}</p>
         </div>
       </Card>
       <div className="detail-grid">
         {guide.sections.map((section) => (
           <Card key={section.title}>
-            <SectionTitle title={section.title} />
+            <SectionTitle title={t(section.title)} />
             <ul className="feature-list">
               {section.items.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item}>{t(item)}</li>
               ))}
             </ul>
           </Card>
@@ -32,33 +35,33 @@ export default function GuidePage() {
       </div>
       <div className="detail-grid">
         <Card>
-          <SectionTitle title="持ち物リスト" />
+          <SectionTitle title={t("持ち物リスト")} />
           <ul className="feature-list">
-            {guide.belongings.map((t) => (
-              <li key={t}>
+            {guide.belongings.map((item) => (
+              <li key={item}>
                 <Backpack size={18} />
-                {t}
+                {t(item)}
               </li>
             ))}
           </ul>
         </Card>
         <Card>
-          <SectionTitle title="服装について" />
+          <SectionTitle title={t("服装について")} />
           <ul className="feature-list">
-            {guide.clothing.map((t) => (
-              <li key={t}>
+            {guide.clothing.map((item) => (
+              <li key={item}>
                 <Shirt size={18} />
-                {t}
+                {t(item)}
               </li>
             ))}
           </ul>
         </Card>
       </div>
       <Card>
-        <SectionTitle title="安全に見学するために" />
+        <SectionTitle title={t("安全に見学するために")} />
         <ol className="rules">
-          {guide.precautions.map((t) => (
-            <li key={t}>{t}</li>
+          {guide.precautions.map((item) => (
+            <li key={item}>{t(item)}</li>
           ))}
         </ol>
       </Card>

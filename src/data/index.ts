@@ -1,3 +1,4 @@
+import { getLanguage } from "@/state/preferences";
 import type { Company, Schedule } from "@/types";
 import companyData from "./companies.json";
 import eventData from "./event.json";
@@ -34,7 +35,7 @@ export const scheduleState = (item: Schedule, now: number) => {
   return "past";
 };
 export const formatDate = (date: string) =>
-  new Intl.DateTimeFormat("ja-JP", {
+  new Intl.DateTimeFormat(getLanguage() === "ja" ? "ja-JP" : "en-US", {
     timeZone: "Asia/Tokyo",
     month: "long",
     day: "numeric",

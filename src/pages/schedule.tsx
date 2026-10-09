@@ -1,3 +1,4 @@
+import { t, usePreferences } from "@/state/preferences";
 import Timeline from "@/components/Timeline";
 import { PageTitle } from "@/components/ui";
 import { event, formatDate, schedule } from "@/data";
@@ -5,6 +6,7 @@ import { useNow } from "@/hooks/useNow";
 import { Info } from "lucide-react";
 import { useState } from "react";
 export default function SchedulePage() {
+  usePreferences();
   const days = [...new Set(schedule.map((s) => s.date))];
   const [day, setDay] = useState(() => {
     const today = new Intl.DateTimeFormat("sv-SE", {
@@ -15,23 +17,23 @@ export default function SchedulePage() {
   const now = useNow();
   return (
     <>
-      <PageTitle title="スケジュール" />
-      <div className="day-tabs" aria-label="見学日">
+      <PageTitle title={t("スケジュール")} />
+      <div className="day-tabs" aria-label={t("見学日")}>
         {days.map((d) => (
           <button
             key={d}
             className={day === d ? "selected" : ""}
             aria-pressed={day === d}
-            aria-label={formatDate(d)}
+            aria-label={t(formatDate(d))}
             onClick={() => setDay(d)}
           >
-            {formatDate(d).replace("月", "/").replace("日", "")}
+            {t(formatDate(d).replace("月", "/").replace("日", ""))}
           </button>
         ))}
       </div>
       <p className="quiet-note">
         <Info size={16} />
-        現在の予定は端末の日時をもとに表示します。
+        {t("現在の予定は端末の日時をもとに表示します。")}
       </p>
       <Timeline items={schedule.filter((s) => s.date === day)} now={now} />
     </>

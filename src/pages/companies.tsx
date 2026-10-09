@@ -1,12 +1,14 @@
+import { t, usePreferences } from "@/state/preferences";
 import { EmptyState, PageTitle } from "@/components/ui";
 import { assetUrl } from "@/config/assets";
 import { companies } from "@/data";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function CompaniesPage() {
+  usePreferences();
   return (
     <>
-      <PageTitle title="企業情報" />
+      <PageTitle title={t("企業情報")} />
       <div className="company-grid">
         {companies.map((c, i) => (
           <Link
@@ -15,18 +17,18 @@ export default function CompaniesPage() {
             to={`/companies/${c.id}`}
           >
             <div className={`company-image tone-${i}`}>
-              <img src={assetUrl(c.image)} alt={`${c.name}の仮イメージ`} />
-              <span className="badge">VISIT 0{i + 1}</span>
+              <img src={assetUrl(c.image)} alt={t("企業ビルのイラスト")} />
+              <span className="badge">VISIT 0{t(i + 1)}</span>
             </div>
             <div className="company-body">
-              <span className="eyebrow">{c.industry}</span>
+              <span className="eyebrow">{t(c.industry)}</span>
               <h2>
-                {c.name}
+                {t(c.name)}
                 <ArrowUpRight size={22} />
               </h2>
-              <p>{c.description}</p>
+              <p>{t(c.description)}</p>
               <span className="text-link">
-                企業を詳しく見る
+                {t("企業を詳しく見る")}
                 <ArrowRight size={18} />
               </span>
             </div>
@@ -34,7 +36,7 @@ export default function CompaniesPage() {
         ))}
       </div>
       {companies.length === 0 && (
-        <EmptyState>企業情報はまだ登録されていません。</EmptyState>
+        <EmptyState>{t("企業情報はまだ登録されていません。")}</EmptyState>
       )}
     </>
   );

@@ -1051,7 +1051,7 @@ details + .button {
   inset: 0;
   background:
     linear-gradient(90deg, #102b4ce6, #14385ba8),
-    url("/images/factory.svg") center/cover;
+    url("/images/company.svg") center/cover;
   z-index: -1;
 }
 .login-intro h1 {
@@ -1879,4 +1879,271 @@ button:disabled {
   .train .aisle {
     font-size: 8px;
   }
+}
+/* Display preferences */
+:root {
+  color-scheme: light;
+}
+.display-controls,
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.display-controls {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.language-switch {
+  padding: 3px 5px;
+  border: 1px solid var(--border);
+  background: #ffffffb3;
+  border-radius: 10px;
+}
+.language-switch > svg {
+  margin: 0 3px;
+  color: var(--muted);
+}
+.language-switch button,
+.theme-switch {
+  border: 0;
+  border-radius: 7px;
+  min-height: 38px;
+  padding: 5px 9px;
+  background: transparent;
+  font-size: 12px;
+}
+.language-switch button[aria-pressed="true"] {
+  background: #337bee;
+  color: white;
+}
+.theme-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 40px;
+  border: 1px solid var(--border);
+  background: #ffffffb3;
+}
+.expanded {
+  margin-bottom: 24px;
+}
+.login-controls {
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  z-index: 3;
+}
+.login-controls .language-switch,
+.login-controls .theme-switch {
+  background: #f6faff;
+  color: #10233f;
+}
+.login-controls small {
+  max-width: 250px;
+  background: #f6faff;
+  padding: 8px;
+  border-radius: 8px;
+}
+html[lang="en"] .header > div:first-child {
+  font-size: 12px;
+}
+html[lang="en"] .hero h1 {
+  max-width: 580px;
+  font-size: clamp(23px, 3vw, 32px);
+  line-height: 1.4;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  color: #e7eef9;
+  background: #101b2d;
+  --muted: #acbdd3;
+  --border: #33475f;
+  --blue: #80b4ff;
+}
+[data-theme="dark"] .workspace {
+  background:
+    radial-gradient(ellipse at 90% 5%, #203651, transparent 45%), #101b2d;
+}
+[data-theme="dark"] :is(.glass-card, .sidebar, .bottom-nav, .login-panel) {
+  background: #19283bee;
+  border-color: #33475f;
+  box-shadow: 0 8px 32px #00000020;
+}
+[data-theme="dark"]
+  :is(
+    p,
+    small,
+    .meta,
+    .subtle,
+    .quiet-note,
+    .eyebrow,
+    .card-kicker,
+    .header-sub,
+    .icon-button,
+    .logout,
+    .bus-front,
+    .aisle,
+    .sidebar nav a,
+    .bottom-nav a,
+    .sidebar-bottom > small,
+    .section-title a
+  ) {
+  color: #b5c5d9;
+}
+[data-theme="dark"]
+  :is(.header, footer, .card-bottom, .login-disclaimer, .password-field) {
+  border-color: #33475f;
+}
+[data-theme="dark"]
+  :is(
+    .language-switch,
+    .theme-switch,
+    .password-field,
+    select,
+    textarea,
+    .bus,
+    .company-inline,
+    .checklist label,
+    .sample-pill,
+    .badge,
+    .timeline-item.past .timeline-content
+  ) {
+  background: #22364e;
+  color: #dbe8f9;
+  border-color: #405772;
+}
+[data-theme="dark"] input {
+  color: #e7eef9;
+}
+[data-theme="dark"]
+  :is(.meeting-card, .timeline-item.current .timeline-content) {
+  background: #203a56;
+  border-color: #4c79b2;
+}
+[data-theme="dark"]
+  :is(.secondary, .badge.blue, .sidebar nav a.active, .bottom-nav a.active) {
+  background: #254266;
+  color: #a7cdff;
+  border-color: #405d83;
+}
+[data-theme="dark"]
+  :is(.icon-button:hover, .sidebar nav a:hover, .bus-front span:last-child) {
+  background: #2e4562;
+}
+[data-theme="dark"] .day-tabs button {
+  color: #b5c5d9;
+}
+[data-theme="dark"] .day-tabs button.active {
+  color: #a7cdff;
+  border-color: #80b4ff;
+}
+[data-theme="dark"] .pwa-status {
+  background: #233a53;
+  color: #c9dcf4;
+}
+[data-theme="dark"]
+  :is(.text-link, .company-info h2, .meeting-time strong, .plan-time strong) {
+  color: #9ec6ff;
+}
+[data-theme="dark"] .error {
+  color: #ffabab;
+}
+[data-theme="dark"] .storage-warning {
+  background: #4d3c20;
+  color: #ffe3a4;
+}
+[data-theme="dark"] .skip-link {
+  background: #19283b;
+  color: #e7eef9;
+}
+[data-theme="dark"] :is(.blue, .group-blue) {
+  background: #25466e;
+  color: #b1d2ff;
+}
+[data-theme="dark"] :is(.cyan) {
+  background: #214451;
+  color: #9bd8ed;
+}
+[data-theme="dark"] :is(.mint, .group-mint) {
+  background: #25463e;
+  color: #a6dec8;
+}
+[data-theme="dark"] :is(.violet, .group-violet) {
+  background: #3f355e;
+  color: #d1c1ff;
+}
+[data-theme="dark"] .amber {
+  background: #4a3d25;
+  color: #eed09a;
+}
+[data-theme="dark"] .rose {
+  background: #4f3041;
+  color: #f0b5cb;
+}
+[data-theme="dark"] .group-gray {
+  background: #333f50;
+  color: #c7d0dc;
+}
+[data-theme="dark"] .announcement-mini .badge {
+  background: #4a3d25;
+  color: #eed09a;
+}
+[data-theme="dark"] .hero :is(h1, p, .hero-meta) {
+  color: #eaf3ff;
+}
+[data-theme="dark"] .login-intro .badge {
+  background: #ffffff15;
+  color: #d3e4f4;
+}
+@media (max-width: 1100px) {
+  .header {
+    padding-inline: 24px;
+  }
+  .header-sub,
+  .header-actions .sample-pill {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    height: auto;
+    min-height: 100px;
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 10px;
+  }
+  .header > div:first-child {
+    width: 100%;
+  }
+  .header-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .header-actions .display-controls {
+    margin-right: auto;
+  }
+  .header-actions .icon-button {
+    width: 36px;
+    height: 38px;
+  }
+  .login-controls {
+    top: 15px;
+    right: 15px;
+  }
+  .login-screen {
+    padding-top: 85px;
+  }
+  html[lang="en"] .login-intro h1 {
+    font-size: 28px;
+  }
+  html[lang="en"] .bottom-nav a {
+    font-size: 10px;
+  }
+}
+[data-theme="dark"] .day-tabs button.selected {
+  color: #a7cdff;
+  border-color: #80b4ff;
 }

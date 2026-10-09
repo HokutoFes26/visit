@@ -1,15 +1,18 @@
+import { DisplayControls } from "@/components/display-controls";
+import { t, usePreferences } from "@/state/preferences";
 import { event } from "@/data";
 import {
   ArrowRight,
   Eye,
   EyeOff,
-  Factory,
+  Building2,
   LockKeyhole,
   ShieldCheck,
 } from "lucide-react";
 import { useState, type FormEvent } from "react";
 const password = import.meta.env.VITE_VISIT_PASSWORD || "factory2026";
 export default function Login({ onLogin }: { onLogin: () => void }) {
+  usePreferences();
   const [value, setValue] = useState("");
   const [visible, setVisible] = useState(false);
   const [error, setError] = useState("");
@@ -23,17 +26,20 @@ export default function Login({ onLogin }: { onLogin: () => void }) {
   }
   return (
     <div className="login-screen">
+      <div className="login-controls">
+        <DisplayControls />
+      </div>
       <div className="login-art" />
       <div className="login-intro">
-        <h1>工場見学</h1>
-        <span className="badge">県外企業見学 · 発表概要版</span>
+        <h1>{t("県外企業見学")}</h1>
+        <span className="badge">{t("県外企業見学 · 発表概要版")}</span>
       </div>
       <form onSubmit={submit} className="glass-card login-panel">
         <span className="brand-icon">
-          <Factory size={30} />
+          <Building2 size={30} />
         </span>
-        <h2>ログイン</h2>
-        <label htmlFor="password">見学用パスワード</label>
+        <h2>{t("ログイン")}</h2>
+        <label htmlFor="password">{t("見学用パスワード")}</label>
         <div className="password-field">
           <LockKeyhole size={19} />
           <input
@@ -49,27 +55,29 @@ export default function Login({ onLogin }: { onLogin: () => void }) {
           <button
             type="button"
             onClick={() => setVisible(!visible)}
-            aria-label={visible ? "パスワードを隠す" : "パスワードを表示"}
+            aria-label={t(visible ? "パスワードを隠す" : "パスワードを表示")}
           >
             {visible ? <EyeOff size={20} /> : <Eye size={20} />}
           </button>
         </div>
         {error && (
           <p id="login-error" role="alert" className="error">
-            {error}
+            {t(error)}
           </p>
         )}
         <button className="button primary" type="submit">
-          見学ガイドをひらく
+          {t("見学ガイドをひらく")}
           <ArrowRight size={19} />
         </button>
         {!import.meta.env.VITE_VISIT_PASSWORD && (
-          <small className="demo-password">{event.passwordHint}</small>
+          <small className="demo-password">{t(event.passwordHint)}</small>
         )}
         <div className="login-disclaimer">
           <ShieldCheck size={18} />
           <small>
-            簡易的な閲覧ゲートです。個人情報・機密情報を保護する認証ではありません。
+            {t(
+              "簡易的な閲覧ゲートです。個人情報・機密情報を保護する認証ではありません。",
+            )}
           </small>
         </div>
       </form>

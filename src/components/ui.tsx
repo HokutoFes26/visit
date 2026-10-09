@@ -1,3 +1,4 @@
+import { t, usePreferences } from "@/state/preferences";
 import { ArrowUpRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
@@ -8,6 +9,7 @@ export function Card({
   children: ReactNode;
   className?: string;
 }) {
+  usePreferences();
   return <section className={`glass-card ${className}`}>{children}</section>;
 }
 export function PageTitle({
@@ -19,11 +21,12 @@ export function PageTitle({
   title: string;
   description?: string;
 }) {
+  usePreferences();
   return (
     <div className="page-title">
-      {eyebrow && <span className="eyebrow">{eyebrow}</span>}
-      <h1>{title}</h1>
-      {description && <p>{description}</p>}
+      {eyebrow && <span className="eyebrow">{t(eyebrow)}</span>}
+      <h1>{t(title)}</h1>
+      {description && <p>{t(description)}</p>}
     </div>
   );
 }
@@ -36,12 +39,13 @@ export function SectionTitle({
   to?: string;
   link?: string;
 }) {
+  usePreferences();
   return (
     <div className="section-title">
-      <h2>{title}</h2>
+      <h2>{t(title)}</h2>
       {to && (
         <Link to={to}>
-          {link}
+          {t(link)}
           <ArrowUpRight size={16} />
         </Link>
       )}
@@ -49,6 +53,7 @@ export function SectionTitle({
   );
 }
 export function EmptyState({ children }: { children: ReactNode }) {
+  usePreferences();
   return (
     <Card>
       <p>{children}</p>

@@ -1,3 +1,4 @@
+import { t, usePreferences } from "@/state/preferences";
 import { validateData } from "@/data";
 import Layout from "@/layouts/default";
 import AnnouncementsPage from "@/pages/announcements";
@@ -16,6 +17,7 @@ import { useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 const AUTH_KEY = "factory-visit:gate:v1";
 export default function App() {
+  usePreferences();
   const [authenticated, setAuthenticated] = useState(() => {
     try {
       return sessionStorage.getItem(AUTH_KEY) === "open";
@@ -48,9 +50,9 @@ export default function App() {
   if (errors.length)
     return (
       <div className="error-screen" role="alert">
-        <h1>データの設定を確認してください</h1>
+        <h1>{t("データの設定を確認してください")}</h1>
         {errors.map((e, i) => (
-          <p key={i}>{e}</p>
+          <p key={i}>{t(e)}</p>
         ))}
       </div>
     );
@@ -59,7 +61,7 @@ export default function App() {
     <>
       {storageWarning && (
         <div className="storage-warning" role="alert">
-          {storageWarning}
+          {t(storageWarning)}
         </div>
       )}
       <Routes>

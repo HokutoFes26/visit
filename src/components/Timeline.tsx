@@ -1,3 +1,4 @@
+import { t, usePreferences } from "@/state/preferences";
 import { assetUrl } from "@/config/assets";
 import { ArrowUpRight, Bus, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -9,10 +10,11 @@ export default function Timeline({
   items: Schedule[];
   now: number;
 }) {
+  usePreferences();
   return (
     <div className="timeline">
       {items.length === 0 ? (
-        <p>この日の予定はまだ登録されていません。</p>
+        <p>{t("この日の予定はまだ登録されていません。")}</p>
       ) : (
         items.map((item) => {
           const state = scheduleState(item, now);
@@ -20,34 +22,40 @@ export default function Timeline({
           return (
             <article className={`timeline-item ${state}`} key={item.id}>
               <div className="timeline-time">
-                <strong>{item.startTime || "未定"}</strong>
+                <strong>{t(item.startTime || "未定")}</strong>
                 {item.endTime && (
                   <span>
-                    {item.endTime}
-                    {item.id === "train" ? "頃" : ""}
+                    {t(item.endTime)}
+                    {t(item.id === "train" ? "頃" : "")}
                   </span>
                 )}
               </div>
               <div className="timeline-dot" />
               <div className="glass-card timeline-content">
                 {state === "current" && (
-                  <span className="badge blue">現在の予定</span>
+                  <span className="badge blue">{t("現在の予定")}</span>
                 )}
-                <h2>{item.title}</h2>
-                {item.timeNote && <p className="quiet-note">{item.timeNote}</p>}
-                <p className="meta">{item.date.slice(5).replace("-", "/")}</p>
+                <h2>{t(item.title)}</h2>
+                {item.timeNote && (
+                  <p className="quiet-note">{t(item.timeNote)}</p>
+                )}
+                <p className="meta">
+                  {t(item.date.slice(5).replace("-", "/"))}
+                </p>
                 <p className="meta">
                   <MapPin size={15} />
-                  {item.location}
+                  {t(item.location)}
                 </p>
-                <p>{item.description}</p>
+                <p>{t(item.description)}</p>
                 {item.transport && (
                   <span className="meta">
                     <Bus size={16} />
-                    {item.transport}
-                    {item.travelMinutes > 0
-                      ? ` · 約${item.travelMinutes}分`
-                      : ""}
+                    {t(item.transport)}
+                    {t(
+                      item.travelMinutes > 0
+                        ? t(" · 約{minutes}分", { minutes: item.travelMinutes })
+                        : "",
+                    )}
                   </span>
                 )}
                 {company && (
@@ -57,11 +65,11 @@ export default function Timeline({
                   >
                     <img
                       src={assetUrl(company.image)}
-                      alt="仮イラスト（実際の訪問先とは異なります）"
+                      alt={t("仮イラスト（実際の訪問先とは異なります）")}
                     />
                     <span>
-                      {company.name}
-                      <small>企業紹介を見る</small>
+                      {t(company.name)}
+                      <small>{t("企業紹介を見る")}</small>
                     </span>
                     <ArrowUpRight size={20} />
                   </Link>
