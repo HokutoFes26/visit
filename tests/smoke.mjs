@@ -26,7 +26,7 @@ const login = async (target = page) => {
     .getByLabel("見学用パスワード")
     .fill(process.env.TEST_PASSWORD || "factory2026");
   await target.getByRole("button", { name: "見学ガイドをひらく" }).click();
-  await target.getByRole("heading", { name: "工場見学" }).waitFor();
+  await target.getByRole("heading", { name: "県外企業見学" }).waitFor();
 };
 try {
   await page.goto(base);
@@ -45,7 +45,7 @@ try {
   );
   await login();
   await page.reload();
-  await page.getByRole("heading", { name: "工場見学" }).waitFor();
+  await page.getByRole("heading", { name: "県外企業見学" }).waitFor();
   for (const width of [360, 390, 768, 1280]) {
     await page.setViewportSize({ width, height: 1000 });
     for (const route of [

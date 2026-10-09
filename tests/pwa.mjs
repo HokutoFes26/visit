@@ -17,7 +17,7 @@ const jsName = (await readdir("dist/assets")).find((n) =>
 const companies = JSON.parse(await readFile("src/data/companies.json", "utf8"));
 const newName = "index-update-test.js";
 const original = await readFile(`dist/assets/${jsName}`, "utf8");
-const updated = original.replace(companies[0].name, "更新テスト会社");
+const updated = original.replaceAll(companies[0].name, "更新テスト会社");
 assert.notEqual(original, updated);
 await writeFile(`${fixture}/assets/${newName}`, updated);
 const html = (await readFile("dist/index.html", "utf8")).replaceAll(
@@ -149,7 +149,7 @@ try {
   await offline.goto(base+'/');
   await login(offline);
   await expect(
-    offline.getByRole("heading", { name: "工場見学", exact: true }),
+    offline.getByRole("heading", { name: "県外企業見学", exact: true }),
   ).toBeVisible();
   await offline.close();
   for (const route of [
@@ -255,3 +255,4 @@ try {
   await browser.close();
   await new Promise((r) => server.close(r));
 }
+
