@@ -14,7 +14,7 @@ await cp("dist", fixture, { recursive: true });
 const jsName = (await readdir("dist/assets")).find((n) =>
   /^index-.*\.js$/.test(n),
 );
-const companies = JSON.parse(await readFile("src/data/companies.json", "utf8"));
+const companies = JSON.parse(await readFile("src/data/i/companies.json", "utf8"));
 const newName = "index-update-test.js";
 const original = await readFile(`dist/assets/${jsName}`, "utf8");
 const updated = original.replaceAll(companies[0].name, "更新テスト会社");

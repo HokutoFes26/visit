@@ -1,0 +1,28 @@
+.checklist {
+  display: grid;
+  gap: 8px;
+}
+
+.checklist label {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.checklist input {
+  accent-color: var(--accent-neon);
+  flex-shrink: 0;
+}
+
+.preparation {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+[data-theme="dark"] .checklist label {
+  background: #111111;
+  color: #ededed;
+  border-color: #222222;
+}

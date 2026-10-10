@@ -18,7 +18,6 @@ export const shortcuts = [
 import { Ellipsis, House } from "lucide-react";
 export const desktopLinks = [
   { to: "/", label: "ホーム", icon: House },
-  { to: "/schedule", label: "スケジュール", icon: CalendarDays },
   { to: "/companies", label: "企業情報", icon: Building2 },
   { to: "/guide", label: "見学ガイド", icon: BookOpen },
   { to: "/seats", label: "座席案内", icon: Users },
@@ -27,7 +26,9 @@ export const desktopLinks = [
   { to: "/more", label: "その他", icon: Ellipsis },
 ];
 export const mobileLinks = [
-  ...desktopLinks.slice(0, 3).map(link => link.to === "/schedule" ? {...link, label: "日程"} : link),
+  { to: "/", label: "ホーム", icon: House },
+  { to: "/schedule", label: "スケジュール", icon: CalendarDays },
+  { to: "/companies", label: "企業情報", icon: Building2 },
   { to: "/sightseeing", label: "東京観光", icon: Compass },
   { to: "/more", label: "その他", icon: Ellipsis },
 ];

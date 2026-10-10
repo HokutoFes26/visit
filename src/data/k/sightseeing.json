@@ -1,0 +1,473 @@
+{
+  "checkedAt": "2026-10-09",
+  "areas": [
+    {
+      "id": "tokyo",
+      "name": {
+        "ja": "東京駅周辺",
+        "en": "Tokyo Station"
+      },
+      "description": {
+        "ja": "東京駅の丸の内駅舎と皇居外苑。駅の丸の内側から歩いて巡れるエリアです。",
+        "en": "Explore the Marunouchi station building and the Imperial Palace Outer Garden on foot from Tokyo Station."
+      }
+    },
+    {
+      "id": "shinagawa",
+      "name": {
+        "ja": "品川周辺",
+        "en": "Shinagawa"
+      },
+      "description": {
+        "ja": "宿泊先の品川プリンスホテル周辺で楽しめるスポット。移動に時間をかけずに立ち寄りたいときに。",
+        "en": "Places around Shinagawa Prince Hotel for a visit without a long journey."
+      }
+    },
+    {
+      "id": "asakusa",
+      "name": {
+        "ja": "浅草・押上",
+        "en": "Asakusa & Oshiage"
+      },
+      "description": {
+        "ja": "浅草寺・仲見世・隅田川沿いから、押上の東京スカイツリーへ。駅間の移動と往復時間も計画に入れましょう。",
+        "en": "Explore Senso-ji, Nakamise and the Sumida River, or continue to Tokyo Skytree in Oshiage. Allow time to travel between areas and return."
+      }
+    },
+    {
+      "id": "harajuku",
+      "name": {
+        "ja": "原宿",
+        "en": "Harajuku"
+      },
+      "description": {
+        "ja": "明治神宮の緑豊かな参道を歩くエリア。入口から本殿までの徒歩時間も見込んで訪問しましょう。",
+        "en": "Walk the wooded approaches to Meiji Jingu. Allow time to reach the main shrine from the entrance."
+      }
+    },
+    {
+      "id": "tsukiji",
+      "name": {
+        "ja": "築地",
+        "en": "Tsukiji"
+      },
+      "description": {
+        "ja": "食の専門店が集まる築地場外市場。朝から昼の時間帯を中心に、各店の営業時間に合わせて計画しましょう。",
+        "en": "Explore specialist food shops at Tsukiji Outer Market. Plan around individual opening hours, mainly in the morning and at lunchtime."
+      }
+    },
+    {
+      "id": "akihabara",
+      "name": {
+        "ja": "秋葉原",
+        "en": "Akihabara"
+      },
+      "description": {
+        "ja": "家電・電子部品・パソコンやポップカルチャーの店を巡るエリア。興味のある店を事前に調べておくと楽しめます。",
+        "en": "Browse electronics, components, computers and pop-culture shops. Research stores that match your interests beforehand."
+      }
+    },
+    {
+      "id": "shiba",
+      "name": {
+        "ja": "芝・東京タワー",
+        "en": "Shiba & Tokyo Tower"
+      },
+      "description": {
+        "ja": "東京タワーを中心に、都心の景色を楽しむエリア。展望台へ行く場合はチケットと滞在時間を確認しましょう。",
+        "en": "Enjoy city views around Tokyo Tower. Check tickets and allow enough time if you plan to visit an observation deck."
+      }
+    }
+  ],
+  "spots": [
+    {
+      "id": "tokyo-station",
+      "areaId": "tokyo",
+      "enabled": true,
+      "name": {
+        "ja": "東京駅 丸の内駅舎",
+        "en": "Tokyo Station · Marunouchi building"
+      },
+      "description": {
+        "ja": "赤レンガの駅舎とドームが印象的な東京の玄関口。丸の内側の駅前広場から、駅舎と高層ビルが並ぶ景色を楽しめます。",
+        "en": "Tokyo’s landmark red-brick station with its distinctive domes. The Marunouchi plaza offers a view of historic architecture against modern towers."
+      },
+      "access": {
+        "ja": "東京駅の丸の内側出口から駅前広場へ。",
+        "en": "Exit Tokyo Station on the Marunouchi side for the station plaza."
+      },
+      "cost": {
+        "ja": "駅舎の外観・駅前広場の散策は無料",
+        "en": "Free to view the exterior and walk through the plaza"
+      },
+      "duration": {
+        "ja": "20〜30分",
+        "en": "20–30 min"
+      },
+      "note": {
+        "ja": "八重洲側とは反対側です。駅構内の移動にも余裕を持たせましょう。",
+        "en": "This is the opposite side from Yaesu. Allow time to cross the station."
+      },
+      "latitude": 35.68124,
+      "longitude": 139.76499,
+      "website": "https://www.tokyostationcity.com/learning/station_building/",
+      "sourceUrl": "https://www.gotokyo.org/jp/destinations/central-tokyo/tokyo-station-and-marunouchi/index.html"
+    },
+    {
+      "id": "imperial-garden",
+      "areaId": "tokyo",
+      "enabled": true,
+      "name": {
+        "ja": "皇居外苑・二重橋の眺め",
+        "en": "Imperial Palace Outer Garden"
+      },
+      "description": {
+        "ja": "広い芝生と黒松、濠や歴史的な門が調和する公園。皇居前広場から二重橋方面の景色を楽しむ散歩コースです。",
+        "en": "A spacious park of lawns, pine trees, moats and historic gates. Enjoy a walk through the plaza with views toward Nijubashi."
+      },
+      "access": {
+        "ja": "東京駅から皇居前広場（二重橋展望エリア）まで徒歩約15分。",
+        "en": "About 15 minutes on foot from Tokyo Station to the palace plaza and Nijubashi viewing area."
+      },
+      "cost": {
+        "ja": "皇居外苑は入園無料",
+        "en": "Free entry to the Outer Garden"
+      },
+      "duration": {
+        "ja": "40〜60分",
+        "en": "40–60 min"
+      },
+      "note": {
+        "ja": "皇居内部への入場ではありません。行事や警備による規制は公式案内を確認してください。",
+        "en": "This does not include entry inside the palace. Check official notices for event and security restrictions."
+      },
+      "latitude": 35.6797,
+      "longitude": 139.758,
+      "website": "https://www.env.go.jp/garden/kokyogaien/",
+      "sourceUrl": "https://www.env.go.jp/garden/kokyogaien/2_guide/kokyogaien_access.html"
+    },
+    {
+      "id": "aqua-park",
+      "areaId": "shinagawa",
+      "enabled": true,
+      "name": {
+        "ja": "マクセル アクアパーク品川",
+        "en": "Maxell Aqua Park Shinagawa"
+      },
+      "description": {
+        "ja": "品川プリンスホテル内の水族館。生きものと音・光の演出を楽しめる、ホテル周辺の屋内観光候補です。",
+        "en": "An aquarium inside Shinagawa Prince Hotel, combining marine life with sound and light. An indoor option near the hotel."
+      },
+      "access": {
+        "ja": "品川駅 高輪口から徒歩約2分。品川プリンスホテル内。",
+        "en": "About 2 minutes on foot from Shinagawa Station’s Takanawa Exit, inside Shinagawa Prince Hotel."
+      },
+      "cost": {
+        "ja": "有料・チケット条件は公式サイトで確認",
+        "en": "Admission fee; check the official website for ticket conditions"
+      },
+      "duration": {
+        "ja": "60〜90分",
+        "en": "60–90 min"
+      },
+      "note": {
+        "ja": "営業時間・公演時間・予約の要否を確認してから予定を組みましょう。",
+        "en": "Check opening hours, show times and reservation requirements before planning a visit."
+      },
+      "latitude": 35.62845,
+      "longitude": 139.736,
+      "website": "https://www.aqua-park.jp/aqua/",
+      "sourceUrl": "https://www.aqua-park.jp/aqua/access/"
+    },
+    {
+      "id": "sensoji",
+      "areaId": "asakusa",
+      "enabled": true,
+      "name": {
+        "ja": "浅草寺・雷門",
+        "en": "Senso-ji Temple & Kaminarimon"
+      },
+      "description": {
+        "ja": "大きな提灯の雷門から、浅草寺の本堂へ。浅草を代表する寺院で、参拝や歴史ある街並みを楽しめます。",
+        "en": "Walk from Kaminarimon’s giant lantern toward Senso-ji’s main hall. This landmark temple is a starting point for exploring historic Asakusa."
+      },
+      "access": {
+        "ja": "東京メトロ銀座線・東武線の浅草駅から徒歩約5分。",
+        "en": "About 5 minutes on foot from Asakusa Station on the Tokyo Metro Ginza or Tobu line."
+      },
+      "cost": {
+        "ja": "境内の散策は無料・お守りなどは別途",
+        "en": "Free to walk the grounds; charms and purchases cost extra"
+      },
+      "duration": {
+        "ja": "30〜45分",
+        "en": "30–45 min"
+      },
+      "note": {
+        "ja": "つくばエクスプレスの浅草駅は別の場所です。本堂の開堂時間は公式情報を確認してください。",
+        "en": "The Tsukuba Express Asakusa Station is in a different location. Check official opening times for the main hall."
+      },
+      "latitude": 35.71477,
+      "longitude": 139.79665,
+      "website": "https://www.senso-ji.jp/",
+      "sourceUrl": "https://www.senso-ji.jp/access/"
+    },
+    {
+      "id": "nakamise",
+      "areaId": "asakusa",
+      "enabled": true,
+      "name": {
+        "ja": "仲見世商店街",
+        "en": "Nakamise Shopping Street"
+      },
+      "description": {
+        "ja": "雷門と宝蔵門をつなぐ参道の商店街。お土産や和菓子のお店が並び、浅草寺と合わせて巡りやすい場所です。",
+        "en": "The shopping street along the approach from Kaminarimon to Hozomon, lined with souvenir and sweet shops. Combine it with a visit to Senso-ji."
+      },
+      "access": {
+        "ja": "浅草駅から雷門へ向かい、門をくぐると仲見世です。",
+        "en": "Walk from Asakusa Station to Kaminarimon; Nakamise begins beyond the gate."
+      },
+      "cost": {
+        "ja": "通りの散策は無料・買い物代は別途",
+        "en": "Free to stroll; purchases cost extra"
+      },
+      "duration": {
+        "ja": "20〜40分",
+        "en": "20–40 min"
+      },
+      "note": {
+        "ja": "各店の営業時間は異なります。飲食場所や撮影のルールは店頭の案内に従ってください。",
+        "en": "Shop hours vary. Follow posted rules for eating and photography."
+      },
+      "latitude": 35.71245,
+      "longitude": 139.79662,
+      "website": "https://www.senso-ji.jp/guide/guide02.html",
+      "sourceUrl": "https://t-navi.city.taito.lg.jp/spot/1002"
+    },
+    {
+      "id": "sumida-park",
+      "areaId": "asakusa",
+      "enabled": true,
+      "name": {
+        "ja": "隅田公園・隅田川沿い",
+        "en": "Sumida Park & riverside"
+      },
+      "description": {
+        "ja": "浅草から隅田川沿いへ少し足を延ばす散歩コース。川や橋、対岸の東京スカイツリーを眺めながら休憩できます。",
+        "en": "Extend your Asakusa walk to the Sumida River. Enjoy views of the river, bridges and Tokyo Skytree across the water."
+      },
+      "access": {
+        "ja": "浅草駅・吾妻橋付近から、台東区側の川沿いへ。",
+        "en": "Walk to the Taito-side riverside from Asakusa Station and Azumabashi Bridge."
+      },
+      "cost": {
+        "ja": "公園の散策は無料",
+        "en": "Free to walk through the park"
+      },
+      "duration": {
+        "ja": "20〜30分",
+        "en": "20–30 min"
+      },
+      "note": {
+        "ja": "地図のピンは浅草側の川沿いの目安です。天候や日没、帰りの時間に合わせて歩く範囲を決めましょう。",
+        "en": "The pin indicates an approximate riverside point on the Asakusa side. Plan your walk around weather, daylight and your return time."
+      },
+      "latitude": 35.71225,
+      "longitude": 139.80205,
+      "website": "https://www.gotokyo.org/jp/destinations/eastern-tokyo/asakusa/index.html",
+      "sourceUrl": "https://www.gotokyo.org/jp/destinations/eastern-tokyo/asakusa/index.html"
+    },
+    {
+      "id": "tokyo-skytree",
+      "areaId": "asakusa",
+      "enabled": true,
+      "name": {
+        "ja": "東京スカイツリー",
+        "en": "Tokyo Skytree"
+      },
+      "description": {
+        "ja": "押上のランドマーク。展望台から東京の街を見渡せるほか、周辺の東京スカイツリータウンで買い物や食事も楽しめます。",
+        "en": "An Oshiage landmark with observation decks overlooking Tokyo. Tokyo Skytree Town also offers shopping and dining."
+      },
+      "access": {
+        "ja": "押上（スカイツリー前）駅、またはとうきょうスカイツリー駅を利用。浅草とは別の駅です。",
+        "en": "Use Oshiage (Skytree-mae) or Tokyo Skytree Station. These are different stations from Asakusa."
+      },
+      "cost": {
+        "ja": "展望台は有料・券種や予約条件は公式サイトで確認",
+        "en": "Observation decks require paid tickets; check official ticket and reservation conditions"
+      },
+      "duration": {
+        "ja": "60〜90分",
+        "en": "60–90 min"
+      },
+      "note": {
+        "ja": "天候で眺望が変わります。入場時間や混雑を確認し、浅草からの移動時間も確保しましょう。",
+        "en": "Views depend on the weather. Check entry times and crowds, and allow time for the journey from Asakusa."
+      },
+      "latitude": 35.71006,
+      "longitude": 139.8107,
+      "website": "https://www.tokyo-skytree.jp/",
+      "sourceUrl": "https://www.tokyo-skytree.jp/access/public-transport/"
+    },
+    {
+      "id": "meiji-jingu",
+      "areaId": "harajuku",
+      "enabled": true,
+      "name": {
+        "ja": "明治神宮",
+        "en": "Meiji Jingu"
+      },
+      "description": {
+        "ja": "原宿・代々木の街に隣接する、森に囲まれた神社。参道を歩き、本殿で参拝しながら落ち着いた時間を過ごせます。",
+        "en": "A shrine surrounded by woodland beside Harajuku and Yoyogi. Walk the approaches and visit the main shrine for a quieter experience."
+      },
+      "access": {
+        "ja": "原宿駅・明治神宮前〈原宿〉駅側の原宿口から徒歩で参道へ。入口から本殿まではさらに歩きます。",
+        "en": "Enter the approach at the Harajuku gate near Harajuku or Meiji-jingumae Station. The main shrine is a further walk inside."
+      },
+      "cost": {
+        "ja": "参拝は無料・御苑やミュージアムは別途確認",
+        "en": "Shrine worship is free; check separate conditions for the Inner Garden and museum"
+      },
+      "duration": {
+        "ja": "45〜60分",
+        "en": "45–60 min"
+      },
+      "note": {
+        "ja": "開門・閉門時間は季節によって変わります。夕方の訪問は公式サイトを確認し、参拝のマナーを守りましょう。",
+        "en": "Gate hours vary by season. Check the official website before an evening visit and observe shrine etiquette."
+      },
+      "latitude": 35.6764,
+      "longitude": 139.69933,
+      "website": "https://www.meijijingu.or.jp/",
+      "sourceUrl": "https://www.meijijingu.or.jp/access/"
+    },
+    {
+      "id": "tsukiji-market",
+      "areaId": "tsukiji",
+      "enabled": true,
+      "name": {
+        "ja": "築地場外市場",
+        "en": "Tsukiji Outer Market"
+      },
+      "description": {
+        "ja": "魚介や食材、調理道具の専門店、飲食店が集まる市場。店を巡りながら、東京の食文化に触れられます。",
+        "en": "A market of seafood, specialist ingredients, kitchenware and restaurants. Explore the shops to discover Tokyo’s food culture."
+      },
+      "access": {
+        "ja": "都営大江戸線の築地市場駅、または東京メトロ日比谷線の築地駅から徒歩でアクセス。",
+        "en": "Walk from Tsukijishijo Station on the Toei Oedo Line or Tsukiji Station on the Tokyo Metro Hibiya Line."
+      },
+      "cost": {
+        "ja": "散策は無料・買い物や飲食代は別途",
+        "en": "Free to explore; shopping and meals cost extra"
+      },
+      "duration": {
+        "ja": "45〜60分",
+        "en": "45–60 min"
+      },
+      "note": {
+        "ja": "店舗ごとに営業時間・休業日が異なります。夜の観光には向かない店も多いため、事前に確認してください。飲食は各店の案内に従いましょう。",
+        "en": "Hours and closing days vary by shop. Many shops are unsuitable for evening visits; check beforehand and follow each shop’s dining rules."
+      },
+      "latitude": 35.6655,
+      "longitude": 139.7707,
+      "website": "https://www.tsukiji.or.jp/",
+      "sourceUrl": "https://www.tsukiji.or.jp/access/"
+    },
+    {
+      "id": "akihabara-electric-town",
+      "areaId": "akihabara",
+      "enabled": true,
+      "name": {
+        "ja": "秋葉原電気街",
+        "en": "Akihabara Electric Town"
+      },
+      "description": {
+        "ja": "家電やパソコン、電子部品からアニメ・ゲーム関連まで、多彩な店が集まる街。技術やものづくりに興味がある人にもおすすめです。",
+        "en": "A district of electronics, computers, components, anime and gaming shops. A good option for anyone interested in technology and making things."
+      },
+      "access": {
+        "ja": "JR秋葉原駅の電気街口から中央通り周辺へ。東京メトロ日比谷線なども利用できます。",
+        "en": "Head from JR Akihabara Station’s Electric Town Exit toward Chuo-dori. The Tokyo Metro Hibiya Line also serves the area."
+      },
+      "cost": {
+        "ja": "街の散策は無料・買い物や施設利用は別途",
+        "en": "Free to walk the streets; purchases and attractions cost extra"
+      },
+      "duration": {
+        "ja": "45〜90分",
+        "en": "45–90 min"
+      },
+      "note": {
+        "ja": "店舗ごとに営業時間が異なります。撮影可否や店内ルールを確認し、買い物の予算も決めておきましょう。",
+        "en": "Hours vary by store. Check photography and in-store rules, and decide on a shopping budget."
+      },
+      "latitude": 35.6996,
+      "longitude": 139.7713,
+      "website": "https://akiba.or.jp/",
+      "sourceUrl": "https://www.gotokyo.org/jp/spot/55/index.html"
+    },
+    {
+      "id": "tokyo-tower",
+      "areaId": "shiba",
+      "enabled": true,
+      "name": {
+        "ja": "東京タワー",
+        "en": "Tokyo Tower"
+      },
+      "description": {
+        "ja": "赤と白の姿で親しまれる東京のランドマーク。展望台から都心の景色を楽しんだり、足元からタワーの大きさを感じたりできます。",
+        "en": "Tokyo’s familiar red-and-white landmark. Enjoy city views from an observation deck or appreciate the tower from ground level."
+      },
+      "access": {
+        "ja": "赤羽橋駅、御成門駅、神谷町駅などから徒歩でアクセス。利用する出口と経路は公式案内で確認。",
+        "en": "Walk from Akabanebashi, Onarimon or Kamiyacho Station. Check the official guide for the appropriate exit and route."
+      },
+      "cost": {
+        "ja": "展望台は有料・券種と料金は公式サイトで確認",
+        "en": "Observation decks require paid tickets; check official ticket types and prices"
+      },
+      "duration": {
+        "ja": "45〜90分",
+        "en": "45–90 min"
+      },
+      "note": {
+        "ja": "展望台の営業時間・予約条件を確認してください。外観を見るだけの場合も、帰りの移動時間を確保しましょう。",
+        "en": "Check deck opening hours and reservation conditions. Allow time for your return journey even if you only view the exterior."
+      },
+      "latitude": 35.65858,
+      "longitude": 139.74543,
+      "website": "https://www.tokyotower.co.jp/",
+      "sourceUrl": "https://www.tokyotower.co.jp/access/railroad/"
+    }
+  ],
+  "origins": [
+    {
+      "id": "tokyo",
+      "name": {
+        "ja": "東京駅",
+        "en": "Tokyo Station"
+      },
+      "query": "Tokyo Station, Tokyo, Japan"
+    },
+    {
+      "id": "shinagawa",
+      "name": {
+        "ja": "品川駅",
+        "en": "Shinagawa Station"
+      },
+      "query": "Shinagawa Station, Tokyo, Japan"
+    },
+    {
+      "id": "shinagawa-prince",
+      "name": {
+        "ja": "品川プリンスホテル",
+        "en": "Shinagawa Prince Hotel"
+      },
+      "query": "Shinagawa Prince Hotel, 4-10-30 Takanawa, Minato City, Tokyo, Japan"
+    }
+  ]
+}

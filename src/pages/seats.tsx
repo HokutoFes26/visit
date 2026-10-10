@@ -1,7 +1,17 @@
 import { t, usePreferences } from "@/state/preferences";
-import { Card, PageTitle, SectionTitle } from "@/components/ui";
+import {
+  Badge,
+  Card,
+  List,
+  PageTitle,
+  SectionTitle,
+  Box,
+  Text,
+  Group,
+} from "@/components/ui";
 import { assetUrl } from "@/config/assets";
-import seats from "@/data/seats.json";
+import { seats } from "@/data";
+import "@/styles/seats.css";
 
 export default function SeatsPage() {
   usePreferences();
@@ -59,22 +69,26 @@ export default function SeatsPage() {
                     key={seat.number}
                     aria-label={t("座席{number}、{group}", {
                       number: seat.number,
-                      group: t(group?.label || ""),
+                      group: group?.label ? t(group.label) : "",
                     })}
                   >
-                    <strong>{t(seat.number)}</strong>
-                    <small>{t(short)}</small>
+                    <strong>{seat.number}</strong>
+                    <small>{t(short || "")}</small>
                   </div>
                 );
               }),
             )}
           </div>
         </div>
-        <ul>
+        <List spacing="xs" size="sm" mt="lg">
           {seats.notes.map((note) => (
-            <li key={note}>{t(note)}</li>
+            <List.Item key={note}>
+              <Text size="sm" c="dimmed">
+                {t(note)}
+              </Text>
+            </List.Item>
           ))}
-        </ul>
+        </List>
         <details>
           <summary>{t("配布資料の座席図を確認")}</summary>
           <a
@@ -91,21 +105,6 @@ export default function SeatsPage() {
             {t("原図を拡大表示")}
           </a>
         </details>
-      </Card>
-      <Card className="group-plan">
-        <SectionTitle title={t("グループ分け（未定）")} />
-        {seats.groupPlan.map((plan) => (
-          <p key={plan.size}>
-            {t("{size}人 × {count}グループ", {
-              size: plan.size,
-              count: plan.count,
-            })}
-          </p>
-        ))}
-        <p>{t("班長も決めます。NEC見学と移動時の点呼に使用します。")}</p>
-        <p className="quiet-note">
-          {t("個人名・班の割り当ては掲載していません。")}
-        </p>
       </Card>
     </>
   );

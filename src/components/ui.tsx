@@ -1,17 +1,83 @@
 import { t, usePreferences } from "@/state/preferences";
+import {
+  Card as MantineCard,
+  CardProps,
+  Title,
+  Text,
+  Group,
+  Stack,
+  Box,
+} from "@mantine/core";
 import { ArrowUpRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
+
+export {
+  Accordion,
+  ActionIcon,
+  Alert,
+  Badge,
+  Box,
+  Button,
+  Checkbox,
+  Collapse,
+  Divider,
+  Flex,
+  Grid,
+  Group,
+  List,
+  NativeSelect,
+  Paper,
+  PasswordInput,
+  ScrollArea,
+  SegmentedControl,
+  SimpleGrid,
+  Stack,
+  Tabs,
+  Text,
+  TextInput,
+  Textarea,
+  ThemeIcon,
+  Title,
+  UnstyledButton,
+} from "@mantine/core";
+
 export function Card({
   children,
   className = "",
-}: {
+  shadow = "xs",
+  padding = "lg",
+  radius = "32px",
+  withBorder = true,
+  id,
+  style,
+  ...props
+}: CardProps & {
   children: ReactNode;
   className?: string;
+  id?: string;
+  style?: React.CSSProperties;
 }) {
   usePreferences();
-  return <section className={`glass-card ${className}`}>{children}</section>;
+  return (
+    <MantineCard
+      id={id}
+      style={{
+        ...(padding === "lg" ? { padding: "18px 20px" } : {}),
+        ...style,
+      }}
+      shadow={shadow}
+      padding={padding === "lg" ? undefined : padding}
+      radius={radius}
+      withBorder={withBorder}
+      className={className}
+      {...props}
+    >
+      {children}
+    </MantineCard>
+  );
 }
+
 export function PageTitle({
   eyebrow,
   title,
@@ -23,13 +89,24 @@ export function PageTitle({
 }) {
   usePreferences();
   return (
-    <div className="page-title">
-      {eyebrow && <span className="eyebrow">{t(eyebrow)}</span>}
-      <h1>{t(title)}</h1>
-      {description && <p>{t(description)}</p>}
-    </div>
+    <Box className="page-title">
+      {eyebrow && (
+        <Text size="xs" fw={700} c="dimmed" tt="uppercase" lts={1} mb={4}>
+          {t(eyebrow)}
+        </Text>
+      )}
+      <Title order={1} size="h1" fw={800}>
+        {t(title)}
+      </Title>
+      {description && (
+        <Text size="sm" c="dimmed" mt={4}>
+          {t(description)}
+        </Text>
+      )}
+    </Box>
   );
 }
+
 export function SectionTitle({
   title,
   to,
@@ -41,22 +118,43 @@ export function SectionTitle({
 }) {
   usePreferences();
   return (
-    <div className="section-title">
-      <h2>{t(title)}</h2>
+    <Group
+      justify="space-between"
+      align="center"
+      my={0}
+      mb="md"
+      className="section-title"
+    >
+      <Title order={2} size="h3" fw={700}>
+        {t(title)}
+      </Title>
       {to && (
-        <Link to={to}>
+        <Link
+          to={to}
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 4,
+            fontSize: "0.8125rem",
+            fontWeight: 600,
+            color: "var(--foreground)",
+          }}
+        >
           {t(link)}
-          <ArrowUpRight size={16} />
+          <ArrowUpRight size={15} />
         </Link>
       )}
-    </div>
+    </Group>
   );
 }
+
 export function EmptyState({ children }: { children: ReactNode }) {
   usePreferences();
   return (
-    <Card>
-      <p>{children}</p>
+    <Card p="xl" style={{ textAlign: "center" }}>
+      <Text c="dimmed" size="sm">
+        {children}
+      </Text>
     </Card>
   );
 }

@@ -1,5 +1,6 @@
 import App from "@/App";
 import { Provider } from "@/provider";
+import "@mantine/core/styles.css";
 import "@/styles/globals.css";
 import "@/styles/monochrome.css";
 import "@/styles/refinement.css";

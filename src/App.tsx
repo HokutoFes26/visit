@@ -13,11 +13,14 @@ import SchedulePage from "@/pages/schedule";
 import SeatsPage from "@/pages/seats";
 import SettingsPage from "@/pages/settings";
 import SightseeingPage from "@/pages/sightseeing";
+import { CourseSelectModal } from "@/components/course-modal";
+import { isCourseDetermined } from "@/data/course";
 import { useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 const AUTH_KEY = "factory-visit:gate:v1";
 export default function App() {
   usePreferences();
+  const [needsCourseSelection] = useState(() => !isCourseDetermined());
   const [authenticated, setAuthenticated] = useState(() => {
     try {
       return sessionStorage.getItem(AUTH_KEY) === "open";
@@ -56,9 +59,16 @@ export default function App() {
         ))}
       </div>
     );
-  if (!authenticated) return <Login onLogin={login} />;
+  if (!authenticated)
+    return (
+      <>
+        <CourseSelectModal opened={needsCourseSelection} allowClose={false} />
+        <Login onLogin={login} />
+      </>
+    );
   return (
     <>
+      <CourseSelectModal opened={needsCourseSelection} allowClose={false} />
       {storageWarning && (
         <div className="storage-warning" role="alert">
           {t(storageWarning)}

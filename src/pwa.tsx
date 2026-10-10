@@ -6,6 +6,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { Button } from "@mantine/core";
 import { registerSW } from "virtual:pwa-register";
 
 interface InstallPrompt extends Event {
@@ -153,16 +154,18 @@ export function PwaProvider({ children }: { children: ReactNode }) {
       );
       return;
     }
-    if (!registration?.waiting) {
-      location.reload();
-      return;
+    const reload = () => location.reload();
+    navigator.serviceWorker.addEventListener("controllerchange", reload, {
+      once: true,
+    });
+    const fallbackTimer = setTimeout(reload, 250);
+
+    if (registration?.waiting) {
+      registration.waiting.postMessage({ type: "SKIP_WAITING" });
+    } else {
+      clearTimeout(fallbackTimer);
+      reload();
     }
-    navigator.serviceWorker.addEventListener(
-      "controllerchange",
-      () => location.reload(),
-      { once: true },
-    );
-    registration.waiting.postMessage({ type: "SKIP_WAITING" });
   }
   async function install() {
     if (!prompt) return;
@@ -229,22 +232,12 @@ export function PwaStatus() {
   const pwa = usePwa();
   return (
     <div className="pwa-status">
-      <span role="status">
-        {t(!pwa.online ? "オフライン · " : "")}
-        {t(
-          import.meta.env.DEV
-            ? "オフライン対応は本番プレビューで確認できます"
-            : pwa.ready
-              ? "オフライン準備完了"
-              : "オフライン未準備",
-        )}
-      </span>
       {pwa.update && (
         <div className="update-notice">
           <span>{t("新しい情報があります。")}</span>
-          <button className="button primary" onClick={pwa.apply}>
+          <Button variant="filled" color="blue" size="xs" onClick={pwa.apply}>
             {t("更新を適用")}
-          </button>
+          </Button>
         </div>
       )}
       {pwa.error && (
@@ -268,23 +261,28 @@ export function PwaSettings() {
           "初回はオンラインで開き、「オフライン準備完了」を確認してください。ブラウザのデータを削除すると再準備が必要です。外部サイトはオンライン接続が必要です。",
         )}
       </p>
-      <button
-        className="button secondary"
+      <Button
+        variant="light"
+        color="gray"
         disabled={pwa.checking}
         onClick={() => void pwa.check()}
       >
         {t(pwa.checking ? "確認中…" : "キャッシュ・更新を確認")}
-      </button>
+      </Button>
       {!import.meta.env.DEV && !pwa.ready && (
-        <button className="button secondary" onClick={() => void pwa.repair()}>
+        <Button variant="light" color="gray" onClick={() => void pwa.repair()}>
           {t("オフラインを再準備")}
-        </button>
+        </Button>
       )}
       <h2>{t("ホーム画面に追加")}</h2>
       {pwa.installable ? (
-        <button className="button primary" onClick={() => void pwa.install()}>
+        <Button
+          variant="filled"
+          color="blue"
+          onClick={() => void pwa.install()}
+        >
           {t("アプリをインストール")}
-        </button>
+        </Button>
       ) : (
         <p>
           {t(

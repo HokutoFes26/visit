@@ -1,18 +1,46 @@
 import { getLanguage } from "@/state/preferences";
 import type { Company, Schedule } from "@/types";
-import companyData from "./companies.json";
-import eventData from "./event.json";
-import learningData from "./learning.json";
-import scheduleData from "./schedule.json";
-import seatData from "./seats.json";
+import { currentCourse, getCurrentCourse } from "./course";
+
+import companyDataI from "./i/companies.json";
+import eventDataI from "./i/event.json";
+import learningDataI from "./i/learning.json";
+import scheduleDataI from "./i/schedule.json";
+import seatDataI from "./i/seats.json";
+import announcementsI from "./i/announcements.json";
+import guideI from "./i/guide.json";
+
+import companyDataK from "./k/companies.json";
+import eventDataK from "./k/event.json";
+import learningDataK from "./k/learning.json";
+import scheduleDataK from "./k/schedule.json";
+import seatDataK from "./k/seats.json";
+import announcementsK from "./k/announcements.json";
+import guideK from "./k/guide.json";
+
+export * from "./course";
 export type { Company, Schedule } from "@/types";
-export { default as announcements } from "./announcements.json";
-export { default as guide } from "./guide.json";
+
+const isK = currentCourse === "k";
+
+const companyData = isK ? companyDataK : companyDataI;
+const eventData = isK ? eventDataK : eventDataI;
+const learningData = isK ? learningDataK : learningDataI;
+const scheduleData = isK ? scheduleDataK : scheduleDataI;
+const seatData = isK ? seatDataK : seatDataI;
+
+export const announcements = isK ? announcementsK : announcementsI;
+export const guide = isK ? guideK : guideI;
+export const seats = seatData;
+export const learning = learningData;
 
 export const event = eventData;
 export const companies: Company[] = companyData;
-export const timestamp = (date: string, time: string | null) =>
-  Date.parse(`${date}T${time}:00+09:00`);
+export const timestamp = (date: string, time: string | null) => {
+  if (!time) return Date.parse(`${date}T00:00:00+09:00`);
+  const normalized = time.length === 4 ? `0${time}` : time;
+  return Date.parse(`${date}T${normalized}:00+09:00`);
+};
 export const validDate = (date: string) => {
   const parsed = new Date(`${date}T00:00:00Z`);
   return (
@@ -41,6 +69,10 @@ export const formatDate = (date: string) =>
     day: "numeric",
     weekday: "short",
   }).format(new Date(`${date}T00:00:00+09:00`));
+export const formatTime = (time: string | null | undefined): string => {
+  if (!time) return "";
+  return time.replace(/^0(?=\d:)/, "");
+};
 export function validateData(): string[] {
   const errors: string[] = [];
   if (!validDate(event.date)) errors.push("見学概要の日付を確認してください。");
@@ -64,10 +96,10 @@ export function validateData(): string[] {
       !validDate(s.date) ||
       !Number.isInteger(s.order) ||
       (s.startTime !== null &&
-        !/^([01]\d|2[0-3]):[0-5]\d$/.test(s.startTime)) ||
+        !/^([01]?\d|2[0-3]):[0-5]\d$/.test(s.startTime)) ||
       (s.endTime !== null &&
         (!s.startTime ||
-          !/^([01]\d|2[0-3]):[0-5]\d$/.test(s.endTime) ||
+          !/^([01]?\d|2[0-3]):[0-5]\d$/.test(s.endTime) ||
           !(end > start)))
     )
       errors.push(`予定 ${s.id} の日時・必須項目を確認してください。`);

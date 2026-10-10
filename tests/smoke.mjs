@@ -10,8 +10,8 @@ const browser = await chromium.launch({
 });
 await mkdir("test-results", { recursive: true });
 const errors = [];
-const companies = JSON.parse(await readFile("src/data/companies.json", "utf8"));
-const schedules = JSON.parse(await readFile("src/data/schedule.json", "utf8"));
+const companies = JSON.parse(await readFile("src/data/i/companies.json", "utf8"));
+const schedules = JSON.parse(await readFile("src/data/i/schedule.json", "utf8"));
 const at = (s, field) => Date.parse(`${s.date}T${s[field]}:00+09:00`);
 const page = await browser.newPage({
   viewport: { width: 1280, height: 1000 },

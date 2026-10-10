@@ -1,4 +1,15 @@
-import { Card, PageTitle } from "@/components/ui";
+import {
+  Card,
+  PageTitle,
+  Badge,
+  Button,
+  Group,
+  Text,
+  Title,
+  Box,
+  NativeSelect,
+  SimpleGrid,
+} from "@/components/ui";
 import {
   sightseeing,
   localize,
@@ -7,10 +18,10 @@ import {
 } from "@/data/sightseeing";
 import { usePwa } from "@/pwa";
 import { t, usePreferences } from "@/state/preferences";
+import "@/styles/sightseeing.css";
 import {
   ArrowUpRight,
   Clock3,
-  Compass,
   MapPin,
   Navigation,
   TrainFront,
@@ -18,9 +29,9 @@ import {
   WifiOff,
 } from "lucide-react";
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function SightseeingPage() {
+  usePreferences();
   const { language } = usePreferences();
   const { online } = usePwa();
   const text = (value: Parameters<typeof localize>[0]) =>
@@ -35,42 +46,24 @@ export default function SightseeingPage() {
   );
   const selected = visible.find((spot) => spot.id === selectedId) || visible[0];
   const area = sightseeing.areas.find((item) => item.id === areaId);
+
   function filter(id: string) {
     setAreaId(id);
     setSelectedId(
       spots.find((spot) => id === "all" || spot.areaId === id)?.id || "",
     );
   }
+
   return (
     <>
-      <PageTitle
-        eyebrow="EXPLORE TOKYO"
-        title={t("東京観光")}
-        description={t(
-          "東京駅・品川・浅草など、自由時間に行ってみたい場所を探そう。",
-        )}
-      />
-      <div className="sightseeing-intro">
-        <span className="shortcut-icon cyan">
-          <Compass size={25} />
-        </span>
-        <div>
-          <strong>{t("企業見学の合間に、東京を知る。")}</strong>
-          <p>
-            {t(
-              "集合・見学・点呼を優先し、22:00以降は外出できません。滞在目安は提案で、移動時間は含みません。",
-            )}
-          </p>
-        </div>
-        <Link className="text-link" to="/schedule">
-          {t("スケジュール")}
-          <ArrowUpRight size={16} />
-        </Link>
-      </div>
-      <div
+      <PageTitle title={t("東京の寄り道ガイド")} />
+
+      <Group
         className="sightseeing-filters"
         role="group"
         aria-label={t("観光エリア")}
+        gap="xs"
+        mb="sm"
       >
         {[
           { id: "all", name: t("すべて") },
@@ -78,24 +71,42 @@ export default function SightseeingPage() {
             id: item.id,
             name: text(item.name),
           })),
-        ].map((item) => (
-          <button
-            type="button"
-            key={item.id}
-            aria-pressed={areaId === item.id}
-            onClick={() => filter(item.id)}
-          >
-            {item.name}
-            <span>
-              {
-                spots.filter(
-                  (spot) => item.id === "all" || spot.areaId === item.id,
-                ).length
+        ].map((item) => {
+          const count = spots.filter(
+            (spot) => item.id === "all" || spot.areaId === item.id,
+          ).length;
+          return (
+            <Button
+              key={item.id}
+              type="button"
+              variant={areaId === item.id ? "filled" : "light"}
+              size="sm"
+              radius="xl"
+              aria-pressed={areaId === item.id}
+              onClick={() => filter(item.id)}
+              rightSection={
+                <Badge
+                  size="xs"
+                  variant={areaId === item.id ? "white" : "light"}
+                  color="var(--accent)"
+                  circle
+                >
+                  {count}
+                </Badge>
               }
-            </span>
-          </button>
-        ))}
-      </div>
+              styles={{
+                root: {
+                  fontWeight: 600,
+                  transition: "all 0.15s ease",
+                },
+              }}
+            >
+              {item.name}
+            </Button>
+          );
+        })}
+      </Group>
+
       <p className="sightseeing-area-note">
         {area
           ? text(area.description)
@@ -103,6 +114,7 @@ export default function SightseeingPage() {
               "スポットを選ぶと、地図のピンが切り替わります。地図は拡大・移動できます。",
             )}
       </p>
+
       {selected ? (
         <div className="sightseeing-layout">
           <div className="sightseeing-map-panel" ref={mapPanel}>
@@ -110,7 +122,6 @@ export default function SightseeingPage() {
               <div className="sightseeing-map-heading">
                 <MapPin size={20} />
                 <div>
-                  <span className="eyebrow">{t("地図で場所を確認")}</span>
                   <h2 aria-live="polite">{text(selected.name)}</h2>
                 </div>
               </div>
@@ -153,35 +164,41 @@ export default function SightseeingPage() {
                   <ArrowUpRight size={13} />
                 </a>
               </div>
-              <label className="field-label" htmlFor="sightseeing-origin">
-                {t("経路の出発地")}
-              </label>
-              <select
+              <NativeSelect
                 id="sightseeing-origin"
+                label={t("経路の出発地")}
                 value={origin}
-                onChange={(event) => setOrigin(event.target.value)}
-              >
-                {sightseeing.origins.map((item) => (
-                  <option key={item.id} value={item.id}>
-                    {text(item.name)}
-                  </option>
-                ))}
-              </select>
-              <a
-                className="button primary sightseeing-directions"
+                onChange={(event) => setOrigin(event.currentTarget.value)}
+                data={sightseeing.origins.map((item) => ({
+                  value: item.id,
+                  label: text(item.name),
+                }))}
+                radius="xl"
+                size="md"
+                mt="sm"
+                styles={{
+                  label: { fontWeight: 600, marginBottom: 6 },
+                  input: {
+                    textAlign: "center",
+                    textAlignLast: "center",
+                  },
+                }}
+              />
+              <Button
+                component="a"
+                variant="filled"
+                radius="xl"
+                fullWidth
+                size="md"
                 href={spotDirectionsUrl(selected, origin)}
                 target="_blank"
                 rel="noreferrer"
+                leftSection={<Navigation size={15} />}
+                rightSection={<ArrowUpRight size={17} />}
+                className="sightseeing-directions"
               >
-                <Navigation size={17} />
                 {t("Googleマップで経路を確認")}
-                <ArrowUpRight size={15} />
-              </a>
-              <p className="quiet-note">
-                {t(
-                  "地図・経路・公式サイトはオンラインで利用できます。地図のピンは訪問場所の目安です。",
-                )}
-              </p>
+              </Button>
             </Card>
             <p className="sightseeing-checked">
               {t("情報確認日：{date}", { date: sightseeing.checkedAt })}
@@ -191,6 +208,7 @@ export default function SightseeingPage() {
               )}
             </p>
           </div>
+
           <div className="sightseeing-spots">
             {visible.map((spot) => (
               <Card
@@ -198,19 +216,39 @@ export default function SightseeingPage() {
                 className={`sightseeing-spot ${selected.id === spot.id ? "is-selected" : ""}`}
               >
                 <div className="sightseeing-spot-heading">
-                  <span className="badge">
+                  <Badge
+                    variant="light"
+                    color="var(--accent-neon)"
+                    size="md"
+                    radius="xl"
+                    style={{ fontWeight: 600 }}
+                  >
                     {text(
                       sightseeing.areas.find((item) => item.id === spot.areaId)
                         ?.name || "",
                     )}
-                  </span>
-                  <button
+                  </Badge>
+                  <Button
                     className="spot-map-button"
                     type="button"
+                    variant={selected.id === spot.id ? "light" : "subtle"}
+                    color={selected.id === spot.id ? "blue" : "gray"}
+                    size="xs"
+                    radius="xl"
                     aria-pressed={selected.id === spot.id}
                     aria-label={t("{name}を地図に表示", {
                       name: text(spot.name),
                     })}
+                    leftSection={
+                      <MapPin
+                        size={14}
+                        color={
+                          selected.id === spot.id
+                            ? "var(--surface)"
+                            : "var(--accent-neon)"
+                        }
+                      />
+                    }
                     onClick={() => {
                       setSelectedId(spot.id);
                       if (window.matchMedia("(max-width: 850px)").matches)
@@ -224,11 +262,10 @@ export default function SightseeingPage() {
                         });
                     }}
                   >
-                    <MapPin size={15} />
                     {selected.id === spot.id
-                      ? t("地図に表示中")
-                      : t("地図に表示")}
-                  </button>
+                      ? t("地図で表示中")
+                      : t("地図で表示")}
+                  </Button>
                 </div>
                 <h2>{text(spot.name)}</h2>
                 <p>{text(spot.description)}</p>
@@ -255,7 +292,6 @@ export default function SightseeingPage() {
                     <dd>{text(spot.cost)}</dd>
                   </div>
                 </dl>
-                <p className="sightseeing-spot-note">{text(spot.note)}</p>
                 <div className="sightseeing-spot-links">
                   <a
                     className="text-link"
@@ -277,7 +313,9 @@ export default function SightseeingPage() {
         </div>
       ) : (
         <Card>
-          <p>{t("このエリアのスポットはまだ登録されていません。")}</p>
+          <Text c="dimmed">
+            {t("このエリアのスポットはまだ登録されていません。")}
+          </Text>
         </Card>
       )}
     </>
