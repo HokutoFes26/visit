@@ -1153,6 +1153,19 @@ main {
   }
 }
 /* Factual page titles replace decorative slogans. */
+:root .display-controls.expanded .theme-switch {
+  width: auto;
+  min-width: 44px;
+  height: auto;
+  min-height: 42px;
+  padding: 10px 16px;
+  border-radius: 24px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.display-controls.expanded .theme-switch span {
+  white-space: nowrap;
+}
 :root .hero {
   min-height: 320px;
 }

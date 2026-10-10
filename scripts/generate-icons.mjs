@@ -20,7 +20,7 @@ try {
     });
     if (size === 512) {
       await page.setContent(
-        `<style>body{margin:0;background:#337bee;display:grid;place-items:center;width:100vw;height:100vh}svg{width:70vw;height:70vh}</style>${svg}`,
+        `<style>body{margin:0;background:#24262c;display:grid;place-items:center;width:100vw;height:100vh}svg{width:70vw;height:70vh}</style>${svg}`,
       );
       await page.screenshot({ path: "public/icons/maskable-512.png" });
     }
@@ -29,3 +29,4 @@ try {
 } finally {
   await browser.close();
 }
+

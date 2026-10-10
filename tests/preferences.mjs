@@ -54,6 +54,9 @@ try {
         ),
         `${width} ${route} overflows`,
       );
+      if (route === "/settings") {
+        assert.ok(await page.locator("main .expanded .theme-switch span").evaluate(el => el.getBoundingClientRect().height < 30), "Expanded theme label must stay on one line");
+      }
       const text = await page.locator("main").innerText();
       assert.ok(
         !/[一-龯ぁ-んァ-ヶ]/.test(text.replaceAll("日本語", "")),
