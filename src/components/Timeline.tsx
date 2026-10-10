@@ -20,7 +20,11 @@ export default function Timeline({
           const state = scheduleState(item, now);
           const company = companies.find((c) => c.id === item.companyId);
           return (
-            <article className={`timeline-item ${state}`} key={item.id}>
+            <article
+              className={`timeline-item ${state}`}
+              key={item.id}
+              tabIndex={-1}
+            >
               <div className="timeline-time">
                 <strong>{t(item.startTime || "未定")}</strong>
                 {item.endTime && (

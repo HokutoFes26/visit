@@ -27,7 +27,7 @@ export const desktopLinks = [
   { to: "/more", label: "その他", icon: Ellipsis },
 ];
 export const mobileLinks = [
-  ...desktopLinks.slice(0, 3),
+  ...desktopLinks.slice(0, 3).map(link => link.to === "/schedule" ? {...link, label: "日程"} : link),
   { to: "/sightseeing", label: "東京観光", icon: Compass },
   { to: "/more", label: "その他", icon: Ellipsis },
 ];

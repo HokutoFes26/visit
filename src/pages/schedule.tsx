@@ -1,7 +1,7 @@
 import { t, usePreferences } from "@/state/preferences";
 import Timeline from "@/components/Timeline";
 import { PageTitle } from "@/components/ui";
-import { event, formatDate, schedule } from "@/data";
+import { event, formatDate, schedule, scheduleState } from "@/data";
 import { useNow } from "@/hooks/useNow";
 import { Info } from "lucide-react";
 import { useState } from "react";
@@ -35,6 +35,26 @@ export default function SchedulePage() {
         <Info size={16} />
         {t("現在の予定は端末の日時をもとに表示します。")}
       </p>
+      {schedule.some((item) => scheduleState(item, now) === "current") && (
+        <button
+          className="button secondary jump-current"
+          onClick={() => {
+            const current = schedule.find(
+              (item) => scheduleState(item, now) === "current",
+            );
+            if (current) setDay(current.date);
+            requestAnimationFrame(() => {
+              const target = document.querySelector<HTMLElement>(
+                ".timeline-item.current",
+              );
+              target?.focus({ preventScroll: true });
+              target?.scrollIntoView({ block: "center", behavior: "instant" });
+            });
+          }}
+        >
+          {t("現在の予定へ")}
+        </button>
+      )}
       <Timeline items={schedule.filter((s) => s.date === day)} now={now} />
     </>
   );

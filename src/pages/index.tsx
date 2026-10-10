@@ -19,6 +19,7 @@ import {
   Building2,
   CalendarDays,
   Compass,
+  Bell,
   Clock3,
   MapPin,
   ShieldCheck,
@@ -33,23 +34,6 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <div className="hero-art" aria-hidden="true">
-          <div className="art-orbit orbit-one" />
-          <div className="art-orbit orbit-two" />
-          <div className="art-sphere" />
-          <div className="art-grain" />
-          <div className="art-label">
-            TOYAMA <ArrowUpRight size={16} /> TOKYO
-          </div>
-          <div className="art-ticket">
-            <span>FIELD TRIP / {event.date.slice(0, 4)}</span>
-            <strong>
-              {event.date.slice(5).replace("-", ".")} —{" "}
-              {event.endDate.slice(5).replace("-", ".")}
-            </strong>
-            <div className="ticket-barcode" />
-          </div>
-        </div>
         <div className="hero-content">
           <h1>{t("県外企業見学")}</h1>
           <div className="hero-meta">
@@ -140,11 +124,15 @@ export default function Home() {
               )}
             </span>
             <Link to="/schedule" aria-label={t("スケジュール詳細")}>
+              <span>{t("スケジュール詳細")}</span>
               <ArrowRight size={20} />
             </Link>
           </div>
         </Card>
-        <Link to="/guide" className="meeting-card glass-card">
+        <Link
+          to="/guide"
+          className={`meeting-card glass-card ${(current || next)?.location === event.meetingPlace ? "meeting-duplicate" : ""}`}
+        >
           <div className="card-kicker">
             <MapPin size={17} />
             {t("集合場所")}
@@ -160,6 +148,23 @@ export default function Home() {
           </div>
         </Link>
       </div>
+      {announcements.some((a) => a.importance === "high") && (
+        <section className="priority-notices" aria-label={t("大切なお知らせ")}>
+          <div className="priority-label">
+            <Bell size={18} />
+            <strong>{t("大切なお知らせ")}</strong>
+          </div>
+          {announcements
+            .filter((a) => a.importance === "high")
+            .map((a) => (
+              <Link to="/announcements" key={a.id}>
+                <span className="badge">{t("重要")}</span>
+                <span>{t(a.title)}</span>
+                <ArrowRight size={18} />
+              </Link>
+            ))}
+        </section>
+      )}
       <div className="shortcut-grid">
         {shortcuts.map(({ to, title, icon: Icon, color }, index) => (
           <Link to={to} className="shortcut glass-card" key={to}>
@@ -176,24 +181,7 @@ export default function Home() {
           </Link>
         ))}
       </div>
-      <Link to="/sightseeing" className="explore-banner">
-        <div className="explore-copy">
-          <h2>{t("東京観光")}</h2>
-          <p>{t("観光スポットの地図・アクセス・経路を確認できます。")}</p>
-          <span className="explore-action">
-            {t("地図を見る")}
-            <ArrowUpRight size={18} />
-          </span>
-        </div>
-        <div className="explore-art" aria-hidden="true">
-          <Compass size={110} strokeWidth={0.7} />
-          <span>
-            TOKYO
-            <br />
-            EXPLORER
-          </span>
-        </div>
-      </Link>
+
       <div className="home-bottom">
         <Card>
           <SectionTitle title={t("出発前のチェック")} to="/guide" />
@@ -218,23 +206,25 @@ export default function Home() {
             {t("安全のため、現地スタッフの案内に従ってください。")}
           </p>
         </Card>
-        <Card>
-          <SectionTitle title={t("大切なお知らせ")} to="/announcements" />
-          {announcements
-            .filter((a) => a.importance === "high")
-            .map((a) => (
-              <Link
-                className="announcement-mini"
-                to="/announcements"
-                key={a.id}
-              >
-                <span className="badge">{t("重要")}</span>
-                <strong>{t(a.title)}</strong>
-                <ArrowUpRight size={17} />
-              </Link>
-            ))}
-        </Card>
       </div>
+      <Link to="/sightseeing" className="explore-banner">
+        <div className="explore-copy">
+          <h2>{t("東京観光")}</h2>
+          <p>{t("観光スポットの地図・アクセス・経路を確認できます。")}</p>
+          <span className="explore-action">
+            {t("地図を見る")}
+            <ArrowUpRight size={18} />
+          </span>
+        </div>
+        <div className="explore-art" aria-hidden="true">
+          <Compass size={110} strokeWidth={0.7} />
+          <span>
+            TOKYO
+            <br />
+            EXPLORER
+          </span>
+        </div>
+      </Link>
     </>
   );
 }
