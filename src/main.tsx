@@ -1,5 +1,6 @@
 import App from "@/App";
 import { Provider } from "@/provider";
+import "@mantine/core/styles.css";
 import "@/styles/globals.css";
 import React from "react";
 import ReactDOM from "react-dom/client";

@@ -4,29 +4,14 @@ export function DisplayControls({ expanded = false }: { expanded?: boolean }) {
   const { language, theme, setLanguage, setTheme, error } = usePreferences();
   return (
     <div className={`display-controls ${expanded ? "expanded" : ""}`}>
-      <div
-        className="language-switch"
-        role="group"
-        aria-label={language === "ja" ? "言語" : "Language"}
+      <button
+        type="button"
+        className="language-toggle-btn"
+        onClick={() => setLanguage(language === "ja" ? "en" : "ja")}
       >
-        <Languages size={17} aria-hidden="true" />
-        <button
-          type="button"
-          lang="ja"
-          aria-pressed={language === "ja"}
-          onClick={() => setLanguage("ja")}
-        >
-          日本語
-        </button>
-        <button
-          type="button"
-          lang="en"
-          aria-pressed={language === "en"}
-          onClick={() => setLanguage("en")}
-        >
-          EN
-        </button>
-      </div>
+        <Languages size={15} aria-hidden="true" />
+        <span>{language === "ja" ? "EN" : "日本語"}</span>
+      </button>
       <button
         type="button"
         className="theme-switch"
@@ -34,7 +19,7 @@ export function DisplayControls({ expanded = false }: { expanded?: boolean }) {
         aria-label={language === "ja" ? "ダークモード" : "Dark mode"}
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
-        {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+        {theme === "dark" ? <Sun size={18} /> : <Moon size={16} />}
         {expanded && (
           <span>
             {language === "ja"

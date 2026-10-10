@@ -1,21 +1,22 @@
 import { DisplayControls } from "@/components/display-controls";
 import { t, usePreferences } from "@/state/preferences";
 import { event } from "@/data";
+import { Badge, Box, Button, PasswordInput, Text, Title } from "@mantine/core";
 import {
   ArrowRight,
-  Eye,
-  EyeOff,
   Building2,
   LockKeyhole,
   ShieldCheck,
 } from "lucide-react";
 import { useState, type FormEvent } from "react";
+
 const password = import.meta.env.VITE_VISIT_PASSWORD || "factory2026";
+
 export default function Login({ onLogin }: { onLogin: () => void }) {
   usePreferences();
   const [value, setValue] = useState("");
-  const [visible, setVisible] = useState(false);
   const [error, setError] = useState("");
+
   function submit(e: FormEvent) {
     e.preventDefault();
     if (value !== password) {
@@ -24,6 +25,7 @@ export default function Login({ onLogin }: { onLogin: () => void }) {
     }
     onLogin();
   }
+
   return (
     <div className="login-screen">
       <div className="login-controls">
@@ -32,43 +34,56 @@ export default function Login({ onLogin }: { onLogin: () => void }) {
       <div className="login-art" />
       <div className="login-intro">
         <h1>{t("県外企業見学")}</h1>
-        <span className="badge">{t("県外企業見学 · 発表概要版")}</span>
+        <Badge variant="light" color="blue" size="md" radius="xl" style={{ fontWeight: 600 }}>
+          {t("県外企業見学 · 発表概要版")}
+        </Badge>
       </div>
       <form onSubmit={submit} className="glass-card login-panel">
         <span className="brand-icon">
-          <Building2 size={30} />
+          <Building2 size={24} />
         </span>
         <h2>{t("ログイン")}</h2>
-        <label htmlFor="password">{t("見学用パスワード")}</label>
-        <div className="password-field">
-          <LockKeyhole size={19} />
-          <input
-            id="password"
-            type={visible ? "text" : "password"}
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            required
-            autoComplete="current-password"
-            aria-describedby={error ? "login-error" : undefined}
-            aria-invalid={!!error}
-          />
-          <button
-            type="button"
-            onClick={() => setVisible(!visible)}
-            aria-label={t(visible ? "パスワードを隠す" : "パスワードを表示")}
-          >
-            {visible ? <EyeOff size={20} /> : <Eye size={20} />}
-          </button>
-        </div>
+        <PasswordInput
+          id="password"
+          label={t("見学用パスワード")}
+          leftSection={<LockKeyhole size={18} />}
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          required
+          autoComplete="current-password"
+          radius="md"
+          size="md"
+          visibilityToggleButtonProps={{
+            "aria-label": t("パスワードを表示"),
+          }}
+          aria-describedby={error ? "login-error" : undefined}
+          aria-invalid={!!error}
+          styles={{
+            input: {
+              background: "var(--surface-secondary)",
+              borderColor: error ? "var(--mantine-color-red-filled)" : "var(--border)",
+            },
+            label: { fontWeight: 600, marginBottom: 6, fontSize: "0.875rem" },
+          }}
+        />
         {error && (
           <p id="login-error" role="alert" className="error">
             {t(error)}
           </p>
         )}
-        <button className="button primary" type="submit">
+        <Button
+          type="submit"
+          variant="filled"
+          color="blue"
+          radius="xl"
+          fullWidth
+          size="md"
+          mt="lg"
+          rightSection={<ArrowRight size={18} />}
+          style={{ fontWeight: 600, boxShadow: "0 4px 14px 0 rgba(0, 111, 238, 0.35)" }}
+        >
           {t("見学ガイドをひらく")}
-          <ArrowRight size={19} />
-        </button>
+        </Button>
         {!import.meta.env.VITE_VISIT_PASSWORD && (
           <small className="demo-password">{t(event.passwordHint)}</small>
         )}

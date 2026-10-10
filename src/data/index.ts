@@ -11,8 +11,11 @@ export { default as guide } from "./guide.json";
 
 export const event = eventData;
 export const companies: Company[] = companyData;
-export const timestamp = (date: string, time: string | null) =>
-  Date.parse(`${date}T${time}:00+09:00`);
+export const timestamp = (date: string, time: string | null) => {
+  if (!time) return Date.parse(`${date}T00:00:00+09:00`);
+  const normalized = time.length === 4 ? `0${time}` : time;
+  return Date.parse(`${date}T${normalized}:00+09:00`);
+};
 export const validDate = (date: string) => {
   const parsed = new Date(`${date}T00:00:00Z`);
   return (
@@ -41,6 +44,10 @@ export const formatDate = (date: string) =>
     day: "numeric",
     weekday: "short",
   }).format(new Date(`${date}T00:00:00+09:00`));
+export const formatTime = (time: string | null | undefined): string => {
+  if (!time) return "";
+  return time.replace(/^0(?=\d:)/, "");
+};
 export function validateData(): string[] {
   const errors: string[] = [];
   if (!validDate(event.date)) errors.push("見学概要の日付を確認してください。");
@@ -64,10 +71,10 @@ export function validateData(): string[] {
       !validDate(s.date) ||
       !Number.isInteger(s.order) ||
       (s.startTime !== null &&
-        !/^([01]\d|2[0-3]):[0-5]\d$/.test(s.startTime)) ||
+        !/^([01]?\d|2[0-3]):[0-5]\d$/.test(s.startTime)) ||
       (s.endTime !== null &&
         (!s.startTime ||
-          !/^([01]\d|2[0-3]):[0-5]\d$/.test(s.endTime) ||
+          !/^([01]?\d|2[0-3]):[0-5]\d$/.test(s.endTime) ||
           !(end > start)))
     )
       errors.push(`予定 ${s.id} の日時・必須項目を確認してください。`);

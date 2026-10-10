@@ -1,6 +1,8 @@
 import { t, usePreferences } from "@/state/preferences";
 import { PwaProvider, PwaStatus } from "@/pwa";
 import { VisitStorageProvider } from "@/state/visit-storage";
+import { theme } from "@/theme";
+import { MantineProvider } from "@mantine/core";
 import React from "react";
 class ErrorBoundary extends React.Component<
   {
@@ -28,15 +30,17 @@ class ErrorBoundary extends React.Component<
 }
 
 export function Provider({ children }: { children: React.ReactNode }) {
-  usePreferences();
+  const { theme: currentTheme } = usePreferences();
   return (
     <ErrorBoundary>
-      <PwaProvider>
-        <VisitStorageProvider>
-          <PwaStatus />
-          {children}
-        </VisitStorageProvider>
-      </PwaProvider>
+      <MantineProvider theme={theme} forceColorScheme={currentTheme}>
+        <PwaProvider>
+          <VisitStorageProvider>
+            <PwaStatus />
+            {children}
+          </VisitStorageProvider>
+        </PwaProvider>
+      </MantineProvider>
     </ErrorBoundary>
   );
 }

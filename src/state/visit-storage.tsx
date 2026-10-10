@@ -7,6 +7,7 @@ import {
   type ReactNode,
 } from "react";
 const CHECKS_KEY = "factory-visit:learning:v1";
+const NOTES_KEY = "factory-visit:notes:v1";
 function readRecord<T extends string | boolean>(
   key: string,
   type: "string" | "boolean",
@@ -71,8 +72,10 @@ function useRecord<T extends string | boolean>(
   };
 }
 type ChecksStore = ReturnType<typeof useRecord<boolean>>;
+type NotesStore = ReturnType<typeof useRecord<string>>;
 const StorageContext = createContext<{
   checks: ChecksStore;
+  notes: NotesStore;
 } | null>(null);
 export function useStorage() {
   const state = useContext(StorageContext);
@@ -81,7 +84,8 @@ export function useStorage() {
 }
 export function VisitStorageProvider({ children }: { children: ReactNode }) {
   const checks = useRecord<boolean>(CHECKS_KEY, "boolean");
-  const unsaved = checks.dirty;
+  const notes = useRecord<string>(NOTES_KEY, "string");
+  const unsaved = checks.dirty || notes.dirty;
   useEffect(() => {
     if (!unsaved) return;
     const warn = (e: BeforeUnloadEvent) => {
@@ -92,7 +96,7 @@ export function VisitStorageProvider({ children }: { children: ReactNode }) {
     return () => window.removeEventListener("beforeunload", warn);
   }, [unsaved]);
   return (
-    <StorageContext.Provider value={{ checks }}>
+    <StorageContext.Provider value={{ checks, notes }}>
       <div data-unsaved={unsaved}>{children}</div>
     </StorageContext.Provider>
   );

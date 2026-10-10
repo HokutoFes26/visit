@@ -1,75 +1,135 @@
 import { t, usePreferences } from "@/state/preferences";
-import { Card, PageTitle, SectionTitle } from "@/components/ui";
-import { event, formatDate, guide } from "@/data";
-import { Backpack, MapPin, Shirt } from "lucide-react";
+import {
+  Badge,
+  Box,
+  Card,
+  Group,
+  List,
+  PageTitle,
+  SectionTitle,
+  SimpleGrid,
+  Text,
+  ThemeIcon,
+  Title,
+} from "@/components/ui";
+import { event, formatDate, formatTime, guide } from "@/data";
+import { Backpack, Check, MapPin, Shirt } from "lucide-react";
 import { Link } from "react-router-dom";
+
 export default function GuidePage() {
   usePreferences();
   return (
     <>
       <PageTitle title={t("見学ガイド")} />
-      <Card className="guide-meeting">
-        <span className="shortcut-icon blue">
-          <MapPin />
-        </span>
-        <div>
-          <span className="eyebrow">{t("集合場所")}</span>
-          <h2>{t(event.meetingPlace)}</h2>
-          <p>
-            {t(formatDate(event.date))} · {t(event.meetingTime)}
-            {t("集合")}
-          </p>
-          <p>{t(event.meetingNote)}</p>
-        </div>
+      <Card mb="lg" radius="lg">
+        <Group align="flex-start" gap="md" wrap="nowrap">
+          <ThemeIcon size={46} radius="md" color="blue" variant="light">
+            <MapPin size={24} />
+          </ThemeIcon>
+          <Box style={{ flex: 1 }}>
+            <Badge variant="light" color="blue" size="xs" radius="xl" mb={6} style={{ fontWeight: 700 }}>
+              {t("集合場所")}
+            </Badge>
+            <Title order={2} size="h3" mb={4}>
+              {t(event.meetingPlace)}
+            </Title>
+            <Text size="sm" fw={600} style={{ color: "var(--mantine-color-blue-filled)" }} mb={4}>
+              {t(formatDate(event.date))} · {formatTime(event.meetingTime)}
+              {t("集合")}
+            </Text>
+            <Text size="sm" c="dimmed">
+              {t(event.meetingNote)}
+            </Text>
+          </Box>
+        </Group>
       </Card>
-      <div className="detail-grid">
+
+      <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg" mb="lg">
         {guide.sections.map((section) => (
-          <Card key={section.title}>
+          <Card key={section.title} radius="lg">
             <SectionTitle title={t(section.title)} />
-            <ul className="feature-list">
+            <List
+              spacing="xs"
+              size="sm"
+              icon={
+                <ThemeIcon color="blue" size={20} radius="xl" variant="light">
+                  <Check size={12} />
+                </ThemeIcon>
+              }
+            >
               {section.items.map((item) => (
-                <li key={item}>{t(item)}</li>
+                <List.Item key={item}>
+                  <Text size="sm" c="dimmed">
+                    {t(item)}
+                  </Text>
+                </List.Item>
               ))}
-            </ul>
+            </List>
             {section.title === "当日までの準備" && (
-              <Link className="text-link" to="/sightseeing">
-                {t("地図で東京の観光スポットを探す")}
-              </Link>
+              <Box mt="md">
+                <Link className="text-link" to="/sightseeing">
+                  {t("地図で東京の観光スポットを探す")}
+                </Link>
+              </Box>
             )}
           </Card>
         ))}
-      </div>
-      <div className="detail-grid">
-        <Card>
+      </SimpleGrid>
+
+      <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg" mb="lg">
+        <Card radius="lg">
           <SectionTitle title={t("持ち物リスト")} />
-          <ul className="feature-list">
+          <List
+            spacing="xs"
+            size="sm"
+            icon={
+              <ThemeIcon color="teal" size={22} radius="md" variant="light">
+                <Backpack size={13} />
+              </ThemeIcon>
+            }
+          >
             {guide.belongings.map((item) => (
-              <li key={item}>
-                <Backpack size={18} />
-                {t(item)}
-              </li>
+              <List.Item key={item}>
+                <Text size="sm" c="dimmed">
+                  {t(item)}
+                </Text>
+              </List.Item>
             ))}
-          </ul>
+          </List>
         </Card>
-        <Card>
+        <Card radius="lg">
           <SectionTitle title={t("服装について")} />
-          <ul className="feature-list">
+          <List
+            spacing="xs"
+            size="sm"
+            icon={
+              <ThemeIcon color="orange" size={22} radius="md" variant="light">
+                <Shirt size={13} />
+              </ThemeIcon>
+            }
+          >
             {guide.clothing.map((item) => (
-              <li key={item}>
-                <Shirt size={18} />
-                {t(item)}
-              </li>
+              <List.Item key={item}>
+                <Text size="sm" c="dimmed">
+                  {t(item)}
+                </Text>
+              </List.Item>
             ))}
-          </ul>
+          </List>
         </Card>
-      </div>
-      <Card>
+      </SimpleGrid>
+
+      <Card radius="lg">
         <SectionTitle title={t("安全に見学するために")} />
-        <ol className="rules">
+        <List type="ordered" spacing="sm" size="sm">
           {guide.precautions.map((item) => (
-            <li key={item}>{t(item)}</li>
+            <List.Item key={item}>
+              <Text size="sm" c="dimmed" style={{ lineHeight: 1.6 }}>
+                {t(item)}
+              </Text>
+            </List.Item>
           ))}
-        </ol>
+        </List>
       </Card>
     </>
   );

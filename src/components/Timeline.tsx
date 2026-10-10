@@ -1,20 +1,24 @@
 import { t, usePreferences } from "@/state/preferences";
 import { assetUrl } from "@/config/assets";
+import { Badge, Card, Group, Stack, Text, Title, Box } from "@mantine/core";
 import { ArrowUpRight, Bus, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import { companies, scheduleState, type Schedule } from "../data";
+import { companies, formatTime, scheduleState, type Schedule } from "../data";
+
 export default function Timeline({
   items,
   now,
+  showCompany = true,
 }: {
   items: Schedule[];
   now: number;
+  showCompany?: boolean;
 }) {
   usePreferences();
   return (
     <div className="timeline">
       {items.length === 0 ? (
-        <p>{t("この日の予定はまだ登録されていません。")}</p>
+        <Text c="dimmed">{t("この日の予定はまだ登録されていません。")}</Text>
       ) : (
         items.map((item) => {
           const state = scheduleState(item, now);
@@ -22,43 +26,80 @@ export default function Timeline({
           return (
             <article className={`timeline-item ${state}`} key={item.id}>
               <div className="timeline-time">
-                <strong>{t(item.startTime || "未定")}</strong>
+                <strong>{item.startTime ? formatTime(item.startTime) : t("未定")}</strong>
                 {item.endTime && (
                   <span>
-                    {t(item.endTime)}
+                    {formatTime(item.endTime)}
                     {t(item.id === "train" ? "頃" : "")}
                   </span>
                 )}
               </div>
               <div className="timeline-dot" />
-              <div className="glass-card timeline-content">
+              <Card padding="lg" radius={0} withBorder={false} className="timeline-content">
                 {state === "current" && (
-                  <span className="badge blue">{t("現在の予定")}</span>
+                  <Box mb="xs">
+                    <Badge
+                      color="lime"
+                      variant="light"
+                      size="sm"
+                      radius="xl"
+                      style={{
+                        fontWeight: 700,
+                        backgroundColor: "var(--accent-bg)",
+                        color: "var(--accent)",
+                        borderColor: "var(--accent-border)",
+                      }}
+                    >
+                      <span
+                        style={{
+                          display: "inline-block",
+                          width: 6,
+                          height: 6,
+                          borderRadius: "50%",
+                          backgroundColor: "var(--accent-neon)",
+                          marginRight: 6,
+                          boxShadow: "0 0 6px var(--accent-neon)",
+                        }}
+                      />
+                      {t("現在の予定")}
+                    </Badge>
+                  </Box>
                 )}
-                <h2>{t(item.title)}</h2>
+                <Title order={3} size="h4" mb={4}>
+                  {t(item.title)}
+                </Title>
                 {item.timeNote && (
                   <p className="quiet-note">{t(item.timeNote)}</p>
                 )}
-                <p className="meta">
-                  {t(item.date.slice(5).replace("-", "/"))}
-                </p>
-                <p className="meta">
-                  <MapPin size={15} />
-                  {t(item.location)}
-                </p>
-                <p>{t(item.description)}</p>
+                <Group gap={6} mb="xs">
+                  <MapPin size={14} color="var(--accent-neon)" />
+                  <Text size="xs" c="dimmed">
+                    {t(item.location)}
+                  </Text>
+                </Group>
+                <Text size="sm" c="dimmed" mb="sm">
+                  {t(item.description)}
+                </Text>
                 {item.transport && (
-                  <span className="meta">
-                    <Bus size={16} />
-                    {t(item.transport)}
-                    {t(
-                      item.travelMinutes > 0
-                        ? t(" · 約{minutes}分", { minutes: item.travelMinutes })
-                        : "",
-                    )}
-                  </span>
+                  <Box mb="xs">
+                    <Badge
+                      color="gray"
+                      variant="light"
+                      size="md"
+                      radius="xl"
+                      style={{ fontWeight: 600 }}
+                      leftSection={<Bus size={12} />}
+                    >
+                      {t(item.transport)}
+                      {t(
+                        item.travelMinutes > 0
+                          ? t(" · 約{minutes}分", { minutes: item.travelMinutes })
+                          : "",
+                      )}
+                    </Badge>
+                  </Box>
                 )}
-                {company && (
+                {showCompany && company && (
                   <Link
                     className="company-inline"
                     to={`/companies/${company.id}`}
@@ -71,10 +112,10 @@ export default function Timeline({
                       {t(company.name)}
                       <small>{t("企業紹介を見る")}</small>
                     </span>
-                    <ArrowUpRight size={20} />
+                    <ArrowUpRight size={18} />
                   </Link>
                 )}
-              </div>
+              </Card>
             </article>
           );
         })

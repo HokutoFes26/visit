@@ -1,118 +1,191 @@
 import { t, usePreferences } from "@/state/preferences";
-import { Card, EmptyState, PageTitle } from "@/components/ui";
+import {
+  Alert,
+  Badge,
+  Button,
+  Card,
+  Checkbox,
+  EmptyState,
+  Group,
+  List,
+  PageTitle,
+  SimpleGrid,
+  Stack,
+  Text,
+  Title,
+} from "@/components/ui";
 import { companies, guide } from "@/data";
 import learning from "@/data/learning.json";
 import { useStorage } from "@/state/visit-storage";
+import { AlertCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+
 export default function LearningPage() {
   usePreferences();
   const { checks } = useStorage();
+
   return (
     <>
       <PageTitle title={t("事前学習")} />
-      <Card className="preparation">
-        <h2>{t("当日までの準備")}</h2>
-        <ul>
+      <Card className="preparation" mb="lg" radius="lg">
+        <Title order={2} size="h3" mb="xs">
+          {t("当日までの準備")}
+        </Title>
+        <List spacing={4} size="sm" mb="sm">
           {guide.sections
             .find((s) => s.title === "当日までの準備")
             ?.items.map((item) => (
-              <li key={item}>{t(item)}</li>
+              <List.Item key={item}>
+                <Text size="sm" c="dimmed">
+                  {t(item)}
+                </Text>
+              </List.Item>
             ))}
-        </ul>
+        </List>
         <Link className="text-link" to="/sightseeing">
           {t("地図で東京の観光スポットを探す")}
         </Link>
       </Card>
+
       {checks.error && (
-        <Card>
-          <p className="error" role="alert">
+        <Alert
+          icon={<AlertCircle size={16} />}
+          title={t("エラー")}
+          color="red"
+          variant="light"
+          radius="md"
+          mb="md"
+        >
+          <Text size="sm" mb="xs">
             {t(checks.error)}
-          </p>
-          <button className="button secondary" onClick={checks.save}>
+          </Text>
+          <Button variant="light" color="red" size="xs" onClick={checks.save}>
             {t("保存を再試行")}
-          </button>
-        </Card>
+          </Button>
+        </Alert>
       )}
-      <p role="status">
+
+      <Text size="xs" c="dimmed" mb="md" role="status">
         {t("チェック状態はこの端末に")}
         {t(checks.dirty ? "保存できていません。" : "保存されます。")}
-      </p>
+      </Text>
+
       {companies.length === 0 && (
         <EmptyState>{t("企業情報が登録されていません。")}</EmptyState>
       )}
-      <div className="learning-grid">
+
+      <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
         {companies.map((company) => {
           const content = learning.find((l) => l.companyId === company.id);
           const items = content?.checklist || [];
           const count = items.filter(
             (item) => checks.value[`${company.id}:${item.id}`],
           ).length;
+
           return (
-            <Card key={company.id}>
-              <h2>
-                <Link to={`/companies/${company.id}`}>{t(company.name)}</Link>
-              </h2>
-              <h3>{t("事前に知っておきたいこと")}</h3>
+            <Card key={company.id} radius="lg">
+              <Title order={2} size="h3" mb="xs">
+                <Link to={`/companies/${company.id}`} style={{ color: "inherit", textDecoration: "none" }}>
+                  {t(company.name)}
+                </Link>
+              </Title>
+              <Title order={3} size="h5" c="dimmed" mt="sm" mb={4}>
+                {t("事前に知っておきたいこと")}
+              </Title>
               {content?.basics.length ? (
-                <ul>
+                <List spacing={4} size="xs" mb="sm">
                   {content.basics.map((text, i) => (
-                    <li key={i}>{t(text)}</li>
+                    <List.Item key={i}>
+                      <Text size="xs" c="dimmed">
+                        {t(text)}
+                      </Text>
+                    </List.Item>
                   ))}
-                </ul>
+                </List>
               ) : (
-                <p>{t("未登録")}</p>
+                <Text size="xs" c="dimmed" mb="sm">
+                  {t("未登録")}
+                </Text>
               )}
-              <h3>{t("見学の注目ポイント")}</h3>
+              <Title order={3} size="h5" c="dimmed" mt="xs" mb={4}>
+                {t("見学の注目ポイント")}
+              </Title>
               {!company.highlights.length && (
-                <p>{t("知りたいことを事前に整理してください。")}</p>
+                <Text size="xs" c="dimmed" mb="xs">
+                  {t("知りたいことを事前に整理してください。")}
+                </Text>
               )}
-              <ul>
+              <List spacing={4} size="xs" mb="sm">
                 {company.highlights.map((text, i) => (
-                  <li key={i}>{t(text)}</li>
+                  <List.Item key={i}>
+                    <Text size="xs" c="dimmed">
+                      {t(text)}
+                    </Text>
+                  </List.Item>
                 ))}
-              </ul>
-              <h3>{t("事前質問例")}</h3>
+              </List>
+              <Title order={3} size="h5" c="dimmed" mt="xs" mb={4}>
+                {t("事前質問例")}
+              </Title>
               {!company.questions.length && (
-                <p>
+                <Text size="xs" c="dimmed" mb="xs">
                   {t(
                     "資料に具体例はありません。事業概要を調べて質問を準備してください。",
                   )}
-                </p>
+                </Text>
               )}
-              <ul>
+              <List spacing={4} size="xs" mb="sm">
                 {company.questions.map((text, i) => (
-                  <li key={i}>{t(text)}</li>
+                  <List.Item key={i}>
+                    <Text size="xs" c="dimmed">
+                      {t(text)}
+                    </Text>
+                  </List.Item>
                 ))}
-              </ul>
-              <h3>
-                {t("学習チェックリスト")}
-                {t(" ")}
-                <small>
+              </List>
+              <Group justify="space-between" align="center" mt="md" mb="xs">
+                <Title order={3} size="h5">
+                  {t("学習チェックリスト")}
+                </Title>
+                <Badge
+                  variant="light"
+                  color={count === items.length && items.length > 0 ? "teal" : "blue"}
+                  size="sm"
+                  radius="xl"
+                  style={{ fontWeight: 600 }}
+                >
                   {count} / {items.length}
-                </small>
-              </h3>
-              <div className="checklist">
+                </Badge>
+              </Group>
+              <Stack gap="xs" mt="xs" className="checklist">
                 {items.map((item) => (
-                  <label key={item.id}>
-                    <input
-                      type="checkbox"
-                      checked={!!checks.value[`${company.id}:${item.id}`]}
-                      onChange={(e) =>
-                        checks.change(
-                          `${company.id}:${item.id}`,
-                          e.target.checked,
-                        )
-                      }
-                    />
-                    <span>{t(item.text)}</span>
-                  </label>
+                  <Checkbox
+                    key={item.id}
+                    label={t(item.text)}
+                    size="sm"
+                    radius="sm"
+                    color="blue"
+                    checked={!!checks.value[`${company.id}:${item.id}`]}
+                    onChange={(e) =>
+                      checks.change(
+                        `${company.id}:${item.id}`,
+                        e.currentTarget.checked,
+                      )
+                    }
+                    styles={{
+                      label: { cursor: "pointer", fontSize: "0.875rem" },
+                      root: { padding: "6px 8px", borderRadius: 8, background: "var(--surface-secondary)" },
+                    }}
+                  />
                 ))}
-              </div>
-              {!items.length && <p>{t("チェック項目は未登録です。")}</p>}
+              </Stack>
+              {!items.length && (
+                <Text size="xs" c="dimmed">{t("チェック項目は未登録です。")}</Text>
+              )}
             </Card>
           );
         })}
-      </div>
+      </SimpleGrid>
     </>
   );
 }
