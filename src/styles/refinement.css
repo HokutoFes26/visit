@@ -680,3 +680,5 @@
   .bottom-nav .tab-indicator, :root .bottom-nav a, :root .bottom-nav a svg { transition: none; }
   :root .bottom-nav a.active svg { transform: none; }
 }
+/* Preserve vertical scrolling and pinch zoom while handling horizontal day changes. */
+.schedule-swipe { touch-action: pan-y pinch-zoom; }
