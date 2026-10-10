@@ -1,3 +1,7 @@
+# 県外企業見学ガイド — モノトーン改修版
+
+起動方法・変更内容・検証結果は [改修版ガイド](docs/REFINEMENT.md) を参照してください。
+
 # Factory Visit Guide
 
 A factory visit guide built with Vite, React, and TypeScript, with offline PWA support.

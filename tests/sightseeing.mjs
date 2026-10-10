@@ -111,7 +111,7 @@ try {
   await expect(page.locator('a[href="#/notes"]')).toHaveCount(0);
   await page.locator(".shortcut-grid").getByRole("link", { name: "東京観光", exact: true }).click();
   await expect(
-    page.getByRole("heading", { name: "東京の寄り道ガイド" }),
+    page.getByRole("heading", { name: "東京観光" }),
   ).toBeVisible();
   await expect(page.locator(".sightseeing-spot")).toHaveCount(
     data.spots.filter((spot) => spot.enabled).length,
@@ -244,7 +244,7 @@ try {
   await context.setOffline(true);
   await page.reload();
   await expect(
-    page.getByRole("heading", { name: "東京の寄り道ガイド" }),
+    page.getByRole("heading", { name: "東京観光" }),
   ).toBeVisible();
   await expect(page.locator(".sightseeing-map-offline")).toBeVisible();
   await expect(page.locator(".sightseeing-spot")).toHaveCount(
@@ -262,7 +262,7 @@ try {
       })
       .click();
     await expect(
-      page.getByRole("heading", { name: "東京の寄り道ガイド" }),
+      page.getByRole("heading", { name: "東京観光" }),
     ).toBeVisible();
   }
   await page.goto(`${base}/#/notes?company=members`);
