@@ -4,6 +4,7 @@ import { Badge, Card, Group, Stack, Text, Title, Box } from "@mantine/core";
 import { ArrowUpRight, Bus, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { companies, formatTime, scheduleState, type Schedule } from "../data";
+import "@/styles/timeline.css";
 
 export default function Timeline({
   items,
@@ -26,7 +27,9 @@ export default function Timeline({
           return (
             <article className={`timeline-item ${state}`} key={item.id}>
               <div className="timeline-time">
-                <strong>{item.startTime ? formatTime(item.startTime) : t("未定")}</strong>
+                <strong>
+                  {item.startTime ? formatTime(item.startTime) : t("未定")}
+                </strong>
                 {item.endTime && (
                   <span>
                     {formatTime(item.endTime)}
@@ -35,11 +38,15 @@ export default function Timeline({
                 )}
               </div>
               <div className="timeline-dot" />
-              <Card padding="lg" radius={0} withBorder={false} className="timeline-content">
+              <Card
+                padding="lg"
+                radius={0}
+                withBorder={false}
+                className="timeline-content"
+              >
                 {state === "current" && (
                   <Box mb="xs">
                     <Badge
-                      color="lime"
                       variant="light"
                       size="sm"
                       radius="xl"
@@ -93,7 +100,9 @@ export default function Timeline({
                       {t(item.transport)}
                       {t(
                         item.travelMinutes > 0
-                          ? t(" · 約{minutes}分", { minutes: item.travelMinutes })
+                          ? t(" · 約{minutes}分", {
+                              minutes: item.travelMinutes,
+                            })
                           : "",
                       )}
                     </Badge>

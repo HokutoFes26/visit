@@ -90,13 +90,14 @@ src/
 | `src/components/ui.tsx` | 共通カード・見出し・空状態 |
 | `src/types/index.ts` | 企業・予定の型定義 |
 | `src/data/index.ts` | 基本バリデーション・日本時間の判定 |
-| `src/data/event.json` | 見学概要、代表日、集合情報、版番号 |
-| `src/data/schedule.json` | 日付、開始・終了時刻、場所、企業ID、移動情報 |
-| `src/data/companies.json` | 企業紹介、画像、注目ポイント、質問例 |
-| `src/data/guide.json` | 持ち物・服装・注意事項 |
-| `src/data/announcements.json` | 告知内容・掲載日・更新日・重要度 |
-| `src/data/seats.json` | 行数、列・通路、座席番号、グループ |
-| `src/data/learning.json` | 企業別の事前知識とチェック項目 |
+| `src/data/i/`, `src/data/k/` | 学科別のデータファイル配置フォルダ |
+| `src/data/*/event.json` | 見学概要、代表日、集合情報、版番号 |
+| `src/data/*/schedule.json` | 日付、開始・終了時刻、場所、企業ID、移動情報 |
+| `src/data/*/companies.json` | 企業紹介、画像、注目ポイント、質問例 |
+| `src/data/*/guide.json` | 持ち物・服装・注意事項 |
+| `src/data/*/announcements.json` | 告知内容・掲載日・更新日・重要度 |
+| `src/data/*/seats.json` | 行数、列・通路、座席番号、グループ |
+| `src/data/*/learning.json` | 企業別の事前知識とチェック項目 |
 | `src/state/visit-storage.tsx` | 学習チェックの端末保存 |
 | `src/pwa.tsx` | 準備状態、インストール、更新通知・適用 |
 | `src/sw.ts` | Service Worker、プリキャッシュ・キャッシュ照合 |
@@ -182,4 +183,4 @@ PWAのため `sw.js`・`manifest.webmanifest`・iconsも含め、dist全体を�
 
 ## 東京観光の編集
 
-地図付きの東京観光ページを追加しています。観光地の追加・変更は `src/data/sightseeing.json` で行います。[編集手順と追加用テンプレート](SIGHTSEEING.md)を参照してください。
+地図付きの東京観光ページを追加しています。観光地の追加・変更は `src/data/i/sightseeing.json`（または `k`）で行います。[編集手順と追加用テンプレート](SIGHTSEEING.md)を参照してください。

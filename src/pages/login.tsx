@@ -2,13 +2,10 @@ import { DisplayControls } from "@/components/display-controls";
 import { t, usePreferences } from "@/state/preferences";
 import { event } from "@/data";
 import { Badge, Box, Button, PasswordInput, Text, Title } from "@mantine/core";
-import {
-  ArrowRight,
-  Building2,
-  LockKeyhole,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowRight, Building2, LockKeyhole, ShieldCheck } from "lucide-react";
 import { useState, type FormEvent } from "react";
+import "@/styles/display-controls.css";
+import "@/styles/login.css";
 
 const password = import.meta.env.VITE_VISIT_PASSWORD || "factory2026";
 
@@ -31,12 +28,8 @@ export default function Login({ onLogin }: { onLogin: () => void }) {
       <div className="login-controls">
         <DisplayControls />
       </div>
-      <div className="login-art" />
       <div className="login-intro">
         <h1>{t("県外企業見学")}</h1>
-        <Badge variant="light" color="blue" size="md" radius="xl" style={{ fontWeight: 600 }}>
-          {t("県外企業見学 · 発表概要版")}
-        </Badge>
       </div>
       <form onSubmit={submit} className="glass-card login-panel">
         <span className="brand-icon">
@@ -51,8 +44,8 @@ export default function Login({ onLogin }: { onLogin: () => void }) {
           onChange={(e) => setValue(e.target.value)}
           required
           autoComplete="current-password"
-          radius="md"
-          size="md"
+          radius="xl"
+          size="lg"
           visibilityToggleButtonProps={{
             "aria-label": t("パスワードを表示"),
           }}
@@ -61,9 +54,11 @@ export default function Login({ onLogin }: { onLogin: () => void }) {
           styles={{
             input: {
               background: "var(--surface-secondary)",
-              borderColor: error ? "var(--mantine-color-red-filled)" : "var(--border)",
+              borderColor: error
+                ? "var(--mantine-color-red-filled)"
+                : "var(--border)",
             },
-            label: { fontWeight: 600, marginBottom: 6, fontSize: "0.875rem" },
+            label: { fontWeight: 600, marginBottom: 12, fontSize: "0.875rem" },
           }}
         />
         {error && (
@@ -74,15 +69,16 @@ export default function Login({ onLogin }: { onLogin: () => void }) {
         <Button
           type="submit"
           variant="filled"
-          color="blue"
+          color="var(--foreground)"
           radius="xl"
           fullWidth
-          size="md"
+          size="lg"
           mt="lg"
           rightSection={<ArrowRight size={18} />}
-          style={{ fontWeight: 600, boxShadow: "0 4px 14px 0 rgba(0, 111, 238, 0.35)" }}
         >
-          {t("見学ガイドをひらく")}
+          <Text fw={700} c="var(--surface)">
+            {t("見学ガイドをひらく")}
+            </Text>
         </Button>
         {!import.meta.env.VITE_VISIT_PASSWORD && (
           <small className="demo-password">{t(event.passwordHint)}</small>

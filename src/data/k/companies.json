@@ -1,0 +1,58 @@
+[
+  {
+    "id": "members",
+    "name": "株式会社メンバーズ",
+    "legalName": "株式会社メンバーズ",
+    "industry": "業種：資料に記載なし",
+    "description": "10月21日 14:30〜16:30。14:00に晴海アイランドトリトンスクエア オフィスタワーXへ集合します。",
+    "image": "/images/company.svg",
+    "business": [],
+    "products": [],
+    "factory": "見学内容の詳細は未発表です。",
+    "highlights": [],
+    "questions": [],
+    "website": null
+  },
+  {
+    "id": "sus",
+    "name": "株式会社エスユーエス",
+    "legalName": "株式会社エスユーエス",
+    "industry": "業種：資料に記載なし",
+    "description": "10月22日 9:20〜11:30に見学します。具体的な訪問拠点は資料に記載されていません。",
+    "image": "/images/company.svg",
+    "business": [],
+    "products": [],
+    "factory": "見学内容の詳細は未発表です。",
+    "highlights": [],
+    "questions": [],
+    "website": null
+  },
+  {
+    "id": "toko",
+    "name": "東港金属",
+    "legalName": "東港金属",
+    "industry": "業種：資料に記載なし",
+    "description": "10月22日 14:00〜16:00に千葉工場を見学します。",
+    "image": "/images/company.svg",
+    "business": [],
+    "products": [],
+    "factory": "千葉工場を見学予定。見学内容の詳細は未発表です。",
+    "highlights": [],
+    "questions": [],
+    "website": null
+  },
+  {
+    "id": "nec",
+    "name": "NEC",
+    "legalName": "NEC",
+    "industry": "業種：資料に記載なし",
+    "description": "10月23日 10:00から見学し、12:00に現地解散します。具体的な訪問拠点は資料に記載されていません。",
+    "image": "/images/company.svg",
+    "business": [],
+    "products": [],
+    "factory": "見学内容の詳細は未発表です。",
+    "highlights": [],
+    "questions": [],
+    "website": null
+  }
+]

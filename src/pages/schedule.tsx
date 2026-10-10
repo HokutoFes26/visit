@@ -15,8 +15,13 @@ import { event, formatDate, schedule } from "@/data";
 import { useNow } from "@/hooks/useNow";
 import { ChevronDown, Info, Navigation } from "lucide-react";
 import { useState } from "react";
+import "@/styles/schedule.css";
 
-export default function SchedulePage() {
+export function ScheduleContent({
+  showTitle = true,
+}: {
+  showTitle?: boolean;
+}) {
   usePreferences();
   const days = [...new Set(schedule.map((s) => s.date))];
   const [day, setDay] = useState(() => {
@@ -35,8 +40,8 @@ export default function SchedulePage() {
   const uniqueStops = [...new Set(stops)];
 
   return (
-    <>
-      <PageTitle title={t("スケジュール")} />
+    <div className="schedule-content">
+      {showTitle && <PageTitle title={t("スケジュール")} />}
       <div className="day-tabs" aria-label={t("見学日")}>
         {days.map((d) => (
           <button
@@ -53,12 +58,12 @@ export default function SchedulePage() {
 
       {uniqueStops.length > 0 && (
         <Box
-          my="md"
           style={{
             background: "var(--surface-secondary)",
             borderRadius: 12,
             border: "1px solid var(--border)",
             overflow: "hidden",
+            marginBottom: 16,
           }}
         >
           <UnstyledButton
@@ -111,6 +116,10 @@ export default function SchedulePage() {
       )}
 
       <Timeline items={daySchedule} now={now} />
-    </>
+    </div>
   );
+}
+
+export default function SchedulePage() {
+  return <ScheduleContent showTitle={true} />;
 }

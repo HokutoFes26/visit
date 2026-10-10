@@ -33,6 +33,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
+import "@/styles/companies.css";
 
 export default function CompanyDetail() {
   usePreferences();
@@ -82,16 +83,10 @@ export default function CompanyDetail() {
         <div className="company-hero-overlay" />
         <div className="company-hero-top">
           <Group gap="xs">
-            <Link
-              to="/schedule"
-              className="back-link company-hero-back-link"
-            >
+            <Link to="/schedule" className="back-link company-hero-back-link">
               {t("← スケジュール")}
             </Link>
-            <Link
-              to="/companies"
-              className="back-link company-hero-back-link"
-            >
+            <Link to="/companies" className="back-link company-hero-back-link">
               {t("← 企業一覧")}
             </Link>
           </Group>
@@ -120,9 +115,7 @@ export default function CompanyDetail() {
           {location && (
             <Group gap={6} align="center" className="company-hero-location">
               <MapPin size={16} />
-              <Text size="sm">
-                {t(location)}
-              </Text>
+              <Text size="sm">{t(location)}</Text>
             </Group>
           )}
         </div>
@@ -287,7 +280,9 @@ export default function CompanyDetail() {
                 onChange={(e) =>
                   notes.change(`${c.id}:pre`, e.currentTarget.value)
                 }
-                placeholder={t("見学前に調べたこと、質問したいことなどをメモ...")}
+                placeholder={t(
+                  "見学前に調べたこと、質問したいことなどをメモ...",
+                )}
                 autosize
                 minRows={5}
                 maxRows={12}
@@ -328,7 +323,9 @@ export default function CompanyDetail() {
                 onChange={(e) =>
                   notes.change(`${c.id}:post`, e.currentTarget.value)
                 }
-                placeholder={t("見学で学んだこと、印象に残ったことなどをメモ...")}
+                placeholder={t(
+                  "見学で学んだこと、印象に残ったことなどをメモ...",
+                )}
                 autosize
                 minRows={5}
                 maxRows={12}
@@ -353,7 +350,6 @@ export default function CompanyDetail() {
                 {t(notes.error)}
               </Alert>
             )}
-
           </Stack>
         </Grid.Col>
       </Grid>

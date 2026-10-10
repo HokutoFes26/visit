@@ -4,6 +4,7 @@ import { assetUrl } from "@/config/assets";
 import { companies } from "@/data";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import "@/styles/companies.css";
 
 export default function CompaniesPage() {
   usePreferences();
@@ -12,11 +13,7 @@ export default function CompaniesPage() {
       <PageTitle title={t("企業情報")} />
       <div className="company-grid">
         {companies.map((c) => (
-          <Link
-            className="company-card"
-            key={c.id}
-            to={`/companies/${c.id}`}
-          >
+          <Link className="company-card" key={c.id} to={`/companies/${c.id}`}>
             <div className="company-card-banner">
               <img
                 src={assetUrl(c.image)}
@@ -31,9 +28,7 @@ export default function CompaniesPage() {
               />
               <div className="company-card-overlay" />
               <div className="company-card-content">
-                <div className="company-card-industry">
-                  {t(c.industry)}
-                </div>
+                <div className="company-card-industry">{t(c.industry)}</div>
                 <Title order={2} size="h3" className="company-card-title">
                   {t(c.name)}
                 </Title>

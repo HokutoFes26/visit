@@ -14,11 +14,11 @@ import {
   Text,
   Title,
 } from "@/components/ui";
-import { companies, guide } from "@/data";
-import learning from "@/data/learning.json";
+import { companies, guide, learning } from "@/data";
 import { useStorage } from "@/state/visit-storage";
 import { AlertCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import "@/styles/learning.css";
 
 export default function LearningPage() {
   usePreferences();
@@ -85,7 +85,10 @@ export default function LearningPage() {
           return (
             <Card key={company.id} radius="lg">
               <Title order={2} size="h3" mb="xs">
-                <Link to={`/companies/${company.id}`} style={{ color: "inherit", textDecoration: "none" }}>
+                <Link
+                  to={`/companies/${company.id}`}
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
                   {t(company.name)}
                 </Link>
               </Title>
@@ -149,8 +152,10 @@ export default function LearningPage() {
                 </Title>
                 <Badge
                   variant="light"
-                  color={count === items.length && items.length > 0 ? "teal" : "blue"}
-                  size="sm"
+                  color={
+                    count === items.length && items.length > 0 ? "teal" : "var(--accent-neon)"
+                  }
+                  size="md"
                   radius="xl"
                   style={{ fontWeight: 600 }}
                 >
@@ -162,9 +167,9 @@ export default function LearningPage() {
                   <Checkbox
                     key={item.id}
                     label={t(item.text)}
-                    size="sm"
-                    radius="sm"
-                    color="blue"
+                    size="md"
+                    radius="xl"
+                    color="var(--accent-neon)"
                     checked={!!checks.value[`${company.id}:${item.id}`]}
                     onChange={(e) =>
                       checks.change(
@@ -174,13 +179,19 @@ export default function LearningPage() {
                     }
                     styles={{
                       label: { cursor: "pointer", fontSize: "0.875rem" },
-                      root: { padding: "6px 8px", borderRadius: 8, background: "var(--surface-secondary)" },
+                      root: {
+                        padding: "12px",
+                        borderRadius: 999,
+                        background: "var(--surface-secondary)"
+                      },
                     }}
                   />
                 ))}
               </Stack>
               {!items.length && (
-                <Text size="xs" c="dimmed">{t("チェック項目は未登録です。")}</Text>
+                <Text size="xs" c="dimmed">
+                  {t("チェック項目は未登録です。")}
+                </Text>
               )}
             </Card>
           );

@@ -2,7 +2,7 @@ import { chromium, expect } from "@playwright/test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 const data = async (name) =>
-  JSON.parse(await readFile(`src/data/${name}.json`, "utf8"));
+  JSON.parse(await readFile(`src/data/i/${name}.json`, "utf8"));
 const [event, schedule, seats] = await Promise.all(
   ["event", "schedule", "seats"].map(data),
 );

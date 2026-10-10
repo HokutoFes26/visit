@@ -1,4 +1,4 @@
-import { createTheme } from "@mantine/core";
+import { createTheme, Card } from "@mantine/core";
 
 export const theme = createTheme({
   primaryColor: "dark",
@@ -14,7 +14,7 @@ export const theme = createTheme({
       h3: { fontWeight: "600" },
     },
   },
-  defaultRadius: "md",
+  defaultRadius: "xl",
   cursorType: "pointer",
   colors: {
     dark: [
@@ -44,16 +44,27 @@ export const theme = createTheme({
         radius: "32px",
       },
     },
-    Card: {
+    Card: Card.extend({
       defaultProps: {
         radius: "32px",
         withBorder: true,
         shadow: "none",
+        padding: "lg",
       },
-    },
+      vars: (_theme, props) => {
+        if (props.padding === "lg" || !props.padding) {
+          return {
+            root: {
+              "--card-padding": "18px 20px",
+            },
+          };
+        }
+        return { root: {} };
+      },
+    }),
     Button: {
       defaultProps: {
-        radius: "md",
+        radius: "xl",
         size: "sm",
       },
     },

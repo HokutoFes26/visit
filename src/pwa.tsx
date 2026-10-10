@@ -276,7 +276,11 @@ export function PwaSettings() {
       )}
       <h2>{t("ホーム画面に追加")}</h2>
       {pwa.installable ? (
-        <Button variant="filled" color="blue" onClick={() => void pwa.install()}>
+        <Button
+          variant="filled"
+          color="blue"
+          onClick={() => void pwa.install()}
+        >
           {t("アプリをインストール")}
         </Button>
       ) : (

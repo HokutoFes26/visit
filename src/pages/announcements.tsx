@@ -1,5 +1,13 @@
 import { getLanguage, t, usePreferences } from "@/state/preferences";
-import { Badge, Card, PageTitle, Stack, Text, Title, Box } from "@/components/ui";
+import {
+  Badge,
+  Card,
+  PageTitle,
+  Stack,
+  Text,
+  Title,
+  Box,
+} from "@/components/ui";
 import { announcements } from "@/data";
 
 export default function AnnouncementsPage() {

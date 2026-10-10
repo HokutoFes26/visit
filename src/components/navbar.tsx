@@ -1,22 +1,23 @@
 import { DisplayControls } from "@/components/display-controls";
 import { t, usePreferences } from "@/state/preferences";
 import { desktopLinks, mobileLinks } from "@/config/site";
-import { ActionIcon, Badge, Button, Group, Stack, Text, Box } from "@mantine/core";
+import {
+  ActionIcon,
+  Badge,
+  Button,
+  Group,
+  Stack,
+  Text,
+  Box,
+} from "@mantine/core";
 import { Bell, Building2, LogOut, Settings } from "lucide-react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import "@/styles/navbar.css";
 
 export function Sidebar({ logout }: { logout: () => void }) {
   usePreferences();
   return (
     <aside className="sidebar">
-      <Link to="/" className="brand">
-        <span className="brand-icon">
-          <Building2 size={20} />
-        </span>
-        <span>
-          COMPANY<span className="brand-sub">VISIT GUIDE</span>
-        </span>
-      </Link>
       <nav aria-label={t("メインナビゲーション")}>
         {desktopLinks.map(({ to, label, icon: Icon }) => (
           <NavLink key={to} to={to} end={to === "/"}>
@@ -37,7 +38,7 @@ export function Sidebar({ logout }: { logout: () => void }) {
         >
           {t("ログアウト")}
         </Button>
-        <small>{t("発表概要版 · v0.2")}</small>
+        <small>{t("UI change · v0.3")}</small>
       </div>
     </aside>
   );
@@ -47,13 +48,11 @@ export function Navbar() {
   usePreferences();
   return (
     <>
-      <header className="header" style={{ height: 60, padding: "0 16px" }}>
+      <header className="header">
         <Group gap="sm" align="center">
           <Box
+          className="header-icon"
             style={{
-              width: 28,
-              height: 28,
-              borderRadius: 6,
               background: "var(--foreground, #000000)",
               color: "var(--surface, #ffffff)",
               display: "flex",
@@ -61,7 +60,7 @@ export function Navbar() {
               justifyContent: "center",
             }}
           >
-            <Building2 size={16}/>
+            <Building2 size={16} />
           </Box>
         </Group>
 
@@ -72,7 +71,7 @@ export function Navbar() {
             aria-label={t("お知らせ")}
             className="header-action-btn notification"
           >
-            <Bell size={16} />
+            <Bell size={20} />
             <i />
           </Link>
           <Link
@@ -80,7 +79,7 @@ export function Navbar() {
             aria-label={t("設定")}
             className="header-action-btn"
           >
-            <Settings size={16} />
+            <Settings size={20} />
           </Link>
         </Group>
       </header>
@@ -153,9 +152,7 @@ export function BottomNavigation() {
                     transform: isActive ? "scale(1.08)" : "scale(1)",
                   }}
                 />
-                <span className="navLabel">
-                  {t(label)}
-                </span>
+                <span className="navLabel">{t(label)}</span>
               </NavLink>
             );
           })}

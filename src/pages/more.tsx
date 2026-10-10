@@ -16,14 +16,22 @@ import {
   Settings,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import "@/styles/more.css";
 
 export default function MorePage() {
   usePreferences();
 
   const groups = [
     {
-      title: "見学サポート",
+      title: "サポート",
       items: [
+        {
+          to: "/announcements",
+          title: "お知らせ",
+          description: "連絡事項・更新情報",
+          icon: Bell,
+          color: "orange",
+        },
         {
           to: "/guide",
           title: "見学ガイド",
@@ -44,13 +52,6 @@ export default function MorePage() {
       title: "アプリ・設定",
       items: [
         {
-          to: "/announcements",
-          title: "お知らせ",
-          description: "連絡事項・更新情報",
-          icon: Bell,
-          color: "orange",
-        },
-        {
           to: "/settings",
           title: "設定",
           description: "言語・表示テーマ・データ管理",
@@ -67,10 +68,23 @@ export default function MorePage() {
 
       {groups.map((group) => (
         <Box key={group.title} mb="xl">
-          <Text size="xs" fw={700} c="dimmed" tt="uppercase" lts={1} mb={8} px={4}>
+          <Text
+            size="xs"
+            fw={700}
+            c="dimmed"
+            tt="uppercase"
+            lts={1}
+            mb={8}
+            px={4}
+          >
             {t(group.title)}
           </Text>
-          <Card padding={0} radius="16px" withBorder className="more-group-card">
+          <Card
+            padding={0}
+            radius="16px"
+            withBorder
+            className="more-group-card"
+          >
             {group.items.map((item, index) => (
               <div key={item.to}>
                 {index > 0 && <Divider className="more-divider" />}

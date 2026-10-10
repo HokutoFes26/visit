@@ -5,7 +5,7 @@ import { createServer } from "node:http";
 import { resolve, extname, sep } from "node:path";
 
 const data = JSON.parse(
-  (await readFile("src/data/sightseeing.json", "utf8")).replace(/^\uFEFF/, ""),
+  (await readFile("src/data/i/sightseeing.json", "utf8")).replace(/^\uFEFF/, ""),
 );
 assert.equal(
   new Set(data.areas.map((area) => area.id)).size,

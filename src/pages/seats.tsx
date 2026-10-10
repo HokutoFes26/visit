@@ -1,7 +1,17 @@
 import { t, usePreferences } from "@/state/preferences";
-import { Badge, Card, List, PageTitle, SectionTitle, Box, Text, Group } from "@/components/ui";
+import {
+  Badge,
+  Card,
+  List,
+  PageTitle,
+  SectionTitle,
+  Box,
+  Text,
+  Group,
+} from "@/components/ui";
 import { assetUrl } from "@/config/assets";
-import seats from "@/data/seats.json";
+import { seats } from "@/data";
+import "@/styles/seats.css";
 
 export default function SeatsPage() {
   usePreferences();

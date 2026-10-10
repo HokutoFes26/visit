@@ -1,4 +1,8 @@
-import data from "./sightseeing.json";
+import dataI from "./i/sightseeing.json";
+import dataK from "./k/sightseeing.json";
+import { getCurrentCourse } from "./course";
+
+const data = getCurrentCourse() === "k" ? dataK : dataI;
 export type LocalizedText = string | { ja: string; en?: string };
 export interface SightseeingArea {
   id: string;

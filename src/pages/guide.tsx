@@ -27,13 +27,25 @@ export default function GuidePage() {
             <MapPin size={24} />
           </ThemeIcon>
           <Box style={{ flex: 1 }}>
-            <Badge variant="light" color="blue" size="xs" radius="xl" mb={6} style={{ fontWeight: 700 }}>
+            <Badge
+              variant="light"
+              color="blue"
+              size="xs"
+              radius="xl"
+              mb={6}
+              style={{ fontWeight: 700 }}
+            >
               {t("集合場所")}
             </Badge>
             <Title order={2} size="h3" mb={4}>
               {t(event.meetingPlace)}
             </Title>
-            <Text size="sm" fw={600} style={{ color: "var(--mantine-color-blue-filled)" }} mb={4}>
+            <Text
+              size="sm"
+              fw={600}
+              style={{ color: "var(--mantine-color-blue-filled)" }}
+              mb={4}
+            >
               {t(formatDate(event.date))} · {formatTime(event.meetingTime)}
               {t("集合")}
             </Text>

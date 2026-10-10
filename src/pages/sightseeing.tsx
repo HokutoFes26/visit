@@ -1,4 +1,15 @@
-import { Card, PageTitle, Badge, Button, Group, Text, Title, Box, NativeSelect, SimpleGrid } from "@/components/ui";
+import {
+  Card,
+  PageTitle,
+  Badge,
+  Button,
+  Group,
+  Text,
+  Title,
+  Box,
+  NativeSelect,
+  SimpleGrid,
+} from "@/components/ui";
 import {
   sightseeing,
   localize,
@@ -7,6 +18,7 @@ import {
 } from "@/data/sightseeing";
 import { usePwa } from "@/pwa";
 import { t, usePreferences } from "@/state/preferences";
+import "@/styles/sightseeing.css";
 import {
   ArrowUpRight,
   Clock3,
@@ -44,7 +56,7 @@ export default function SightseeingPage() {
 
   return (
     <>
-      <PageTitle title={t("東京の寄り道ガイド")}/>
+      <PageTitle title={t("東京の寄り道ガイド")} />
 
       <Group
         className="sightseeing-filters"
@@ -99,8 +111,8 @@ export default function SightseeingPage() {
         {area
           ? text(area.description)
           : t(
-            "スポットを選ぶと、地図のピンが切り替わります。地図は拡大・移動できます。",
-          )}
+              "スポットを選ぶと、地図のピンが切り替わります。地図は拡大・移動できます。",
+            )}
       </p>
 
       {selected ? (
@@ -204,7 +216,13 @@ export default function SightseeingPage() {
                 className={`sightseeing-spot ${selected.id === spot.id ? "is-selected" : ""}`}
               >
                 <div className="sightseeing-spot-heading">
-                  <Badge variant="light" color="var(--accent-neon)" size="md" radius="xl" style={{ fontWeight: 600 }}>
+                  <Badge
+                    variant="light"
+                    color="var(--accent-neon)"
+                    size="md"
+                    radius="xl"
+                    style={{ fontWeight: 600 }}
+                  >
                     {text(
                       sightseeing.areas.find((item) => item.id === spot.areaId)
                         ?.name || "",
@@ -221,7 +239,16 @@ export default function SightseeingPage() {
                     aria-label={t("{name}を地図に表示", {
                       name: text(spot.name),
                     })}
-                    leftSection={<MapPin size={14} color={selected.id === spot.id ? "var(--surface)" : "var(--accent-neon)"} />}
+                    leftSection={
+                      <MapPin
+                        size={14}
+                        color={
+                          selected.id === spot.id
+                            ? "var(--surface)"
+                            : "var(--accent-neon)"
+                        }
+                      />
+                    }
                     onClick={() => {
                       setSelectedId(spot.id);
                       if (window.matchMedia("(max-width: 850px)").matches)
@@ -286,7 +313,9 @@ export default function SightseeingPage() {
         </div>
       ) : (
         <Card>
-          <Text c="dimmed">{t("このエリアのスポットはまだ登録されていません。")}</Text>
+          <Text c="dimmed">
+            {t("このエリアのスポットはまだ登録されていません。")}
+          </Text>
         </Card>
       )}
     </>

@@ -62,9 +62,12 @@ export function Card({
   return (
     <MantineCard
       id={id}
-      style={style}
+      style={{
+        ...(padding === "lg" ? { padding: "18px 20px" } : {}),
+        ...style,
+      }}
       shadow={shadow}
-      padding={padding}
+      padding={padding === "lg" ? undefined : padding}
       radius={radius}
       withBorder={withBorder}
       className={className}
@@ -86,7 +89,7 @@ export function PageTitle({
 }) {
   usePreferences();
   return (
-    <Box mb="lg" className="page-title">
+    <Box className="page-title">
       {eyebrow && (
         <Text size="xs" fw={700} c="dimmed" tt="uppercase" lts={1} mb={4}>
           {t(eyebrow)}
@@ -115,7 +118,13 @@ export function SectionTitle({
 }) {
   usePreferences();
   return (
-    <Group justify="space-between" align="center" my="md" className="section-title">
+    <Group
+      justify="space-between"
+      align="center"
+      my={0}
+      mb="md"
+      className="section-title"
+    >
       <Title order={2} size="h3" fw={700}>
         {t(title)}
       </Title>

@@ -1,13 +1,38 @@
 import { getLanguage } from "@/state/preferences";
 import type { Company, Schedule } from "@/types";
-import companyData from "./companies.json";
-import eventData from "./event.json";
-import learningData from "./learning.json";
-import scheduleData from "./schedule.json";
-import seatData from "./seats.json";
+import { currentCourse, getCurrentCourse } from "./course";
+
+import companyDataI from "./i/companies.json";
+import eventDataI from "./i/event.json";
+import learningDataI from "./i/learning.json";
+import scheduleDataI from "./i/schedule.json";
+import seatDataI from "./i/seats.json";
+import announcementsI from "./i/announcements.json";
+import guideI from "./i/guide.json";
+
+import companyDataK from "./k/companies.json";
+import eventDataK from "./k/event.json";
+import learningDataK from "./k/learning.json";
+import scheduleDataK from "./k/schedule.json";
+import seatDataK from "./k/seats.json";
+import announcementsK from "./k/announcements.json";
+import guideK from "./k/guide.json";
+
+export * from "./course";
 export type { Company, Schedule } from "@/types";
-export { default as announcements } from "./announcements.json";
-export { default as guide } from "./guide.json";
+
+const isK = currentCourse === "k";
+
+const companyData = isK ? companyDataK : companyDataI;
+const eventData = isK ? eventDataK : eventDataI;
+const learningData = isK ? learningDataK : learningDataI;
+const scheduleData = isK ? scheduleDataK : scheduleDataI;
+const seatData = isK ? seatDataK : seatDataI;
+
+export const announcements = isK ? announcementsK : announcementsI;
+export const guide = isK ? guideK : guideI;
+export const seats = seatData;
+export const learning = learningData;
 
 export const event = eventData;
 export const companies: Company[] = companyData;
