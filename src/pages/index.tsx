@@ -231,7 +231,10 @@ export default function Home() {
             ))}
           </Box>
 
-          <Card>
+          <Box
+            component="section"
+            className="priority-notices"
+          >
             <SectionTitle title={t("出発前のチェック")} to="/guide" />
             <Box className="check-items">
               <div>
@@ -249,7 +252,7 @@ export default function Home() {
                 </span>
               </div>
             </Box>
-          </Card>
+          </Box>
         </div>
       </div>
 

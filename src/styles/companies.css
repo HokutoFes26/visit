@@ -338,6 +338,7 @@
   line-height: 1.6;
   font-size: 0.875rem;
   margin-top: 8px;
+  border-radius: 12px;
 }
 
 .company-related-schedule {

@@ -128,7 +128,6 @@ export default function CompanyDetail() {
             size="sm"
             radius="xl"
             fw={600}
-            leftSection={<Building2 size={15} />}
             rightSection={<ArrowDown size={14} />}
             onClick={() => scrollToSection("company-overview")}
           >
@@ -140,11 +139,10 @@ export default function CompanyDetail() {
             size="sm"
             radius="xl"
             fw={600}
-            leftSection={<BookOpen size={15} />}
             rightSection={<ArrowDown size={14} />}
             onClick={() => scrollToSection("pre-note-card")}
           >
-            {t("事前メモ")}
+            {t("メモ")}
           </Button>
           <Button
             variant="light"
@@ -152,11 +150,10 @@ export default function CompanyDetail() {
             size="sm"
             radius="xl"
             fw={600}
-            leftSection={<CheckCircle2 size={15} />}
             rightSection={<ArrowDown size={14} />}
             onClick={() => scrollToSection("post-note-card")}
           >
-            {t("事後メモ")}
+            {t("学び")}
           </Button>
         </Group>
       </Box>
@@ -266,7 +263,7 @@ export default function CompanyDetail() {
                     <BookOpen size={16} />
                   </ThemeIcon>
                   <Title order={3} size="h4" fw={700}>
-                    {t("事前メモ")}
+                    {t("メモ")}
                   </Title>
                 </Group>
               </Group>
@@ -286,7 +283,7 @@ export default function CompanyDetail() {
                 autosize
                 minRows={5}
                 maxRows={12}
-                aria-label={t("事前メモ")}
+                aria-label={t("メモ")}
                 className="company-note-textarea"
               />
 
@@ -309,7 +306,7 @@ export default function CompanyDetail() {
                     <CheckCircle2 size={16} />
                   </ThemeIcon>
                   <Title order={3} size="h4" fw={700}>
-                    {t("事後メモ")}
+                    {t("学び")}
                   </Title>
                 </Group>
               </Group>
@@ -329,7 +326,7 @@ export default function CompanyDetail() {
                 autosize
                 minRows={5}
                 maxRows={12}
-                aria-label={t("事後メモ")}
+                aria-label={t("メモ")}
                 className="company-note-textarea"
               />
 
