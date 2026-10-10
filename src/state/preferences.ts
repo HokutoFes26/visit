@@ -38,7 +38,7 @@ function apply() {
     .querySelector('meta[name="theme-color"]')
     ?.setAttribute(
       "content",
-      preferences.theme === "dark" ? "#101b2d" : "#edf4ff",
+      preferences.theme === "dark" ? "#17191c" : "#f8f9fb",
     );
 }
 apply();

@@ -1,6 +1,5 @@
 import { t, usePreferences } from "@/state/preferences";
 import { Card, SectionTitle } from "@/components/ui";
-import { assetUrl } from "@/config/assets";
 import { shortcuts } from "@/config/site";
 import {
   announcements,
@@ -19,7 +18,7 @@ import {
   Backpack,
   Building2,
   CalendarDays,
-  ChevronRight,
+  Compass,
   Clock3,
   MapPin,
   ShieldCheck,
@@ -34,11 +33,23 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <img
-          src={assetUrl("images/company.svg")}
-          alt={t("企業ビルのイラスト")}
-        />
-        <div className="hero-shade" />
+        <div className="hero-art" aria-hidden="true">
+          <div className="art-orbit orbit-one" />
+          <div className="art-orbit orbit-two" />
+          <div className="art-sphere" />
+          <div className="art-grain" />
+          <div className="art-label">
+            TOYAMA <ArrowUpRight size={16} /> TOKYO
+          </div>
+          <div className="art-ticket">
+            <span>FIELD TRIP / {event.date.slice(0, 4)}</span>
+            <strong>
+              {event.date.slice(5).replace("-", ".")} —{" "}
+              {event.endDate.slice(5).replace("-", ".")}
+            </strong>
+            <div className="ticket-barcode" />
+          </div>
+        </div>
         <div className="hero-content">
           <h1>{t("県外企業見学")}</h1>
           <div className="hero-meta">
@@ -61,7 +72,6 @@ export default function Home() {
             <ArrowRight size={18} />
           </Link>
         </div>
-        <span className="hero-caption">{t("建物は仮イラスト")}</span>
       </section>
       <div className="overview-grid">
         <Card className="now-card">
@@ -151,7 +161,7 @@ export default function Home() {
         </Link>
       </div>
       <div className="shortcut-grid">
-        {shortcuts.map(({ to, title, icon: Icon, color }) => (
+        {shortcuts.map(({ to, title, icon: Icon, color }, index) => (
           <Link to={to} className="shortcut glass-card" key={to}>
             <span className={`shortcut-icon ${color}`}>
               <Icon size={23} />
@@ -159,10 +169,31 @@ export default function Home() {
             <span>
               <strong>{t(title)}</strong>
             </span>
-            <ChevronRight size={16} />
+            <span className="shortcut-number" aria-hidden="true">
+              0{index + 1}
+            </span>
+            <ArrowUpRight size={18} />
           </Link>
         ))}
       </div>
+      <Link to="/sightseeing" className="explore-banner">
+        <div className="explore-copy">
+          <h2>{t("東京観光")}</h2>
+          <p>{t("観光スポットの地図・アクセス・経路を確認できます。")}</p>
+          <span className="explore-action">
+            {t("地図を見る")}
+            <ArrowUpRight size={18} />
+          </span>
+        </div>
+        <div className="explore-art" aria-hidden="true">
+          <Compass size={110} strokeWidth={0.7} />
+          <span>
+            TOKYO
+            <br />
+            EXPLORER
+          </span>
+        </div>
+      </Link>
       <div className="home-bottom">
         <Card>
           <SectionTitle title={t("出発前のチェック")} to="/guide" />
