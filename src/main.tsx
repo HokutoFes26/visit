@@ -2,8 +2,6 @@ import App from "@/App";
 import { Provider } from "@/provider";
 import "@mantine/core/styles.css";
 import "@/styles/globals.css";
-import "@/styles/monochrome.css";
-import "@/styles/refinement.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { HashRouter } from "react-router-dom";
