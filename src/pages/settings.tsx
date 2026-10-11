@@ -85,8 +85,9 @@ export default function SettingsPage({ logout }: { logout: () => void }) {
                 {t("端末の日時を正しく設定してください。")}
               </Text>
               <Button
+                color="var(--foreground)"
+                size="md"
                 variant="light"
-                color="gray"
                 leftSection={<LogOut size={16} />}
                 onClick={logout}
               >

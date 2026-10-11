@@ -62,12 +62,16 @@ export const scheduleState = (item: Schedule, now: number) => {
     return "current";
   return "past";
 };
-export const formatDate = (date: string) =>
+export const formatDate = (
+  date: string,
+  options?: Intl.DateTimeFormatOptions,
+) =>
   new Intl.DateTimeFormat(getLanguage() === "ja" ? "ja-JP" : "en-US", {
     timeZone: "Asia/Tokyo",
-    month: "long",
+    month: "short",
     day: "numeric",
     weekday: "short",
+    ...options,
   }).format(new Date(`${date}T00:00:00+09:00`));
 export const formatTime = (time: string | null | undefined): string => {
   if (!time) return "";

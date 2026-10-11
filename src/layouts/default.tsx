@@ -32,15 +32,6 @@ export default function Layout({ logout }: { logout: () => void }) {
           <Outlet />
         </main>
         <footer>
-          COMPANY VISIT GUIDE{t(" ")}
-          <span>
-            {t("発表概要に基づく案内です。")}
-            {t(" ")}
-            <Link to="/guide">
-              {t("見学ガイド")}
-              <ArrowUpRight size={12} />
-            </Link>
-          </span>
         </footer>
       </div>
       <BottomNavigation />

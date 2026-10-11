@@ -6,7 +6,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { Button } from "@mantine/core";
+import { Badge, Button, Group, Text, Title } from "@mantine/core";
 import { registerSW } from "virtual:pwa-register";
 
 interface InstallPrompt extends Event {
@@ -20,10 +20,10 @@ const PwaContext = createContext({
   update: false,
   error: "",
   installable: false,
-  check: async () => {},
-  apply: () => {},
-  install: async () => {},
-  repair: async () => {},
+  check: async () => { },
+  apply: () => { },
+  install: async () => { },
+  repair: async () => { },
 });
 export const usePwa = () => useContext(PwaContext);
 
@@ -254,42 +254,82 @@ export function PwaSettings() {
   const pwa = usePwa();
   return (
     <>
-      <h2>{t("オフライン対応")}</h2>
-      <PwaStatus />
-      <p>
-        {t(
-          "初回はオンラインで開き、「オフライン準備完了」を確認してください。ブラウザのデータを削除すると再準備が必要です。外部サイトはオンライン接続が必要です。",
-        )}
-      </p>
-      <Button
-        variant="light"
-        color="gray"
-        disabled={pwa.checking}
-        onClick={() => void pwa.check()}
-      >
-        {t(pwa.checking ? "確認中…" : "キャッシュ・更新を確認")}
-      </Button>
-      {!import.meta.env.DEV && !pwa.ready && (
-        <Button variant="light" color="gray" onClick={() => void pwa.repair()}>
-          {t("オフラインを再準備")}
-        </Button>
-      )}
-      <h2>{t("ホーム画面に追加")}</h2>
-      {pwa.installable ? (
-        <Button
-          variant="filled"
-          color="blue"
-          onClick={() => void pwa.install()}
-        >
-          {t("アプリをインストール")}
-        </Button>
-      ) : (
-        <p>
-          {t(
-            "対応ブラウザのメニューから「アプリをインストール」または「ホーム画面に追加」を選択してください。iPhoneではSafariの共有メニューをご利用ください。",
+      <div>
+        <Title order={2} size="h4" mb="xs">
+          {t("オフライン対応")}
+        </Title>
+        <Group gap="xs" mb="xs" align="center">
+          <Badge
+            color={
+              import.meta.env.DEV
+                ? "gray"
+                : pwa.ready
+                  ? "teal"
+                  : "orange"
+            }
+            variant="light"
+            size="lg"
+            radius="xl"
+            tt="none"
+            style={{ textTransform: "none" }}
+          >
+            {t(
+              import.meta.env.DEV
+                ? "開発モード（キャッシュ無効）"
+                : pwa.ready
+                  ? "オフライン準備完了"
+                  : "オフライン未準備",
+            )}
+          </Badge>
+          {pwa.checking && (
+            <Text size="xs" c="dimmed">
+              {t("確認中…")}
+            </Text>
           )}
-        </p>
-      )}
+        </Group>
+        <PwaStatus />
+        <Text size="sm" c="dimmed" mb="md">
+          {t(
+            "初回はオンラインで開き、「オフライン準備完了」を確認してください。ブラウザのデータを削除すると再準備が必要です。外部サイトはオンライン接続が必要です。",
+          )}
+        </Text>
+        <Group gap="sm">
+          <Button
+            color="var(--foreground)"
+            size="md"
+            variant="light"
+            disabled={pwa.checking}
+            onClick={() => void pwa.check()}
+          >
+            {t(pwa.checking ? "確認中…" : "キャッシュ・更新を確認")}
+          </Button>
+          {!import.meta.env.DEV && !pwa.ready && (
+            <Button variant="light" color="gray" onClick={() => void pwa.repair()}>
+              {t("オフラインを再準備")}
+            </Button>
+          )}
+        </Group>
+      </div>
+      <div>
+        <Title order={2} size="h4" mb="xs">
+          {t("ホーム画面に追加")}
+        </Title>
+        {pwa.installable ? (
+          <Button
+            variant="filled"
+            color="blue"
+            onClick={() => void pwa.install()}
+          >
+            {t("アプリをインストール")}
+          </Button>
+        ) : (
+          <Text size="sm" c="dimmed">
+            {t(
+              "対応ブラウザのメニューから「アプリをインストール」または「ホーム画面に追加」を選択してください。iPhoneではSafariの共有メニューをご利用ください。",
+            )}
+          </Text>
+        )}
+      </div>
     </>
   );
 }
