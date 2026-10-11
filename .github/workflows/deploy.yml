@@ -35,6 +35,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_VISIT_PASSWORD: ${{ secrets.VITE_VISIT_PASSWORD }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
