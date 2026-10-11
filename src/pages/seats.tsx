@@ -1,13 +1,10 @@
 import { t, usePreferences } from "@/state/preferences";
 import {
-  Badge,
   Card,
   List,
   PageTitle,
   SectionTitle,
-  Box,
   Text,
-  Group,
 } from "@/components/ui";
 import { assetUrl } from "@/config/assets";
 import { seats } from "@/data";
@@ -15,6 +12,19 @@ import "@/styles/seats.css";
 
 export default function SeatsPage() {
   usePreferences();
+  if (seats.seatingPolicy === "free") {
+    return (
+      <>
+        <PageTitle title={t("座席案内")} description={t(seats.description)} />
+        <Card>
+          <SectionTitle title={t(seats.title)} />
+          <List spacing="md">
+            {seats.notes.map((note) => <List.Item key={note}>{t(note)}</List.Item>)}
+          </List>
+        </Card>
+      </>
+    );
+  }
   return (
     <>
       <PageTitle title={t("座席案内")} description={t(seats.description)} />

@@ -36,7 +36,7 @@ export function ScheduleContent({
   const daySchedule = schedule.filter((s) => s.date === day);
   const stops = daySchedule
     .filter((s) => s.location && !s.location.includes("東京都内"))
-    .map((s) => s.location.split(" → ")[0]);
+    .map((s) => t(s.location).split(" → ")[0]);
   const uniqueStops = [...new Set(stops)];
 
   return (
@@ -101,6 +101,7 @@ export function ScheduleContent({
                 {uniqueStops.map((stop, i) => (
                   <Badge
                     key={i}
+                    styles={{ root: { maxWidth: "100%", height: "auto", paddingBlock: 4 }, label: { whiteSpace: "normal", overflowWrap: "anywhere" } }}
                     variant="light"
                     color="var(--accent)"
                     size="sm"

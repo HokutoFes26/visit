@@ -72,10 +72,13 @@ export function setCourse(course: CourseId, reload = true): void {
             const hashParams = new URLSearchParams(hashQuery);
             if (hashParams.has("c")) {
                 hashParams.set("c", course);
-                window.location.hash = `${hashPath}?${hashParams.toString()}`;
+                url.hash = `${hashPath}?${hashParams.toString()}`;
             }
         }
-        window.location.href = url.toString();
-        window.location.reload();
+        if (url.toString() === window.location.href) {
+            window.location.reload();
+        } else {
+            window.location.assign(url.toString());
+        }
     }
 }

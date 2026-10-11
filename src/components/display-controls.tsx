@@ -1,5 +1,5 @@
 import { Languages, Moon, Sun } from "lucide-react";
-import { usePreferences } from "@/state/preferences";
+import { t, usePreferences } from "@/state/preferences";
 import "@/styles/display-controls.css";
 
 export function DisplayControls({ expanded = false }: { expanded?: boolean }) {
@@ -11,7 +11,7 @@ export function DisplayControls({ expanded = false }: { expanded?: boolean }) {
         <div
           className="capsule-switch-group"
           role="group"
-          aria-label="言語の選択"
+          aria-label={t("言語の選択")}
         >
           <span className="capsule-switch-lead-icon" aria-hidden="true">
             <Languages size={16} />
@@ -46,7 +46,7 @@ export function DisplayControls({ expanded = false }: { expanded?: boolean }) {
         <div
           className="capsule-switch-group"
           role="group"
-          aria-label="テーマの選択"
+          aria-label={t("テーマの選択")}
         >
           <div className="capsule-switch-track">
             <div

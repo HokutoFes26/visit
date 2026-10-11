@@ -1,0 +1,1876 @@
+# 掲載内容一覧（日本語）
+
+ソースデータから自動生成。項目名はJSONと対応します。更新コマンド：`npm run docs:sync`。
+
+## 電子コース
+
+### event
+
+- **date**: 2026-10-21
+- **timezone**: Asia/Tokyo
+- **version**: 0.2
+- **isSample**: false
+- **meetingTime**: 09:00
+- **meetingPlace**: 富山駅
+- **meetingNote**: 駅構内の詳細な集合位置は未発表です。9:26発の新幹線で東京へ移動します。
+- **passwordHint**: デモ用パスワード：factory2026
+- **arrivalNote**: 詳細な集合位置は未発表
+- **endDate**: 2026-10-23
+- **hotel**: 品川プリンス（資料表記）
+- **source**: 県外企業見学.pdf
+- **sourceNote**: 発表概要に基づく案内です。未発表の項目は未定としています。
+- **dateConfirmed**: true
+
+### announcements
+
+-   - **id**: overview-2026
+  - **title**: 10月21日〜23日の見学概要
+  - **body**: 訪問先はメンバーズ、エスユーエス、東港金属 千葉工場、NECです。10月21日9:00に富山駅集合。詳細はスケジュールをご確認ください。
+  - **publishedAt**: —
+  - **updatedAt**: 2026-10-09
+  - **importance**: high
+-   - **id**: luggage
+  - **title**: 10月20日に旅行荷物を学校で取りまとめ
+  - **body**: 着替えなどの旅行荷物はホテルへ発送します。荷物を持っての見学はできません。最終日もホテル預けまたは事前発送とし、回収時間に余裕を持たせてください。
+  - **publishedAt**: —
+  - **updatedAt**: 2026-10-09
+  - **importance**: high
+-   - **id**: rules
+  - **title**: 服装・夜間外出・帰路について
+  - **body**: スーツ着用。男子はネクタイ・革靴着用です。22:00以降は外出禁止、教員による点呼があります。最終日は12:00に現地解散し、富山までの移動は各自手配です。
+  - **publishedAt**: —
+  - **updatedAt**: 2026-10-09
+  - **importance**: normal
+
+### schedule
+
+-   - **id**: meet
+  - **date**: 2026-10-21
+  - **startTime**: 09:00
+  - **endTime**: —
+  - **title**: 富山駅集合
+  - **location**: 富山駅
+  - **description**: 詳細な集合位置は未発表です。
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 0
+  - **timeNote**: 
+-   - **id**: train
+  - **date**: 2026-10-21
+  - **startTime**: 09:26
+  - **endTime**: 11:36
+  - **title**: 新幹線で東京へ
+  - **location**: 富山駅 → 東京駅
+  - **description**: 新幹線は学校手配。東京駅には11:36ごろ到着予定です。
+  - **companyId**: —
+  - **transport**: 新幹線
+  - **travelMinutes**: 0
+  - **order**: 1
+  - **timeNote**: 到着は11:36ごろ
+-   - **id**: tokyo-lunch
+  - **date**: 2026-10-21
+  - **startTime**: —
+  - **endTime**: —
+  - **title**: 移動・昼食
+  - **location**: 東京都内
+  - **description**: 東京駅到着後、電車で移動し昼食。14:00の集合に間に合うよう行動してください。昼食は各自。
+  - **companyId**: —
+  - **transport**: 電車
+  - **travelMinutes**: 0
+  - **order**: 2
+  - **timeNote**: 東京駅到着後〜14:00集合前
+-   - **id**: members-meet
+  - **date**: 2026-10-21
+  - **startTime**: 14:00
+  - **endTime**: —
+  - **title**: 見学先に集合
+  - **location**: 晴海アイランドトリトンスクエア オフィスタワーX
+  - **description**: 14:30から株式会社メンバーズを見学します。
+  - **companyId**: members
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 3
+  - **timeNote**: 
+-   - **id**: members-visit
+  - **date**: 2026-10-21
+  - **startTime**: 14:30
+  - **endTime**: 16:30
+  - **title**: メンバーズ見学
+  - **location**: 株式会社メンバーズ
+  - **description**: 見学内容の詳細は未発表です。
+  - **companyId**: members
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 4
+  - **timeNote**: 
+-   - **id**: hotel-1
+  - **date**: 2026-10-21
+  - **startTime**: —
+  - **endTime**: —
+  - **title**: ホテルへ移動・宿泊
+  - **location**: 品川プリンス
+  - **description**: 夕食は各自。22:00以降は外出禁止、教員による点呼があります。
+  - **companyId**: —
+  - **transport**: 電車
+  - **travelMinutes**: 0
+  - **order**: 5
+  - **timeNote**: 見学終了後（ホテル到着時刻は未発表）
+-   - **id**: depart-2
+  - **date**: 2026-10-22
+  - **startTime**: 08:30
+  - **endTime**: —
+  - **title**: ホテル出発
+  - **location**: 品川プリンス
+  - **description**: 朝食はホテルで。終日貸切バスで移動します。
+  - **companyId**: —
+  - **transport**: 貸切バス
+  - **travelMinutes**: 0
+  - **order**: 6
+  - **timeNote**: 
+-   - **id**: sus-visit
+  - **date**: 2026-10-22
+  - **startTime**: 09:20
+  - **endTime**: 11:30
+  - **title**: エスユーエス見学
+  - **location**: 株式会社エスユーエス（訪問拠点は未発表）
+  - **description**: 見学内容の詳細は未発表です。
+  - **companyId**: sus
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 7
+  - **timeNote**: 
+-   - **id**: umihotaru
+  - **date**: 2026-10-22
+  - **startTime**: —
+  - **endTime**: —
+  - **title**: 移動・昼食
+  - **location**: 海ほたる
+  - **description**: 海ほたるにて昼食。昼食は各自。
+  - **companyId**: —
+  - **transport**: 貸切バス
+  - **travelMinutes**: 0
+  - **order**: 8
+  - **timeNote**: エスユーエス見学後〜東港金属見学前
+-   - **id**: toko-visit
+  - **date**: 2026-10-22
+  - **startTime**: 14:00
+  - **endTime**: 16:00
+  - **title**: 東港金属 千葉工場見学
+  - **location**: 東港金属 千葉工場
+  - **description**: 見学内容の詳細は未発表です。
+  - **companyId**: toko
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 9
+  - **timeNote**: 
+-   - **id**: hotel-2
+  - **date**: 2026-10-22
+  - **startTime**: —
+  - **endTime**: —
+  - **title**: ホテルへ移動・宿泊
+  - **location**: 品川プリンス
+  - **description**: 夕食は各自。22:00以降は外出禁止、教員による点呼があります。
+  - **companyId**: —
+  - **transport**: 貸切バス
+  - **travelMinutes**: 0
+  - **order**: 10
+  - **timeNote**: 見学終了後（ホテル到着時刻は未発表）
+-   - **id**: depart-3
+  - **date**: 2026-10-23
+  - **startTime**: 09:00
+  - **endTime**: —
+  - **title**: ホテル出発
+  - **location**: 品川プリンス
+  - **description**: 朝食はホテルで。旅行荷物はホテルに預けるか、あらかじめ発送してください。
+  - **companyId**: —
+  - **transport**: 公共交通機関
+  - **travelMinutes**: 0
+  - **order**: 11
+  - **timeNote**: 
+-   - **id**: nec-visit
+  - **date**: 2026-10-23
+  - **startTime**: 10:00
+  - **endTime**: 12:00
+  - **title**: NEC見学
+  - **location**: NEC（訪問拠点は未発表）
+  - **description**: 見学終了後、12:00に現地解散。資料の注意事項に記載された解散時刻を終了時刻として表示しています。
+  - **companyId**: nec
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 12
+  - **timeNote**: 
+-   - **id**: dismiss
+  - **date**: 2026-10-23
+  - **startTime**: 12:00
+  - **endTime**: —
+  - **title**: 現地解散
+  - **location**: NEC見学先
+  - **description**: ホテルでの荷物回収の時間に余裕を持たせてください。
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 13
+  - **timeNote**: 
+-   - **id**: return
+  - **date**: 2026-10-23
+  - **startTime**: —
+  - **endTime**: —
+  - **title**: 各自で帰路へ
+  - **location**: 現地 → 富山
+  - **description**: 富山までの移動方法は各自で手配してください。
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 14
+  - **timeNote**: 解散・荷物回収後（各自手配）
+
+### guide
+
+- **belongings**:
+  - 公共交通系IC（事前に準備）
+  - 着替えなどの旅行荷物（10/20に学校で取りまとめ、ホテルへ発送）
+- **clothing**:
+  - スーツ着用
+  - 男子はネクタイ・革靴着用
+  - 新品の革靴は事前に慣らしておく（靴擦れ防止）
+- **precautions**:
+  - 旅行荷物を持って見学することはできません。
+  - 最終日は旅行荷物をホテルに預けるか、あらかじめ発送してください。
+  - 最終日は12:00に現地解散です。ホテルでの荷物回収の時間に余裕を持たせてください。
+  - 22:00以降は外出禁止です。教員による点呼があります。
+  - 富山までの帰りの移動方法は各自で手配してください。
+- **sections**:
+  -     - **title**: 荷物の発送
+    - **items**:
+      - 10月20日（前日）に学校で旅行荷物を取りまとめ、ホテルへ発送します。
+      - 取りまとめ場所・時刻、発送方法の詳細は未発表です。
+  -     - **title**: 宿泊・食事
+    - **items**:
+      - 10月21日・22日は品川プリンス泊（資料表記）。
+      - 朝食はホテルで、昼食・夕食は各自です。
+      - 10月22日の昼食場所は海ほたるです。
+  -     - **title**: 当日までの準備
+    - **items**:
+      - 見学先の事業概要・知りたいこと・質問を準備する。
+      - 東京で3日間に見ておきたいこと・体験したいことを考える。
+      - 公共交通系ICを作っておく。
+      - 企業見学以外も「健全に楽しむ」予定を立てる。
+      - 後日、レポート提出があります。提出日・形式は未発表です。
+  -     - **title**: 部屋割り・グループ分け
+    - **items**:
+      - ホテル：男子はツイン14部屋、女子はツイン4部屋・トリプル1部屋。部屋割りは未定です。
+      - グループは4人×6班、5人×3班。班長も決めます。
+      - グループはNEC見学と移動時の点呼に使用します。
+      - 新幹線の個人別座席割りは未定です。
+
+### seats
+
+- **rows**: 20
+- **columns**:
+  - A
+  - B
+  - C
+  - aisle
+  - D
+  - E
+- **isSample**: false
+- **title**: 新幹線 2号車
+- **description**: 配布資料の座席図に基づく配置です。個人別の座席・班の割り当ては未定です。
+- **groups**:
+  -     - **id**: participant
+    - **label**: 水色席・割当未定
+    - **color**: blue
+  -     - **id**: teacher
+    - **label**: 教員
+    - **color**: mint
+  -     - **id**: luggage
+    - **label**: 荷物置き
+    - **color**: violet
+  -     - **id**: unavailable
+    - **label**: ×（資料表記）
+    - **color**: gray
+- **groupPlan**:
+  -     - **size**: 4
+    - **count**: 6
+  -     - **size**: 5
+    - **count**: 3
+- **notes**:
+  - 1D・1Eは荷物置き、8D・8E・9Dは教員席です。
+  - 水色の39席は個人の割り当てが未定です。×の表示は資料の表記をそのまま示しています。
+  - トイレは1号車へ。東京駅で乗車する際は、原図の矢印側の扉が開く予定です。
+  - 10月22日の貸切バス座席は未発表です。
+- **seats**:
+  -     - **number**: 1A
+    - **row**: 1
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 1B
+    - **row**: 1
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 1C
+    - **row**: 1
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 1D
+    - **row**: 1
+    - **column**: D
+    - **groupId**: luggage
+  -     - **number**: 1E
+    - **row**: 1
+    - **column**: E
+    - **groupId**: luggage
+  -     - **number**: 2A
+    - **row**: 2
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 2B
+    - **row**: 2
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 2C
+    - **row**: 2
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 2D
+    - **row**: 2
+    - **column**: D
+    - **groupId**: participant
+  -     - **number**: 2E
+    - **row**: 2
+    - **column**: E
+    - **groupId**: participant
+  -     - **number**: 3A
+    - **row**: 3
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 3B
+    - **row**: 3
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 3C
+    - **row**: 3
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 3D
+    - **row**: 3
+    - **column**: D
+    - **groupId**: participant
+  -     - **number**: 3E
+    - **row**: 3
+    - **column**: E
+    - **groupId**: participant
+  -     - **number**: 4A
+    - **row**: 4
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 4B
+    - **row**: 4
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 4C
+    - **row**: 4
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 4D
+    - **row**: 4
+    - **column**: D
+    - **groupId**: participant
+  -     - **number**: 4E
+    - **row**: 4
+    - **column**: E
+    - **groupId**: participant
+  -     - **number**: 5A
+    - **row**: 5
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 5B
+    - **row**: 5
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 5C
+    - **row**: 5
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 5D
+    - **row**: 5
+    - **column**: D
+    - **groupId**: participant
+  -     - **number**: 5E
+    - **row**: 5
+    - **column**: E
+    - **groupId**: participant
+  -     - **number**: 6A
+    - **row**: 6
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 6B
+    - **row**: 6
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 6C
+    - **row**: 6
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 6D
+    - **row**: 6
+    - **column**: D
+    - **groupId**: participant
+  -     - **number**: 6E
+    - **row**: 6
+    - **column**: E
+    - **groupId**: participant
+  -     - **number**: 7A
+    - **row**: 7
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 7B
+    - **row**: 7
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 7C
+    - **row**: 7
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 7D
+    - **row**: 7
+    - **column**: D
+    - **groupId**: participant
+  -     - **number**: 7E
+    - **row**: 7
+    - **column**: E
+    - **groupId**: participant
+  -     - **number**: 8A
+    - **row**: 8
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 8B
+    - **row**: 8
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 8C
+    - **row**: 8
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 8D
+    - **row**: 8
+    - **column**: D
+    - **groupId**: teacher
+  -     - **number**: 8E
+    - **row**: 8
+    - **column**: E
+    - **groupId**: teacher
+  -     - **number**: 9A
+    - **row**: 9
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 9B
+    - **row**: 9
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 9C
+    - **row**: 9
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 9D
+    - **row**: 9
+    - **column**: D
+    - **groupId**: teacher
+  -     - **number**: 9E
+    - **row**: 9
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 10A
+    - **row**: 10
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 10B
+    - **row**: 10
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 10C
+    - **row**: 10
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 10D
+    - **row**: 10
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 10E
+    - **row**: 10
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 11A
+    - **row**: 11
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 11B
+    - **row**: 11
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 11C
+    - **row**: 11
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 11D
+    - **row**: 11
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 11E
+    - **row**: 11
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 12A
+    - **row**: 12
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 12B
+    - **row**: 12
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 12C
+    - **row**: 12
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 12D
+    - **row**: 12
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 12E
+    - **row**: 12
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 13A
+    - **row**: 13
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 13B
+    - **row**: 13
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 13C
+    - **row**: 13
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 13D
+    - **row**: 13
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 13E
+    - **row**: 13
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 14A
+    - **row**: 14
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 14B
+    - **row**: 14
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 14C
+    - **row**: 14
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 14D
+    - **row**: 14
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 14E
+    - **row**: 14
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 15A
+    - **row**: 15
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 15B
+    - **row**: 15
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 15C
+    - **row**: 15
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 15D
+    - **row**: 15
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 15E
+    - **row**: 15
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 16A
+    - **row**: 16
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 16B
+    - **row**: 16
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 16C
+    - **row**: 16
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 16D
+    - **row**: 16
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 16E
+    - **row**: 16
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 17A
+    - **row**: 17
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 17B
+    - **row**: 17
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 17C
+    - **row**: 17
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 17D
+    - **row**: 17
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 17E
+    - **row**: 17
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 18A
+    - **row**: 18
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 18B
+    - **row**: 18
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 18C
+    - **row**: 18
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 18D
+    - **row**: 18
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 18E
+    - **row**: 18
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 19A
+    - **row**: 19
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 19B
+    - **row**: 19
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 19C
+    - **row**: 19
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 19D
+    - **row**: 19
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 19E
+    - **row**: 19
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 20A
+    - **row**: 20
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 20B
+    - **row**: 20
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 20C
+    - **row**: 20
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 20D
+    - **row**: 20
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 20E
+    - **row**: 20
+    - **column**: E
+    - **groupId**: unavailable
+- **seatingPolicy**: diagram
+
+### companies
+
+-   - **id**: members
+  - **name**: 株式会社メンバーズ
+  - **legalName**: 株式会社メンバーズ
+  - **industry**: 業種：インターネット関連 / 広告制作・Web制作 / 情報処理
+  - **description**: 10月21日 14:30〜16:30。14:00に晴海アイランドトリトンスクエア オフィスタワーXへ集合します。
+  - **image**: /images/company.svg
+  - **business**:
+    - 大手企業を中心としたデジタルビジネス運用の伴走型支援、DX推進支援、CSV戦略コンサルティング
+  - **products**:
+    - AI導入・活用支援
+    - Webサイト運用・運営
+    - インターネット／SNS広告・プロモーション
+  - **factory**: 見学内容の詳細は未発表です。
+  - **highlights**:
+    - クライアント専任チームの働き方や連携方法を見る
+    - 社内のペーパーレスや環境配慮の取り組みを見る
+    - クリエイター同士のコミュニケーション空間を見る
+  - **questions**:
+    - 他社のWeb制作・コンサルと一番異なる強みは何ですか
+    - 環境に配慮したWeb制作で意識している点は何ですか
+    - 若手社員が専任チームで活躍するための条件は何ですか
+  - **website**: https://www.members.co.jp
+-   - **id**: sus
+  - **name**: 株式会社エスユーエス
+  - **legalName**: 株式会社エスユーエス
+  - **industry**: 業種：サービス業（ソフトウエア、情報処理、機械設計など）
+  - **description**: 10月22日 9:20〜11:30に見学します。具体的な訪問拠点は資料に記載されていません。
+  - **image**: /images/company.svg
+  - **business**:
+    - IT・R&D分野におけるエンジニアリングソリューション事業、AI・XRソリューション事業
+  - **products**:
+    - IT・機械・電気電子エンジニアの派遣・受託開発
+    - VRmeet（ブラウザ・アプリ版メタバース） / MVR（ウォーク型VR）
+    - 画像診断・外観検査AIソリューション
+    - ERPソリューション
+  - **factory**: 見学内容の詳細は未発表です。
+  - **highlights**:
+    - メタバースやAIなど自社開発プロダクトのデモを見る
+    - エンジニア向けの社内研修施設や設備を見る
+    - 若手技術者が働くオフィス環境の雰囲気を見る
+  - **questions**:
+    - 自社プロダクト開発と派遣事業のシナジーは何ですか
+    - 未経験から先進技術を学ぶサポート体制はありますか
+    - 今後はどの技術領域に一番力を入れていきますか
+  - **website**: https://www.sus-g.co.jp
+-   - **id**: toko
+  - **name**: 東港金属
+  - **legalName**: 東港金属
+  - **industry**: 業種：環境サービス（リサイクル業）
+  - **description**: 10月22日 14:00〜16:00に千葉工場を見学します。
+  - **image**: /images/company.svg
+  - **business**:
+    - 金属スクラップのリサイクル、産業廃棄物の中間処理、各種資源の収集・運搬
+  - **products**:
+    - 鉄・非鉄金属スクラップのリサイクル加工（ギロチン切断機による加工など）
+  - **factory**: 千葉工場を見学予定。見学内容の詳細は未発表です。
+  - **highlights**:
+    - 大型切断機や選別機が動くリサイクルプラントを見る
+    - 安全管理や騒音・粉じん対策の現場工夫を見る
+    - 廃棄物の受け入れから処理までのシステム化を見る
+  - **questions**:
+    - リサイクル現場でITやAIはどのように活用されていますか
+    - 近年の環境意識の高まりで持ち込まれる物に変化はありますか
+    - 未経験から安全に現場作業を覚える仕組みはありますか
+  - **website**: https://www.tokometal.co.jp
+-   - **id**: nec
+  - **name**: NEC
+  - **legalName**: NEC
+  - **industry**: 業種：情報通信業 / 電気機器
+  - **description**: 10月23日 10:00から見学し、12:00に現地解散します。具体的な訪問拠点は資料に記載されていません。
+  - **image**: /images/company.svg
+  - **business**:
+    - 社会インフラ事業、ITサービス事業（DX推進、クラウド、AI、セキュリティ等）、通信・宇宙事業
+  - **products**:
+    - 「BluStellar（ブルーステラ）」を活用したITソリューション・DX支援
+    - 生体認証システム（顔認証等）
+    - 航空交通管制システム・宇宙関連機器（衛星など）
+    - 金融・官公庁向け基幹システム
+  - **factory**: 見学内容の詳細は未発表です。
+  - **highlights**:
+    - 顔認証など先進技術を体験できるショールームを見る
+    - 社会インフラを支える大規模開発の現場拠点を見る
+    - オープンイノベーションを生み出す共創スペースを見る
+  - **questions**:
+    - BluStellarで今後最も力を入れる事業領域は何ですか
+    - 生体認証技術のグローバル展開での強みは何ですか
+    - 大型プロジェクトでチームが一丸となる工夫は何ですか
+  - **website**: https://group.nec/global/ja/
+
+### learning
+
+-   - **companyId**: members
+  - **basics**:
+    - デジタルビジネスの伴走型支援が中心であると知っておく
+    - CSV（社会課題解決と事業利益の両立）経営を重視していると知っておく
+    - クライアント専任のチーム体制で支援する特徴を理解しておく
+    - 脱炭素・サステナブルWebの推進に注力していると知っておく
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: 事業概要を調べた
+    -       - **id**: interests
+      - **text**: 知りたいことを整理した
+    -       - **id**: questions
+      - **text**: 質問を準備した
+-   - **companyId**: sus
+  - **basics**:
+    - IT・技術者の派遣と受託開発が主軸であると知っておく
+    - VR・メタバースやAIの自社プロダクト開発を行っていると知っておく
+    - エンジニアの育成・研修体制に力を入れていると知っておく
+    - 派遣だけでなく自社ソリューション展開を進めていると知っておく
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: 事業概要を調べた
+    -       - **id**: interests
+      - **text**: 知りたいことを整理した
+    -       - **id**: questions
+      - **text**: 質問を準備した
+-   - **companyId**: toko
+  - **basics**:
+    - 創業120年以上の歴史ある資源リサイクル企業だと知っておく
+    - 金属スクラップの買取と産業廃棄物の中間処理を行っていると知っておく
+    - 大型重機や処理プラントを保有していると知っておく
+    - リサイクル現場へのIT・AI活用を進めていると知っておく
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: 事業概要を調べた
+    -       - **id**: interests
+      - **text**: 知りたいことを整理した
+    -       - **id**: questions
+      - **text**: 質問を準備した
+-   - **companyId**: nec
+  - **basics**:
+    - 社会インフラや官公庁向けITサービスに強いと知っておく
+    - 顔認証など世界最高水準の生体認証技術を持つと知っておく
+    - 「BluStellar」で企業のDX推進を支援していると知っておく
+    - 生成AIや宇宙・通信など先端技術に投資していると知っておく
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: 事業概要を調べた
+    -       - **id**: interests
+      - **text**: 知りたいことを整理した
+    -       - **id**: questions
+      - **text**: 質問を準備した
+
+### sightseeing
+
+- **checkedAt**: 2026-10-09
+- **areas**:
+  -     - **id**: tokyo
+    - **name**: 東京駅周辺
+    - **description**: 東京駅の丸の内駅舎と皇居外苑。駅の丸の内側から歩いて巡れるエリアです。
+  -     - **id**: shinagawa
+    - **name**: 品川周辺
+    - **description**: 宿泊先の品川プリンスホテル周辺で楽しめるスポット。移動に時間をかけずに立ち寄りたいときに。
+  -     - **id**: asakusa
+    - **name**: 浅草・押上
+    - **description**: 浅草寺・仲見世・隅田川沿いから、押上の東京スカイツリーへ。駅間の移動と往復時間も計画に入れましょう。
+  -     - **id**: harajuku
+    - **name**: 原宿
+    - **description**: 明治神宮の緑豊かな参道を歩くエリア。入口から本殿までの徒歩時間も見込んで訪問しましょう。
+  -     - **id**: tsukiji
+    - **name**: 築地
+    - **description**: 食の専門店が集まる築地場外市場。朝から昼の時間帯を中心に、各店の営業時間に合わせて計画しましょう。
+  -     - **id**: akihabara
+    - **name**: 秋葉原
+    - **description**: 家電・電子部品・パソコンやポップカルチャーの店を巡るエリア。興味のある店を事前に調べておくと楽しめます。
+  -     - **id**: shiba
+    - **name**: 芝・東京タワー
+    - **description**: 東京タワーを中心に、都心の景色を楽しむエリア。展望台へ行く場合はチケットと滞在時間を確認しましょう。
+- **spots**:
+  -     - **id**: tokyo-station
+    - **areaId**: tokyo
+    - **enabled**: true
+    - **name**: 東京駅 丸の内駅舎
+    - **description**: 赤レンガの駅舎とドームが印象的な東京の玄関口。丸の内側の駅前広場から、駅舎と高層ビルが並ぶ景色を楽しめます。
+    - **access**: 東京駅の丸の内側出口から駅前広場へ。
+    - **cost**: 駅舎の外観・駅前広場の散策は無料
+    - **duration**: 20〜30分
+    - **note**: 八重洲側とは反対側です。駅構内の移動にも余裕を持たせましょう。
+    - **latitude**: 35.68124
+    - **longitude**: 139.76499
+    - **website**: https://www.tokyostationcity.com/learning/station_building/
+    - **sourceUrl**: https://www.gotokyo.org/jp/destinations/central-tokyo/tokyo-station-and-marunouchi/index.html
+  -     - **id**: imperial-garden
+    - **areaId**: tokyo
+    - **enabled**: true
+    - **name**: 皇居外苑・二重橋の眺め
+    - **description**: 広い芝生と黒松、濠や歴史的な門が調和する公園。皇居前広場から二重橋方面の景色を楽しむ散歩コースです。
+    - **access**: 東京駅から皇居前広場（二重橋展望エリア）まで徒歩約15分。
+    - **cost**: 皇居外苑は入園無料
+    - **duration**: 40〜60分
+    - **note**: 皇居内部への入場ではありません。行事や警備による規制は公式案内を確認してください。
+    - **latitude**: 35.6797
+    - **longitude**: 139.758
+    - **website**: https://www.env.go.jp/garden/kokyogaien/
+    - **sourceUrl**: https://www.env.go.jp/garden/kokyogaien/2_guide/kokyogaien_access.html
+  -     - **id**: aqua-park
+    - **areaId**: shinagawa
+    - **enabled**: true
+    - **name**: マクセル アクアパーク品川
+    - **description**: 品川プリンスホテル内の水族館。生きものと音・光の演出を楽しめる、ホテル周辺の屋内観光候補です。
+    - **access**: 品川駅 高輪口から徒歩約2分。品川プリンスホテル内。
+    - **cost**: 有料・チケット条件は公式サイトで確認
+    - **duration**: 60〜90分
+    - **note**: 営業時間・公演時間・予約の要否を確認してから予定を組みましょう。
+    - **latitude**: 35.62845
+    - **longitude**: 139.736
+    - **website**: https://www.aqua-park.jp/aqua/
+    - **sourceUrl**: https://www.aqua-park.jp/aqua/access/
+  -     - **id**: sensoji
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: 浅草寺・雷門
+    - **description**: 大きな提灯の雷門から、浅草寺の本堂へ。浅草を代表する寺院で、参拝や歴史ある街並みを楽しめます。
+    - **access**: 東京メトロ銀座線・東武線の浅草駅から徒歩約5分。
+    - **cost**: 境内の散策は無料・お守りなどは別途
+    - **duration**: 30〜45分
+    - **note**: つくばエクスプレスの浅草駅は別の場所です。本堂の開堂時間は公式情報を確認してください。
+    - **latitude**: 35.71477
+    - **longitude**: 139.79665
+    - **website**: https://www.senso-ji.jp/
+    - **sourceUrl**: https://www.senso-ji.jp/access/
+  -     - **id**: nakamise
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: 仲見世商店街
+    - **description**: 雷門と宝蔵門をつなぐ参道の商店街。お土産や和菓子のお店が並び、浅草寺と合わせて巡りやすい場所です。
+    - **access**: 浅草駅から雷門へ向かい、門をくぐると仲見世です。
+    - **cost**: 通りの散策は無料・買い物代は別途
+    - **duration**: 20〜40分
+    - **note**: 各店の営業時間は異なります。飲食場所や撮影のルールは店頭の案内に従ってください。
+    - **latitude**: 35.71245
+    - **longitude**: 139.79662
+    - **website**: https://www.senso-ji.jp/guide/guide02.html
+    - **sourceUrl**: https://t-navi.city.taito.lg.jp/spot/1002
+  -     - **id**: sumida-park
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: 隅田公園・隅田川沿い
+    - **description**: 浅草から隅田川沿いへ少し足を延ばす散歩コース。川や橋、対岸の東京スカイツリーを眺めながら休憩できます。
+    - **access**: 浅草駅・吾妻橋付近から、台東区側の川沿いへ。
+    - **cost**: 公園の散策は無料
+    - **duration**: 20〜30分
+    - **note**: 地図のピンは浅草側の川沿いの目安です。天候や日没、帰りの時間に合わせて歩く範囲を決めましょう。
+    - **latitude**: 35.71225
+    - **longitude**: 139.80205
+    - **website**: https://www.gotokyo.org/jp/destinations/eastern-tokyo/asakusa/index.html
+    - **sourceUrl**: https://www.gotokyo.org/jp/destinations/eastern-tokyo/asakusa/index.html
+  -     - **id**: tokyo-skytree
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: 東京スカイツリー
+    - **description**: 押上のランドマーク。展望台から東京の街を見渡せるほか、周辺の東京スカイツリータウンで買い物や食事も楽しめます。
+    - **access**: 押上（スカイツリー前）駅、またはとうきょうスカイツリー駅を利用。浅草とは別の駅です。
+    - **cost**: 展望台は有料・券種や予約条件は公式サイトで確認
+    - **duration**: 60〜90分
+    - **note**: 天候で眺望が変わります。入場時間や混雑を確認し、浅草からの移動時間も確保しましょう。
+    - **latitude**: 35.71006
+    - **longitude**: 139.8107
+    - **website**: https://www.tokyo-skytree.jp/
+    - **sourceUrl**: https://www.tokyo-skytree.jp/access/public-transport/
+  -     - **id**: meiji-jingu
+    - **areaId**: harajuku
+    - **enabled**: true
+    - **name**: 明治神宮
+    - **description**: 原宿・代々木の街に隣接する、森に囲まれた神社。参道を歩き、本殿で参拝しながら落ち着いた時間を過ごせます。
+    - **access**: 原宿駅・明治神宮前〈原宿〉駅側の原宿口から徒歩で参道へ。入口から本殿まではさらに歩きます。
+    - **cost**: 参拝は無料・御苑やミュージアムは別途確認
+    - **duration**: 45〜60分
+    - **note**: 開門・閉門時間は季節によって変わります。夕方の訪問は公式サイトを確認し、参拝のマナーを守りましょう。
+    - **latitude**: 35.6764
+    - **longitude**: 139.69933
+    - **website**: https://www.meijijingu.or.jp/
+    - **sourceUrl**: https://www.meijijingu.or.jp/access/
+  -     - **id**: tsukiji-market
+    - **areaId**: tsukiji
+    - **enabled**: true
+    - **name**: 築地場外市場
+    - **description**: 魚介や食材、調理道具の専門店、飲食店が集まる市場。店を巡りながら、東京の食文化に触れられます。
+    - **access**: 都営大江戸線の築地市場駅、または東京メトロ日比谷線の築地駅から徒歩でアクセス。
+    - **cost**: 散策は無料・買い物や飲食代は別途
+    - **duration**: 45〜60分
+    - **note**: 店舗ごとに営業時間・休業日が異なります。夜の観光には向かない店も多いため、事前に確認してください。飲食は各店の案内に従いましょう。
+    - **latitude**: 35.6655
+    - **longitude**: 139.7707
+    - **website**: https://www.tsukiji.or.jp/
+    - **sourceUrl**: https://www.tsukiji.or.jp/access/
+  -     - **id**: akihabara-electric-town
+    - **areaId**: akihabara
+    - **enabled**: true
+    - **name**: 秋葉原電気街
+    - **description**: 家電やパソコン、電子部品からアニメ・ゲーム関連まで、多彩な店が集まる街。技術やものづくりに興味がある人にもおすすめです。
+    - **access**: JR秋葉原駅の電気街口から中央通り周辺へ。東京メトロ日比谷線なども利用できます。
+    - **cost**: 街の散策は無料・買い物や施設利用は別途
+    - **duration**: 45〜90分
+    - **note**: 店舗ごとに営業時間が異なります。撮影可否や店内ルールを確認し、買い物の予算も決めておきましょう。
+    - **latitude**: 35.6996
+    - **longitude**: 139.7713
+    - **website**: https://akiba.or.jp/
+    - **sourceUrl**: https://www.gotokyo.org/jp/spot/55/index.html
+  -     - **id**: tokyo-tower
+    - **areaId**: shiba
+    - **enabled**: true
+    - **name**: 東京タワー
+    - **description**: 赤と白の姿で親しまれる東京のランドマーク。展望台から都心の景色を楽しんだり、足元からタワーの大きさを感じたりできます。
+    - **access**: 赤羽橋駅、御成門駅、神谷町駅などから徒歩でアクセス。利用する出口と経路は公式案内で確認。
+    - **cost**: 展望台は有料・券種と料金は公式サイトで確認
+    - **duration**: 45〜90分
+    - **note**: 展望台の営業時間・予約条件を確認してください。外観を見るだけの場合も、帰りの移動時間を確保しましょう。
+    - **latitude**: 35.65858
+    - **longitude**: 139.74543
+    - **website**: https://www.tokyotower.co.jp/
+    - **sourceUrl**: https://www.tokyotower.co.jp/access/railroad/
+- **origins**:
+  -     - **id**: tokyo
+    - **name**: 東京駅
+    - **query**: Tokyo Station, Tokyo, Japan
+  -     - **id**: shinagawa
+    - **name**: 品川駅
+    - **query**: Shinagawa Station, Tokyo, Japan
+  -     - **id**: shinagawa-prince
+    - **name**: 品川プリンスホテル
+    - **query**: Shinagawa Prince Hotel, 4-10-30 Takanawa, Minato City, Tokyo, Japan
+
+## 国際コース
+
+### event
+
+- **date**: 2026-10-20
+- **timezone**: Asia/Tokyo
+- **version**: 0.3
+- **isSample**: false
+- **meetingTime**: 09:00
+- **meetingPlace**: 富山駅
+- **meetingNote**: 10月20日9:00に富山駅集合。9:26発の北陸新幹線かがやき506号で東京駅へ向かいます。駅構内の集合位置は行程表に記載されていません。
+- **passwordHint**: デモ用パスワード：factory2026
+- **arrivalNote**: 東京駅11:36着。昼食後、日本橋口に13:40集合。
+- **endDate**: 2026-10-23
+- **hotel**: 品川プリンスホテル
+- **source**: 流通見学行程表(10月9日現在).pdf
+- **sourceNote**: 10月9日現在の流通見学行程表に基づきます。記載のない詳細は未定です。
+- **dateConfirmed**: true
+
+### announcements
+
+-   - **id**: overview-2026
+  - **title**: 国際コース：10月20日〜23日の4日間
+  - **body**: 10月20日9:00に富山駅集合。東京都下水道サービス、経済産業省、東京税関、ルネサスエレクトロニクス、慶應義塾大学湘南藤沢キャンパス、読売プリントメディアを訪問します。10月23日14:20に東京駅で解散します。
+  - **publishedAt**: —
+  - **updatedAt**: 2026-10-09
+  - **importance**: high
+-   - **id**: customs-groups
+  - **title**: 東京税関見学は奇数班・偶数班で時間が異なります
+  - **body**: 10月21日、奇数班は13:30出発・14:00〜15:00見学、偶数班は14:30出発・15:00〜16:00見学です。出発場所はデラックス東京ビーチ（行程表表記）。
+  - **publishedAt**: —
+  - **updatedAt**: 2026-10-09
+  - **importance**: high
+-   - **id**: rules
+  - **title**: 門限21:30・点呼22:00
+  - **body**: 10月20日〜22日は品川プリンスホテル泊。門限は21:30、点呼は22:00です。10月22日は横浜中華街での自由行動後、各自でホテルへ戻ります。
+  - **publishedAt**: —
+  - **updatedAt**: 2026-10-09
+  - **importance**: high
+
+### schedule
+
+-   - **id**: meet
+  - **date**: 2026-10-20
+  - **startTime**: 09:00
+  - **endTime**: —
+  - **title**: 富山駅集合
+  - **location**: 富山駅
+  - **description**: 駅構内の集合位置は行程表に記載されていません。
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 0
+  - **timeNote**: 
+-   - **id**: train
+  - **date**: 2026-10-20
+  - **startTime**: 09:26
+  - **endTime**: 11:36
+  - **title**: かがやき506号で東京へ
+  - **location**: JR富山駅 → JR東京駅
+  - **description**: 北陸新幹線かがやき506号に乗車します。
+  - **companyId**: —
+  - **transport**: 北陸新幹線
+  - **travelMinutes**: 0
+  - **order**: 1
+  - **timeNote**: 
+-   - **id**: tokyo-lunch
+  - **date**: 2026-10-20
+  - **startTime**: —
+  - **endTime**: —
+  - **title**: 昼食（各自）
+  - **location**: 東京駅構内
+  - **description**: 昼食後、日本橋口に13:40集合です。
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 2
+  - **timeNote**: 東京駅到着後〜13:40集合前
+-   - **id**: nihonbashi-meet
+  - **date**: 2026-10-20
+  - **startTime**: 13:40
+  - **endTime**: —
+  - **title**: 東京駅日本橋口集合
+  - **location**: 東京駅 日本橋口
+  - **description**: 集合後、徒歩で東京都下水道サービスへ向かいます。
+  - **companyId**: —
+  - **transport**: 徒歩
+  - **travelMinutes**: 0
+  - **order**: 3
+  - **timeNote**: 
+-   - **id**: tgs-visit
+  - **date**: 2026-10-20
+  - **startTime**: 14:00
+  - **endTime**: 16:00
+  - **title**: 東京都下水道サービス見学
+  - **location**: 東京都下水道サービス
+  - **description**: 見学後、徒歩で東京駅へ戻り、公共交通機関で品川駅へ移動します。
+  - **companyId**: tgs
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 4
+  - **timeNote**: 
+-   - **id**: hotel-1
+  - **date**: 2026-10-20
+  - **startTime**: 17:30
+  - **endTime**: —
+  - **title**: ホテルチェックイン・解散
+  - **location**: 品川プリンスホテル
+  - **description**: 品川駅から徒歩でホテルへ。チェックイン後は自由行動、夕食は各自です。
+  - **companyId**: —
+  - **transport**: 公共交通機関・徒歩
+  - **travelMinutes**: 0
+  - **order**: 5
+  - **timeNote**: 
+-   - **id**: curfew-20
+  - **date**: 2026-10-20
+  - **startTime**: 21:30
+  - **endTime**: —
+  - **title**: 門限
+  - **location**: 品川プリンスホテル
+  - **description**: 21:30までにホテルへ戻ってください。
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 6
+  - **timeNote**: 
+-   - **id**: rollcall-20
+  - **date**: 2026-10-20
+  - **startTime**: 22:00
+  - **endTime**: —
+  - **title**: 点呼
+  - **location**: 品川プリンスホテル
+  - **description**: 22:00に点呼があります。
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 7
+  - **timeNote**: 
+-   - **id**: depart-2
+  - **date**: 2026-10-21
+  - **startTime**: 09:30
+  - **endTime**: —
+  - **title**: ホテル出発
+  - **location**: 品川プリンスホテル
+  - **description**: 朝食後、バスで経済産業省へ向かいます。
+  - **companyId**: —
+  - **transport**: バス
+  - **travelMinutes**: 0
+  - **order**: 8
+  - **timeNote**: 
+-   - **id**: meti-visit
+  - **date**: 2026-10-21
+  - **startTime**: 10:00
+  - **endTime**: 12:00
+  - **title**: 経済産業省見学
+  - **location**: 経済産業省
+  - **description**: 見学後、バスで昼食会場へ移動します。
+  - **companyId**: meti
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 9
+  - **timeNote**: 
+-   - **id**: odaiba-lunch
+  - **date**: 2026-10-21
+  - **startTime**: 12:30
+  - **endTime**: —
+  - **title**: お台場オーシャンクラブビュッフェで昼食
+  - **location**: お台場オーシャンクラブビュッフェ
+  - **description**: 昼食付き。午後の東京税関見学は奇数班と偶数班で時間が異なります。
+  - **companyId**: —
+  - **transport**: バス
+  - **travelMinutes**: 0
+  - **order**: 10
+  - **timeNote**: 
+-   - **id**: odd-depart
+  - **date**: 2026-10-21
+  - **startTime**: 13:30
+  - **endTime**: —
+  - **title**: 【奇数班】東京税関へ出発
+  - **location**: デラックス東京ビーチ（行程表表記）
+  - **description**: 奇数班は13:30発。バスで東京税関へ移動します。
+  - **companyId**: —
+  - **transport**: バス
+  - **travelMinutes**: 0
+  - **order**: 11
+  - **timeNote**: 
+-   - **id**: customs-odd
+  - **date**: 2026-10-21
+  - **startTime**: 14:00
+  - **endTime**: 15:00
+  - **title**: 【奇数班】東京税関見学
+  - **location**: 東京税関
+  - **description**: 奇数班の見学時間です。偶数班は15:00から見学します。
+  - **companyId**: customs
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 12
+  - **timeNote**: 
+-   - **id**: even-depart
+  - **date**: 2026-10-21
+  - **startTime**: 14:30
+  - **endTime**: —
+  - **title**: 【偶数班】東京税関へ出発
+  - **location**: デラックス東京ビーチ（行程表表記）
+  - **description**: 偶数班は14:30発。バスで東京税関へ移動します。
+  - **companyId**: —
+  - **transport**: バス
+  - **travelMinutes**: 0
+  - **order**: 13
+  - **timeNote**: 
+-   - **id**: customs-even
+  - **date**: 2026-10-21
+  - **startTime**: 15:00
+  - **endTime**: 16:00
+  - **title**: 【偶数班】東京税関見学
+  - **location**: 東京税関
+  - **description**: 偶数班の見学時間です。終了後、バスでデラックス東京ビーチ（行程表表記）へ戻り合流します。
+  - **companyId**: customs
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 14
+  - **timeNote**: 
+-   - **id**: odd-wait
+  - **date**: 2026-10-21
+  - **startTime**: 15:15
+  - **endTime**: —
+  - **title**: 【奇数班】館内で待機
+  - **location**: デラックス東京ビーチ（行程表表記）
+  - **description**: 奇数班はバスで戻り、館内で偶数班との合流を待ちます。
+  - **companyId**: —
+  - **transport**: バス
+  - **travelMinutes**: 0
+  - **order**: 15
+  - **timeNote**: 
+-   - **id**: group-merge
+  - **date**: 2026-10-21
+  - **startTime**: —
+  - **endTime**: —
+  - **title**: 奇数班・偶数班が合流
+  - **location**: デラックス東京ビーチ（行程表表記）
+  - **description**: 偶数班の見学終了後に合流し、バスでホテルへ向かいます。
+  - **companyId**: —
+  - **transport**: バス
+  - **travelMinutes**: 0
+  - **order**: 16
+  - **timeNote**: 16:00の偶数班見学終了後（合流時刻の記載なし）
+-   - **id**: hotel-2
+  - **date**: 2026-10-21
+  - **startTime**: 17:00
+  - **endTime**: —
+  - **title**: ホテル到着・解散
+  - **location**: 品川プリンスホテル
+  - **description**: 到着後は自由行動、夕食は各自です。
+  - **companyId**: —
+  - **transport**: バス
+  - **travelMinutes**: 0
+  - **order**: 17
+  - **timeNote**: 
+-   - **id**: curfew-21
+  - **date**: 2026-10-21
+  - **startTime**: 21:30
+  - **endTime**: —
+  - **title**: 門限
+  - **location**: 品川プリンスホテル
+  - **description**: 21:30までにホテルへ戻ってください。
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 18
+  - **timeNote**: 
+-   - **id**: rollcall-21
+  - **date**: 2026-10-21
+  - **startTime**: 22:00
+  - **endTime**: —
+  - **title**: 点呼
+  - **location**: 品川プリンスホテル
+  - **description**: 22:00に点呼があります。
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 19
+  - **timeNote**: 
+-   - **id**: depart-3
+  - **date**: 2026-10-22
+  - **startTime**: 08:30
+  - **endTime**: —
+  - **title**: ホテル出発
+  - **location**: 品川プリンスホテル
+  - **description**: 朝食後、バスでルネサスエレクトロニクスへ向かいます。
+  - **companyId**: —
+  - **transport**: バス
+  - **travelMinutes**: 0
+  - **order**: 20
+  - **timeNote**: 
+-   - **id**: renesas-visit
+  - **date**: 2026-10-22
+  - **startTime**: 09:30
+  - **endTime**: 11:30
+  - **title**: ルネサスエレクトロニクス見学
+  - **location**: ルネサスエレクトロニクス
+  - **description**: 訪問拠点の詳細は行程表に記載されていません。
+  - **companyId**: renesas
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 21
+  - **timeNote**: 
+-   - **id**: keio-visit
+  - **date**: 2026-10-22
+  - **startTime**: 13:30
+  - **endTime**: 16:00
+  - **title**: 慶應義塾大学 湘南藤沢キャンパス見学・昼食
+  - **location**: 慶應義塾大学 湘南藤沢キャンパス
+  - **description**: バスで移動。見学と学食での昼食を含む時間帯です。昼食は各自です。
+  - **companyId**: keio-sfc
+  - **transport**: バス
+  - **travelMinutes**: 0
+  - **order**: 22
+  - **timeNote**: 
+-   - **id**: chinatown
+  - **date**: 2026-10-22
+  - **startTime**: 17:20
+  - **endTime**: —
+  - **title**: 横浜中華街・写真撮影・解散
+  - **location**: 横浜中華街
+  - **description**: 写真撮影後は自由行動、夕食は各自。各自で品川プリンスホテルへ戻り、21:30の門限を守ってください。
+  - **companyId**: —
+  - **transport**: バス（ホテルへは各自移動）
+  - **travelMinutes**: 0
+  - **order**: 23
+  - **timeNote**: 
+-   - **id**: curfew-22
+  - **date**: 2026-10-22
+  - **startTime**: 21:30
+  - **endTime**: —
+  - **title**: 門限
+  - **location**: 品川プリンスホテル
+  - **description**: 21:30までにホテルへ戻ってください。
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 24
+  - **timeNote**: 
+-   - **id**: rollcall-22
+  - **date**: 2026-10-22
+  - **startTime**: 22:00
+  - **endTime**: —
+  - **title**: 点呼
+  - **location**: 品川プリンスホテル
+  - **description**: 22:00に点呼があります。
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 25
+  - **timeNote**: 
+-   - **id**: depart-4
+  - **date**: 2026-10-23
+  - **startTime**: 10:00
+  - **endTime**: —
+  - **title**: ホテル出発
+  - **location**: 品川プリンスホテル
+  - **description**: 朝食後、バスで読売プリントメディアへ向かいます。
+  - **companyId**: —
+  - **transport**: バス
+  - **travelMinutes**: 0
+  - **order**: 26
+  - **timeNote**: 
+-   - **id**: yomiuri-visit
+  - **date**: 2026-10-23
+  - **startTime**: 11:30
+  - **endTime**: 13:10
+  - **title**: 読売プリントメディア見学
+  - **location**: 読売プリントメディア
+  - **description**: 訪問拠点の詳細は行程表に記載されていません。見学後、バスで東京駅へ向かいます。
+  - **companyId**: yomiuri
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 27
+  - **timeNote**: 
+-   - **id**: dismiss
+  - **date**: 2026-10-23
+  - **startTime**: 14:20
+  - **endTime**: —
+  - **title**: 東京駅で解散・昼食
+  - **location**: 東京駅
+  - **description**: 昼食は各自。バス車内での昼食も可能です。
+  - **companyId**: —
+  - **transport**: バス
+  - **travelMinutes**: 0
+  - **order**: 28
+  - **timeNote**: 
+
+### guide
+
+- **belongings**:
+  - 持ち物の指定は行程表に記載されていません。学校からの案内を確認してください。
+- **clothing**:
+  - 服装の指定は行程表に記載されていません。学校からの案内を確認してください。
+- **precautions**:
+  - 10月20日〜22日の門限は21:30、点呼は22:00です。
+  - 10月21日の東京税関見学は奇数班14:00〜15:00、偶数班15:00〜16:00です。
+  - 10月22日は横浜中華街で解散後、各自でホテルへ戻ります。
+  - 10月23日は14:20に東京駅で解散です。
+- **sections**:
+  -     - **title**: 宿泊・食事
+    - **items**:
+      - 10月20日・21日・22日は品川プリンスホテル泊です。
+      - 10月21日〜23日は朝食付きです。
+      - 10月21日の昼食は12:30からお台場オーシャンクラブビュッフェ（昼食付き）です。
+      - 10月20日・22日・23日の昼食、10月20日〜22日の夕食は各自です。
+      - 10月22日は慶應義塾大学湘南藤沢キャンパスの学食で昼食。10月23日の昼食はバス車内も可能です。
+  -     - **title**: 班別の行動（10月21日）
+    - **items**:
+      - 奇数班：13:30出発 → 東京税関14:00〜15:00見学 → 15:15館内待機。
+      - 偶数班：14:30出発 → 東京税関15:00〜16:00見学 → 奇数班と合流。
+      - 出発・待機・合流場所は「デラックス東京ビーチ」（行程表表記）です。
+      - 班の割り当ては行程表に記載されていません。
+  -     - **title**: 当日までの準備
+    - **items**:
+      - 訪問先の概要・知りたいこと・質問を準備する。
+      - 4日間の行程と、自分の班の出発・見学時刻を確認する。
+      - 荷物の発送・服装・持ち物の指定は行程表に記載されていません。学校からの案内を確認してください。
+  -     - **title**: 新幹線・バスの座席
+    - **items**:
+      - 国際コースは、新幹線・バスともに座席は自由です。
+
+### seats
+
+- **rows**: 0
+- **columns**:
+  - A
+  - B
+  - C
+  - aisle
+  - D
+  - E
+- **isSample**: false
+- **title**: 新幹線・バスの座席
+- **description**: 国際コースは、新幹線・バスともに座席は自由です。
+- **groups**:
+
+- **groupPlan**:
+
+- **notes**:
+  - 新幹線の座席は自由です。
+  - バスの座席は自由です。
+- **seats**:
+
+- **seatingPolicy**: free
+
+### companies
+
+-   - **id**: tgs
+  - **name**: 東京都下水道サービス
+  - **legalName**: 東京都下水道サービス
+  - **industry**: 業種：サービス業（環境・インフラ維持管理 / 第三セクター）
+  - **description**: 10月20日14:00〜16:00に見学します。
+  - **image**: /images/company.svg
+  - **business**:
+    - 都下水道局との連携による都市型水インフラ管理、および技術・ノウハウの海外展開（新興国支援・水ビジネス）
+  - **products**:
+    - 新興国向け水環境改善
+    - 海外インフラ整備プロジェクトの技術支援
+    - 「SPR工法（管路更生技術）」や降雨情報システム等の独自技術ライセンス・海外展開
+    - 海外技術者の研修・人材交流事業
+  - **factory**: 見学内容の詳細は行程表に記載されていません。
+  - **highlights**:
+    - 世界へ輸出されている管路更生技術（SPR工法）の実演・展示を見る
+    - 豪雨対応や都市水害を防ぐ中央監視・制御システムの技術を見る
+    - 海外の研修生や技術者を受け入れるトレーニング環境を見る
+  - **questions**:
+    - 海外の急成長都市において日本の水処理技術が最も評価される点は何ですか
+    - 気候変動による局地的大雨に対し海外都市との技術共有はどのように行われていますか
+    - 若手技術者が海外プロジェクトに関わる機会やキャリアパスはありますか
+  - **website**: https://www.tgs-sw.co.jp
+-   - **id**: meti
+  - **name**: 経済産業省
+  - **legalName**: 経済産業省
+  - **industry**: 業種：中央省庁（行政機関）
+  - **description**: 10月21日10:00〜12:00に見学します。
+  - **image**: /images/company.svg
+  - **business**:
+    - 国際通商交渉（EPA/FTA推進）、半導体やGX等の国家戦略産業の育成・投資誘致、国際標準化の主導
+  - **products**:
+    - グローバル供給網（サプライチェーン）強靭化政策・経済安保施策
+    - 国内外企業への補助金制度・対日投資呼び込み施策
+    - 通商交渉・国際標準（ISO等）のルール形成推進
+  - **factory**: 見学内容の詳細は行程表に記載されていません。
+  - **highlights**:
+    - 国際通商・経済安保施策が議論される省内の雰囲気を見る
+    - 海外からの投資呼び込みや企業支援に関する展示・案内を見る
+    - 日本の産業政策を動かす行政組織のデジタル化・執務環境を見る
+  - **questions**:
+    - グローバルなサプライチェーン再編の中で日本の強みをどう発揮させていますか
+    - 世界的なデジタルトランスフォーメーションやGX競争に対する主要施策は何ですか
+    - 若手職員が国際機関や海外赴任を通じてどのように経験を積んでいますか
+  - **website**: https://www.meti.go.jp/index.html
+-   - **id**: customs
+  - **name**: 東京税関
+  - **legalName**: 東京税関
+  - **industry**: 財務省の地方支分部局（行政機関）
+  - **description**: 10月21日、奇数班は14:00〜15:00、偶数班は15:00〜16:00に見学します。
+  - **image**: /images/company.svg
+  - **business**:
+    - 国際貿易の円滑化（通関迅速化）、サプライチェーンの安全確保、不正薬物・模倣品の国際水際阻止
+  - **products**:
+    - AEO制度（認定事業者制度）による国際サプライチェーン迅速化
+    - 輸出入貨物の通関処理・電子通関（NACCS）運用
+    - 外国税関当局との国際協調・情報交換・水際取り締まり
+  - **factory**: 見学内容の詳細は行程表に記載されていません。
+  - **highlights**:
+    - 大型X線検査装置や麻薬探知犬による水際検査の現場施設を見る
+    - 国際電子通関（NACCS）による迅速な処理プロセスを見る
+    - 知的財産侵害品（コピー商品）などの取締展示コーナーを見る
+  - **questions**:
+    - 越境ECの急増に伴う小口貨物の増加に対し通関迅速化と取締りをどう両立させていますか
+    - WCO（世界税関機構）など国際機関との情報共有や連携の仕組みはどうなっていますか
+    - 国際物流の安全確保に向けた最新テクノロジー（AI画像認識等）の導入状況はどうですか
+  - **website**: https://www.customs.go.jp/tokyo/
+-   - **id**: renesas
+  - **name**: ルネサスエレクトロニクス
+  - **legalName**: ルネサスエレクトロニクス
+  - **industry**: 業種：電気機器（半導体製造）
+  - **description**: 10月22日9:30〜11:30に見学します。
+  - **image**: /images/company.svg
+  - **business**:
+    - 車載用マイコン世界シェアトップクラス。世界各国の自動車・産業機器メーカー向けに組込み半導体をグローバル供給
+  - **products**:
+    - 車載・産業用マイクロコントローラ（MCU）/ システムオンチップ（SoC）
+    - 車載用パワー半導体・アナログ・シグナルチェーンIC
+    - オープンアーキテクチャ（RISC-Vなど）対応の開発環境
+  - **factory**: 見学内容の詳細は行程表に記載されていません。
+  - **highlights**:
+    - 世界の自動車メーカーで使われる車載半導体の評価・テスト環境を見る
+    - グローバル市場向けの最新マイコンやSoCのデモ・展示を見る
+    - 国際的な開発チームが連携して働く研究開発・オフィス環境を見る
+  - **questions**:
+    - 海外競合他社に対してルネサスが持つ製品・技術の差別化ポイントは何ですか
+    - 世界各地の開発・製造拠点とのグローバルなコミュニケーションの工夫は何ですか
+    - 次世代のEV（電気自動車）や自動運転向け半導体開発で重視している領域は何ですか
+  - **website**: https://www.renesas.com/ja
+-   - **id**: keio-sfc
+  - **name**: 慶應義塾大学 湘南藤沢キャンパス
+  - **legalName**: 慶應義塾大学 湘南藤沢キャンパス
+  - **industry**: 業種：教育・研究機関（高等教育）
+  - **description**: 10月22日13:30〜16:00に見学し、学食で昼食をとります。
+  - **image**: /images/company.svg
+  - **business**:
+    - 先端技術の社会実装・スタートアップ創出（ベンチャー起業）、グローバルIT人材の育成、産官学連携プロジェクト
+  - **products**:
+    - 海外大学とのダブルディグリー・国際共同研究プログラム
+    - SFC Open Research Forum（ORF）を通じた産学連携・オープンイノベーション
+    - 先端IT・バイオ・ドローン等の実証実験プラットフォーム
+  - **factory**: 見学内容の詳細は行程表に記載されていません。
+  - **highlights**:
+    - ドローンやバイオ・ITの実証実験が行われる先進的研究設備を見る
+    - 学生や企業が共創する産学連携研究室（ラボ）の熱量を見る
+    - 起業家精神（アントレプレナーシップ）を育むオープンな学習環境を見る
+  - **questions**:
+    - SFCからグローバルに活躍するスタートアップを生み出すエコシステムの強みは何ですか
+    - 海外の大学・研究機関との共同研究を推進する上でのハードルと工夫は何ですか
+    - 先端技術を単なる研究で終わらせず社会実装（ビジネス化）するためのサポートは何ですか
+  - **website**: https://www.keio.ac.jp/ja/sfc/
+-   - **id**: yomiuri
+  - **name**: 読売プリントメディア
+  - **legalName**: 読売プリントメディア
+  - **industry**: 業種：印刷・同関連業（読売新聞グループ）
+  - **description**: 10月23日11:30〜13:10に見学します。
+  - **image**: /images/company.svg
+  - **business**:
+    - 国際ニュースの国内伝達を支える大容量・高精度のフィジカル印刷・サプライチェーン網の運用
+  - **products**:
+    - 読売新聞等（海外取材網で収集された国際情報）の大規模・超短時間印刷
+    - 大規模商業印刷・自治体向け広報紙等の迅速発行・配送物流
+    - 印刷拠点と連携したロジスティクス管理
+  - **factory**: 見学内容の詳細は行程表に記載されていません。
+  - **highlights**:
+    - 超高速で新聞を印刷する巨大な輪転機群と自動化ラインを見る
+    - 国際ニュースを即座に紙面化して発送する精密な物流管理システムを見る
+    - 夜間の超短時間印刷を支える安全・品質管理体制を見る
+  - **questions**:
+    - 海外現地での国際ニュース発生から朝刊印刷までのタイムラグを縮める工夫は何ですか
+    - デジタル化が進む中でフィジカルな印刷・物流網が持つビジネス的価値は何ですか
+    - 大規模な印刷ラインを24時間安定して稼働させるための危機管理体制はどうなっていますか
+  - **website**: https://www.yomiuri-pm.co.jp
+
+### learning
+
+-   - **companyId**: tgs
+  - **basics**:
+    - 東京の都市インフラ維持だけでなく海外への技術展開を行っていると知っておく
+    - 独自開発の管路更生技術（SPR工法等）を世界へ提供していると知っておく
+    - 新興国向けの水環境改善支援や国際研修に携わっていると知っておく
+    - 東京都下水道局の補完組織として高い技術力を保持していると知っておく
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: 訪問先の概要を調べた
+    -       - **id**: interests
+      - **text**: 知りたいことを整理した
+    -       - **id**: questions
+      - **text**: 質問を準備した
+-   - **companyId**: meti
+  - **basics**:
+    - 日本の経済成長と国際通商交渉（EPA/FTA）を主導していると知っておく
+    - 半導体やGX（脱炭素）など経済安全保障・先端産業投資を進めていると知っておく
+    - グローバルなサプライチェーン構築や国際標準化を推進していると知っておく
+    - 国内外の企業誘致やスタートアップ育成の政策を行っていると知っておく
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: 訪問先の概要を調べた
+    -       - **id**: interests
+      - **text**: 知りたいことを整理した
+    -       - **id**: questions
+      - **text**: 質問を準備した
+-   - **companyId**: customs
+  - **basics**:
+    - 羽田空港や東京港を通じて日本の国際貿易を水際で支えていると知っておく
+    - 不正薬物・模倣品の密輸防止と貿易円滑化を両立させていると知っておく
+    - AEO制度により国際サプライチェーンの迅速化を図っていると知っておく
+    - 外国税関との国際協調や電子通関（NACCS）を活用していると知っておく
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: 訪問先の概要を調べた
+    -       - **id**: interests
+      - **text**: 知りたいことを整理した
+    -       - **id**: questions
+      - **text**: 質問を準備した
+-   - **companyId**: renesas
+  - **basics**:
+    - 車載用マイコンで世界トップクラスのシェアを持つグローバル企業だと知っておく
+    - 世界の自動車・産業機器メーカーのサプライチェーンを支えていると知っておく
+    - M&Aを通じて海外事業やアナログ・パワー半導体を強化していると知っておく
+    - RISC-Vなど次世代オープンアーキテクチャの開発に投資していると知っておく
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: 訪問先の概要を調べた
+    -       - **id**: interests
+      - **text**: 知りたいことを整理した
+    -       - **id**: questions
+      - **text**: 質問を準備した
+-   - **companyId**: keio-sfc
+  - **basics**:
+    - 先端技術の社会実装や多くのITスタートアップを創出していると知っておく
+    - 海外大学との連携や国際共同研究などグローバル教育を行うと知っておく
+    - SFC Open Research Forum（ORF）など産官学連携の拠点だと知っておく
+    - 文理融合やオープンイノベーションを推進する研究環境だと知っておく
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: 訪問先の概要を調べた
+    -       - **id**: interests
+      - **text**: 知りたいことを整理した
+    -       - **id**: questions
+      - **text**: 質問を準備した
+-   - **companyId**: yomiuri
+  - **basics**:
+    - 世界中の取材網から届く国際ニュースを毎日正確・迅速に印刷・配送していると知っておく
+    - 読売新聞グループの超大規模・短時間フィジカル供給網を担っていると知っておく
+    - 新聞印刷で培った高度なカラー印刷・ロジスティクス技術を持つと知っておく
+    - 自治体広報紙や商業印刷など地域インフラとしての印刷業務も行うと知っておく
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: 訪問先の概要を調べた
+    -       - **id**: interests
+      - **text**: 知りたいことを整理した
+    -       - **id**: questions
+      - **text**: 質問を準備した
+
+### sightseeing
+
+- **checkedAt**: 2026-10-09
+- **areas**:
+  -     - **id**: tokyo
+    - **name**: 東京駅周辺
+    - **description**: 東京駅の丸の内駅舎と皇居外苑。駅の丸の内側から歩いて巡れるエリアです。
+  -     - **id**: shinagawa
+    - **name**: 品川周辺
+    - **description**: 宿泊先の品川プリンスホテル周辺で楽しめるスポット。移動に時間をかけずに立ち寄りたいときに。
+  -     - **id**: asakusa
+    - **name**: 浅草・押上
+    - **description**: 浅草寺・仲見世・隅田川沿いから、押上の東京スカイツリーへ。駅間の移動と往復時間も計画に入れましょう。
+  -     - **id**: harajuku
+    - **name**: 原宿
+    - **description**: 明治神宮の緑豊かな参道を歩くエリア。入口から本殿までの徒歩時間も見込んで訪問しましょう。
+  -     - **id**: tsukiji
+    - **name**: 築地
+    - **description**: 食の専門店が集まる築地場外市場。朝から昼の時間帯を中心に、各店の営業時間に合わせて計画しましょう。
+  -     - **id**: akihabara
+    - **name**: 秋葉原
+    - **description**: 家電・電子部品・パソコンやポップカルチャーの店を巡るエリア。興味のある店を事前に調べておくと楽しめます。
+  -     - **id**: shiba
+    - **name**: 芝・東京タワー
+    - **description**: 東京タワーを中心に、都心の景色を楽しむエリア。展望台へ行く場合はチケットと滞在時間を確認しましょう。
+- **spots**:
+  -     - **id**: tokyo-station
+    - **areaId**: tokyo
+    - **enabled**: true
+    - **name**: 東京駅 丸の内駅舎
+    - **description**: 赤レンガの駅舎とドームが印象的な東京の玄関口。丸の内側の駅前広場から、駅舎と高層ビルが並ぶ景色を楽しめます。
+    - **access**: 東京駅の丸の内側出口から駅前広場へ。
+    - **cost**: 駅舎の外観・駅前広場の散策は無料
+    - **duration**: 20〜30分
+    - **note**: 八重洲側とは反対側です。駅構内の移動にも余裕を持たせましょう。
+    - **latitude**: 35.68124
+    - **longitude**: 139.76499
+    - **website**: https://www.tokyostationcity.com/learning/station_building/
+    - **sourceUrl**: https://www.gotokyo.org/jp/destinations/central-tokyo/tokyo-station-and-marunouchi/index.html
+  -     - **id**: imperial-garden
+    - **areaId**: tokyo
+    - **enabled**: true
+    - **name**: 皇居外苑・二重橋の眺め
+    - **description**: 広い芝生と黒松、濠や歴史的な門が調和する公園。皇居前広場から二重橋方面の景色を楽しむ散歩コースです。
+    - **access**: 東京駅から皇居前広場（二重橋展望エリア）まで徒歩約15分。
+    - **cost**: 皇居外苑は入園無料
+    - **duration**: 40〜60分
+    - **note**: 皇居内部への入場ではありません。行事や警備による規制は公式案内を確認してください。
+    - **latitude**: 35.6797
+    - **longitude**: 139.758
+    - **website**: https://www.env.go.jp/garden/kokyogaien/
+    - **sourceUrl**: https://www.env.go.jp/garden/kokyogaien/2_guide/kokyogaien_access.html
+  -     - **id**: aqua-park
+    - **areaId**: shinagawa
+    - **enabled**: true
+    - **name**: マクセル アクアパーク品川
+    - **description**: 品川プリンスホテル内の水族館。生きものと音・光の演出を楽しめる、ホテル周辺の屋内観光候補です。
+    - **access**: 品川駅 高輪口から徒歩約2分。品川プリンスホテル内。
+    - **cost**: 有料・チケット条件は公式サイトで確認
+    - **duration**: 60〜90分
+    - **note**: 営業時間・公演時間・予約の要否を確認してから予定を組みましょう。
+    - **latitude**: 35.62845
+    - **longitude**: 139.736
+    - **website**: https://www.aqua-park.jp/aqua/
+    - **sourceUrl**: https://www.aqua-park.jp/aqua/access/
+  -     - **id**: sensoji
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: 浅草寺・雷門
+    - **description**: 大きな提灯の雷門から、浅草寺の本堂へ。浅草を代表する寺院で、参拝や歴史ある街並みを楽しめます。
+    - **access**: 東京メトロ銀座線・東武線の浅草駅から徒歩約5分。
+    - **cost**: 境内の散策は無料・お守りなどは別途
+    - **duration**: 30〜45分
+    - **note**: つくばエクスプレスの浅草駅は別の場所です。本堂の開堂時間は公式情報を確認してください。
+    - **latitude**: 35.71477
+    - **longitude**: 139.79665
+    - **website**: https://www.senso-ji.jp/
+    - **sourceUrl**: https://www.senso-ji.jp/access/
+  -     - **id**: nakamise
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: 仲見世商店街
+    - **description**: 雷門と宝蔵門をつなぐ参道の商店街。お土産や和菓子のお店が並び、浅草寺と合わせて巡りやすい場所です。
+    - **access**: 浅草駅から雷門へ向かい、門をくぐると仲見世です。
+    - **cost**: 通りの散策は無料・買い物代は別途
+    - **duration**: 20〜40分
+    - **note**: 各店の営業時間は異なります。飲食場所や撮影のルールは店頭の案内に従ってください。
+    - **latitude**: 35.71245
+    - **longitude**: 139.79662
+    - **website**: https://www.senso-ji.jp/guide/guide02.html
+    - **sourceUrl**: https://t-navi.city.taito.lg.jp/spot/1002
+  -     - **id**: sumida-park
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: 隅田公園・隅田川沿い
+    - **description**: 浅草から隅田川沿いへ少し足を延ばす散歩コース。川や橋、対岸の東京スカイツリーを眺めながら休憩できます。
+    - **access**: 浅草駅・吾妻橋付近から、台東区側の川沿いへ。
+    - **cost**: 公園の散策は無料
+    - **duration**: 20〜30分
+    - **note**: 地図のピンは浅草側の川沿いの目安です。天候や日没、帰りの時間に合わせて歩く範囲を決めましょう。
+    - **latitude**: 35.71225
+    - **longitude**: 139.80205
+    - **website**: https://www.gotokyo.org/jp/destinations/eastern-tokyo/asakusa/index.html
+    - **sourceUrl**: https://www.gotokyo.org/jp/destinations/eastern-tokyo/asakusa/index.html
+  -     - **id**: tokyo-skytree
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: 東京スカイツリー
+    - **description**: 押上のランドマーク。展望台から東京の街を見渡せるほか、周辺の東京スカイツリータウンで買い物や食事も楽しめます。
+    - **access**: 押上（スカイツリー前）駅、またはとうきょうスカイツリー駅を利用。浅草とは別の駅です。
+    - **cost**: 展望台は有料・券種や予約条件は公式サイトで確認
+    - **duration**: 60〜90分
+    - **note**: 天候で眺望が変わります。入場時間や混雑を確認し、浅草からの移動時間も確保しましょう。
+    - **latitude**: 35.71006
+    - **longitude**: 139.8107
+    - **website**: https://www.tokyo-skytree.jp/
+    - **sourceUrl**: https://www.tokyo-skytree.jp/access/public-transport/
+  -     - **id**: meiji-jingu
+    - **areaId**: harajuku
+    - **enabled**: true
+    - **name**: 明治神宮
+    - **description**: 原宿・代々木の街に隣接する、森に囲まれた神社。参道を歩き、本殿で参拝しながら落ち着いた時間を過ごせます。
+    - **access**: 原宿駅・明治神宮前〈原宿〉駅側の原宿口から徒歩で参道へ。入口から本殿まではさらに歩きます。
+    - **cost**: 参拝は無料・御苑やミュージアムは別途確認
+    - **duration**: 45〜60分
+    - **note**: 開門・閉門時間は季節によって変わります。夕方の訪問は公式サイトを確認し、参拝のマナーを守りましょう。
+    - **latitude**: 35.6764
+    - **longitude**: 139.69933
+    - **website**: https://www.meijijingu.or.jp/
+    - **sourceUrl**: https://www.meijijingu.or.jp/access/
+  -     - **id**: tsukiji-market
+    - **areaId**: tsukiji
+    - **enabled**: true
+    - **name**: 築地場外市場
+    - **description**: 魚介や食材、調理道具の専門店、飲食店が集まる市場。店を巡りながら、東京の食文化に触れられます。
+    - **access**: 都営大江戸線の築地市場駅、または東京メトロ日比谷線の築地駅から徒歩でアクセス。
+    - **cost**: 散策は無料・買い物や飲食代は別途
+    - **duration**: 45〜60分
+    - **note**: 店舗ごとに営業時間・休業日が異なります。夜の観光には向かない店も多いため、事前に確認してください。飲食は各店の案内に従いましょう。
+    - **latitude**: 35.6655
+    - **longitude**: 139.7707
+    - **website**: https://www.tsukiji.or.jp/
+    - **sourceUrl**: https://www.tsukiji.or.jp/access/
+  -     - **id**: akihabara-electric-town
+    - **areaId**: akihabara
+    - **enabled**: true
+    - **name**: 秋葉原電気街
+    - **description**: 家電やパソコン、電子部品からアニメ・ゲーム関連まで、多彩な店が集まる街。技術やものづくりに興味がある人にもおすすめです。
+    - **access**: JR秋葉原駅の電気街口から中央通り周辺へ。東京メトロ日比谷線なども利用できます。
+    - **cost**: 街の散策は無料・買い物や施設利用は別途
+    - **duration**: 45〜90分
+    - **note**: 店舗ごとに営業時間が異なります。撮影可否や店内ルールを確認し、買い物の予算も決めておきましょう。
+    - **latitude**: 35.6996
+    - **longitude**: 139.7713
+    - **website**: https://akiba.or.jp/
+    - **sourceUrl**: https://www.gotokyo.org/jp/spot/55/index.html
+  -     - **id**: tokyo-tower
+    - **areaId**: shiba
+    - **enabled**: true
+    - **name**: 東京タワー
+    - **description**: 赤と白の姿で親しまれる東京のランドマーク。展望台から都心の景色を楽しんだり、足元からタワーの大きさを感じたりできます。
+    - **access**: 赤羽橋駅、御成門駅、神谷町駅などから徒歩でアクセス。利用する出口と経路は公式案内で確認。
+    - **cost**: 展望台は有料・券種と料金は公式サイトで確認
+    - **duration**: 45〜90分
+    - **note**: 展望台の営業時間・予約条件を確認してください。外観を見るだけの場合も、帰りの移動時間を確保しましょう。
+    - **latitude**: 35.65858
+    - **longitude**: 139.74543
+    - **website**: https://www.tokyotower.co.jp/
+    - **sourceUrl**: https://www.tokyotower.co.jp/access/railroad/
+- **origins**:
+  -     - **id**: tokyo
+    - **name**: 東京駅
+    - **query**: Tokyo Station, Tokyo, Japan
+  -     - **id**: shinagawa
+    - **name**: 品川駅
+    - **query**: Shinagawa Station, Tokyo, Japan
+  -     - **id**: shinagawa-prince
+    - **name**: 品川プリンスホテル
+    - **query**: Shinagawa Prince Hotel, 4-10-30 Takanawa, Minato City, Tokyo, Japan

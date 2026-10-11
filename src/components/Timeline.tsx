@@ -99,6 +99,7 @@ export default function Timeline({
                       size="md"
                       radius="xl"
                       style={{ fontWeight: 600 }}
+                      styles={{ root: { maxWidth: "100%", height: "auto", paddingBlock: 4 }, label: { whiteSpace: "normal", overflowWrap: "anywhere" } }}
                       leftSection={<Bus size={12} />}
                     >
                       {t(item.transport)}

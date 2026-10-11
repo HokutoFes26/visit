@@ -180,9 +180,9 @@ export default function CompanyDetail() {
               <dt>{t("企業名")}</dt>
               <dd>{t(c.legalName)}</dd>
               <dt>{t("主な事業")}</dt>
-              <dd>{t(c.business.join(" / ") || "資料に記載なし")}</dd>
+              <dd>{c.business.map((item) => t(item)).join(" / ") || t("資料に記載なし")}</dd>
               <dt>{t("製品・サービス")}</dt>
-              <dd>{t(c.products.join(" / ") || "資料に記載なし")}</dd>
+              <dd>{c.products.map((item) => t(item)).join(" / ") || t("資料に記載なし")}</dd>
             </dl>
 
             <Title order={3} size="h4" mt="lg" mb="xs">

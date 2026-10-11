@@ -43,7 +43,7 @@ export default function SettingsPage({ logout }: { logout: () => void }) {
                   }}
                 >
                   <Text fw={600} size="lg" c="var(--foreground)">
-                    {COURSE_LABELS[currentCourse]}
+                    {t(COURSE_LABELS[currentCourse])}
                   </Text>
                   <Button
                     color="var(--foreground)"

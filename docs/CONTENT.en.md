@@ -1,0 +1,1876 @@
+# Published content (English)
+
+Generated from source data and translations. Field names match the JSON files. Regenerate with `npm run docs:sync`.
+
+## Electronics course
+
+### event
+
+- **date**: 2026-10-21
+- **timezone**: Asia/Tokyo
+- **version**: 0.2
+- **isSample**: false
+- **meetingTime**: 09:00
+- **meetingPlace**: Toyama Station
+- **meetingNote**: The exact meeting point inside the station has not been announced. Take the 9:26 Shinkansen to Tokyo.
+- **passwordHint**: Demo password: factory2026
+- **arrivalNote**: Exact meeting point to be announced
+- **endDate**: 2026-10-23
+- **hotel**: Shinagawa Prince (as listed in the handout)
+- **source**: Company visits outside Toyama.pdf
+- **sourceNote**: Based on the announced overview. Unannounced details are shown as to be confirmed.
+- **dateConfirmed**: true
+
+### announcements
+
+-   - **id**: overview-2026
+  - **title**: Visit overview: October 21–23
+  - **body**: We will visit Members, SUS, Toko Metal’s Chiba plant and NEC. Meet at Toyama Station at 9:00 on October 21. See the schedule for details.
+  - **publishedAt**: —
+  - **updatedAt**: 2026-10-09
+  - **importance**: high
+-   - **id**: luggage
+  - **title**: Luggage collection at school on October 20
+  - **body**: Travel luggage, including changes of clothes, will be shipped to the hotel. Luggage cannot be taken on visits. On the last day, leave it at the hotel or ship it ahead, allowing time for collection.
+  - **publishedAt**: —
+  - **updatedAt**: 2026-10-09
+  - **importance**: high
+-   - **id**: rules
+  - **title**: Dress code, evening curfew and return trip
+  - **body**: Wear a suit. Male participants must wear ties and leather shoes. No outings after 22:00; teachers will take roll call. The trip ends on site at 12:00 on the last day. Arrange your own return to Toyama.
+  - **publishedAt**: —
+  - **updatedAt**: 2026-10-09
+  - **importance**: normal
+
+### schedule
+
+-   - **id**: meet
+  - **date**: 2026-10-21
+  - **startTime**: 09:00
+  - **endTime**: —
+  - **title**: Meet at Toyama Station
+  - **location**: Toyama Station
+  - **description**: The exact meeting point has not been announced.
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 0
+  - **timeNote**: 
+-   - **id**: train
+  - **date**: 2026-10-21
+  - **startTime**: 09:26
+  - **endTime**: 11:36
+  - **title**: Shinkansen to Tokyo
+  - **location**: Toyama Station → Tokyo Station
+  - **description**: The school arranges the Shinkansen. Arrival at Tokyo Station is expected around 11:36.
+  - **companyId**: —
+  - **transport**: Shinkansen
+  - **travelMinutes**: 0
+  - **order**: 1
+  - **timeNote**: Arrival around 11:36
+-   - **id**: tokyo-lunch
+  - **date**: 2026-10-21
+  - **startTime**: —
+  - **endTime**: —
+  - **title**: Travel and lunch
+  - **location**: Tokyo
+  - **description**: After arriving at Tokyo Station, travel by train and have lunch. Arrive at the meeting point by 14:00. Arrange your own lunch.
+  - **companyId**: —
+  - **transport**: Train
+  - **travelMinutes**: 0
+  - **order**: 2
+  - **timeNote**: After arrival in Tokyo and before the 14:00 meeting
+-   - **id**: members-meet
+  - **date**: 2026-10-21
+  - **startTime**: 14:00
+  - **endTime**: —
+  - **title**: Meet at the visit location
+  - **location**: Harumi Island Triton Square Office Tower X
+  - **description**: Visit Members Co., Ltd. from 14:30.
+  - **companyId**: members
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 3
+  - **timeNote**: 
+-   - **id**: members-visit
+  - **date**: 2026-10-21
+  - **startTime**: 14:30
+  - **endTime**: 16:30
+  - **title**: Visit Members
+  - **location**: Members Co., Ltd.
+  - **description**: Visit details have not been announced.
+  - **companyId**: members
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 4
+  - **timeNote**: 
+-   - **id**: hotel-1
+  - **date**: 2026-10-21
+  - **startTime**: —
+  - **endTime**: —
+  - **title**: Travel to hotel and overnight stay
+  - **location**: Shinagawa Prince
+  - **description**: Arrange your own dinner. No outings after 22:00; teachers will take roll call.
+  - **companyId**: —
+  - **transport**: Train
+  - **travelMinutes**: 0
+  - **order**: 5
+  - **timeNote**: After the visit (hotel arrival time to be announced)
+-   - **id**: depart-2
+  - **date**: 2026-10-22
+  - **startTime**: 08:30
+  - **endTime**: —
+  - **title**: Leave the hotel
+  - **location**: Shinagawa Prince
+  - **description**: Breakfast at the hotel. Travel by chartered bus throughout the day.
+  - **companyId**: —
+  - **transport**: Chartered bus
+  - **travelMinutes**: 0
+  - **order**: 6
+  - **timeNote**: 
+-   - **id**: sus-visit
+  - **date**: 2026-10-22
+  - **startTime**: 09:20
+  - **endTime**: 11:30
+  - **title**: Visit SUS
+  - **location**: SUS Co., Ltd. (visit location to be announced)
+  - **description**: Visit details have not been announced.
+  - **companyId**: sus
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 7
+  - **timeNote**: 
+-   - **id**: umihotaru
+  - **date**: 2026-10-22
+  - **startTime**: —
+  - **endTime**: —
+  - **title**: Travel and lunch
+  - **location**: Umihotaru
+  - **description**: Lunch at Umihotaru. Arrange your own meal.
+  - **companyId**: —
+  - **transport**: Chartered bus
+  - **travelMinutes**: 0
+  - **order**: 8
+  - **timeNote**: After SUS and before Toko Metal
+-   - **id**: toko-visit
+  - **date**: 2026-10-22
+  - **startTime**: 14:00
+  - **endTime**: 16:00
+  - **title**: Visit Toko Metal’s Chiba plant
+  - **location**: Toko Metal’s Chiba plant
+  - **description**: Visit details have not been announced.
+  - **companyId**: toko
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 9
+  - **timeNote**: 
+-   - **id**: hotel-2
+  - **date**: 2026-10-22
+  - **startTime**: —
+  - **endTime**: —
+  - **title**: Travel to hotel and overnight stay
+  - **location**: Shinagawa Prince
+  - **description**: Arrange your own dinner. No outings after 22:00; teachers will take roll call.
+  - **companyId**: —
+  - **transport**: Chartered bus
+  - **travelMinutes**: 0
+  - **order**: 10
+  - **timeNote**: After the visit (hotel arrival time to be announced)
+-   - **id**: depart-3
+  - **date**: 2026-10-23
+  - **startTime**: 09:00
+  - **endTime**: —
+  - **title**: Leave the hotel
+  - **location**: Shinagawa Prince
+  - **description**: Breakfast at the hotel. Leave luggage at the hotel or ship it ahead.
+  - **companyId**: —
+  - **transport**: Public transport
+  - **travelMinutes**: 0
+  - **order**: 11
+  - **timeNote**: 
+-   - **id**: nec-visit
+  - **date**: 2026-10-23
+  - **startTime**: 10:00
+  - **endTime**: 12:00
+  - **title**: Visit NEC
+  - **location**: NEC (visit location to be announced)
+  - **description**: Dismiss on site at 12:00 after the visit. The dismissal time in the handout is displayed as the end time.
+  - **companyId**: nec
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 12
+  - **timeNote**: 
+-   - **id**: dismiss
+  - **date**: 2026-10-23
+  - **startTime**: 12:00
+  - **endTime**: —
+  - **title**: Dismiss on site
+  - **location**: NEC visit location
+  - **description**: Allow time to collect luggage at the hotel.
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 13
+  - **timeNote**: 
+-   - **id**: return
+  - **date**: 2026-10-23
+  - **startTime**: —
+  - **endTime**: —
+  - **title**: Return home independently
+  - **location**: Visit location → Toyama
+  - **description**: Arrange your own transport back to Toyama.
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 14
+  - **timeNote**: After dismissal and luggage collection (individually arranged)
+
+### guide
+
+- **belongings**:
+  - Transit IC card (prepare in advance)
+  - Travel luggage, including clothes (collected at school on October 20 and shipped to the hotel)
+- **clothing**:
+  - Wear a suit
+  - Male participants: tie and leather shoes
+  - Break in new leather shoes beforehand to avoid blisters
+- **precautions**:
+  - Travel luggage cannot be taken on visits.
+  - On the last day, leave travel luggage at the hotel or ship it ahead.
+  - The trip ends on site at 12:00 on the last day. Allow time to collect luggage at the hotel.
+  - No outings after 22:00. Teachers will take roll call.
+  - Arrange your own return transport to Toyama.
+- **sections**:
+  -     - **title**: Shipping luggage
+    - **items**:
+      - Travel luggage will be collected at school on October 20 (the day before) and shipped to the hotel.
+      - Collection location, time and shipping details have not been announced.
+  -     - **title**: Accommodation and meals
+    - **items**:
+      - Stay at Shinagawa Prince on October 21 and 22 (as listed in the handout).
+      - Breakfast is at the hotel. Arrange your own lunch and dinner.
+      - Lunch on October 22 is at Umihotaru.
+  -     - **title**: Before the trip
+    - **items**:
+      - Research each company and prepare your learning goals and questions.
+      - Think about what you want to see and experience during three days in Tokyo.
+      - Prepare a transit IC card.
+      - Plan responsible leisure activities outside the company visits.
+      - A report will be required afterward. The deadline and format have not been announced.
+  -     - **title**: Rooms and groups
+    - **items**:
+      - Hotel: 14 twin rooms for men; 4 twin rooms and 1 triple room for women. Room assignments are to be confirmed.
+      - Six groups of four and three groups of five. Group leaders will also be selected.
+      - Groups are used for the NEC visit and roll calls during travel.
+      - Individual Shinkansen seat assignments are to be confirmed.
+
+### seats
+
+- **rows**: 20
+- **columns**:
+  - A
+  - B
+  - C
+  - aisle
+  - D
+  - E
+- **isSample**: false
+- **title**: Shinkansen Car 2
+- **description**: Layout based on the handout. Individual seats and group assignments are to be confirmed.
+- **groups**:
+  -     - **id**: participant
+    - **label**: Blue seats · unassigned
+    - **color**: blue
+  -     - **id**: teacher
+    - **label**: Teachers
+    - **color**: mint
+  -     - **id**: luggage
+    - **label**: Luggage
+    - **color**: violet
+  -     - **id**: unavailable
+    - **label**: × (as marked in the handout)
+    - **color**: gray
+- **groupPlan**:
+  -     - **size**: 4
+    - **count**: 6
+  -     - **size**: 5
+    - **count**: 3
+- **notes**:
+  - 1D and 1E are for luggage; 8D, 8E and 9D are teacher seats.
+  - The 39 blue seats are unassigned. The × marks are reproduced from the handout.
+  - Restroom in Car 1. At Tokyo Station, the doors indicated by arrows in the original diagram are expected to open.
+  - Chartered bus seats for October 22 have not been announced.
+- **seats**:
+  -     - **number**: 1A
+    - **row**: 1
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 1B
+    - **row**: 1
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 1C
+    - **row**: 1
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 1D
+    - **row**: 1
+    - **column**: D
+    - **groupId**: luggage
+  -     - **number**: 1E
+    - **row**: 1
+    - **column**: E
+    - **groupId**: luggage
+  -     - **number**: 2A
+    - **row**: 2
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 2B
+    - **row**: 2
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 2C
+    - **row**: 2
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 2D
+    - **row**: 2
+    - **column**: D
+    - **groupId**: participant
+  -     - **number**: 2E
+    - **row**: 2
+    - **column**: E
+    - **groupId**: participant
+  -     - **number**: 3A
+    - **row**: 3
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 3B
+    - **row**: 3
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 3C
+    - **row**: 3
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 3D
+    - **row**: 3
+    - **column**: D
+    - **groupId**: participant
+  -     - **number**: 3E
+    - **row**: 3
+    - **column**: E
+    - **groupId**: participant
+  -     - **number**: 4A
+    - **row**: 4
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 4B
+    - **row**: 4
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 4C
+    - **row**: 4
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 4D
+    - **row**: 4
+    - **column**: D
+    - **groupId**: participant
+  -     - **number**: 4E
+    - **row**: 4
+    - **column**: E
+    - **groupId**: participant
+  -     - **number**: 5A
+    - **row**: 5
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 5B
+    - **row**: 5
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 5C
+    - **row**: 5
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 5D
+    - **row**: 5
+    - **column**: D
+    - **groupId**: participant
+  -     - **number**: 5E
+    - **row**: 5
+    - **column**: E
+    - **groupId**: participant
+  -     - **number**: 6A
+    - **row**: 6
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 6B
+    - **row**: 6
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 6C
+    - **row**: 6
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 6D
+    - **row**: 6
+    - **column**: D
+    - **groupId**: participant
+  -     - **number**: 6E
+    - **row**: 6
+    - **column**: E
+    - **groupId**: participant
+  -     - **number**: 7A
+    - **row**: 7
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 7B
+    - **row**: 7
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 7C
+    - **row**: 7
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 7D
+    - **row**: 7
+    - **column**: D
+    - **groupId**: participant
+  -     - **number**: 7E
+    - **row**: 7
+    - **column**: E
+    - **groupId**: participant
+  -     - **number**: 8A
+    - **row**: 8
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 8B
+    - **row**: 8
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 8C
+    - **row**: 8
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 8D
+    - **row**: 8
+    - **column**: D
+    - **groupId**: teacher
+  -     - **number**: 8E
+    - **row**: 8
+    - **column**: E
+    - **groupId**: teacher
+  -     - **number**: 9A
+    - **row**: 9
+    - **column**: A
+    - **groupId**: participant
+  -     - **number**: 9B
+    - **row**: 9
+    - **column**: B
+    - **groupId**: participant
+  -     - **number**: 9C
+    - **row**: 9
+    - **column**: C
+    - **groupId**: participant
+  -     - **number**: 9D
+    - **row**: 9
+    - **column**: D
+    - **groupId**: teacher
+  -     - **number**: 9E
+    - **row**: 9
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 10A
+    - **row**: 10
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 10B
+    - **row**: 10
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 10C
+    - **row**: 10
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 10D
+    - **row**: 10
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 10E
+    - **row**: 10
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 11A
+    - **row**: 11
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 11B
+    - **row**: 11
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 11C
+    - **row**: 11
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 11D
+    - **row**: 11
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 11E
+    - **row**: 11
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 12A
+    - **row**: 12
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 12B
+    - **row**: 12
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 12C
+    - **row**: 12
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 12D
+    - **row**: 12
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 12E
+    - **row**: 12
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 13A
+    - **row**: 13
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 13B
+    - **row**: 13
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 13C
+    - **row**: 13
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 13D
+    - **row**: 13
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 13E
+    - **row**: 13
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 14A
+    - **row**: 14
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 14B
+    - **row**: 14
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 14C
+    - **row**: 14
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 14D
+    - **row**: 14
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 14E
+    - **row**: 14
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 15A
+    - **row**: 15
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 15B
+    - **row**: 15
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 15C
+    - **row**: 15
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 15D
+    - **row**: 15
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 15E
+    - **row**: 15
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 16A
+    - **row**: 16
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 16B
+    - **row**: 16
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 16C
+    - **row**: 16
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 16D
+    - **row**: 16
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 16E
+    - **row**: 16
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 17A
+    - **row**: 17
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 17B
+    - **row**: 17
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 17C
+    - **row**: 17
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 17D
+    - **row**: 17
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 17E
+    - **row**: 17
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 18A
+    - **row**: 18
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 18B
+    - **row**: 18
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 18C
+    - **row**: 18
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 18D
+    - **row**: 18
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 18E
+    - **row**: 18
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 19A
+    - **row**: 19
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 19B
+    - **row**: 19
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 19C
+    - **row**: 19
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 19D
+    - **row**: 19
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 19E
+    - **row**: 19
+    - **column**: E
+    - **groupId**: unavailable
+  -     - **number**: 20A
+    - **row**: 20
+    - **column**: A
+    - **groupId**: unavailable
+  -     - **number**: 20B
+    - **row**: 20
+    - **column**: B
+    - **groupId**: unavailable
+  -     - **number**: 20C
+    - **row**: 20
+    - **column**: C
+    - **groupId**: unavailable
+  -     - **number**: 20D
+    - **row**: 20
+    - **column**: D
+    - **groupId**: unavailable
+  -     - **number**: 20E
+    - **row**: 20
+    - **column**: E
+    - **groupId**: unavailable
+- **seatingPolicy**: diagram
+
+### companies
+
+-   - **id**: members
+  - **name**: Members Co., Ltd.
+  - **legalName**: Members Co., Ltd.
+  - **industry**: Industry: Internet services / advertising and web production / information processing
+  - **description**: October 21, 14:30–16:30. Meet at Harumi Island Triton Square Office Tower X at 14:00.
+  - **image**: /images/company.svg
+  - **business**:
+    - Ongoing digital business operations support for major companies, digital transformation support, and creating shared value (CSV) strategy consulting
+  - **products**:
+    - AI implementation and adoption support
+    - Website operations and management
+    - Online and social media advertising and promotion
+  - **factory**: Visit details have not been announced.
+  - **highlights**:
+    - Observe how dedicated client teams work and collaborate
+    - Observe paperless operations and environmental initiatives
+    - Observe spaces where creators communicate
+  - **questions**:
+    - What most distinguishes your strengths from other web production and consulting firms?
+    - What do you prioritize in environmentally conscious web development?
+    - What helps young employees succeed in dedicated client teams?
+  - **website**: https://www.members.co.jp
+-   - **id**: sus
+  - **name**: SUS Co., Ltd.
+  - **legalName**: SUS Co., Ltd.
+  - **industry**: Industry: Services (software, information processing, mechanical design, etc.)
+  - **description**: Visit on October 22, 9:20–11:30. The specific location is not listed in the handout.
+  - **image**: /images/company.svg
+  - **business**:
+    - Engineering solutions in IT and R&D, and AI and XR solutions
+  - **products**:
+    - Staffing and contract development for IT, mechanical, electrical and electronics engineering
+    - VRmeet (browser and app metaverse) / MVR (walk-through VR)
+    - AI solutions for diagnostic imaging and visual inspection
+    - ERP solutions
+  - **factory**: Visit details have not been announced.
+  - **highlights**:
+    - Observe demonstrations of in-house metaverse and AI products
+    - Observe in-house engineer training facilities and equipment
+    - Observe the office environment where young engineers work
+  - **questions**:
+    - How do in-house product development and staffing services benefit each other?
+    - What support helps beginners learn advanced technologies?
+    - Which technology areas will you focus on most in the future?
+  - **website**: https://www.sus-g.co.jp
+-   - **id**: toko
+  - **name**: Toko Metal
+  - **legalName**: Toko Metal
+  - **industry**: Industry: Environmental services (recycling)
+  - **description**: Visit the Chiba plant on October 22, 14:00–16:00.
+  - **image**: /images/company.svg
+  - **business**:
+    - Metal scrap recycling, intermediate processing of industrial waste, and resource collection and transport
+  - **products**:
+    - Processing ferrous and nonferrous metal scrap for recycling, including guillotine cutting
+  - **factory**: A visit to the Chiba plant is planned. Details have not been announced.
+  - **highlights**:
+    - Observe large cutters and sorting machines at the recycling plant
+    - Observe on-site safety management and measures to control noise and dust
+    - Observe systems covering waste reception through processing
+  - **questions**:
+    - How are IT and AI used in recycling operations?
+    - Has growing environmental awareness changed the materials you receive?
+    - How do beginners learn on-site work safely?
+  - **website**: https://www.tokometal.co.jp
+-   - **id**: nec
+  - **name**: NEC
+  - **legalName**: NEC
+  - **industry**: Industry: Information and communications / electrical equipment
+  - **description**: Visit on October 23 from 10:00; dismiss on site at 12:00. The specific location is not listed in the handout.
+  - **image**: /images/company.svg
+  - **business**:
+    - Social infrastructure, IT services (digital transformation, cloud, AI, security, etc.), telecommunications and space businesses
+  - **products**:
+    - IT solutions and digital transformation support using BluStellar
+    - Biometric authentication systems, including facial recognition
+    - Air traffic control systems and space equipment, including satellites
+    - Core systems for financial institutions and government agencies
+  - **factory**: Visit details have not been announced.
+  - **highlights**:
+    - Observe showrooms offering experiences with advanced technologies such as facial recognition
+    - Observe large-scale development sites supporting social infrastructure
+    - Observe co-creation spaces that support open innovation
+  - **questions**:
+    - Which business areas will BluStellar focus on most in the future?
+    - What are your strengths in deploying biometric technologies globally?
+    - How do you help teams work together on large projects?
+  - **website**: https://group.nec/global/ja/
+
+### learning
+
+-   - **companyId**: members
+  - **basics**:
+    - Understand that ongoing digital business support is a core activity
+    - Understand the focus on CSV management, combining social problem solving with business profitability
+    - Understand the dedicated client team approach
+    - Understand the focus on decarbonization and sustainable web development
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: Researched the business
+    -       - **id**: interests
+      - **text**: Identified what I want to learn
+    -       - **id**: questions
+      - **text**: Prepared questions
+-   - **companyId**: sus
+  - **basics**:
+    - Understand that IT and engineering staffing and contract development are core businesses
+    - Understand that the company develops its own VR, metaverse and AI products
+    - Understand the emphasis on engineer development and training
+    - Understand the expansion into in-house solutions alongside staffing
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: Researched the business
+    -       - **id**: interests
+      - **text**: Identified what I want to learn
+    -       - **id**: questions
+      - **text**: Prepared questions
+-   - **companyId**: toko
+  - **basics**:
+    - Know that this resource recycling company has over 120 years of history
+    - Know that the company buys metal scrap and performs intermediate processing of industrial waste
+    - Know that the company owns large heavy equipment and processing plants
+    - Understand the adoption of IT and AI in recycling operations
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: Researched the business
+    -       - **id**: interests
+      - **text**: Identified what I want to learn
+    -       - **id**: questions
+      - **text**: Prepared questions
+-   - **companyId**: nec
+  - **basics**:
+    - Understand the strengths in social infrastructure and government IT services
+    - Know about its world-leading biometric technologies, including facial recognition
+    - Understand how BluStellar supports corporate digital transformation
+    - Know about investments in advanced technologies such as generative AI, space and telecommunications
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: Researched the business
+    -       - **id**: interests
+      - **text**: Identified what I want to learn
+    -       - **id**: questions
+      - **text**: Prepared questions
+
+### sightseeing
+
+- **checkedAt**: 2026-10-09
+- **areas**:
+  -     - **id**: tokyo
+    - **name**: Tokyo Station
+    - **description**: Explore the Marunouchi station building and the Imperial Palace Outer Garden on foot from Tokyo Station.
+  -     - **id**: shinagawa
+    - **name**: Shinagawa
+    - **description**: Places around Shinagawa Prince Hotel for a visit without a long journey.
+  -     - **id**: asakusa
+    - **name**: Asakusa & Oshiage
+    - **description**: Explore Senso-ji, Nakamise and the Sumida River, or continue to Tokyo Skytree in Oshiage. Allow time to travel between areas and return.
+  -     - **id**: harajuku
+    - **name**: Harajuku
+    - **description**: Walk the wooded approaches to Meiji Jingu. Allow time to reach the main shrine from the entrance.
+  -     - **id**: tsukiji
+    - **name**: Tsukiji
+    - **description**: Explore specialist food shops at Tsukiji Outer Market. Plan around individual opening hours, mainly in the morning and at lunchtime.
+  -     - **id**: akihabara
+    - **name**: Akihabara
+    - **description**: Browse electronics, components, computers and pop-culture shops. Research stores that match your interests beforehand.
+  -     - **id**: shiba
+    - **name**: Shiba & Tokyo Tower
+    - **description**: Enjoy city views around Tokyo Tower. Check tickets and allow enough time if you plan to visit an observation deck.
+- **spots**:
+  -     - **id**: tokyo-station
+    - **areaId**: tokyo
+    - **enabled**: true
+    - **name**: Tokyo Station · Marunouchi building
+    - **description**: Tokyo’s landmark red-brick station with its distinctive domes. The Marunouchi plaza offers a view of historic architecture against modern towers.
+    - **access**: Exit Tokyo Station on the Marunouchi side for the station plaza.
+    - **cost**: Free to view the exterior and walk through the plaza
+    - **duration**: 20–30 min
+    - **note**: This is the opposite side from Yaesu. Allow time to cross the station.
+    - **latitude**: 35.68124
+    - **longitude**: 139.76499
+    - **website**: https://www.tokyostationcity.com/learning/station_building/
+    - **sourceUrl**: https://www.gotokyo.org/jp/destinations/central-tokyo/tokyo-station-and-marunouchi/index.html
+  -     - **id**: imperial-garden
+    - **areaId**: tokyo
+    - **enabled**: true
+    - **name**: Imperial Palace Outer Garden
+    - **description**: A spacious park of lawns, pine trees, moats and historic gates. Enjoy a walk through the plaza with views toward Nijubashi.
+    - **access**: About 15 minutes on foot from Tokyo Station to the palace plaza and Nijubashi viewing area.
+    - **cost**: Free entry to the Outer Garden
+    - **duration**: 40–60 min
+    - **note**: This does not include entry inside the palace. Check official notices for event and security restrictions.
+    - **latitude**: 35.6797
+    - **longitude**: 139.758
+    - **website**: https://www.env.go.jp/garden/kokyogaien/
+    - **sourceUrl**: https://www.env.go.jp/garden/kokyogaien/2_guide/kokyogaien_access.html
+  -     - **id**: aqua-park
+    - **areaId**: shinagawa
+    - **enabled**: true
+    - **name**: Maxell Aqua Park Shinagawa
+    - **description**: An aquarium inside Shinagawa Prince Hotel, combining marine life with sound and light. An indoor option near the hotel.
+    - **access**: About 2 minutes on foot from Shinagawa Station’s Takanawa Exit, inside Shinagawa Prince Hotel.
+    - **cost**: Admission fee; check the official website for ticket conditions
+    - **duration**: 60–90 min
+    - **note**: Check opening hours, show times and reservation requirements before planning a visit.
+    - **latitude**: 35.62845
+    - **longitude**: 139.736
+    - **website**: https://www.aqua-park.jp/aqua/
+    - **sourceUrl**: https://www.aqua-park.jp/aqua/access/
+  -     - **id**: sensoji
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: Senso-ji Temple & Kaminarimon
+    - **description**: Walk from Kaminarimon’s giant lantern toward Senso-ji’s main hall. This landmark temple is a starting point for exploring historic Asakusa.
+    - **access**: About 5 minutes on foot from Asakusa Station on the Tokyo Metro Ginza or Tobu line.
+    - **cost**: Free to walk the grounds; charms and purchases cost extra
+    - **duration**: 30–45 min
+    - **note**: The Tsukuba Express Asakusa Station is in a different location. Check official opening times for the main hall.
+    - **latitude**: 35.71477
+    - **longitude**: 139.79665
+    - **website**: https://www.senso-ji.jp/
+    - **sourceUrl**: https://www.senso-ji.jp/access/
+  -     - **id**: nakamise
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: Nakamise Shopping Street
+    - **description**: The shopping street along the approach from Kaminarimon to Hozomon, lined with souvenir and sweet shops. Combine it with a visit to Senso-ji.
+    - **access**: Walk from Asakusa Station to Kaminarimon; Nakamise begins beyond the gate.
+    - **cost**: Free to stroll; purchases cost extra
+    - **duration**: 20–40 min
+    - **note**: Shop hours vary. Follow posted rules for eating and photography.
+    - **latitude**: 35.71245
+    - **longitude**: 139.79662
+    - **website**: https://www.senso-ji.jp/guide/guide02.html
+    - **sourceUrl**: https://t-navi.city.taito.lg.jp/spot/1002
+  -     - **id**: sumida-park
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: Sumida Park & riverside
+    - **description**: Extend your Asakusa walk to the Sumida River. Enjoy views of the river, bridges and Tokyo Skytree across the water.
+    - **access**: Walk to the Taito-side riverside from Asakusa Station and Azumabashi Bridge.
+    - **cost**: Free to walk through the park
+    - **duration**: 20–30 min
+    - **note**: The pin indicates an approximate riverside point on the Asakusa side. Plan your walk around weather, daylight and your return time.
+    - **latitude**: 35.71225
+    - **longitude**: 139.80205
+    - **website**: https://www.gotokyo.org/jp/destinations/eastern-tokyo/asakusa/index.html
+    - **sourceUrl**: https://www.gotokyo.org/jp/destinations/eastern-tokyo/asakusa/index.html
+  -     - **id**: tokyo-skytree
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: Tokyo Skytree
+    - **description**: An Oshiage landmark with observation decks overlooking Tokyo. Tokyo Skytree Town also offers shopping and dining.
+    - **access**: Use Oshiage (Skytree-mae) or Tokyo Skytree Station. These are different stations from Asakusa.
+    - **cost**: Observation decks require paid tickets; check official ticket and reservation conditions
+    - **duration**: 60–90 min
+    - **note**: Views depend on the weather. Check entry times and crowds, and allow time for the journey from Asakusa.
+    - **latitude**: 35.71006
+    - **longitude**: 139.8107
+    - **website**: https://www.tokyo-skytree.jp/
+    - **sourceUrl**: https://www.tokyo-skytree.jp/access/public-transport/
+  -     - **id**: meiji-jingu
+    - **areaId**: harajuku
+    - **enabled**: true
+    - **name**: Meiji Jingu
+    - **description**: A shrine surrounded by woodland beside Harajuku and Yoyogi. Walk the approaches and visit the main shrine for a quieter experience.
+    - **access**: Enter the approach at the Harajuku gate near Harajuku or Meiji-jingumae Station. The main shrine is a further walk inside.
+    - **cost**: Shrine worship is free; check separate conditions for the Inner Garden and museum
+    - **duration**: 45–60 min
+    - **note**: Gate hours vary by season. Check the official website before an evening visit and observe shrine etiquette.
+    - **latitude**: 35.6764
+    - **longitude**: 139.69933
+    - **website**: https://www.meijijingu.or.jp/
+    - **sourceUrl**: https://www.meijijingu.or.jp/access/
+  -     - **id**: tsukiji-market
+    - **areaId**: tsukiji
+    - **enabled**: true
+    - **name**: Tsukiji Outer Market
+    - **description**: A market of seafood, specialist ingredients, kitchenware and restaurants. Explore the shops to discover Tokyo’s food culture.
+    - **access**: Walk from Tsukijishijo Station on the Toei Oedo Line or Tsukiji Station on the Tokyo Metro Hibiya Line.
+    - **cost**: Free to explore; shopping and meals cost extra
+    - **duration**: 45–60 min
+    - **note**: Hours and closing days vary by shop. Many shops are unsuitable for evening visits; check beforehand and follow each shop’s dining rules.
+    - **latitude**: 35.6655
+    - **longitude**: 139.7707
+    - **website**: https://www.tsukiji.or.jp/
+    - **sourceUrl**: https://www.tsukiji.or.jp/access/
+  -     - **id**: akihabara-electric-town
+    - **areaId**: akihabara
+    - **enabled**: true
+    - **name**: Akihabara Electric Town
+    - **description**: A district of electronics, computers, components, anime and gaming shops. A good option for anyone interested in technology and making things.
+    - **access**: Head from JR Akihabara Station’s Electric Town Exit toward Chuo-dori. The Tokyo Metro Hibiya Line also serves the area.
+    - **cost**: Free to walk the streets; purchases and attractions cost extra
+    - **duration**: 45–90 min
+    - **note**: Hours vary by store. Check photography and in-store rules, and decide on a shopping budget.
+    - **latitude**: 35.6996
+    - **longitude**: 139.7713
+    - **website**: https://akiba.or.jp/
+    - **sourceUrl**: https://www.gotokyo.org/jp/spot/55/index.html
+  -     - **id**: tokyo-tower
+    - **areaId**: shiba
+    - **enabled**: true
+    - **name**: Tokyo Tower
+    - **description**: Tokyo’s familiar red-and-white landmark. Enjoy city views from an observation deck or appreciate the tower from ground level.
+    - **access**: Walk from Akabanebashi, Onarimon or Kamiyacho Station. Check the official guide for the appropriate exit and route.
+    - **cost**: Observation decks require paid tickets; check official ticket types and prices
+    - **duration**: 45–90 min
+    - **note**: Check deck opening hours and reservation conditions. Allow time for your return journey even if you only view the exterior.
+    - **latitude**: 35.65858
+    - **longitude**: 139.74543
+    - **website**: https://www.tokyotower.co.jp/
+    - **sourceUrl**: https://www.tokyotower.co.jp/access/railroad/
+- **origins**:
+  -     - **id**: tokyo
+    - **name**: Tokyo Station
+    - **query**: Tokyo Station, Tokyo, Japan
+  -     - **id**: shinagawa
+    - **name**: Shinagawa Station
+    - **query**: Shinagawa Station, Tokyo, Japan
+  -     - **id**: shinagawa-prince
+    - **name**: Shinagawa Prince Hotel
+    - **query**: Shinagawa Prince Hotel, 4-10-30 Takanawa, Minato City, Tokyo, Japan
+
+## International course
+
+### event
+
+- **date**: 2026-10-20
+- **timezone**: Asia/Tokyo
+- **version**: 0.3
+- **isSample**: false
+- **meetingTime**: 09:00
+- **meetingPlace**: Toyama Station
+- **meetingNote**: Meet at Toyama Station at 9:00 on October 20. Take the 9:26 Hokuriku Shinkansen Kagayaki 506 to Tokyo Station. The itinerary does not specify the meeting point inside the station.
+- **passwordHint**: Demo password: factory2026
+- **arrivalNote**: Arrive at Tokyo Station at 11:36. After lunch, meet at the Nihombashi Exit at 13:40.
+- **endDate**: 2026-10-23
+- **hotel**: Shinagawa Prince Hotel
+- **source**: Distribution Study Visit Itinerary (as of October 9).pdf
+- **sourceNote**: Based on the distribution study visit itinerary as of October 9. Unspecified details remain to be confirmed.
+- **dateConfirmed**: true
+
+### announcements
+
+-   - **id**: overview-2026
+  - **title**: International course: four days, October 20–23
+  - **body**: Meet at Toyama Station at 9:00 on October 20. Visits include Tokyo Metropolitan Sewerage Service, METI, Tokyo Customs, Renesas Electronics, Keio University Shonan Fujisawa Campus and Yomiuri Print Media. The trip ends at Tokyo Station at 14:20 on October 23.
+  - **publishedAt**: —
+  - **updatedAt**: 2026-10-09
+  - **importance**: high
+-   - **id**: customs-groups
+  - **title**: Tokyo Customs visit times differ for odd- and even-numbered groups
+  - **body**: On October 21, odd-numbered groups depart at 13:30 and visit from 14:00 to 15:00; even-numbered groups depart at 14:30 and visit from 15:00 to 16:00. Depart from Deluxe Tokyo Beach (name as printed in the itinerary).
+  - **publishedAt**: —
+  - **updatedAt**: 2026-10-09
+  - **importance**: high
+-   - **id**: rules
+  - **title**: Curfew 21:30 / roll call 22:00
+  - **body**: Stay at Shinagawa Prince Hotel on October 20–22. Curfew is 21:30 and roll call is at 22:00. On October 22, return to the hotel independently after free time in Yokohama Chinatown.
+  - **publishedAt**: —
+  - **updatedAt**: 2026-10-09
+  - **importance**: high
+
+### schedule
+
+-   - **id**: meet
+  - **date**: 2026-10-20
+  - **startTime**: 09:00
+  - **endTime**: —
+  - **title**: Meet at Toyama Station
+  - **location**: Toyama Station
+  - **description**: The itinerary does not specify the meeting point inside the station.
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 0
+  - **timeNote**: 
+-   - **id**: train
+  - **date**: 2026-10-20
+  - **startTime**: 09:26
+  - **endTime**: 11:36
+  - **title**: Take Kagayaki 506 to Tokyo
+  - **location**: JR Toyama Station → JR Tokyo Station
+  - **description**: Take the Hokuriku Shinkansen Kagayaki 506.
+  - **companyId**: —
+  - **transport**: Hokuriku Shinkansen
+  - **travelMinutes**: 0
+  - **order**: 1
+  - **timeNote**: 
+-   - **id**: tokyo-lunch
+  - **date**: 2026-10-20
+  - **startTime**: —
+  - **endTime**: —
+  - **title**: Lunch (on your own)
+  - **location**: Inside Tokyo Station
+  - **description**: After lunch, meet at the Nihombashi Exit at 13:40.
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 2
+  - **timeNote**: After arriving at Tokyo Station, before the 13:40 meeting
+-   - **id**: nihonbashi-meet
+  - **date**: 2026-10-20
+  - **startTime**: 13:40
+  - **endTime**: —
+  - **title**: Meet at Tokyo Station Nihombashi Exit
+  - **location**: Tokyo Station, Nihombashi Exit
+  - **description**: After meeting, walk to Tokyo Metropolitan Sewerage Service.
+  - **companyId**: —
+  - **transport**: On foot
+  - **travelMinutes**: 0
+  - **order**: 3
+  - **timeNote**: 
+-   - **id**: tgs-visit
+  - **date**: 2026-10-20
+  - **startTime**: 14:00
+  - **endTime**: 16:00
+  - **title**: Visit Tokyo Metropolitan Sewerage Service
+  - **location**: Tokyo Metropolitan Sewerage Service
+  - **description**: After the visit, walk back to Tokyo Station and take public transport to Shinagawa Station.
+  - **companyId**: tgs
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 4
+  - **timeNote**: 
+-   - **id**: hotel-1
+  - **date**: 2026-10-20
+  - **startTime**: 17:30
+  - **endTime**: —
+  - **title**: Hotel check-in / free time
+  - **location**: Shinagawa Prince Hotel
+  - **description**: Walk from Shinagawa Station to the hotel. After check-in, enjoy free time and arrange your own dinner.
+  - **companyId**: —
+  - **transport**: Public transport / on foot
+  - **travelMinutes**: 0
+  - **order**: 5
+  - **timeNote**: 
+-   - **id**: curfew-20
+  - **date**: 2026-10-20
+  - **startTime**: 21:30
+  - **endTime**: —
+  - **title**: Curfew
+  - **location**: Shinagawa Prince Hotel
+  - **description**: Return to the hotel by 21:30.
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 6
+  - **timeNote**: 
+-   - **id**: rollcall-20
+  - **date**: 2026-10-20
+  - **startTime**: 22:00
+  - **endTime**: —
+  - **title**: Roll call
+  - **location**: Shinagawa Prince Hotel
+  - **description**: Roll call is at 22:00.
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 7
+  - **timeNote**: 
+-   - **id**: depart-2
+  - **date**: 2026-10-21
+  - **startTime**: 09:30
+  - **endTime**: —
+  - **title**: Leave the hotel
+  - **location**: Shinagawa Prince Hotel
+  - **description**: After breakfast, take the bus to METI.
+  - **companyId**: —
+  - **transport**: Bus
+  - **travelMinutes**: 0
+  - **order**: 8
+  - **timeNote**: 
+-   - **id**: meti-visit
+  - **date**: 2026-10-21
+  - **startTime**: 10:00
+  - **endTime**: 12:00
+  - **title**: Visit METI
+  - **location**: Ministry of Economy, Trade and Industry
+  - **description**: After the visit, take the bus to the lunch venue.
+  - **companyId**: meti
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 9
+  - **timeNote**: 
+-   - **id**: odaiba-lunch
+  - **date**: 2026-10-21
+  - **startTime**: 12:30
+  - **endTime**: —
+  - **title**: Lunch at Odaiba Ocean Club Buffet
+  - **location**: Odaiba Ocean Club Buffet
+  - **description**: Lunch is included. Afternoon Tokyo Customs visit times differ for odd- and even-numbered groups.
+  - **companyId**: —
+  - **transport**: Bus
+  - **travelMinutes**: 0
+  - **order**: 10
+  - **timeNote**: 
+-   - **id**: odd-depart
+  - **date**: 2026-10-21
+  - **startTime**: 13:30
+  - **endTime**: —
+  - **title**: [Odd-numbered groups] Depart for Tokyo Customs
+  - **location**: Deluxe Tokyo Beach (name as printed in the itinerary)
+  - **description**: Odd-numbered groups depart at 13:30 and take the bus to Tokyo Customs.
+  - **companyId**: —
+  - **transport**: Bus
+  - **travelMinutes**: 0
+  - **order**: 11
+  - **timeNote**: 
+-   - **id**: customs-odd
+  - **date**: 2026-10-21
+  - **startTime**: 14:00
+  - **endTime**: 15:00
+  - **title**: [Odd-numbered groups] Visit Tokyo Customs
+  - **location**: Tokyo Customs
+  - **description**: Visit time for odd-numbered groups. Even-numbered groups visit from 15:00.
+  - **companyId**: customs
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 12
+  - **timeNote**: 
+-   - **id**: even-depart
+  - **date**: 2026-10-21
+  - **startTime**: 14:30
+  - **endTime**: —
+  - **title**: [Even-numbered groups] Depart for Tokyo Customs
+  - **location**: Deluxe Tokyo Beach (name as printed in the itinerary)
+  - **description**: Even-numbered groups depart at 14:30 and take the bus to Tokyo Customs.
+  - **companyId**: —
+  - **transport**: Bus
+  - **travelMinutes**: 0
+  - **order**: 13
+  - **timeNote**: 
+-   - **id**: customs-even
+  - **date**: 2026-10-21
+  - **startTime**: 15:00
+  - **endTime**: 16:00
+  - **title**: [Even-numbered groups] Visit Tokyo Customs
+  - **location**: Tokyo Customs
+  - **description**: Visit time for even-numbered groups. Afterward, take the bus back to Deluxe Tokyo Beach (name as printed in the itinerary) to rejoin the other groups.
+  - **companyId**: customs
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 14
+  - **timeNote**: 
+-   - **id**: odd-wait
+  - **date**: 2026-10-21
+  - **startTime**: 15:15
+  - **endTime**: —
+  - **title**: [Odd-numbered groups] Wait inside
+  - **location**: Deluxe Tokyo Beach (name as printed in the itinerary)
+  - **description**: Odd-numbered groups return by bus and wait inside to rejoin the even-numbered groups.
+  - **companyId**: —
+  - **transport**: Bus
+  - **travelMinutes**: 0
+  - **order**: 15
+  - **timeNote**: 
+-   - **id**: group-merge
+  - **date**: 2026-10-21
+  - **startTime**: —
+  - **endTime**: —
+  - **title**: Odd- and even-numbered groups reunite
+  - **location**: Deluxe Tokyo Beach (name as printed in the itinerary)
+  - **description**: Reunite after the even-numbered groups finish their visit, then take the bus to the hotel.
+  - **companyId**: —
+  - **transport**: Bus
+  - **travelMinutes**: 0
+  - **order**: 16
+  - **timeNote**: After the even-numbered groups finish at 16:00 (reunion time unspecified)
+-   - **id**: hotel-2
+  - **date**: 2026-10-21
+  - **startTime**: 17:00
+  - **endTime**: —
+  - **title**: Arrive at hotel / free time
+  - **location**: Shinagawa Prince Hotel
+  - **description**: Enjoy free time after arrival and arrange your own dinner.
+  - **companyId**: —
+  - **transport**: Bus
+  - **travelMinutes**: 0
+  - **order**: 17
+  - **timeNote**: 
+-   - **id**: curfew-21
+  - **date**: 2026-10-21
+  - **startTime**: 21:30
+  - **endTime**: —
+  - **title**: Curfew
+  - **location**: Shinagawa Prince Hotel
+  - **description**: Return to the hotel by 21:30.
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 18
+  - **timeNote**: 
+-   - **id**: rollcall-21
+  - **date**: 2026-10-21
+  - **startTime**: 22:00
+  - **endTime**: —
+  - **title**: Roll call
+  - **location**: Shinagawa Prince Hotel
+  - **description**: Roll call is at 22:00.
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 19
+  - **timeNote**: 
+-   - **id**: depart-3
+  - **date**: 2026-10-22
+  - **startTime**: 08:30
+  - **endTime**: —
+  - **title**: Leave the hotel
+  - **location**: Shinagawa Prince Hotel
+  - **description**: After breakfast, take the bus to Renesas Electronics.
+  - **companyId**: —
+  - **transport**: Bus
+  - **travelMinutes**: 0
+  - **order**: 20
+  - **timeNote**: 
+-   - **id**: renesas-visit
+  - **date**: 2026-10-22
+  - **startTime**: 09:30
+  - **endTime**: 11:30
+  - **title**: Visit Renesas Electronics
+  - **location**: Renesas Electronics
+  - **description**: The itinerary does not specify the exact visit site.
+  - **companyId**: renesas
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 21
+  - **timeNote**: 
+-   - **id**: keio-visit
+  - **date**: 2026-10-22
+  - **startTime**: 13:30
+  - **endTime**: 16:00
+  - **title**: Visit Keio University Shonan Fujisawa Campus / lunch
+  - **location**: Keio University Shonan Fujisawa Campus
+  - **description**: Travel by bus. This time slot includes the visit and lunch at the campus cafeteria. Arrange your own lunch.
+  - **companyId**: keio-sfc
+  - **transport**: Bus
+  - **travelMinutes**: 0
+  - **order**: 22
+  - **timeNote**: 
+-   - **id**: chinatown
+  - **date**: 2026-10-22
+  - **startTime**: 17:20
+  - **endTime**: —
+  - **title**: Yokohama Chinatown / photos / free time
+  - **location**: Yokohama Chinatown
+  - **description**: After photos, enjoy free time and arrange your own dinner. Return independently to Shinagawa Prince Hotel by the 21:30 curfew.
+  - **companyId**: —
+  - **transport**: Bus (return to the hotel independently)
+  - **travelMinutes**: 0
+  - **order**: 23
+  - **timeNote**: 
+-   - **id**: curfew-22
+  - **date**: 2026-10-22
+  - **startTime**: 21:30
+  - **endTime**: —
+  - **title**: Curfew
+  - **location**: Shinagawa Prince Hotel
+  - **description**: Return to the hotel by 21:30.
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 24
+  - **timeNote**: 
+-   - **id**: rollcall-22
+  - **date**: 2026-10-22
+  - **startTime**: 22:00
+  - **endTime**: —
+  - **title**: Roll call
+  - **location**: Shinagawa Prince Hotel
+  - **description**: Roll call is at 22:00.
+  - **companyId**: —
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 25
+  - **timeNote**: 
+-   - **id**: depart-4
+  - **date**: 2026-10-23
+  - **startTime**: 10:00
+  - **endTime**: —
+  - **title**: Leave the hotel
+  - **location**: Shinagawa Prince Hotel
+  - **description**: After breakfast, take the bus to Yomiuri Print Media.
+  - **companyId**: —
+  - **transport**: Bus
+  - **travelMinutes**: 0
+  - **order**: 26
+  - **timeNote**: 
+-   - **id**: yomiuri-visit
+  - **date**: 2026-10-23
+  - **startTime**: 11:30
+  - **endTime**: 13:10
+  - **title**: Visit Yomiuri Print Media
+  - **location**: Yomiuri Print Media
+  - **description**: The itinerary does not specify the exact visit site. After the visit, take the bus to Tokyo Station.
+  - **companyId**: yomiuri
+  - **transport**: —
+  - **travelMinutes**: 0
+  - **order**: 27
+  - **timeNote**: 
+-   - **id**: dismiss
+  - **date**: 2026-10-23
+  - **startTime**: 14:20
+  - **endTime**: —
+  - **title**: Trip ends at Tokyo Station / lunch
+  - **location**: Tokyo Station
+  - **description**: Arrange your own lunch. You may also eat on the bus.
+  - **companyId**: —
+  - **transport**: Bus
+  - **travelMinutes**: 0
+  - **order**: 28
+  - **timeNote**: 
+
+### guide
+
+- **belongings**:
+  - The itinerary does not specify what to bring. Check the school's instructions.
+- **clothing**:
+  - The itinerary does not specify clothing requirements. Check the school's instructions.
+- **precautions**:
+  - On October 20–22, curfew is 21:30 and roll call is at 22:00.
+  - The October 21 Tokyo Customs visit is 14:00–15:00 for odd-numbered groups and 15:00–16:00 for even-numbered groups.
+  - On October 22, return to the hotel independently after the group disperses in Yokohama Chinatown.
+  - The trip ends at Tokyo Station at 14:20 on October 23.
+- **sections**:
+  -     - **title**: Accommodation and meals
+    - **items**:
+      - Stay at Shinagawa Prince Hotel on the nights of October 20, 21 and 22.
+      - Breakfast is included on October 21–23.
+      - Lunch on October 21 is included, at Odaiba Ocean Club Buffet from 12:30.
+      - Arrange your own lunches on October 20, 22 and 23 and dinners on October 20–22.
+      - On October 22, have lunch at Keio University Shonan Fujisawa Campus cafeteria. On October 23, you may eat lunch on the bus.
+  -     - **title**: Group activities (October 21)
+    - **items**:
+      - Odd-numbered groups: depart 13:30 → Tokyo Customs visit 14:00–15:00 → wait inside from 15:15.
+      - Even-numbered groups: depart 14:30 → Tokyo Customs visit 15:00–16:00 → rejoin odd-numbered groups.
+      - Departure, waiting and reunion take place at Deluxe Tokyo Beach (name as printed in the itinerary).
+      - The itinerary does not specify group assignments.
+  -     - **title**: Before the trip
+    - **items**:
+      - Research the places to visit and prepare topics and questions.
+      - Check the four-day itinerary and your group's departure and visit times.
+      - The itinerary does not specify luggage shipping, clothing or items to bring. Check the school’s instructions.
+  -     - **title**: Shinkansen and bus seating
+    - **items**:
+      - For the International course, you may choose your seat on both the Shinkansen and the bus.
+
+### seats
+
+- **rows**: 0
+- **columns**:
+  - A
+  - B
+  - C
+  - aisle
+  - D
+  - E
+- **isSample**: false
+- **title**: Shinkansen and bus seating
+- **description**: For the International course, you may choose your seat on both the Shinkansen and the bus.
+- **groups**:
+
+- **groupPlan**:
+
+- **notes**:
+  - You may choose your seat on the Shinkansen.
+  - You may choose your seat on the bus.
+- **seats**:
+
+- **seatingPolicy**: free
+
+### companies
+
+-   - **id**: tgs
+  - **name**: Tokyo Metropolitan Sewerage Service
+  - **legalName**: Tokyo Metropolitan Sewerage Service
+  - **industry**: Industry: Services (environmental and infrastructure maintenance / public-private enterprise)
+  - **description**: Visit on October 20, 14:00–16:00.
+  - **image**: /images/company.svg
+  - **business**:
+    - Urban water infrastructure management with the metropolitan sewerage bureau, and overseas deployment of technology and expertise for emerging economies and water services
+  - **products**:
+    - Water environment improvements in emerging economies
+    - Technical support for overseas infrastructure projects
+    - Licensing and overseas deployment of proprietary technologies, including SPR pipe rehabilitation and rainfall information systems
+    - Training and personnel exchange programs for overseas engineers
+  - **factory**: The itinerary does not specify the visit details.
+  - **highlights**:
+    - Observe demonstrations and exhibits of internationally deployed pipe rehabilitation technology (SPR)
+    - Observe central monitoring and control technologies for heavy rainfall and urban flood prevention
+    - Observe training environments for overseas trainees and engineers
+  - **questions**:
+    - Which aspects of Japanese water treatment technology are most valued in rapidly growing overseas cities?
+    - How do you share technologies with overseas cities to address localized heavy rainfall caused by climate change?
+    - What opportunities and career paths allow young engineers to participate in overseas projects?
+  - **website**: https://www.tgs-sw.co.jp
+-   - **id**: meti
+  - **name**: Ministry of Economy, Trade and Industry
+  - **legalName**: Ministry of Economy, Trade and Industry
+  - **industry**: Industry: Central government ministry
+  - **description**: Visit on October 21, 10:00–12:00.
+  - **image**: /images/company.svg
+  - **business**:
+    - International trade negotiations (EPAs/FTAs), development and investment promotion for strategic industries such as semiconductors and green transformation (GX), and international standardization
+  - **products**:
+    - Global supply chain resilience and economic security policies
+    - Subsidies for domestic and overseas companies and measures to attract investment into Japan
+    - Trade negotiations and international rulemaking, including ISO standards
+  - **factory**: The itinerary does not specify the visit details.
+  - **highlights**:
+    - Observe the ministry environment where international trade and economic security policies are discussed
+    - Observe exhibits and information about attracting overseas investment and supporting businesses
+    - Observe digitalization and working environments in the administration responsible for Japanese industrial policy
+  - **questions**:
+    - How do you draw on Japan's strengths as global supply chains are reorganized?
+    - What are the key policies addressing global competition in digital and green transformation?
+    - How do young officials gain experience through international organizations and overseas postings?
+  - **website**: https://www.meti.go.jp/index.html
+-   - **id**: customs
+  - **name**: Tokyo Customs
+  - **legalName**: Tokyo Customs
+  - **industry**: Regional office of the Ministry of Finance (government agency)
+  - **description**: On October 21, odd-numbered groups visit from 14:00 to 15:00 and even-numbered groups from 15:00 to 16:00.
+  - **image**: /images/company.svg
+  - **business**:
+    - Facilitating international trade through faster customs clearance, securing supply chains, and preventing illegal drugs and counterfeit goods from crossing borders
+  - **products**:
+    - Faster international supply chains through the Authorized Economic Operator (AEO) program
+    - Import and export clearance and electronic customs processing through NACCS
+    - International cooperation, information exchange and border enforcement with foreign customs authorities
+  - **factory**: The itinerary does not specify the visit details.
+  - **highlights**:
+    - Observe border inspection facilities using large X-ray equipment and drug detection dogs
+    - Observe expedited electronic customs processing through NACCS
+    - Observe enforcement exhibits featuring intellectual property infringements such as counterfeit goods
+  - **questions**:
+    - How do you balance rapid clearance and enforcement as cross-border e-commerce increases small shipments?
+    - How do you share information and cooperate with international organizations such as the WCO?
+    - How are technologies such as AI image recognition being adopted to secure international logistics?
+  - **website**: https://www.customs.go.jp/tokyo/
+-   - **id**: renesas
+  - **name**: Renesas Electronics
+  - **legalName**: Renesas Electronics
+  - **industry**: Industry: Electrical equipment (semiconductor manufacturing)
+  - **description**: Visit on October 22, 9:30–11:30.
+  - **image**: /images/company.svg
+  - **business**:
+    - A leading global supplier of automotive microcontrollers, supplying embedded semiconductors to automotive and industrial equipment manufacturers worldwide
+  - **products**:
+    - Automotive and industrial microcontrollers (MCUs) / systems on a chip (SoCs)
+    - Automotive power semiconductors, analog and signal-chain ICs
+    - Development environments supporting open architectures such as RISC-V
+  - **factory**: The itinerary does not specify the visit details.
+  - **highlights**:
+    - Observe evaluation and testing environments for semiconductors used by automakers worldwide
+    - Observe demonstrations and exhibits of the latest MCUs and SoCs for global markets
+    - Observe R&D and office environments where international development teams collaborate
+  - **questions**:
+    - What differentiates Renesas products and technologies from overseas competitors?
+    - How do you support communication among development and manufacturing sites worldwide?
+    - Which areas are priorities in developing semiconductors for next-generation EVs and autonomous driving?
+  - **website**: https://www.renesas.com/ja
+-   - **id**: keio-sfc
+  - **name**: Keio University Shonan Fujisawa Campus
+  - **legalName**: Keio University Shonan Fujisawa Campus
+  - **industry**: Industry: Education and research (higher education)
+  - **description**: Visit on October 22, 13:30–16:00, including lunch at the campus cafeteria.
+  - **image**: /images/company.svg
+  - **business**:
+    - Applying advanced technologies in society, creating startups, developing global IT talent, and industry-government-academia projects
+  - **products**:
+    - Double-degree and international joint research programs with overseas universities
+    - Industry-academia collaboration and open innovation through SFC Open Research Forum (ORF)
+    - Platforms for field trials in advanced IT, biotechnology, drones and related fields
+  - **factory**: The itinerary does not specify the visit details.
+  - **highlights**:
+    - Observe advanced research facilities for drone, biotechnology and IT field trials
+    - Observe the energy of laboratories where students and companies collaborate
+    - Observe open learning environments that encourage entrepreneurship
+  - **questions**:
+    - What strengths help the SFC ecosystem produce globally active startups?
+    - What challenges and approaches are involved in joint research with overseas universities and institutions?
+    - What support helps turn advanced research into practical applications and businesses?
+  - **website**: https://www.keio.ac.jp/ja/sfc/
+-   - **id**: yomiuri
+  - **name**: Yomiuri Print Media
+  - **legalName**: Yomiuri Print Media
+  - **industry**: Industry: Printing and related services (Yomiuri Shimbun Group)
+  - **description**: Visit on October 23, 11:30–13:10.
+  - **image**: /images/company.svg
+  - **business**:
+    - Operating high-volume, high-precision physical printing and supply chains that deliver international news domestically
+  - **products**:
+    - High-volume, rapid printing of Yomiuri Shimbun and other publications carrying news gathered overseas
+    - Rapid production and delivery of large-scale commercial printing and municipal newsletters
+    - Logistics management coordinated with printing sites
+  - **factory**: The itinerary does not specify the visit details.
+  - **highlights**:
+    - Observe large high-speed newspaper presses and automated lines
+    - Observe precise logistics systems that rapidly print and dispatch international news
+    - Observe safety and quality management supporting rapid overnight printing
+  - **questions**:
+    - How do you shorten the time between overseas news events and morning newspaper printing?
+    - What business value do physical printing and logistics networks offer as digitalization progresses?
+    - What crisis management supports stable, round-the-clock operation of large printing lines?
+  - **website**: https://www.yomiuri-pm.co.jp
+
+### learning
+
+-   - **companyId**: tgs
+  - **basics**:
+    - Know that the organization maintains Tokyo's urban infrastructure and also deploys technologies overseas
+    - Know about its worldwide provision of proprietary pipe rehabilitation technologies such as SPR
+    - Know about support for water environment improvements in emerging economies and international training
+    - Know about its technical expertise as a supporting organization for the Tokyo Metropolitan Government Bureau of Sewerage
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: Researched the organization to be visited
+    -       - **id**: interests
+      - **text**: Identified what I want to learn
+    -       - **id**: questions
+      - **text**: Prepared questions
+-   - **companyId**: meti
+  - **basics**:
+    - Know about its role in Japan's economic growth and international trade negotiations (EPAs/FTAs)
+    - Know about its promotion of economic security and advanced industry investment, including semiconductors and GX (decarbonization)
+    - Know about its promotion of global supply chains and international standardization
+    - Know about its policies to attract domestic and overseas companies and develop startups
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: Researched the organization to be visited
+    -       - **id**: interests
+      - **text**: Identified what I want to learn
+    -       - **id**: questions
+      - **text**: Prepared questions
+-   - **companyId**: customs
+  - **basics**:
+    - Know about its role supporting Japanese international trade at borders through Haneda Airport and the Port of Tokyo
+    - Understand how it combines prevention of drug and counterfeit smuggling with trade facilitation
+    - Know how the AEO program speeds up international supply chains
+    - Know about cooperation with foreign customs authorities and electronic customs processing through NACCS
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: Researched the organization to be visited
+    -       - **id**: interests
+      - **text**: Identified what I want to learn
+    -       - **id**: questions
+      - **text**: Prepared questions
+-   - **companyId**: renesas
+  - **basics**:
+    - Know that the company is a global leader in automotive microcontroller market share
+    - Know about its role in supply chains for automotive and industrial equipment manufacturers worldwide
+    - Know how acquisitions strengthen its overseas business and analog and power semiconductors
+    - Know about investment in next-generation open architectures such as RISC-V
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: Researched the organization to be visited
+    -       - **id**: interests
+      - **text**: Identified what I want to learn
+    -       - **id**: questions
+      - **text**: Prepared questions
+-   - **companyId**: keio-sfc
+  - **basics**:
+    - Know about its application of advanced technologies in society and creation of many IT startups
+    - Know about global education through overseas university partnerships and international joint research
+    - Know about its role as a hub for industry-government-academia collaboration, including SFC Open Research Forum (ORF)
+    - Know about its research environment encouraging interdisciplinary work and open innovation
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: Researched the organization to be visited
+    -       - **id**: interests
+      - **text**: Identified what I want to learn
+    -       - **id**: questions
+      - **text**: Prepared questions
+-   - **companyId**: yomiuri
+  - **basics**:
+    - Know how it accurately and rapidly prints and delivers international news from worldwide reporting networks every day
+    - Know about its role in the Yomiuri Shimbun Group's large-scale, rapid physical supply chain
+    - Know about advanced color printing and logistics technologies developed through newspaper printing
+    - Know about printing operations supporting local infrastructure, including municipal newsletters and commercial printing
+  - **checklist**:
+    -       - **id**: overview
+      - **text**: Researched the organization to be visited
+    -       - **id**: interests
+      - **text**: Identified what I want to learn
+    -       - **id**: questions
+      - **text**: Prepared questions
+
+### sightseeing
+
+- **checkedAt**: 2026-10-09
+- **areas**:
+  -     - **id**: tokyo
+    - **name**: Tokyo Station
+    - **description**: Explore the Marunouchi station building and the Imperial Palace Outer Garden on foot from Tokyo Station.
+  -     - **id**: shinagawa
+    - **name**: Shinagawa
+    - **description**: Places around Shinagawa Prince Hotel for a visit without a long journey.
+  -     - **id**: asakusa
+    - **name**: Asakusa & Oshiage
+    - **description**: Explore Senso-ji, Nakamise and the Sumida River, or continue to Tokyo Skytree in Oshiage. Allow time to travel between areas and return.
+  -     - **id**: harajuku
+    - **name**: Harajuku
+    - **description**: Walk the wooded approaches to Meiji Jingu. Allow time to reach the main shrine from the entrance.
+  -     - **id**: tsukiji
+    - **name**: Tsukiji
+    - **description**: Explore specialist food shops at Tsukiji Outer Market. Plan around individual opening hours, mainly in the morning and at lunchtime.
+  -     - **id**: akihabara
+    - **name**: Akihabara
+    - **description**: Browse electronics, components, computers and pop-culture shops. Research stores that match your interests beforehand.
+  -     - **id**: shiba
+    - **name**: Shiba & Tokyo Tower
+    - **description**: Enjoy city views around Tokyo Tower. Check tickets and allow enough time if you plan to visit an observation deck.
+- **spots**:
+  -     - **id**: tokyo-station
+    - **areaId**: tokyo
+    - **enabled**: true
+    - **name**: Tokyo Station · Marunouchi building
+    - **description**: Tokyo’s landmark red-brick station with its distinctive domes. The Marunouchi plaza offers a view of historic architecture against modern towers.
+    - **access**: Exit Tokyo Station on the Marunouchi side for the station plaza.
+    - **cost**: Free to view the exterior and walk through the plaza
+    - **duration**: 20–30 min
+    - **note**: This is the opposite side from Yaesu. Allow time to cross the station.
+    - **latitude**: 35.68124
+    - **longitude**: 139.76499
+    - **website**: https://www.tokyostationcity.com/learning/station_building/
+    - **sourceUrl**: https://www.gotokyo.org/jp/destinations/central-tokyo/tokyo-station-and-marunouchi/index.html
+  -     - **id**: imperial-garden
+    - **areaId**: tokyo
+    - **enabled**: true
+    - **name**: Imperial Palace Outer Garden
+    - **description**: A spacious park of lawns, pine trees, moats and historic gates. Enjoy a walk through the plaza with views toward Nijubashi.
+    - **access**: About 15 minutes on foot from Tokyo Station to the palace plaza and Nijubashi viewing area.
+    - **cost**: Free entry to the Outer Garden
+    - **duration**: 40–60 min
+    - **note**: This does not include entry inside the palace. Check official notices for event and security restrictions.
+    - **latitude**: 35.6797
+    - **longitude**: 139.758
+    - **website**: https://www.env.go.jp/garden/kokyogaien/
+    - **sourceUrl**: https://www.env.go.jp/garden/kokyogaien/2_guide/kokyogaien_access.html
+  -     - **id**: aqua-park
+    - **areaId**: shinagawa
+    - **enabled**: true
+    - **name**: Maxell Aqua Park Shinagawa
+    - **description**: An aquarium inside Shinagawa Prince Hotel, combining marine life with sound and light. An indoor option near the hotel.
+    - **access**: About 2 minutes on foot from Shinagawa Station’s Takanawa Exit, inside Shinagawa Prince Hotel.
+    - **cost**: Admission fee; check the official website for ticket conditions
+    - **duration**: 60–90 min
+    - **note**: Check opening hours, show times and reservation requirements before planning a visit.
+    - **latitude**: 35.62845
+    - **longitude**: 139.736
+    - **website**: https://www.aqua-park.jp/aqua/
+    - **sourceUrl**: https://www.aqua-park.jp/aqua/access/
+  -     - **id**: sensoji
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: Senso-ji Temple & Kaminarimon
+    - **description**: Walk from Kaminarimon’s giant lantern toward Senso-ji’s main hall. This landmark temple is a starting point for exploring historic Asakusa.
+    - **access**: About 5 minutes on foot from Asakusa Station on the Tokyo Metro Ginza or Tobu line.
+    - **cost**: Free to walk the grounds; charms and purchases cost extra
+    - **duration**: 30–45 min
+    - **note**: The Tsukuba Express Asakusa Station is in a different location. Check official opening times for the main hall.
+    - **latitude**: 35.71477
+    - **longitude**: 139.79665
+    - **website**: https://www.senso-ji.jp/
+    - **sourceUrl**: https://www.senso-ji.jp/access/
+  -     - **id**: nakamise
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: Nakamise Shopping Street
+    - **description**: The shopping street along the approach from Kaminarimon to Hozomon, lined with souvenir and sweet shops. Combine it with a visit to Senso-ji.
+    - **access**: Walk from Asakusa Station to Kaminarimon; Nakamise begins beyond the gate.
+    - **cost**: Free to stroll; purchases cost extra
+    - **duration**: 20–40 min
+    - **note**: Shop hours vary. Follow posted rules for eating and photography.
+    - **latitude**: 35.71245
+    - **longitude**: 139.79662
+    - **website**: https://www.senso-ji.jp/guide/guide02.html
+    - **sourceUrl**: https://t-navi.city.taito.lg.jp/spot/1002
+  -     - **id**: sumida-park
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: Sumida Park & riverside
+    - **description**: Extend your Asakusa walk to the Sumida River. Enjoy views of the river, bridges and Tokyo Skytree across the water.
+    - **access**: Walk to the Taito-side riverside from Asakusa Station and Azumabashi Bridge.
+    - **cost**: Free to walk through the park
+    - **duration**: 20–30 min
+    - **note**: The pin indicates an approximate riverside point on the Asakusa side. Plan your walk around weather, daylight and your return time.
+    - **latitude**: 35.71225
+    - **longitude**: 139.80205
+    - **website**: https://www.gotokyo.org/jp/destinations/eastern-tokyo/asakusa/index.html
+    - **sourceUrl**: https://www.gotokyo.org/jp/destinations/eastern-tokyo/asakusa/index.html
+  -     - **id**: tokyo-skytree
+    - **areaId**: asakusa
+    - **enabled**: true
+    - **name**: Tokyo Skytree
+    - **description**: An Oshiage landmark with observation decks overlooking Tokyo. Tokyo Skytree Town also offers shopping and dining.
+    - **access**: Use Oshiage (Skytree-mae) or Tokyo Skytree Station. These are different stations from Asakusa.
+    - **cost**: Observation decks require paid tickets; check official ticket and reservation conditions
+    - **duration**: 60–90 min
+    - **note**: Views depend on the weather. Check entry times and crowds, and allow time for the journey from Asakusa.
+    - **latitude**: 35.71006
+    - **longitude**: 139.8107
+    - **website**: https://www.tokyo-skytree.jp/
+    - **sourceUrl**: https://www.tokyo-skytree.jp/access/public-transport/
+  -     - **id**: meiji-jingu
+    - **areaId**: harajuku
+    - **enabled**: true
+    - **name**: Meiji Jingu
+    - **description**: A shrine surrounded by woodland beside Harajuku and Yoyogi. Walk the approaches and visit the main shrine for a quieter experience.
+    - **access**: Enter the approach at the Harajuku gate near Harajuku or Meiji-jingumae Station. The main shrine is a further walk inside.
+    - **cost**: Shrine worship is free; check separate conditions for the Inner Garden and museum
+    - **duration**: 45–60 min
+    - **note**: Gate hours vary by season. Check the official website before an evening visit and observe shrine etiquette.
+    - **latitude**: 35.6764
+    - **longitude**: 139.69933
+    - **website**: https://www.meijijingu.or.jp/
+    - **sourceUrl**: https://www.meijijingu.or.jp/access/
+  -     - **id**: tsukiji-market
+    - **areaId**: tsukiji
+    - **enabled**: true
+    - **name**: Tsukiji Outer Market
+    - **description**: A market of seafood, specialist ingredients, kitchenware and restaurants. Explore the shops to discover Tokyo’s food culture.
+    - **access**: Walk from Tsukijishijo Station on the Toei Oedo Line or Tsukiji Station on the Tokyo Metro Hibiya Line.
+    - **cost**: Free to explore; shopping and meals cost extra
+    - **duration**: 45–60 min
+    - **note**: Hours and closing days vary by shop. Many shops are unsuitable for evening visits; check beforehand and follow each shop’s dining rules.
+    - **latitude**: 35.6655
+    - **longitude**: 139.7707
+    - **website**: https://www.tsukiji.or.jp/
+    - **sourceUrl**: https://www.tsukiji.or.jp/access/
+  -     - **id**: akihabara-electric-town
+    - **areaId**: akihabara
+    - **enabled**: true
+    - **name**: Akihabara Electric Town
+    - **description**: A district of electronics, computers, components, anime and gaming shops. A good option for anyone interested in technology and making things.
+    - **access**: Head from JR Akihabara Station’s Electric Town Exit toward Chuo-dori. The Tokyo Metro Hibiya Line also serves the area.
+    - **cost**: Free to walk the streets; purchases and attractions cost extra
+    - **duration**: 45–90 min
+    - **note**: Hours vary by store. Check photography and in-store rules, and decide on a shopping budget.
+    - **latitude**: 35.6996
+    - **longitude**: 139.7713
+    - **website**: https://akiba.or.jp/
+    - **sourceUrl**: https://www.gotokyo.org/jp/spot/55/index.html
+  -     - **id**: tokyo-tower
+    - **areaId**: shiba
+    - **enabled**: true
+    - **name**: Tokyo Tower
+    - **description**: Tokyo’s familiar red-and-white landmark. Enjoy city views from an observation deck or appreciate the tower from ground level.
+    - **access**: Walk from Akabanebashi, Onarimon or Kamiyacho Station. Check the official guide for the appropriate exit and route.
+    - **cost**: Observation decks require paid tickets; check official ticket types and prices
+    - **duration**: 45–90 min
+    - **note**: Check deck opening hours and reservation conditions. Allow time for your return journey even if you only view the exterior.
+    - **latitude**: 35.65858
+    - **longitude**: 139.74543
+    - **website**: https://www.tokyotower.co.jp/
+    - **sourceUrl**: https://www.tokyotower.co.jp/access/railroad/
+- **origins**:
+  -     - **id**: tokyo
+    - **name**: Tokyo Station
+    - **query**: Tokyo Station, Tokyo, Japan
+  -     - **id**: shinagawa
+    - **name**: Shinagawa Station
+    - **query**: Shinagawa Station, Tokyo, Japan
+  -     - **id**: shinagawa-prince
+    - **name**: Shinagawa Prince Hotel
+    - **query**: Shinagawa Prince Hotel, 4-10-30 Takanawa, Minato City, Tokyo, Japan

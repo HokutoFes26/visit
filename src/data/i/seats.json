@@ -1,6 +1,13 @@
 {
   "rows": 20,
-  "columns": ["A", "B", "C", "aisle", "D", "E"],
+  "columns": [
+    "A",
+    "B",
+    "C",
+    "aisle",
+    "D",
+    "E"
+  ],
   "isSample": false,
   "title": "新幹線 2号車",
   "description": "配布資料の座席図に基づく配置です。個人別の座席・班の割り当ては未定です。",
@@ -643,5 +650,6 @@
       "column": "E",
       "groupId": "unavailable"
     }
-  ]
+  ],
+  "seatingPolicy": "diagram"
 }

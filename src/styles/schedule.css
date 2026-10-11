@@ -21,7 +21,9 @@
   min-height: 48px;
   min-width: 0;
   font-size: 15px;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
 }
 
 .day-tabs button.selected {
