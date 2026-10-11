@@ -1,16 +1,16 @@
 {
-  "date": "2026-10-21",
+  "date": "2026-10-20",
   "timezone": "Asia/Tokyo",
-  "version": "0.2",
+  "version": "0.3",
   "isSample": false,
   "meetingTime": "09:00",
   "meetingPlace": "富山駅",
-  "meetingNote": "駅構内の詳細な集合位置は未発表です。9:26発の新幹線で東京へ移動します。",
+  "meetingNote": "10月20日9:00に富山駅集合。9:26発の北陸新幹線かがやき506号で東京駅へ向かいます。駅構内の集合位置は行程表に記載されていません。",
   "passwordHint": "デモ用パスワード：factory2026",
-  "arrivalNote": "詳細な集合位置は未発表",
+  "arrivalNote": "東京駅11:36着。昼食後、日本橋口に13:40集合。",
   "endDate": "2026-10-23",
-  "hotel": "品川プリンス（資料表記）",
-  "source": "県外企業見学.pdf",
-  "sourceNote": "発表概要に基づく案内です。未発表の項目は未定としています。",
+  "hotel": "品川プリンスホテル",
+  "source": "流通見学行程表(10月9日現在).pdf",
+  "sourceNote": "10月9日現在の流通見学行程表に基づきます。記載のない詳細は未定です。",
   "dateConfirmed": true
 }
