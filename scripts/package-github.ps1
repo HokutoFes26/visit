@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop'
 $projectRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
-$zipPath = Join-Path $projectRoot 'visit-github-icons-2026-10-11.zip'
+$zipPath = Join-Path $projectRoot 'visit-github-packing-2026-10-11.zip'
 $directories = @('.github', 'docs', 'public', 'scripts', 'src', 'tests')
 $rootFiles = @('.gitignore', '.npmrc', '.env.example', 'favicon.ico', 'index.html', 'LICENSE', 'package-lock.json', 'package.json', 'postcss.config.cjs', 'README.md', 'tsconfig.json', 'tsconfig.sw.json', 'vercel.json', 'vite.config.ts')
 $files = @(
