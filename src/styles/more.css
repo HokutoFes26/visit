@@ -54,11 +54,6 @@
   margin: 16px 0;
 }
 
-[data-theme="dark"] .more-group-card {
-  background: #0a0a0a;
-  border-color: #222222;
-}
-
 [data-theme="dark"] .more-list-item:hover {
   background-color: #141414;
 }
@@ -68,5 +63,5 @@
 }
 
 [data-theme="dark"] .more-divider {
-  border-color: #1a1a1a;
+  border-color: #333;
 }

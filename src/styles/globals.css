@@ -20,10 +20,10 @@
   line-height: 1.5;
   --paper-shadow: none !important;
   --mantine-shadow-xs: none !important;
-  --accent: #5f52be;
-  --accent-neon: #6956fa;
-  --accent-bg: rgba(99, 84, 217, 0.12);
-  --accent-border: rgba(99, 84, 217, 0.25);
+  --accent: #8152be;
+  --accent-neon: #905af4;
+  --accent-bg: rgba(124, 84, 217, 0.12);
+  --accent-border: rgba(160, 111, 238, 0.443);
   --accent-glow: 0 0 10px rgba(99, 84, 217, 0.4);
   --blue: #171717;
   --muted: #666666;
@@ -41,6 +41,19 @@
 
 :is(.mantine-Badge-root, .mantine-Badge-label) {
   text-transform: none !important;
+  color: var(--accent-neon) !important;
+}
+
+.mantine-Badge-root {
+  border: 1px solid var(--accent-neon) !important;
+}
+
+:is(.announcement-badge, .announcement-badge .mantine-Badge-label) {
+  color: var(--badge-color) !important;
+}
+
+.announcement-badge {
+  border: none !important;
 }
 
 * {
@@ -375,7 +388,7 @@ button:disabled {
   --blue: #ededed;
   --muted: #888888;
   --border: #222222;
-  --surface: #0a0a0a;
+  --surface: #0d0d0e;
   --surface-secondary: #141414;
   --foreground: #ededed;
 }
@@ -391,7 +404,7 @@ button:disabled {
 }
 
 [data-theme="dark"] .glass-card {
-  background: rgba(10, 10, 10, 0.85);
+  background: var(--surface);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-color: #222222;
@@ -456,8 +469,13 @@ button:disabled {
   border-color: #cccccc;
 }
 
-[data-theme="dark"] :is(.glass-card, .mantine-Card-root):hover {
+[data-theme="dark"] .glass-card:hover {
   border-color: #333333;
+}
+
+:is([data-theme="dark"], [data-mantine-color-scheme="dark"]) .mantine-Card-root,
+:is([data-theme="dark"], [data-mantine-color-scheme="dark"]) .mantine-Card-root:hover {
+  border: none !important;
 }
 
 @media (min-width: 1500px) {

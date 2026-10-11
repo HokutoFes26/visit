@@ -255,9 +255,9 @@
 
 .company-hero-industry {
   letter-spacing: 0.5px;
-  background: rgba(0, 0, 0, 0.08);
-  color: #333333;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.55) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .company-hero-title {
@@ -300,9 +300,9 @@
 }
 
 [data-theme="dark"] .company-hero-industry {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-  border-color: transparent;
+  background: rgba(0, 0, 0, 0.55) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 [data-theme="dark"] .company-hero-title {

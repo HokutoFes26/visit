@@ -22,7 +22,9 @@ export default function AnnouncementsPage() {
               <Badge
                 color={a.importance === "high" ? "red" : "blue"}
                 variant="light"
-                size="sm"
+                size="md"
+                radius="xl"
+                className="announcement-badge"
               >
                 {t(a.importance === "high" ? "重要" : "ご案内")}
               </Badge>

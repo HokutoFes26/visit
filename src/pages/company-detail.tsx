@@ -114,7 +114,7 @@ export default function CompanyDetail() {
 
           {location && (
             <Group gap={6} align="center" className="company-hero-location">
-              <MapPin size={16} />
+              <MapPin size={16} style={{color: "var(--accent-neon)"}}/>
               <Text size="sm">{t(location)}</Text>
             </Group>
           )}

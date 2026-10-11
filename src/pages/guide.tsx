@@ -25,14 +25,14 @@ export default function GuidePage() {
       <PageTitle title={t("見学ガイド")} />
       <Card mb="lg" radius="lg">
         <Group align="flex-start" gap="md" wrap="nowrap">
-          <ThemeIcon size={46} radius="md" color="blue" variant="light">
+          <ThemeIcon size={46} radius="xl" color="var(--accent-neon)" variant="light">
             <MapPin size={24} />
           </ThemeIcon>
           <Box style={{ flex: 1 }}>
             <Badge
               variant="light"
-              color="blue"
-              size="xs"
+              color="var(--accent-neon)"
+              size="md"
               radius="xl"
               mb={6}
               style={{ fontWeight: 700 }}
@@ -45,7 +45,7 @@ export default function GuidePage() {
             <Text
               size="sm"
               fw={600}
-              style={{ color: "var(--mantine-color-blue-filled)" }}
+              style={{ color: "var(--accent-neon)" }}
               mb={4}
             >
               {t(formatDate(event.date))} · {formatTime(event.meetingTime)}
@@ -61,14 +61,14 @@ export default function GuidePage() {
       <Card mb="lg" radius="lg">
         <SectionTitle title={t("配布資料")} />
         <Text size="sm" c="dimmed" mb="md">
-          {t("部屋割りや座席表などの資料は、個人情報保護のため学校のTeams（認証保護）で安全に閲覧できます。")}
+          {t("部屋割りや座席表などの資料は、個人情報保護のため学校のTeamsで閲覧できます。")}
         </Text>
-        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
           {guide.documents.map((document) => {
             const linkUrl = (document as { url?: string; file?: string }).url || (document.file ? assetUrl(document.file) : "");
             return (
-              <Box key={document.id} p="md" style={{ border: "1px solid var(--border)", borderRadius: 12, minWidth: 0 }}>
-                <Title order={3} size="h4" mb="sm">{t(document.title)}</Title>
+              <Box key={document.id} style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                <Title order={5}>{t(document.title)}</Title>
                 {linkUrl ? (
                   <Group gap="sm" wrap="wrap">
                     <Button
@@ -77,11 +77,11 @@ export default function GuidePage() {
                       target="_blank"
                       rel="noreferrer"
                       variant="light"
-                      color="blue"
+                      color="var(--accent-neon)"
                       size="sm"
-                      leftSection={<ExternalLink size={15} />}
+                      rightSection={<ExternalLink size={15} />}
                     >
-                      {t("Teamsで確認（学校アカウント）")}
+                      {t("Teamsで確認")}
                     </Button>
                   </Group>
                 ) : (
@@ -104,7 +104,7 @@ export default function GuidePage() {
               spacing="xs"
               size="sm"
               icon={
-                <ThemeIcon color="blue" size={20} radius="xl" variant="light">
+                <ThemeIcon color="var(--accent-neon)" size={20} radius="xl" variant="light">
                   <Check size={12} />
                 </ThemeIcon>
               }
