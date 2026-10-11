@@ -68,3 +68,7 @@ See [LICENSE](LICENSE) for the included MIT license notice.
 ## GitHub用ZIP
 
 ZIPを展開し、`package.json` と `.github` がリポジトリ直下に来るように中身を反映してください。ZIPファイルそのものをアップロードしてもサイトは更新されません。Pagesの公開元はGitHub Actionsを選択します。
+
+ホームの座席案内は見学ガイドに変更しました。旧 `/#/seats` は `/#/guide` へ転送します。 / The home seating shortcut is now Visit guide; old seating URLs redirect to the guide.
+
+PDF資料の配置・登録方法は [PDF追加手順](docs/PDF-GUIDE.md) を参照してください。
