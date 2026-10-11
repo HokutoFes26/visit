@@ -1,6 +1,7 @@
 import { t, usePreferences } from "@/state/preferences";
 import { validateData } from "@/data";
 import Layout from "@/layouts/default";
+import AboutPage from "@/pages/about";
 import AnnouncementsPage from "@/pages/announcements";
 import CompaniesPage from "@/pages/companies";
 import CompanyDetail from "@/pages/company-detail";
@@ -22,7 +23,10 @@ export default function App() {
   const [needsCourseSelection] = useState(() => !isCourseDetermined());
   const [authenticated, setAuthenticated] = useState(() => {
     try {
-      return sessionStorage.getItem(AUTH_KEY) === "open";
+      return (
+        localStorage.getItem(AUTH_KEY) === "open" ||
+        sessionStorage.getItem(AUTH_KEY) === "open"
+      );
     } catch {
       return false;
     }
@@ -31,6 +35,7 @@ export default function App() {
   const errors = validateData();
   function login() {
     try {
+      localStorage.setItem(AUTH_KEY, "open");
       sessionStorage.setItem(AUTH_KEY, "open");
     } catch {
       setStorageWarning(
@@ -41,6 +46,7 @@ export default function App() {
   }
   function logout() {
     try {
+      localStorage.removeItem(AUTH_KEY);
       sessionStorage.removeItem(AUTH_KEY);
     } catch {
       setStorageWarning(
@@ -84,6 +90,7 @@ export default function App() {
           <Route path="seats" element={<Navigate to="/guide" replace />} />
           <Route path="learning" element={<LearningPage />} />
           <Route path="sightseeing" element={<SightseeingPage />} />
+          <Route path="about" element={<AboutPage />} />
           <Route
             path="notes"
             element={<Navigate to="/sightseeing" replace />}

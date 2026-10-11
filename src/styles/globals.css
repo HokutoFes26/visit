@@ -320,7 +320,8 @@ summary {
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  padding-top: 8px;
+  padding: 8px 16px;
+  margin-bottom: 8px;
 }
 
 .pwa-status .error {

@@ -267,12 +267,15 @@
   -     - **id**: rooms
     - **title**: 部屋割り
     - **file**: 
+    - **url**: 
   -     - **id**: groups
     - **title**: グループ分け
     - **file**: 
+    - **url**: 
   -     - **id**: seats
     - **title**: 新幹線・バス等の座席表
     - **file**: 
+    - **url**: 
 
 ### companies
 
@@ -1037,9 +1040,11 @@
   -     - **id**: rooms
     - **title**: 部屋割り
     - **file**: 
+    - **url**: https://teams.microsoft.com/
   -     - **id**: groups
     - **title**: グループ分け
     - **file**: 
+    - **url**: 
 
 ### companies
 

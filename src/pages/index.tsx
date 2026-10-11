@@ -38,6 +38,7 @@ import {
 import { Badge } from "@mantine/core";
 import { Link } from "react-router-dom";
 import { ScheduleContent } from "@/pages/schedule";
+import { OfflineToast } from "@/components/offline-toast";
 import "@/styles/home.css";
 import "@/styles/schedule.css";
 
@@ -249,6 +250,8 @@ export default function Home() {
       <div className="home-right-col" id="home-schedule-col">
         <ScheduleContent showTitle={true} />
       </div>
+
+      <OfflineToast />
     </div>
   );
 }

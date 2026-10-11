@@ -13,6 +13,7 @@ import {
   BookOpen,
   ChevronRight,
   GraduationCap,
+  Info,
   Settings,
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -51,6 +52,13 @@ export default function MorePage() {
     {
       title: "アプリ・設定",
       items: [
+        {
+          to: "/about",
+          title: "アプリの使い方",
+          description: "基本操作とオフライン・メモ保存の仕組み",
+          icon: Info,
+          color: "teal",
+        },
         {
           to: "/settings",
           title: "設定",

@@ -15,13 +15,14 @@ export const shortcuts = [
   { to: "/announcements", title: "お知らせ", icon: Bell, color: "rose" },
 ];
 
-import { Ellipsis, House } from "lucide-react";
+import { Ellipsis, House, Info } from "lucide-react";
 export const desktopLinks = [
   { to: "/", label: "ホーム", icon: House },
   { to: "/companies", label: "企業情報", icon: Building2 },
   { to: "/guide", label: "見学ガイド", icon: BookOpen },
   { to: "/learning", label: "事前学習", icon: GraduationCap },
   { to: "/sightseeing", label: "東京観光", icon: Compass },
+  { to: "/about", label: "アプリの使い方", icon: Info },
   { to: "/more", label: "その他", icon: Ellipsis },
 ];
 export const mobileLinks = [

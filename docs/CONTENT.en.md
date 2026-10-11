@@ -267,12 +267,15 @@ Generated from source data and translations. Field names match the JSON files. R
   -     - **id**: rooms
     - **title**: Room assignments
     - **file**: 
+    - **url**: 
   -     - **id**: groups
     - **title**: Group assignments
     - **file**: 
+    - **url**: 
   -     - **id**: seats
     - **title**: Shinkansen, bus and other seating plans
     - **file**: 
+    - **url**: 
 
 ### companies
 
@@ -1037,9 +1040,11 @@ Generated from source data and translations. Field names match the JSON files. R
   -     - **id**: rooms
     - **title**: Room assignments
     - **file**: 
+    - **url**: https://teams.microsoft.com/
   -     - **id**: groups
     - **title**: Group assignments
     - **file**: 
+    - **url**: 
 
 ### companies
 

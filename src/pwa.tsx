@@ -6,7 +6,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { Badge, Button, Group, Text, Title } from "@mantine/core";
+import { Badge, Box, Button, Group, Stack, Text, Title } from "@mantine/core";
 import { registerSW } from "virtual:pwa-register";
 
 interface InstallPrompt extends Event {
@@ -323,11 +323,32 @@ export function PwaSettings() {
             {t("アプリをインストール")}
           </Button>
         ) : (
-          <Text size="sm" c="dimmed">
-            {t(
-              "対応ブラウザのメニューから「アプリをインストール」または「ホーム画面に追加」を選択してください。iPhoneではSafariの共有メニューをご利用ください。",
-            )}
-          </Text>
+          <Stack gap="xs">
+            <Text size="sm" c="dimmed">
+              {t("ホーム画面に追加すると、全画面で起動できオフライン時も素早く使えます。")}
+            </Text>
+            <Box
+              p="sm"
+              style={{
+                background: "var(--surface-secondary)",
+                borderRadius: 8,
+                border: "1px solid var(--border)",
+              }}
+            >
+              <Text size="xs" fw={600} mb={4}>
+                {t("iPhone (Safari) の場合:")}
+              </Text>
+              <Text size="xs" c="dimmed">
+                {t("画面下の中央にある「共有ボタン（四角から上矢印のアイコン）」を押し、メニューから「ホーム画面に追加」を選択してください。")}
+              </Text>
+              <Text size="xs" fw={600} mt={8} mb={4}>
+                {t("Android (Chrome) の場合:")}
+              </Text>
+              <Text size="xs" c="dimmed">
+                {t("右上のメニューボタン（︙）から「アプリをインストール」または「ホーム画面に追加」を選択してください。")}
+              </Text>
+            </Box>
+          </Stack>
         )}
       </div>
     </>

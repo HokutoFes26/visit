@@ -37,7 +37,6 @@
   background: var(--surface-secondary);
   font-weight: 600;
   box-shadow: none;
-  border: 1px solid var(--border);
 }
 
 .sidebar nav a:hover {

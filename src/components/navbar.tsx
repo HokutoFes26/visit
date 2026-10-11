@@ -102,6 +102,7 @@ export function BottomNavigation() {
     if (to === "/more") {
       return [
         "/more",
+        "/about",
         "/guide",
         "/learning",
         "/announcements",

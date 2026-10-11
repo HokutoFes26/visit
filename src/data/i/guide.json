@@ -55,17 +55,20 @@
     {
       "id": "rooms",
       "title": "部屋割り",
-      "file": ""
+      "file": "",
+      "url": ""
     },
     {
       "id": "groups",
       "title": "グループ分け",
-      "file": ""
+      "file": "",
+      "url": ""
     },
     {
       "id": "seats",
       "title": "新幹線・バス等の座席表",
-      "file": ""
+      "file": "",
+      "url": ""
     }
   ]
 }

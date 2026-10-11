@@ -2,6 +2,7 @@ import { t, usePreferences } from "@/state/preferences";
 import {
   Badge,
   Box,
+  Button,
   Card,
   Group,
   List,
@@ -14,7 +15,7 @@ import {
 } from "@/components/ui";
 import { assetUrl } from "@/config/assets";
 import { event, formatDate, formatTime, guide } from "@/data";
-import { Backpack, Check, MapPin, Shirt } from "lucide-react";
+import { Backpack, Check, ExternalLink, MapPin, Shirt } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function GuidePage() {
@@ -58,32 +59,40 @@ export default function GuidePage() {
       </Card>
 
       <Card mb="lg" radius="lg">
-        <SectionTitle title={t("配布資料（PDF）")} />
-        <Text size="sm" c="dimmed" mb="md">{t("PDFの閲覧にはインターネット接続が必要です。")}</Text>
+        <SectionTitle title={t("配布資料")} />
+        <Text size="sm" c="dimmed" mb="md">
+          {t("部屋割りや座席表などの資料は、個人情報保護のため学校のTeams（認証保護）で安全に閲覧できます。")}
+        </Text>
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
-          {guide.documents.map((document) => (
-            <Box key={document.id} p="md" style={{ border: "1px solid var(--border)", borderRadius: 12, minWidth: 0 }}>
-              <Title order={3} size="h4" mb="sm">{t(document.title)}</Title>
-              {document.file ? (
-                <>
-                  <Group gap="md" mb="sm">
-                    <a className="text-link" href={assetUrl(document.file)} target="_blank" rel="noreferrer">{t("PDFを開く")}</a>
-                    <a className="text-link" href={assetUrl(document.file)} download>{t("PDFをダウンロード")}</a>
+          {guide.documents.map((document) => {
+            const linkUrl = (document as { url?: string; file?: string }).url || (document.file ? assetUrl(document.file) : "");
+            return (
+              <Box key={document.id} p="md" style={{ border: "1px solid var(--border)", borderRadius: 12, minWidth: 0 }}>
+                <Title order={3} size="h4" mb="sm">{t(document.title)}</Title>
+                {linkUrl ? (
+                  <Group gap="sm" wrap="wrap">
+                    <Button
+                      component="a"
+                      href={linkUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      variant="light"
+                      color="blue"
+                      size="sm"
+                      leftSection={<ExternalLink size={15} />}
+                    >
+                      {t("Teamsで確認（学校アカウント）")}
+                    </Button>
                   </Group>
-                  <details>
-                    <summary style={{ cursor: "pointer" }}>{t("このページで表示")}</summary>
-                    <iframe src={assetUrl(document.file)} title={t(document.title)} loading="lazy" style={{ width: "100%", height: 480, border: 0, marginTop: 12 }} />
-                    <Text size="xs" c="dimmed">{t("PDFを表示できない場合は「PDFを開く」をご利用ください。")}</Text>
-                  </details>
-                </>
-              ) : (
-                <>
-                  <Badge variant="light" color="gray" mb="xs">{t("準備中")}</Badge>
-                  <Text size="sm" c="dimmed">{t("資料は準備ができ次第、掲載します。")}</Text>
-                </>
-              )}
-            </Box>
-          ))}
+                ) : (
+                  <>
+                    <Badge variant="light" color="gray" mb="xs">{t("準備中")}</Badge>
+                    <Text size="sm" c="dimmed">{t("資料は準備ができ次第、掲載します。")}</Text>
+                  </>
+                )}
+              </Box>
+            );
+          })}
         </SimpleGrid>
       </Card>
 

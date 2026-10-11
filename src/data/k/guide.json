@@ -59,12 +59,14 @@
     {
       "id": "rooms",
       "title": "部屋割り",
-      "file": "pdfs/k/rooms.pdf"
+      "file": "",
+      "url": ""
     },
     {
       "id": "groups",
       "title": "グループ分け",
-      "file": ""
+      "file": "",
+      "url": ""
     }
   ]
 }
