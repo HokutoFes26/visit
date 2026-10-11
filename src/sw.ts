@@ -20,6 +20,8 @@ registerRoute(
     createHandlerBoundToURL(
       new URL("index.html", self.registration.scope).href,
     ),
+    // PDF tabs and iframe navigations must reach the actual file, not the app shell.
+    { denylist: [/\.pdf(?:\?|$)/i] },
   ),
 );
 clientsClaim();
