@@ -29,8 +29,17 @@ for (const language of ['ja', 'en']) {
     : '# Published content (English)\n\nGenerated from source data and translations. Field names match the JSON files. Regenerate with `npm run docs:sync`.\n';
   for (const course of ['i', 'k']) {
     output += `\n## ${course === 'i' ? (language === 'ja' ? '電子コース' : 'Electronics course') : (language === 'ja' ? '国際コース' : 'International course')}\n`;
-    for (const name of ['event', 'announcements', 'schedule', 'guide', 'seats', 'companies', 'learning', 'sightseeing']) {
+    for (const name of ['event', 'announcements', 'schedule', 'guide', 'companies', 'learning', 'sightseeing']) {
       const data = JSON.parse(fs.readFileSync(`src/data/${course}/${name}.json`, 'utf8'));
+      if (name === 'guide') {
+        assert.equal(new Set(data.documents.map(item => item.id)).size, data.documents.length, 'Duplicate document IDs');
+        for (const document of data.documents) {
+          assert.equal(typeof document.file, 'string');
+          if (!document.file) continue;
+          assert.ok(document.file.startsWith('pdfs/' + course + '/') && !document.file.includes('..') && /\.pdf$/i.test(document.file), 'Invalid PDF path: ' + document.file);
+          assert.ok(fs.existsSync('public/' + document.file), 'Missing PDF: ' + document.file);
+        }
+      }
       output += `\n### ${name}\n\n${render(data, language)}\n`;
     }
   }

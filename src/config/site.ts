@@ -4,13 +4,13 @@ import {
   Building2,
   CalendarDays,
   Compass,
-  Users,
+  GraduationCap,
 } from "lucide-react";
 export const shortcuts = [
   { to: "/schedule", title: "スケジュール", icon: CalendarDays, color: "blue" },
   { to: "/companies", title: "企業情報", icon: Building2, color: "cyan" },
-  { to: "/seats", title: "座席案内", icon: Users, color: "violet" },
-  { to: "/learning", title: "事前学習", icon: BookOpen, color: "amber" },
+  { to: "/guide", title: "見学ガイド", icon: BookOpen, color: "violet" },
+  { to: "/learning", title: "事前学習", icon: GraduationCap, color: "amber" },
   { to: "/sightseeing", title: "東京観光", icon: Compass, color: "mint" },
   { to: "/announcements", title: "お知らせ", icon: Bell, color: "rose" },
 ];
@@ -20,8 +20,7 @@ export const desktopLinks = [
   { to: "/", label: "ホーム", icon: House },
   { to: "/companies", label: "企業情報", icon: Building2 },
   { to: "/guide", label: "見学ガイド", icon: BookOpen },
-  { to: "/seats", label: "座席案内", icon: Users },
-  { to: "/learning", label: "事前学習", icon: BookOpen },
+  { to: "/learning", label: "事前学習", icon: GraduationCap },
   { to: "/sightseeing", label: "東京観光", icon: Compass },
   { to: "/more", label: "その他", icon: Ellipsis },
 ];

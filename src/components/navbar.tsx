@@ -103,7 +103,6 @@ export function BottomNavigation() {
       return [
         "/more",
         "/guide",
-        "/seats",
         "/learning",
         "/announcements",
         "/settings",

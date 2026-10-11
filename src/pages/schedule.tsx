@@ -14,8 +14,7 @@ import {
 import { event, formatDate, schedule } from "@/data";
 import { useNow } from "@/hooks/useNow";
 import { ChevronDown, Info, Navigation } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useState } from "react";
 import "@/styles/schedule.css";
 
 export function ScheduleContent({
@@ -24,7 +23,6 @@ export function ScheduleContent({
   showTitle?: boolean;
 }) {
   usePreferences();
-  const { pathname } = useLocation();
   const days = [...new Set(schedule.map((s) => s.date))];
   const [day, setDay] = useState(() => {
     const today = new Intl.DateTimeFormat("sv-SE", {
@@ -34,30 +32,6 @@ export function ScheduleContent({
   });
   const now = useNow();
   const [stopsOpened, setStopsOpened] = useState(false);
-  const sentinelRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (pathname !== "/schedule") {
-      document.body.classList.remove("tabs-stuck");
-      return;
-    }
-    const sentinel = sentinelRef.current;
-    if (!sentinel) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        const isPastHeader = entry.boundingClientRect.top <= 72;
-        document.body.classList.toggle("tabs-stuck", !entry.isIntersecting && isPastHeader);
-      },
-      { rootMargin: "-72px 0px 0px 0px" }
-    );
-    observer.observe(sentinel);
-
-    return () => {
-      observer.disconnect();
-      document.body.classList.remove("tabs-stuck");
-    };
-  }, [pathname]);
 
   const daySchedule = schedule.filter((s) => s.date === day);
   const stops = daySchedule
@@ -68,7 +42,6 @@ export function ScheduleContent({
   return (
     <div className="schedule-content">
       {showTitle && <PageTitle title={t("スケジュール")} />}
-      <div ref={sentinelRef} style={{ height: 1, marginTop: -1 }} />
       <div className="day-tabs" aria-label={t("見学日")}>
         {days.map((d) => (
           <button

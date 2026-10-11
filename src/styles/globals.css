@@ -39,10 +39,6 @@
   border-radius: 32px !important;
 }
 
-:is(.mantine-Badge-root, .mantine-Badge-label) {
-  text-transform: none !important;
-}
-
 * {
   box-sizing: border-box;
 }

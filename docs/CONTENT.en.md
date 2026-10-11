@@ -37,7 +37,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **importance**: high
 -   - **id**: rules
   - **title**: Dress code, evening curfew and return trip
-  - **body**: Wear a suit. Male participants must wear ties and leather shoes. No outings after 22:00; teachers will check attendance. The trip ends on site at 12:00 on the last day. Arrange your own return to Toyama.
+  - **body**: Wear a suit. Male participants must wear ties and leather shoes. No outings after 22:00; teachers will take roll call. The trip ends on site at 12:00 on the last day. Arrange your own return to Toyama.
   - **publishedAt**: —
   - **updatedAt**: 2026-10-09
   - **importance**: normal
@@ -108,9 +108,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: —
   - **endTime**: —
-  - **title**: Return to Hotel
+  - **title**: Travel to hotel and overnight stay
   - **location**: Shinagawa Prince
-  - **description**: Arrange your own dinner. No outings after 22:00; teachers will check attendance.
+  - **description**: Arrange your own dinner. No outings after 22:00; teachers will take roll call.
   - **companyId**: —
   - **transport**: Train
   - **travelMinutes**: 0
@@ -168,9 +168,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-22
   - **startTime**: —
   - **endTime**: —
-  - **title**: Return to Hotel
+  - **title**: Travel to hotel and overnight stay
   - **location**: Shinagawa Prince
-  - **description**: Arrange your own dinner. No outings after 22:00; teachers will check attendance.
+  - **description**: Arrange your own dinner. No outings after 22:00; teachers will take roll call.
   - **companyId**: —
   - **transport**: Chartered bus
   - **travelMinutes**: 0
@@ -194,7 +194,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **endTime**: 12:00
   - **title**: Visit NEC
   - **location**: NEC (visit location to be announced)
-  - **description**: Disband on site at 12:00 after the visit. The disband time in the handout is displayed as the end time.
+  - **description**: Dismiss on site at 12:00 after the visit. The dismissal time in the handout is displayed as the end time.
   - **companyId**: nec
   - **transport**: —
   - **travelMinutes**: 0
@@ -204,7 +204,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-23
   - **startTime**: 12:00
   - **endTime**: —
-  - **title**: Disband on site
+  - **title**: Dismiss on site
   - **location**: NEC visit location
   - **description**: Allow time to collect luggage at the hotel.
   - **companyId**: —
@@ -223,7 +223,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **transport**: —
   - **travelMinutes**: 0
   - **order**: 14
-  - **timeNote**: After disband and luggage collection (individually arranged)
+  - **timeNote**: After dismissal and luggage collection (individually arranged)
 
 ### guide
 
@@ -238,7 +238,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - Travel luggage cannot be taken on visits.
   - On the last day, leave travel luggage at the hotel or ship it ahead.
   - The trip ends on site at 12:00 on the last day. Allow time to collect luggage at the hotel.
-  - No outings after 22:00. Teachers will check attendance.
+  - No outings after 22:00. Teachers will take roll call.
   - Arrange your own return transport to Toyama.
 - **sections**:
   -     - **title**: Shipping luggage
@@ -261,454 +261,25 @@ Generated from source data and translations. Field names match the JSON files. R
     - **items**:
       - Hotel: 14 twin rooms for men; 4 twin rooms and 1 triple room for women. Room assignments are to be confirmed.
       - Six groups of four and three groups of five. Group leaders will also be selected.
-      - Groups are used for the NEC visit and attendance checks during travel.
+      - Groups are used for the NEC visit and roll calls during travel.
       - Individual Shinkansen seat assignments are to be confirmed.
-
-### seats
-
-- **rows**: 20
-- **columns**:
-  - A
-  - B
-  - C
-  - aisle
-  - D
-  - E
-- **isSample**: false
-- **title**: Shinkansen Car 2
-- **description**: Layout based on the handout. Individual seats and group assignments are to be confirmed.
-- **groups**:
-  -     - **id**: participant
-    - **label**: Blue seats · unassigned
-    - **color**: blue
-  -     - **id**: teacher
-    - **label**: Teachers
-    - **color**: mint
-  -     - **id**: luggage
-    - **label**: Luggage
-    - **color**: violet
-  -     - **id**: unavailable
-    - **label**: × (as marked in the handout)
-    - **color**: gray
-- **groupPlan**:
-  -     - **size**: 4
-    - **count**: 6
-  -     - **size**: 5
-    - **count**: 3
-- **notes**:
-  - 1D and 1E are for luggage; 8D, 8E and 9D are teacher seats.
-  - The 39 blue seats are unassigned. The × marks are reproduced from the handout.
-  - Restroom in Car 1. At Tokyo Station, the doors indicated by arrows in the original diagram are expected to open.
-  - Chartered bus seats for October 22 have not been announced.
-- **seats**:
-  -     - **number**: 1A
-    - **row**: 1
-    - **column**: A
-    - **groupId**: participant
-  -     - **number**: 1B
-    - **row**: 1
-    - **column**: B
-    - **groupId**: participant
-  -     - **number**: 1C
-    - **row**: 1
-    - **column**: C
-    - **groupId**: participant
-  -     - **number**: 1D
-    - **row**: 1
-    - **column**: D
-    - **groupId**: luggage
-  -     - **number**: 1E
-    - **row**: 1
-    - **column**: E
-    - **groupId**: luggage
-  -     - **number**: 2A
-    - **row**: 2
-    - **column**: A
-    - **groupId**: participant
-  -     - **number**: 2B
-    - **row**: 2
-    - **column**: B
-    - **groupId**: participant
-  -     - **number**: 2C
-    - **row**: 2
-    - **column**: C
-    - **groupId**: participant
-  -     - **number**: 2D
-    - **row**: 2
-    - **column**: D
-    - **groupId**: participant
-  -     - **number**: 2E
-    - **row**: 2
-    - **column**: E
-    - **groupId**: participant
-  -     - **number**: 3A
-    - **row**: 3
-    - **column**: A
-    - **groupId**: participant
-  -     - **number**: 3B
-    - **row**: 3
-    - **column**: B
-    - **groupId**: participant
-  -     - **number**: 3C
-    - **row**: 3
-    - **column**: C
-    - **groupId**: participant
-  -     - **number**: 3D
-    - **row**: 3
-    - **column**: D
-    - **groupId**: participant
-  -     - **number**: 3E
-    - **row**: 3
-    - **column**: E
-    - **groupId**: participant
-  -     - **number**: 4A
-    - **row**: 4
-    - **column**: A
-    - **groupId**: participant
-  -     - **number**: 4B
-    - **row**: 4
-    - **column**: B
-    - **groupId**: participant
-  -     - **number**: 4C
-    - **row**: 4
-    - **column**: C
-    - **groupId**: participant
-  -     - **number**: 4D
-    - **row**: 4
-    - **column**: D
-    - **groupId**: participant
-  -     - **number**: 4E
-    - **row**: 4
-    - **column**: E
-    - **groupId**: participant
-  -     - **number**: 5A
-    - **row**: 5
-    - **column**: A
-    - **groupId**: participant
-  -     - **number**: 5B
-    - **row**: 5
-    - **column**: B
-    - **groupId**: participant
-  -     - **number**: 5C
-    - **row**: 5
-    - **column**: C
-    - **groupId**: participant
-  -     - **number**: 5D
-    - **row**: 5
-    - **column**: D
-    - **groupId**: participant
-  -     - **number**: 5E
-    - **row**: 5
-    - **column**: E
-    - **groupId**: participant
-  -     - **number**: 6A
-    - **row**: 6
-    - **column**: A
-    - **groupId**: participant
-  -     - **number**: 6B
-    - **row**: 6
-    - **column**: B
-    - **groupId**: participant
-  -     - **number**: 6C
-    - **row**: 6
-    - **column**: C
-    - **groupId**: participant
-  -     - **number**: 6D
-    - **row**: 6
-    - **column**: D
-    - **groupId**: participant
-  -     - **number**: 6E
-    - **row**: 6
-    - **column**: E
-    - **groupId**: participant
-  -     - **number**: 7A
-    - **row**: 7
-    - **column**: A
-    - **groupId**: participant
-  -     - **number**: 7B
-    - **row**: 7
-    - **column**: B
-    - **groupId**: participant
-  -     - **number**: 7C
-    - **row**: 7
-    - **column**: C
-    - **groupId**: participant
-  -     - **number**: 7D
-    - **row**: 7
-    - **column**: D
-    - **groupId**: participant
-  -     - **number**: 7E
-    - **row**: 7
-    - **column**: E
-    - **groupId**: participant
-  -     - **number**: 8A
-    - **row**: 8
-    - **column**: A
-    - **groupId**: participant
-  -     - **number**: 8B
-    - **row**: 8
-    - **column**: B
-    - **groupId**: participant
-  -     - **number**: 8C
-    - **row**: 8
-    - **column**: C
-    - **groupId**: participant
-  -     - **number**: 8D
-    - **row**: 8
-    - **column**: D
-    - **groupId**: teacher
-  -     - **number**: 8E
-    - **row**: 8
-    - **column**: E
-    - **groupId**: teacher
-  -     - **number**: 9A
-    - **row**: 9
-    - **column**: A
-    - **groupId**: participant
-  -     - **number**: 9B
-    - **row**: 9
-    - **column**: B
-    - **groupId**: participant
-  -     - **number**: 9C
-    - **row**: 9
-    - **column**: C
-    - **groupId**: participant
-  -     - **number**: 9D
-    - **row**: 9
-    - **column**: D
-    - **groupId**: teacher
-  -     - **number**: 9E
-    - **row**: 9
-    - **column**: E
-    - **groupId**: unavailable
-  -     - **number**: 10A
-    - **row**: 10
-    - **column**: A
-    - **groupId**: unavailable
-  -     - **number**: 10B
-    - **row**: 10
-    - **column**: B
-    - **groupId**: unavailable
-  -     - **number**: 10C
-    - **row**: 10
-    - **column**: C
-    - **groupId**: unavailable
-  -     - **number**: 10D
-    - **row**: 10
-    - **column**: D
-    - **groupId**: unavailable
-  -     - **number**: 10E
-    - **row**: 10
-    - **column**: E
-    - **groupId**: unavailable
-  -     - **number**: 11A
-    - **row**: 11
-    - **column**: A
-    - **groupId**: unavailable
-  -     - **number**: 11B
-    - **row**: 11
-    - **column**: B
-    - **groupId**: unavailable
-  -     - **number**: 11C
-    - **row**: 11
-    - **column**: C
-    - **groupId**: unavailable
-  -     - **number**: 11D
-    - **row**: 11
-    - **column**: D
-    - **groupId**: unavailable
-  -     - **number**: 11E
-    - **row**: 11
-    - **column**: E
-    - **groupId**: unavailable
-  -     - **number**: 12A
-    - **row**: 12
-    - **column**: A
-    - **groupId**: unavailable
-  -     - **number**: 12B
-    - **row**: 12
-    - **column**: B
-    - **groupId**: unavailable
-  -     - **number**: 12C
-    - **row**: 12
-    - **column**: C
-    - **groupId**: unavailable
-  -     - **number**: 12D
-    - **row**: 12
-    - **column**: D
-    - **groupId**: unavailable
-  -     - **number**: 12E
-    - **row**: 12
-    - **column**: E
-    - **groupId**: unavailable
-  -     - **number**: 13A
-    - **row**: 13
-    - **column**: A
-    - **groupId**: unavailable
-  -     - **number**: 13B
-    - **row**: 13
-    - **column**: B
-    - **groupId**: unavailable
-  -     - **number**: 13C
-    - **row**: 13
-    - **column**: C
-    - **groupId**: unavailable
-  -     - **number**: 13D
-    - **row**: 13
-    - **column**: D
-    - **groupId**: unavailable
-  -     - **number**: 13E
-    - **row**: 13
-    - **column**: E
-    - **groupId**: unavailable
-  -     - **number**: 14A
-    - **row**: 14
-    - **column**: A
-    - **groupId**: unavailable
-  -     - **number**: 14B
-    - **row**: 14
-    - **column**: B
-    - **groupId**: unavailable
-  -     - **number**: 14C
-    - **row**: 14
-    - **column**: C
-    - **groupId**: unavailable
-  -     - **number**: 14D
-    - **row**: 14
-    - **column**: D
-    - **groupId**: unavailable
-  -     - **number**: 14E
-    - **row**: 14
-    - **column**: E
-    - **groupId**: unavailable
-  -     - **number**: 15A
-    - **row**: 15
-    - **column**: A
-    - **groupId**: unavailable
-  -     - **number**: 15B
-    - **row**: 15
-    - **column**: B
-    - **groupId**: unavailable
-  -     - **number**: 15C
-    - **row**: 15
-    - **column**: C
-    - **groupId**: unavailable
-  -     - **number**: 15D
-    - **row**: 15
-    - **column**: D
-    - **groupId**: unavailable
-  -     - **number**: 15E
-    - **row**: 15
-    - **column**: E
-    - **groupId**: unavailable
-  -     - **number**: 16A
-    - **row**: 16
-    - **column**: A
-    - **groupId**: unavailable
-  -     - **number**: 16B
-    - **row**: 16
-    - **column**: B
-    - **groupId**: unavailable
-  -     - **number**: 16C
-    - **row**: 16
-    - **column**: C
-    - **groupId**: unavailable
-  -     - **number**: 16D
-    - **row**: 16
-    - **column**: D
-    - **groupId**: unavailable
-  -     - **number**: 16E
-    - **row**: 16
-    - **column**: E
-    - **groupId**: unavailable
-  -     - **number**: 17A
-    - **row**: 17
-    - **column**: A
-    - **groupId**: unavailable
-  -     - **number**: 17B
-    - **row**: 17
-    - **column**: B
-    - **groupId**: unavailable
-  -     - **number**: 17C
-    - **row**: 17
-    - **column**: C
-    - **groupId**: unavailable
-  -     - **number**: 17D
-    - **row**: 17
-    - **column**: D
-    - **groupId**: unavailable
-  -     - **number**: 17E
-    - **row**: 17
-    - **column**: E
-    - **groupId**: unavailable
-  -     - **number**: 18A
-    - **row**: 18
-    - **column**: A
-    - **groupId**: unavailable
-  -     - **number**: 18B
-    - **row**: 18
-    - **column**: B
-    - **groupId**: unavailable
-  -     - **number**: 18C
-    - **row**: 18
-    - **column**: C
-    - **groupId**: unavailable
-  -     - **number**: 18D
-    - **row**: 18
-    - **column**: D
-    - **groupId**: unavailable
-  -     - **number**: 18E
-    - **row**: 18
-    - **column**: E
-    - **groupId**: unavailable
-  -     - **number**: 19A
-    - **row**: 19
-    - **column**: A
-    - **groupId**: unavailable
-  -     - **number**: 19B
-    - **row**: 19
-    - **column**: B
-    - **groupId**: unavailable
-  -     - **number**: 19C
-    - **row**: 19
-    - **column**: C
-    - **groupId**: unavailable
-  -     - **number**: 19D
-    - **row**: 19
-    - **column**: D
-    - **groupId**: unavailable
-  -     - **number**: 19E
-    - **row**: 19
-    - **column**: E
-    - **groupId**: unavailable
-  -     - **number**: 20A
-    - **row**: 20
-    - **column**: A
-    - **groupId**: unavailable
-  -     - **number**: 20B
-    - **row**: 20
-    - **column**: B
-    - **groupId**: unavailable
-  -     - **number**: 20C
-    - **row**: 20
-    - **column**: C
-    - **groupId**: unavailable
-  -     - **number**: 20D
-    - **row**: 20
-    - **column**: D
-    - **groupId**: unavailable
-  -     - **number**: 20E
-    - **row**: 20
-    - **column**: E
-    - **groupId**: unavailable
-- **seatingPolicy**: diagram
+- **documents**:
+  -     - **id**: rooms
+    - **title**: Room assignments
+    - **file**: 
+  -     - **id**: groups
+    - **title**: Group assignments
+    - **file**: 
+  -     - **id**: seats
+    - **title**: Shinkansen, bus and other seating plans
+    - **file**: 
 
 ### companies
 
 -   - **id**: members
   - **name**: Members Co., Ltd.
   - **legalName**: Members Co., Ltd.
-  - **industry**: Internet services / advertising and web production / information processing
+  - **industry**: Industry: Internet services / advertising and web production / information processing
   - **description**: October 21, 14:30–16:30. Meet at Harumi Island Triton Square Office Tower X at 14:00.
   - **image**: /images/company.svg
   - **business**:
@@ -730,7 +301,7 @@ Generated from source data and translations. Field names match the JSON files. R
 -   - **id**: sus
   - **name**: SUS Co., Ltd.
   - **legalName**: SUS Co., Ltd.
-  - **industry**: Services (software, information processing, mechanical design, etc.)
+  - **industry**: Industry: Services (software, information processing, mechanical design, etc.)
   - **description**: Visit on October 22, 9:20–11:30. The specific location is not listed in the handout.
   - **image**: /images/company.svg
   - **business**:
@@ -753,7 +324,7 @@ Generated from source data and translations. Field names match the JSON files. R
 -   - **id**: toko
   - **name**: Toko Metal
   - **legalName**: Toko Metal
-  - **industry**: Environmental services (recycling)
+  - **industry**: Industry: Environmental services (recycling)
   - **description**: Visit the Chiba plant on October 22, 14:00–16:00.
   - **image**: /images/company.svg
   - **business**:
@@ -773,8 +344,8 @@ Generated from source data and translations. Field names match the JSON files. R
 -   - **id**: nec
   - **name**: NEC
   - **legalName**: NEC
-  - **industry**: Information and communications / electrical equipment
-  - **description**: Visit on October 23 from 10:00; disband on site at 12:00. The specific location is not listed in the handout.
+  - **industry**: Industry: Information and communications / electrical equipment
+  - **description**: Visit on October 23 from 10:00; dismiss on site at 12:00. The specific location is not listed in the handout.
   - **image**: /images/company.svg
   - **business**:
     - Social infrastructure, IT services (digital transformation, cloud, AI, security, etc.), telecommunications and space businesses
@@ -1077,7 +648,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **endTime**: —
   - **title**: Meet at Toyama Station
   - **location**: Toyama Station
-  - **description**: The exact meeting point inside the station is not listed in the schedule.
+  - **description**: The itinerary does not specify the meeting point inside the station.
   - **companyId**: —
   - **transport**: —
   - **travelMinutes**: 0
@@ -1087,11 +658,11 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-20
   - **startTime**: 09:26
   - **endTime**: 11:36
-  - **title**: Kagayaki 506 to Tokyo
+  - **title**: Take Kagayaki 506 to Tokyo
   - **location**: JR Toyama Station → JR Tokyo Station
-  - **description**: Board the Hokuriku Shinkansen Kagayaki 506.
+  - **description**: Take the Hokuriku Shinkansen Kagayaki 506.
   - **companyId**: —
-  - **transport**: Shinkansen
+  - **transport**: Hokuriku Shinkansen
   - **travelMinutes**: 0
   - **order**: 1
   - **timeNote**: 
@@ -1099,23 +670,23 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-20
   - **startTime**: —
   - **endTime**: —
-  - **title**: Lunch (Self-arranged)
+  - **title**: Lunch (on your own)
   - **location**: Inside Tokyo Station
-  - **description**: Meet at the Nihombashi Exit at 13:40 after lunch.
+  - **description**: After lunch, meet at the Nihombashi Exit at 13:40.
   - **companyId**: —
   - **transport**: —
   - **travelMinutes**: 0
   - **order**: 2
-  - **timeNote**: After arrival in Tokyo and before 13:40 meeting
+  - **timeNote**: After arriving at Tokyo Station, before the 13:40 meeting
 -   - **id**: nihonbashi-meet
   - **date**: 2026-10-20
   - **startTime**: 13:40
   - **endTime**: —
   - **title**: Meet at Tokyo Station Nihombashi Exit
-  - **location**: Tokyo Station Nihombashi Exit
-  - **description**: After gathering, walk to Tokyo Sewerage Service.
+  - **location**: Tokyo Station, Nihombashi Exit
+  - **description**: After meeting, walk to Tokyo Metropolitan Sewerage Service.
   - **companyId**: —
-  - **transport**: Walk
+  - **transport**: On foot
   - **travelMinutes**: 0
   - **order**: 3
   - **timeNote**: 
@@ -1123,9 +694,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-20
   - **startTime**: 14:00
   - **endTime**: 16:00
-  - **title**: Visit Tokyo Sewerage Service
-  - **location**: Tokyo Sewerage Service
-  - **description**: After the visit, walk back to Tokyo Station and take public transit to Shinagawa Station.
+  - **title**: Visit Tokyo Metropolitan Sewerage Service
+  - **location**: Tokyo Metropolitan Sewerage Service
+  - **description**: After the visit, walk back to Tokyo Station and take public transport to Shinagawa Station.
   - **companyId**: tgs
   - **transport**: —
   - **travelMinutes**: 0
@@ -1135,11 +706,11 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-20
   - **startTime**: 17:30
   - **endTime**: —
-  - **title**: Hotel Check-in & Disband
+  - **title**: Hotel check-in / free time
   - **location**: Shinagawa Prince Hotel
-  - **description**: Walk from Shinagawa Station to the hotel. Free time after check-in; arrange your own dinner.
+  - **description**: Walk from Shinagawa Station to the hotel. After check-in, enjoy free time and arrange your own dinner.
   - **companyId**: —
-  - **transport**: Public transport · Walk
+  - **transport**: Public transport / on foot
   - **travelMinutes**: 0
   - **order**: 5
   - **timeNote**: 
@@ -1147,7 +718,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-20
   - **startTime**: 21:30
   - **endTime**: —
-  - **title**: Return to Hotel
+  - **title**: Curfew
   - **location**: Shinagawa Prince Hotel
   - **description**: Return to the hotel by 21:30.
   - **companyId**: —
@@ -1159,9 +730,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-20
   - **startTime**: 22:00
   - **endTime**: —
-  - **title**: Attendance Check
+  - **title**: Roll call
   - **location**: Shinagawa Prince Hotel
-  - **description**: Teachers will check attendance at 22:00.
+  - **description**: Roll call is at 22:00.
   - **companyId**: —
   - **transport**: —
   - **travelMinutes**: 0
@@ -1184,7 +755,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **startTime**: 10:00
   - **endTime**: 12:00
   - **title**: Visit METI
-  - **location**: METI
+  - **location**: Ministry of Economy, Trade and Industry
   - **description**: After the visit, take the bus to the lunch venue.
   - **companyId**: meti
   - **transport**: —
@@ -1197,7 +768,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **endTime**: —
   - **title**: Lunch at Odaiba Ocean Club Buffet
   - **location**: Odaiba Ocean Club Buffet
-  - **description**: Lunch included. Afternoon visit times to Tokyo Customs differ between odd and even groups.
+  - **description**: Lunch is included. Afternoon Tokyo Customs visit times differ for odd- and even-numbered groups.
   - **companyId**: —
   - **transport**: Bus
   - **travelMinutes**: 0
@@ -1207,9 +778,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: 13:30
   - **endTime**: —
-  - **title**: [Odd Groups] Depart for Tokyo Customs
-  - **location**: Decks Tokyo Beach (as in schedule)
-  - **description**: Odd groups depart at 13:30 by bus to Tokyo Customs.
+  - **title**: [Odd-numbered groups] Depart for Tokyo Customs
+  - **location**: Deluxe Tokyo Beach (name as printed in the itinerary)
+  - **description**: Odd-numbered groups depart at 13:30 and take the bus to Tokyo Customs.
   - **companyId**: —
   - **transport**: Bus
   - **travelMinutes**: 0
@@ -1219,9 +790,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: 14:00
   - **endTime**: 15:00
-  - **title**: [Odd Groups] Visit Tokyo Customs
+  - **title**: [Odd-numbered groups] Visit Tokyo Customs
   - **location**: Tokyo Customs
-  - **description**: Visit time for odd groups. Even groups visit from 15:00.
+  - **description**: Visit time for odd-numbered groups. Even-numbered groups visit from 15:00.
   - **companyId**: customs
   - **transport**: —
   - **travelMinutes**: 0
@@ -1231,9 +802,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: 14:30
   - **endTime**: —
-  - **title**: [Even Groups] Depart for Tokyo Customs
-  - **location**: Decks Tokyo Beach (as in schedule)
-  - **description**: Even groups depart at 14:30 by bus to Tokyo Customs.
+  - **title**: [Even-numbered groups] Depart for Tokyo Customs
+  - **location**: Deluxe Tokyo Beach (name as printed in the itinerary)
+  - **description**: Even-numbered groups depart at 14:30 and take the bus to Tokyo Customs.
   - **companyId**: —
   - **transport**: Bus
   - **travelMinutes**: 0
@@ -1243,9 +814,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: 15:00
   - **endTime**: 16:00
-  - **title**: [Even Groups] Visit Tokyo Customs
+  - **title**: [Even-numbered groups] Visit Tokyo Customs
   - **location**: Tokyo Customs
-  - **description**: Visit time for even groups. Afterward, return by bus to Decks Tokyo Beach to rejoin.
+  - **description**: Visit time for even-numbered groups. Afterward, take the bus back to Deluxe Tokyo Beach (name as printed in the itinerary) to rejoin the other groups.
   - **companyId**: customs
   - **transport**: —
   - **travelMinutes**: 0
@@ -1255,9 +826,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: 15:15
   - **endTime**: —
-  - **title**: [Odd Groups] Stand by in Building
-  - **location**: Decks Tokyo Beach (as in schedule)
-  - **description**: Odd groups return by bus and wait inside to rejoin the even groups.
+  - **title**: [Odd-numbered groups] Wait inside
+  - **location**: Deluxe Tokyo Beach (name as printed in the itinerary)
+  - **description**: Odd-numbered groups return by bus and wait inside to rejoin the even-numbered groups.
   - **companyId**: —
   - **transport**: Bus
   - **travelMinutes**: 0
@@ -1267,21 +838,21 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: —
   - **endTime**: —
-  - **title**: Odd & Even Groups Rejoin
-  - **location**: Decks Tokyo Beach (as in schedule)
-  - **description**: Rejoin after even groups finish, then head to the hotel by bus.
+  - **title**: Odd- and even-numbered groups reunite
+  - **location**: Deluxe Tokyo Beach (name as printed in the itinerary)
+  - **description**: Reunite after the even-numbered groups finish their visit, then take the bus to the hotel.
   - **companyId**: —
   - **transport**: Bus
   - **travelMinutes**: 0
   - **order**: 16
-  - **timeNote**: After Even Groups visit at 16:00 (Rejoining time unannounced)
+  - **timeNote**: After the even-numbered groups finish at 16:00 (reunion time unspecified)
 -   - **id**: hotel-2
   - **date**: 2026-10-21
   - **startTime**: 17:00
   - **endTime**: —
-  - **title**: Hotel Arrival & Disband
+  - **title**: Arrive at hotel / free time
   - **location**: Shinagawa Prince Hotel
-  - **description**: Free time upon arrival; arrange your own dinner.
+  - **description**: Enjoy free time after arrival and arrange your own dinner.
   - **companyId**: —
   - **transport**: Bus
   - **travelMinutes**: 0
@@ -1291,7 +862,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: 21:30
   - **endTime**: —
-  - **title**: Return to Hotel
+  - **title**: Curfew
   - **location**: Shinagawa Prince Hotel
   - **description**: Return to the hotel by 21:30.
   - **companyId**: —
@@ -1303,9 +874,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: 22:00
   - **endTime**: —
-  - **title**: Attendance Check
+  - **title**: Roll call
   - **location**: Shinagawa Prince Hotel
-  - **description**: Teachers will check attendance at 22:00.
+  - **description**: Roll call is at 22:00.
   - **companyId**: —
   - **transport**: —
   - **travelMinutes**: 0
@@ -1329,7 +900,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **endTime**: 11:30
   - **title**: Visit Renesas Electronics
   - **location**: Renesas Electronics
-  - **description**: Details of the specific visit site are not listed in the schedule.
+  - **description**: The itinerary does not specify the exact visit site.
   - **companyId**: renesas
   - **transport**: —
   - **travelMinutes**: 0
@@ -1339,9 +910,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-22
   - **startTime**: 13:30
   - **endTime**: 16:00
-  - **title**: Visit Keio University SFC & Lunch
-  - **location**: Keio University SFC
-  - **description**: Travel by bus. Includes visit and lunch at the cafeteria; arrange your own meal.
+  - **title**: Visit Keio University Shonan Fujisawa Campus / lunch
+  - **location**: Keio University Shonan Fujisawa Campus
+  - **description**: Travel by bus. This time slot includes the visit and lunch at the campus cafeteria. Arrange your own lunch.
   - **companyId**: keio-sfc
   - **transport**: Bus
   - **travelMinutes**: 0
@@ -1351,11 +922,11 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-22
   - **startTime**: 17:20
   - **endTime**: —
-  - **title**: Yokohama Chinatown · Photo · Disband
+  - **title**: Yokohama Chinatown / photos / free time
   - **location**: Yokohama Chinatown
-  - **description**: Free time after group photo; arrange your own dinner. Return to Shinagawa Prince Hotel independently by 21:30.
+  - **description**: After photos, enjoy free time and arrange your own dinner. Return independently to Shinagawa Prince Hotel by the 21:30 curfew.
   - **companyId**: —
-  - **transport**: Bus (Own transport to hotel)
+  - **transport**: Bus (return to the hotel independently)
   - **travelMinutes**: 0
   - **order**: 23
   - **timeNote**: 
@@ -1363,7 +934,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-22
   - **startTime**: 21:30
   - **endTime**: —
-  - **title**: Return to Hotel
+  - **title**: Curfew
   - **location**: Shinagawa Prince Hotel
   - **description**: Return to the hotel by 21:30.
   - **companyId**: —
@@ -1375,9 +946,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-22
   - **startTime**: 22:00
   - **endTime**: —
-  - **title**: Attendance Check
+  - **title**: Roll call
   - **location**: Shinagawa Prince Hotel
-  - **description**: Teachers will check attendance at 22:00.
+  - **description**: Roll call is at 22:00.
   - **companyId**: —
   - **transport**: —
   - **travelMinutes**: 0
@@ -1401,7 +972,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **endTime**: 13:10
   - **title**: Visit Yomiuri Print Media
   - **location**: Yomiuri Print Media
-  - **description**: Details of the specific visit site are not listed. Take the bus to Tokyo Station after the visit.
+  - **description**: The itinerary does not specify the exact visit site. After the visit, take the bus to Tokyo Station.
   - **companyId**: yomiuri
   - **transport**: —
   - **travelMinutes**: 0
@@ -1411,9 +982,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-23
   - **startTime**: 14:20
   - **endTime**: —
-  - **title**: Disband & Lunch at Tokyo Station
+  - **title**: Trip ends at Tokyo Station / lunch
   - **location**: Tokyo Station
-  - **description**: Arrange your own lunch. Eating on the bus is permitted.
+  - **description**: Arrange your own lunch. You may also eat on the bus.
   - **companyId**: —
   - **transport**: Bus
   - **travelMinutes**: 0
@@ -1453,37 +1024,20 @@ Generated from source data and translations. Field names match the JSON files. R
   -     - **title**: Shinkansen and bus seating
     - **items**:
       - For the International course, you may choose your seat on both the Shinkansen and the bus.
-
-### seats
-
-- **rows**: 0
-- **columns**:
-  - A
-  - B
-  - C
-  - aisle
-  - D
-  - E
-- **isSample**: false
-- **title**: Shinkansen and bus seating
-- **description**: For the International course, you may choose your seat on both the Shinkansen and the bus.
-- **groups**:
-
-- **groupPlan**:
-
-- **notes**:
-  - You may choose your seat on the Shinkansen.
-  - You may choose your seat on the bus.
-- **seats**:
-
-- **seatingPolicy**: free
+- **documents**:
+  -     - **id**: rooms
+    - **title**: Room assignments
+    - **file**: 
+  -     - **id**: groups
+    - **title**: Group assignments
+    - **file**: 
 
 ### companies
 
 -   - **id**: tgs
-  - **name**: Tokyo Sewerage Service
-  - **legalName**: Tokyo Sewerage Service
-  - **industry**: Services (environmental and infrastructure maintenance / public-private enterprise)
+  - **name**: Tokyo Metropolitan Sewerage Service
+  - **legalName**: Tokyo Metropolitan Sewerage Service
+  - **industry**: Industry: Services (environmental and infrastructure maintenance / public-private enterprise)
   - **description**: Visit on October 20, 14:00–16:00.
   - **image**: /images/company.svg
   - **business**:
@@ -1504,9 +1058,9 @@ Generated from source data and translations. Field names match the JSON files. R
     - What opportunities and career paths allow young engineers to participate in overseas projects?
   - **website**: https://www.tgs-sw.co.jp
 -   - **id**: meti
-  - **name**: METI
-  - **legalName**: METI
-  - **industry**: Government agency (central government ministry)
+  - **name**: Ministry of Economy, Trade and Industry
+  - **legalName**: Ministry of Economy, Trade and Industry
+  - **industry**: Industry: Central government ministry
   - **description**: Visit on October 21, 10:00–12:00.
   - **image**: /images/company.svg
   - **business**:
@@ -1550,7 +1104,7 @@ Generated from source data and translations. Field names match the JSON files. R
 -   - **id**: renesas
   - **name**: Renesas Electronics
   - **legalName**: Renesas Electronics
-  - **industry**: Electrical equipment (semiconductor manufacturing)
+  - **industry**: Industry: Electrical equipment (semiconductor manufacturing)
   - **description**: Visit on October 22, 9:30–11:30.
   - **image**: /images/company.svg
   - **business**:
@@ -1570,9 +1124,9 @@ Generated from source data and translations. Field names match the JSON files. R
     - Which areas are priorities in developing semiconductors for next-generation EVs and autonomous driving?
   - **website**: https://www.renesas.com/ja
 -   - **id**: keio-sfc
-  - **name**: Keio University SFC
-  - **legalName**: Keio University SFC
-  - **industry**: Education and research institution (higher education)
+  - **name**: Keio University Shonan Fujisawa Campus
+  - **legalName**: Keio University Shonan Fujisawa Campus
+  - **industry**: Industry: Education and research (higher education)
   - **description**: Visit on October 22, 13:30–16:00, including lunch at the campus cafeteria.
   - **image**: /images/company.svg
   - **business**:
@@ -1594,7 +1148,7 @@ Generated from source data and translations. Field names match the JSON files. R
 -   - **id**: yomiuri
   - **name**: Yomiuri Print Media
   - **legalName**: Yomiuri Print Media
-  - **industry**: Printing and related industries (Yomiuri Shimbun Group)
+  - **industry**: Industry: Printing and related services (Yomiuri Shimbun Group)
   - **description**: Visit on October 23, 11:30–13:10.
   - **image**: /images/company.svg
   - **business**:

@@ -29,7 +29,7 @@ try {
   assert.equal(await page.locator("html").getAttribute("lang"), "en");
   assert.equal(await page.locator("html").getAttribute("data-theme"), "dark");
   await page.getByLabel("Visit password").fill("factory2026");
-  await page.getByRole("button", { name: "Open Guide" }).click();
+  await page.getByRole("button", { name: "Open visit guide" }).click();
   await page.locator("main").waitFor();
   for (const width of [360, 390, 768, 1280]) {
     await page.setViewportSize({ width, height: 1000 });

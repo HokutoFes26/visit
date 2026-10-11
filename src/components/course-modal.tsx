@@ -29,7 +29,7 @@ export function CourseSelectModal({
       closeOnClickOutside={allowClose}
       closeOnEscape={allowClose}
       title={
-        <Text fw={700} size="lg" c="var(--foreground)">
+        <Text fw={700} size="lg" c="var(--foreground">
           {t("学科の選択")}
         </Text>
       }

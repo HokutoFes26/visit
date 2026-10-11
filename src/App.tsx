@@ -10,7 +10,6 @@ import LearningPage from "@/pages/learning";
 import Login from "@/pages/login";
 import MorePage from "@/pages/more";
 import SchedulePage from "@/pages/schedule";
-import SeatsPage from "@/pages/seats";
 import SettingsPage from "@/pages/settings";
 import SightseeingPage from "@/pages/sightseeing";
 import { CourseSelectModal } from "@/components/course-modal";
@@ -82,7 +81,7 @@ export default function App() {
           <Route path="companies/:id" element={<CompanyDetail />} />
           <Route path="guide" element={<GuidePage />} />
           <Route path="announcements" element={<AnnouncementsPage />} />
-          <Route path="seats" element={<SeatsPage />} />
+          <Route path="seats" element={<Navigate to="/guide" replace />} />
           <Route path="learning" element={<LearningPage />} />
           <Route path="sightseeing" element={<SightseeingPage />} />
           <Route

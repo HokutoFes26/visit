@@ -98,8 +98,7 @@ export default function Timeline({
                       variant="light"
                       size="md"
                       radius="xl"
-                      tt="none"
-                      style={{ fontWeight: 600, textTransform: "none" }}
+                      style={{ fontWeight: 600 }}
                       styles={{ root: { maxWidth: "100%", height: "auto", paddingBlock: 4 }, label: { whiteSpace: "normal", overflowWrap: "anywhere" } }}
                       leftSection={<Bus size={12} />}
                     >

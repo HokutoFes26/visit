@@ -15,14 +15,12 @@ try {
     await page.locator('button[type="submit"]').click();
     await page.locator('main').waitFor();
     await page.goto(`${base}/?c=${course}#/seats`, { waitUntil: "domcontentloaded" });
-    if (course === 'k') {
-      assert.match(await page.locator('main').innerText(), /新幹線・バスともに座席は自由/);
-      assert.equal(await page.locator('.seat-grid').count(), 0);
-      assert.equal(await page.locator('img[src*="train-seats"]').count(), 0);
-    } else assert.equal(await page.locator('.seat').count(), 100);
+    await page.waitForURL('**#/guide');
+    assert.equal(await page.getByRole('heading', { name: '見学ガイド', exact: true }).count(), 1);
+    assert.equal(await page.locator('a[href="#/seats"]').count(), 0);
     await page.getByRole('button', { name: 'EN', exact: true }).first().click();
     const companies = JSON.parse(fs.readFileSync(`src/data/${course}/companies.json`, 'utf8'));
-    const routes = ['/', '/schedule', '/companies', '/guide', '/seats', '/learning', '/sightseeing', '/more', '/announcements', '/settings', ...companies.map(c => `/companies/${c.id}`)];
+    const routes = ['/', '/schedule', '/companies', '/guide', '/learning', '/sightseeing', '/more', '/announcements', '/settings', ...companies.map(c => `/companies/${c.id}`)];
     const check = async route => {
       const text = await page.locator('main').innerText();
       assert.ok(!/[一-龯ぁ-んァ-ヶ]/.test(text.replaceAll('日本語', '')), `${course} ${route}: untranslated text: ${text}`);
@@ -48,10 +46,10 @@ try {
           for (const button of await page.locator('main button[aria-expanded="false"]').all()) await button.click();
           await check(route);
         }
-        if (route === '/seats') {
+        if (route === '/guide') {
           if (course === 'k') assert.match(await page.locator('main').innerText(), /choose your seat on both the Shinkansen and the bus/);
           fs.mkdirSync('test-results', { recursive: true });
-          await page.screenshot({ path: `test-results/seats-${course}-en-${width}.png`, fullPage: true });
+          await page.screenshot({ path: `test-results/guide-${course}-en-${width}.png`, fullPage: true });
         }
       }
     }
@@ -64,7 +62,7 @@ try {
     await context.close();
   }
   assert.deepEqual(errors, []);
-  console.log('PASS: both courses, Japanese seating, English on all main routes and company details, every schedule day, expanded content, mobile/desktop layout and course switching.');
+  console.log('PASS: both courses, legacy seating URL redirect to guide, English on all main routes and company details, every schedule day, expanded content, mobile/desktop layout and course switching.');
 } finally {
   await browser.close();
 }

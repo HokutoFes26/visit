@@ -193,7 +193,7 @@ try {
     englishNames,
   );
   await expect(page.locator(".sightseeing-map-heading .eyebrow")).toHaveText(
-    "View on Map",
+    "LOCATE ON THE MAP",
   );
   await page.screenshot({
     path: "test-results/sightseeing-en-dark.png",

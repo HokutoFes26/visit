@@ -79,7 +79,7 @@
   position: relative;
   z-index: 3;
   padding: 10px 20px;
-  width: 100%;
+  max-width: 65%;
   gap: 6px;
   display: flex;
   flex-direction: column;
@@ -90,19 +90,9 @@
   color: #555555 !important;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
   margin-bottom: 4px;
-  white-space: normal;
-  overflow-wrap: anywhere;
-  line-height: 1.4;
-  -webkit-text-stroke: 0.5px #fff;
-  paint-order: stroke fill;
-}
-
-.company-card-title,
-.company-card-desc,
-.company-card-cta {
-  max-width: 65%;
 }
 
 .company-card-title {
@@ -111,7 +101,6 @@
   font-weight: 800;
   margin-bottom: 6px;
   line-height: 1.3;
-  word-break: auto-phrase;
 }
 
 .company-card-desc {
@@ -383,13 +372,8 @@
   }
 
   .company-card-content {
-    padding: 20px 22px;
-  }
-
-  .company-card-title,
-  .company-card-desc,
-  .company-card-cta {
     max-width: 60%;
+    padding: 20px 22px;
   }
 
   .company-card-title {

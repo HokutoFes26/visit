@@ -65,9 +65,14 @@
   border-radius: 0 !important;
   border-left: none !important;
   border-right: none !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.4) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-top: 1px solid rgba(89, 255, 0, 0.4) !important;
+  border-bottom: 1px solid rgba(89, 255, 0, 0.4) !important;
   box-shadow: none !important;
+}
+
+.timeline-item.current .timeline-dot {
+  background: var(--accent-neon);
+  box-shadow: 0 0 0 3px rgba(89, 255, 0, 0.35);
 }
 
 .timeline-item.past .timeline-content {

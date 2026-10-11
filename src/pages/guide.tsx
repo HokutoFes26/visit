@@ -12,6 +12,7 @@ import {
   ThemeIcon,
   Title,
 } from "@/components/ui";
+import { assetUrl } from "@/config/assets";
 import { event, formatDate, formatTime, guide } from "@/data";
 import { Backpack, Check, MapPin, Shirt } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -54,6 +55,36 @@ export default function GuidePage() {
             </Text>
           </Box>
         </Group>
+      </Card>
+
+      <Card mb="lg" radius="lg">
+        <SectionTitle title={t("配布資料（PDF）")} />
+        <Text size="sm" c="dimmed" mb="md">{t("PDFの閲覧にはインターネット接続が必要です。")}</Text>
+        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+          {guide.documents.map((document) => (
+            <Box key={document.id} p="md" style={{ border: "1px solid var(--border)", borderRadius: 12, minWidth: 0 }}>
+              <Title order={3} size="h4" mb="sm">{t(document.title)}</Title>
+              {document.file ? (
+                <>
+                  <Group gap="md" mb="sm">
+                    <a className="text-link" href={assetUrl(document.file)} target="_blank" rel="noreferrer">{t("PDFを開く")}</a>
+                    <a className="text-link" href={assetUrl(document.file)} download>{t("PDFをダウンロード")}</a>
+                  </Group>
+                  <details>
+                    <summary style={{ cursor: "pointer" }}>{t("このページで表示")}</summary>
+                    <iframe src={assetUrl(document.file)} title={t(document.title)} loading="lazy" style={{ width: "100%", height: 480, border: 0, marginTop: 12 }} />
+                    <Text size="xs" c="dimmed">{t("PDFを表示できない場合は「PDFを開く」をご利用ください。")}</Text>
+                  </details>
+                </>
+              ) : (
+                <>
+                  <Badge variant="light" color="gray" mb="xs">{t("準備中")}</Badge>
+                  <Text size="sm" c="dimmed">{t("資料は準備ができ次第、掲載します。")}</Text>
+                </>
+              )}
+            </Box>
+          ))}
+        </SimpleGrid>
       </Card>
 
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg" mb="lg">
