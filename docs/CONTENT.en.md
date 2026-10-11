@@ -994,9 +994,18 @@ Generated from source data and translations. Field names match the JSON files. R
 ### guide
 
 - **belongings**:
-  - The itinerary does not specify what to bring. Check the school's instructions.
+  - A suit and matching shoes
+  - Casual clothes (including clothes for visits)
+  - Towels, handkerchiefs and similar items
+  - Health insurance card or an equivalent document
+  - A bag for visits
+  - Writing materials and a notepad
+  - Your usual medicines
+  - Trip booklet
+  - Other essentials (charger, cash)
 - **clothing**:
-  - The itinerary does not specify clothing requirements. Check the school's instructions.
+  - A suit and matching shoes
+  - Casual clothes (including clothes for visits)
 - **precautions**:
   - On October 20–22, curfew is 21:30 and roll call is at 22:00.
   - The October 21 Tokyo Customs visit is 14:00–15:00 for odd-numbered groups and 15:00–16:00 for even-numbered groups.
@@ -1020,7 +1029,7 @@ Generated from source data and translations. Field names match the JSON files. R
     - **items**:
       - Research the places to visit and prepare topics and questions.
       - Check the four-day itinerary and your group's departure and visit times.
-      - The itinerary does not specify luggage shipping, clothing or items to bring. Check the school’s instructions.
+      - The itinerary does not specify luggage shipping details. Check the school’s instructions.
   -     - **title**: Shinkansen and bus seating
     - **items**:
       - For the International course, you may choose your seat on both the Shinkansen and the bus.
