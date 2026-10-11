@@ -1,6 +1,6 @@
 # 県外企業見学ガイド — モノトーン改修版
 
-起動方法・変更内容・検証結果は [改修版ガイド](docs/REFINEMENT.md) を参照してください。
+起動方法・変更内容・検証結果は [改修版ガイド](docs/GUIDE.md) を参照してください。
 
 # Factory Visit Guide
 
@@ -24,7 +24,7 @@ Node.js 24 and npm are recommended.
 ### Install dependencies
 
 ```bash
-npm install
+npm ci
 ```
 
 ### Run the development server
@@ -53,4 +53,18 @@ The shared password is only a viewing gate, not secure authentication. Do not in
 
 ## License
 
-A license for this project has not been specified.
+See [LICENSE](LICENSE) for the included MIT license notice.
+
+## コース別の掲載内容 / Course content
+
+- 電子：2026年10月21日〜23日。国際：2026年10月20日〜23日。
+- 国際コースの新幹線・バスの座席は自由です。
+- International course: you may choose your seat on both the Shinkansen and the bus.
+- [日本語の全掲載データ](docs/CONTENT.ja.md) / [Full content in English](docs/CONTENT.en.md)
+- [更新・確認記録](docs/RELEASE-2026-10-11.md)
+
+`npm run docs:sync` updates both content documents; `npm run test:content` checks translation coverage and document synchronization.
+
+## GitHub用ZIP
+
+ZIPを展開し、`package.json` と `.github` がリポジトリ直下に来るように中身を反映してください。ZIPファイルそのものをアップロードしてもサイトは更新されません。Pagesの公開元はGitHub Actionsを選択します。

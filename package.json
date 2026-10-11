@@ -12,7 +12,10 @@
     "test:pages": "node tests/pwa.mjs --pages",
     "format": "prettier --write src vite.config.ts",
     "test:preferences": "node tests/preferences.mjs",
-    "test:sightseeing": "node tests/sightseeing.mjs"
+    "test:sightseeing": "node tests/sightseeing.mjs",
+    "docs:sync": "node scripts/sync-content-docs.mjs",
+    "test:content": "node scripts/sync-content-docs.mjs --check",
+    "test:courses": "node tests/courses.mjs"
   },
   "dependencies": {
     "@mantine/core": "^9.7.1",
