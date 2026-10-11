@@ -86,9 +86,7 @@ export default function Home() {
               <div>
                 <Group justify="space-between" align="center" mb="xs">
                   <Group gap="xs">
-                    <ThemeIcon size="sm" radius="xl" color="gray" variant="light">
-                      <Clock3 size={14} />
-                    </ThemeIcon>
+                    <Clock3 size={16} />
                     <Title order={2} size="h4" fw={700}>
                       {t("次のアクション")}
                     </Title>
@@ -96,16 +94,6 @@ export default function Home() {
                 </Group>
 
                 <div style={{ margin: "10px 0" }}>
-                  <Text
-                    size="xs"
-                    fw={700}
-                    c="dimmed"
-                    tt="uppercase"
-                    lts={1}
-                    mb={2}
-                  >
-                    {t(current ? "現在の予定" : next ? "次の予定" : "ステータス")}
-                  </Text>
                   <Group
                     justify="space-between"
                     align="baseline"
@@ -198,17 +186,19 @@ export default function Home() {
                 <Bell size={18} />
                 <strong>{t("大切なお知らせ")}</strong>
               </Box>
-              {announcements
-                .filter((a) => a.importance === "high")
-                .map((a) => (
-                  <Link to="/announcements" key={a.id}>
-                    <Badge size="sm" radius="xl" c="var(--accent-neon)">
-                      {t("重要")}
-                    </Badge>
-                    <span>{t(a.title)}</span>
-                    <ArrowRight size={18} />
-                  </Link>
-                ))}
+              <div style={{ display: "flex", gap: "12px", flexDirection: "column" }}>
+                {announcements
+                  .filter((a) => a.importance === "high")
+                  .map((a) => (
+                    <Link to="/announcements" key={a.id}>
+                      <Badge size="sm" radius="xl" c="var(--accent-neon)">
+                        {t("重要")}
+                      </Badge>
+                      <span>{t(a.title)}</span>
+                      <ArrowRight size={18} />
+                    </Link>
+                  ))}
+              </div>
             </Box>
           )}
 
