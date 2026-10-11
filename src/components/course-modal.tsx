@@ -50,7 +50,7 @@ export function CourseSelectModal({
               onClick={() => handleSelect(c)}
             >
               <Text fw={700} size="lg" c="var(--surface)">
-                {t(COURSE_LABELS[c])}
+                {COURSE_LABELS[c]}
               </Text>
             </Button>
           ))}
