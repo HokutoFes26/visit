@@ -15,7 +15,7 @@
     "questions": ["他社のWeb制作・コンサルと一番異なる強みは何ですか",
       "環境に配慮したWeb制作で意識している点は何ですか",
       "若手社員が専任チームで活躍するための条件は何ですか"],
-    "website": null
+    "website": "https://www.members.co.jp"
   },
   {
     "id": "sus",
@@ -33,7 +33,7 @@
     "questions": ["自社プロダクト開発と派遣事業のシナジーは何ですか",
       "未経験から先進技術を学ぶサポート体制はありますか",
       "今後はどの技術領域に一番力を入れていきますか"],
-    "website": null
+    "website": "https://www.sus-g.co.jp"
   },
   {
     "id": "toko",
@@ -51,7 +51,7 @@
     "questions": ["リサイクル現場でITやAIはどのように活用されていますか",
       "近年の環境意識の高まりで持ち込まれる物に変化はありますか",
       "未経験から安全に現場作業を覚える仕組みはありますか"],
-    "website": null
+    "website": "https://www.tokometal.co.jp"
   },
   {
     "id": "nec",
@@ -69,6 +69,6 @@
     "questions": ["BluStellarで今後最も力を入れる事業領域は何ですか",
       "生体認証技術のグローバル展開での強みは何ですか",
       "大型プロジェクトでチームが一丸となる工夫は何ですか"],
-    "website": null
+    "website": "https://group.nec/global/ja/"
   }
 ]
