@@ -79,7 +79,7 @@
   position: relative;
   z-index: 3;
   padding: 10px 20px;
-  max-width: 65%;
+  width: 100%;
   gap: 6px;
   display: flex;
   flex-direction: column;
@@ -92,7 +92,17 @@
   font-weight: 700;
   letter-spacing: 0.5px;
   margin-bottom: 4px;
-  white-space: nowrap
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+  -webkit-text-stroke: 0.5px #fff;
+  paint-order: stroke fill;
+}
+
+.company-card-title,
+.company-card-desc,
+.company-card-cta {
+  max-width: 65%;
 }
 
 .company-card-title {
@@ -373,8 +383,13 @@
   }
 
   .company-card-content {
-    max-width: 60%;
     padding: 20px 22px;
+  }
+
+  .company-card-title,
+  .company-card-desc,
+  .company-card-cta {
+    max-width: 60%;
   }
 
   .company-card-title {
