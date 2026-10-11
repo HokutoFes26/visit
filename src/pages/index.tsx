@@ -86,26 +86,29 @@ export default function Home() {
               <div>
                 <Group justify="space-between" align="center" mb="xs">
                   <Group gap="xs">
-                    <ThemeIcon size="sm" radius="xl" color="gray" variant="light">
-                      <Clock3 size={14} />
-                    </ThemeIcon>
+                    <Clock3 size={16} />
                     <Title order={2} size="h4" fw={700}>
                       {t("次のアクション")}
                     </Title>
                   </Group>
+                  {current && (
+                    <Badge
+                      size="sm"
+                      variant="filled"
+                      color="var(--accent-neon)"
+                      radius="xl"
+                      style={{
+                        color: "#000000",
+                        fontWeight: 700,
+                        fontSize: "11px",
+                      }}
+                    >
+                      {t("進行中")}
+                    </Badge>
+                  )}
                 </Group>
 
                 <div style={{ margin: "10px 0" }}>
-                  <Text
-                    size="xs"
-                    fw={700}
-                    c="dimmed"
-                    tt="uppercase"
-                    lts={1}
-                    mb={2}
-                  >
-                    {t(current ? "現在の予定" : next ? "次の予定" : "ステータス")}
-                  </Text>
                   <Group
                     justify="space-between"
                     align="baseline"
@@ -137,8 +140,8 @@ export default function Home() {
                     )}
                   </Group>
                   <Group gap={4}>
-                    <MapPin size={14} color="var(--muted)" />
-                    <Text size="xs" c="dimmed">
+                    <MapPin size={16} color="var(--accent-neon)" />
+                    <Text size="sm" c="var(--border)">
                       {t((current || next)?.location || event.meetingPlace)}
                     </Text>
                   </Group>

@@ -98,7 +98,8 @@ export default function Timeline({
                       variant="light"
                       size="md"
                       radius="xl"
-                      style={{ fontWeight: 600 }}
+                      tt="none"
+                      style={{ fontWeight: 600, textTransform: "none" }}
                       leftSection={<Bus size={12} />}
                     >
                       {t(item.transport)}

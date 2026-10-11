@@ -28,7 +28,7 @@ export default function CompaniesPage() {
               />
               <div className="company-card-overlay" />
               <div className="company-card-content">
-                <div className="company-card-industry">{t(c.industry)}</div>
+                <div className="company-card-industry">{t("業種")} : {t(c.industry)}</div>
                 <Title order={2} size="h3" className="company-card-title">
                   {t(c.name)}
                 </Title>
