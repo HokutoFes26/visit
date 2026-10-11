@@ -44,7 +44,12 @@
 }
 
 .expanded {
-  margin-bottom: 24px;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.expanded .capsule-switch-lead-icon {
+  display: none;
 }
 
 .capsule-switch-group {

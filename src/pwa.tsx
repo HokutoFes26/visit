@@ -271,6 +271,7 @@ export function PwaSettings() {
             size="lg"
             radius="xl"
             tt="none"
+            className="pwa-offline-badge"
             style={{ textTransform: "none" }}
           >
             {t(
@@ -314,15 +315,15 @@ export function PwaSettings() {
         <Title order={2} size="h4" mb="xs">
           {t("ホーム画面に追加")}
         </Title>
-        {pwa.installable ? (
+        {pwa.installable && (
           <Button
             variant="filled"
-            color="blue"
+            mb="sm"
             onClick={() => void pwa.install()}
           >
             {t("アプリをインストール")}
           </Button>
-        ) : (
+        )}
           <Stack gap="xs">
             <Text size="sm" c="dimmed">
               {t("ホーム画面に追加すると、全画面で起動できオフライン時も素早く使えます。")}
@@ -340,11 +341,12 @@ export function PwaSettings() {
                 {t("Android (Chrome) の場合:")}
               </Text>
               <Text size="xs" c="dimmed">
-                {t("右上のメニューボタン（︙）から「アプリをインストール」または「ホーム画面に追加」を選択してください。")}
+                {pwa.installable
+                  ? t("上の「アプリをインストール」ボタンを直接タップして追加できます。（ボタンが反応しない場合は、右上のメニューボタン（︙）から「アプリをインストール」を選択）")
+                  : t("右上のメニューボタン（︙）から「アプリをインストール」または「ホーム画面に追加」を選択してください。")}
               </Text>
             </Box>
           </Stack>
-        )}
       </div>
     </>
   );

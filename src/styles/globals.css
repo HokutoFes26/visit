@@ -56,6 +56,14 @@
   border: none !important;
 }
 
+:is(.pwa-offline-badge, .pwa-offline-badge .mantine-Badge-label) {
+  color: var(--badge-color) !important;
+}
+
+.pwa-offline-badge {
+  border: 1px solid var(--badge-color) !important;
+}
+
 * {
   box-sizing: border-box;
 }

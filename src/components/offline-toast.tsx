@@ -4,26 +4,44 @@ import { Check, Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import "@/styles/offline-toast.css";
 
+const DISMISSED_KEY = "factory-visit:offline-toast-dismissed:v1";
+let dismissedInMemory = false;
+
 export function OfflineToast() {
   usePreferences();
-  const { ready, checking } = usePwa();
-  const [visible, setVisible] = useState(true);
+  const { ready } = usePwa();
+  const [dismissed, setDismissed] = useState(() => {
+    if (dismissedInMemory) return true;
+    try {
+      return sessionStorage.getItem(DISMISSED_KEY) === "true";
+    } catch {
+      return false;
+    }
+  });
   const [fading, setFading] = useState(false);
 
   useEffect(() => {
+    if (dismissed) return;
+
     if (ready) {
       const timer = setTimeout(() => {
         setFading(true);
         const hideTimer = setTimeout(() => {
-          setVisible(false);
+          dismissedInMemory = true;
+          try {
+            sessionStorage.setItem(DISMISSED_KEY, "true");
+          } catch {
+            // ignore
+          }
+          setDismissed(true);
         }, 400); // fade-out animation
         return () => clearTimeout(hideTimer);
       }, 3000); // show ready state for 3 seconds
       return () => clearTimeout(timer);
     }
-  }, [ready]);
+  }, [ready, dismissed]);
 
-  if (!visible || import.meta.env.DEV) {
+  if (dismissed || import.meta.env.DEV) {
     return null;
   }
 
