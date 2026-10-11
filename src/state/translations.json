@@ -695,7 +695,7 @@
   "多言語（日英）対応とダークモード最適化": "Bilingual (JA/EN) support & dark mode optimization",
   "日本語・英語の辞書ベースによるリアルタイムな言語切り替えをサポートしています。また、ダークモードは有機EL（OLED）ディスプレイでのバッテリー消費を抑え、夜間や暗所でも目に優しい高コントラストな配色に最適化されています。": "Supports real-time Japanese/English dictionary switching. Dark mode is optimized for OLED battery saving and high-contrast night viewing.",
   "アプリの使い方・仕組み": "How to Use & App Guide",
-  "アプリの使い方": "How to Use the App",
+  "アプリの使い方": "How to Use",
   "基本操作とオフライン・メモ保存の仕組み": "Basic usage, offline support & note saving",
   "見学を快適に進めるためのアプリの使い方と、電波がない場所でも動く仕組みやメモの保存について説明します。": "Guide on how to use the app for your tour, how it operates offline, and how notes are saved.",
   "1. ホーム画面に追加して使う（おすすめ）": "1. Add to Home Screen (Recommended)",
@@ -755,5 +755,9 @@
   "スケジュールの変更などが配信されると、画面上部に「新しい情報があります」という案内が出ます。「更新を適用」を押すと最新の内容に切り替わります。": "If schedule updates are published, a notice appears at the top. Tap 'Apply update' to switch to the latest information.",
   "メモの編集中に勝手に画面が再読み込みされて文章が消えないよう、自動更新は行わず手動でボタンを押して切り替える安全な仕組みになっています。": "To prevent your active note-taking from being wiped by an unexpected reload, updates are not automatic and apply safely only when you tap the button.",
   "配布資料について": "About Handouts",
-  "部屋割りや座席表などの資料には個人情報が含まれるため、アプリ内では直接表示しません。「見学ガイド」画面のリンクからログイン状態のTeamsで確認してください。": "Documents such as room and seat assignments contain personal information and are not displayed directly in the app. Please open Teams from the Tour Guide page and log in with your school account."
+  "部屋割りや座席表などの資料には個人情報が含まれるため、アプリ内では直接表示しません。「見学ガイド」画面のリンクからログイン状態のTeamsで確認してください。": "Documents such as room and seat assignments contain personal information and are not displayed directly in the app. Please open Teams from the Tour Guide page and log in with your school account.",
+  "はじめての方へ": "First-time visitors",
+  "はじめての方へ：アプリの使い方": "For First-Time Users: How to Use",
+  "ホーム画面への追加やオフラインでの使い方を確認できます": "Check how to add to home screen and use offline",
+  "見る": "View"
 }

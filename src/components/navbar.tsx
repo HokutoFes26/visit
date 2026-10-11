@@ -10,7 +10,7 @@ import {
   Text,
   Box,
 } from "@mantine/core";
-import { Bell, Building2, LogOut, Settings } from "lucide-react";
+import { Bell, Building2, HelpCircle, LogOut, Settings } from "lucide-react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import "@/styles/navbar.css";
 
@@ -66,6 +66,13 @@ export function Navbar() {
 
         <Group gap={6} align="center" className="header-actions">
           <DisplayControls />
+          <Link
+            to="/about"
+            aria-label={t("アプリの使い方")}
+            className="header-action-btn"
+          >
+            <HelpCircle size={20} />
+          </Link>
           <Link
             to="/announcements"
             aria-label={t("お知らせ")}

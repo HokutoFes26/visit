@@ -39,6 +39,7 @@ import { Badge } from "@mantine/core";
 import { Link } from "react-router-dom";
 import { ScheduleContent } from "@/pages/schedule";
 import { OfflineToast } from "@/components/offline-toast";
+import { WelcomeBanner } from "@/components/welcome-banner";
 import "@/styles/home.css";
 import "@/styles/schedule.css";
 
@@ -62,6 +63,7 @@ export default function Home() {
     <div className="home-layout">
       <div className="home-left-col">
         <PageTitle title={t("ホーム")} />
+        <WelcomeBanner />
         <div
           style={{
             display: "flex",

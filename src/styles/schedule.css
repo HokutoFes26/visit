@@ -1,34 +1,42 @@
 .day-tabs {
-  position: sticky;
-  top: 72px;
-  z-index: 21;
-  background: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(0, 1fr);
-  max-width: 870px;
-  padding: 10px 0;
-  border-bottom: none;
+    position: sticky;
+    top: 72px;
+    z-index: 21;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    max-width: 870px;
+    padding: 10px 0;
+    border-bottom: none;
+    background: rgba(250, 250, 250, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 .day-tabs button {
-  border: 0;
-  border-bottom: 3px solid transparent;
-  background: transparent;
-  padding: 12px 4px;
-  border-radius: 32px;
-  min-height: 48px;
-  min-width: 0;
-  font-size: 15px;
-  white-space: normal;
-  overflow-wrap: anywhere;
-  line-height: 1.4;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    background: transparent;
+    padding: 12px 4px;
+    border-radius: 32px;
+    min-height: 48px;
+    min-width: 0;
+    font-size: 15px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.4;
 }
 
 .day-tabs button.selected {
-  color: var(--surface);
-  background-color: var(--foreground);
-  font-weight: 700;
+    color: var(--surface);
+    background-color: var(--foreground);
+    font-weight: 700;
+}
+
+@media (max-width: 850px) {
+    .day-tabs {
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
 }
