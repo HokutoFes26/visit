@@ -37,7 +37,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **importance**: high
 -   - **id**: rules
   - **title**: Dress code, evening curfew and return trip
-  - **body**: Wear a suit. Male participants must wear ties and leather shoes. No outings after 22:00; teachers will take roll call. The trip ends on site at 12:00 on the last day. Arrange your own return to Toyama.
+  - **body**: Wear a suit. Male participants must wear ties and leather shoes. No outings after 22:00; teachers will check attendance. The trip ends on site at 12:00 on the last day. Arrange your own return to Toyama.
   - **publishedAt**: —
   - **updatedAt**: 2026-10-09
   - **importance**: normal
@@ -108,9 +108,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: —
   - **endTime**: —
-  - **title**: Travel to hotel and overnight stay
+  - **title**: Return to Hotel
   - **location**: Shinagawa Prince
-  - **description**: Arrange your own dinner. No outings after 22:00; teachers will take roll call.
+  - **description**: Arrange your own dinner. No outings after 22:00; teachers will check attendance.
   - **companyId**: —
   - **transport**: Train
   - **travelMinutes**: 0
@@ -168,9 +168,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-22
   - **startTime**: —
   - **endTime**: —
-  - **title**: Travel to hotel and overnight stay
+  - **title**: Return to Hotel
   - **location**: Shinagawa Prince
-  - **description**: Arrange your own dinner. No outings after 22:00; teachers will take roll call.
+  - **description**: Arrange your own dinner. No outings after 22:00; teachers will check attendance.
   - **companyId**: —
   - **transport**: Chartered bus
   - **travelMinutes**: 0
@@ -194,7 +194,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **endTime**: 12:00
   - **title**: Visit NEC
   - **location**: NEC (visit location to be announced)
-  - **description**: Dismiss on site at 12:00 after the visit. The dismissal time in the handout is displayed as the end time.
+  - **description**: Disband on site at 12:00 after the visit. The disband time in the handout is displayed as the end time.
   - **companyId**: nec
   - **transport**: —
   - **travelMinutes**: 0
@@ -204,7 +204,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-23
   - **startTime**: 12:00
   - **endTime**: —
-  - **title**: Dismiss on site
+  - **title**: Disband on site
   - **location**: NEC visit location
   - **description**: Allow time to collect luggage at the hotel.
   - **companyId**: —
@@ -223,7 +223,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **transport**: —
   - **travelMinutes**: 0
   - **order**: 14
-  - **timeNote**: After dismissal and luggage collection (individually arranged)
+  - **timeNote**: After disband and luggage collection (individually arranged)
 
 ### guide
 
@@ -238,7 +238,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - Travel luggage cannot be taken on visits.
   - On the last day, leave travel luggage at the hotel or ship it ahead.
   - The trip ends on site at 12:00 on the last day. Allow time to collect luggage at the hotel.
-  - No outings after 22:00. Teachers will take roll call.
+  - No outings after 22:00. Teachers will check attendance.
   - Arrange your own return transport to Toyama.
 - **sections**:
   -     - **title**: Shipping luggage
@@ -261,7 +261,7 @@ Generated from source data and translations. Field names match the JSON files. R
     - **items**:
       - Hotel: 14 twin rooms for men; 4 twin rooms and 1 triple room for women. Room assignments are to be confirmed.
       - Six groups of four and three groups of five. Group leaders will also be selected.
-      - Groups are used for the NEC visit and roll calls during travel.
+      - Groups are used for the NEC visit and attendance checks during travel.
       - Individual Shinkansen seat assignments are to be confirmed.
 
 ### seats
@@ -708,7 +708,7 @@ Generated from source data and translations. Field names match the JSON files. R
 -   - **id**: members
   - **name**: Members Co., Ltd.
   - **legalName**: Members Co., Ltd.
-  - **industry**: Industry: Internet services / advertising and web production / information processing
+  - **industry**: Internet services / advertising and web production / information processing
   - **description**: October 21, 14:30–16:30. Meet at Harumi Island Triton Square Office Tower X at 14:00.
   - **image**: /images/company.svg
   - **business**:
@@ -730,7 +730,7 @@ Generated from source data and translations. Field names match the JSON files. R
 -   - **id**: sus
   - **name**: SUS Co., Ltd.
   - **legalName**: SUS Co., Ltd.
-  - **industry**: Industry: Services (software, information processing, mechanical design, etc.)
+  - **industry**: Services (software, information processing, mechanical design, etc.)
   - **description**: Visit on October 22, 9:20–11:30. The specific location is not listed in the handout.
   - **image**: /images/company.svg
   - **business**:
@@ -753,7 +753,7 @@ Generated from source data and translations. Field names match the JSON files. R
 -   - **id**: toko
   - **name**: Toko Metal
   - **legalName**: Toko Metal
-  - **industry**: Industry: Environmental services (recycling)
+  - **industry**: Environmental services (recycling)
   - **description**: Visit the Chiba plant on October 22, 14:00–16:00.
   - **image**: /images/company.svg
   - **business**:
@@ -773,8 +773,8 @@ Generated from source data and translations. Field names match the JSON files. R
 -   - **id**: nec
   - **name**: NEC
   - **legalName**: NEC
-  - **industry**: Industry: Information and communications / electrical equipment
-  - **description**: Visit on October 23 from 10:00; dismiss on site at 12:00. The specific location is not listed in the handout.
+  - **industry**: Information and communications / electrical equipment
+  - **description**: Visit on October 23 from 10:00; disband on site at 12:00. The specific location is not listed in the handout.
   - **image**: /images/company.svg
   - **business**:
     - Social infrastructure, IT services (digital transformation, cloud, AI, security, etc.), telecommunications and space businesses
@@ -1077,7 +1077,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **endTime**: —
   - **title**: Meet at Toyama Station
   - **location**: Toyama Station
-  - **description**: The itinerary does not specify the meeting point inside the station.
+  - **description**: The exact meeting point inside the station is not listed in the schedule.
   - **companyId**: —
   - **transport**: —
   - **travelMinutes**: 0
@@ -1087,11 +1087,11 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-20
   - **startTime**: 09:26
   - **endTime**: 11:36
-  - **title**: Take Kagayaki 506 to Tokyo
+  - **title**: Kagayaki 506 to Tokyo
   - **location**: JR Toyama Station → JR Tokyo Station
-  - **description**: Take the Hokuriku Shinkansen Kagayaki 506.
+  - **description**: Board the Hokuriku Shinkansen Kagayaki 506.
   - **companyId**: —
-  - **transport**: Hokuriku Shinkansen
+  - **transport**: Shinkansen
   - **travelMinutes**: 0
   - **order**: 1
   - **timeNote**: 
@@ -1099,23 +1099,23 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-20
   - **startTime**: —
   - **endTime**: —
-  - **title**: Lunch (on your own)
+  - **title**: Lunch (Self-arranged)
   - **location**: Inside Tokyo Station
-  - **description**: After lunch, meet at the Nihombashi Exit at 13:40.
+  - **description**: Meet at the Nihombashi Exit at 13:40 after lunch.
   - **companyId**: —
   - **transport**: —
   - **travelMinutes**: 0
   - **order**: 2
-  - **timeNote**: After arriving at Tokyo Station, before the 13:40 meeting
+  - **timeNote**: After arrival in Tokyo and before 13:40 meeting
 -   - **id**: nihonbashi-meet
   - **date**: 2026-10-20
   - **startTime**: 13:40
   - **endTime**: —
   - **title**: Meet at Tokyo Station Nihombashi Exit
-  - **location**: Tokyo Station, Nihombashi Exit
-  - **description**: After meeting, walk to Tokyo Metropolitan Sewerage Service.
+  - **location**: Tokyo Station Nihombashi Exit
+  - **description**: After gathering, walk to Tokyo Sewerage Service.
   - **companyId**: —
-  - **transport**: On foot
+  - **transport**: Walk
   - **travelMinutes**: 0
   - **order**: 3
   - **timeNote**: 
@@ -1123,9 +1123,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-20
   - **startTime**: 14:00
   - **endTime**: 16:00
-  - **title**: Visit Tokyo Metropolitan Sewerage Service
-  - **location**: Tokyo Metropolitan Sewerage Service
-  - **description**: After the visit, walk back to Tokyo Station and take public transport to Shinagawa Station.
+  - **title**: Visit Tokyo Sewerage Service
+  - **location**: Tokyo Sewerage Service
+  - **description**: After the visit, walk back to Tokyo Station and take public transit to Shinagawa Station.
   - **companyId**: tgs
   - **transport**: —
   - **travelMinutes**: 0
@@ -1135,11 +1135,11 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-20
   - **startTime**: 17:30
   - **endTime**: —
-  - **title**: Hotel check-in / free time
+  - **title**: Hotel Check-in & Disband
   - **location**: Shinagawa Prince Hotel
-  - **description**: Walk from Shinagawa Station to the hotel. After check-in, enjoy free time and arrange your own dinner.
+  - **description**: Walk from Shinagawa Station to the hotel. Free time after check-in; arrange your own dinner.
   - **companyId**: —
-  - **transport**: Public transport / on foot
+  - **transport**: Public transport · Walk
   - **travelMinutes**: 0
   - **order**: 5
   - **timeNote**: 
@@ -1147,7 +1147,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-20
   - **startTime**: 21:30
   - **endTime**: —
-  - **title**: Curfew
+  - **title**: Return to Hotel
   - **location**: Shinagawa Prince Hotel
   - **description**: Return to the hotel by 21:30.
   - **companyId**: —
@@ -1159,9 +1159,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-20
   - **startTime**: 22:00
   - **endTime**: —
-  - **title**: Roll call
+  - **title**: Attendance Check
   - **location**: Shinagawa Prince Hotel
-  - **description**: Roll call is at 22:00.
+  - **description**: Teachers will check attendance at 22:00.
   - **companyId**: —
   - **transport**: —
   - **travelMinutes**: 0
@@ -1184,7 +1184,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **startTime**: 10:00
   - **endTime**: 12:00
   - **title**: Visit METI
-  - **location**: Ministry of Economy, Trade and Industry
+  - **location**: METI
   - **description**: After the visit, take the bus to the lunch venue.
   - **companyId**: meti
   - **transport**: —
@@ -1197,7 +1197,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **endTime**: —
   - **title**: Lunch at Odaiba Ocean Club Buffet
   - **location**: Odaiba Ocean Club Buffet
-  - **description**: Lunch is included. Afternoon Tokyo Customs visit times differ for odd- and even-numbered groups.
+  - **description**: Lunch included. Afternoon visit times to Tokyo Customs differ between odd and even groups.
   - **companyId**: —
   - **transport**: Bus
   - **travelMinutes**: 0
@@ -1207,9 +1207,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: 13:30
   - **endTime**: —
-  - **title**: [Odd-numbered groups] Depart for Tokyo Customs
-  - **location**: Deluxe Tokyo Beach (name as printed in the itinerary)
-  - **description**: Odd-numbered groups depart at 13:30 and take the bus to Tokyo Customs.
+  - **title**: [Odd Groups] Depart for Tokyo Customs
+  - **location**: Decks Tokyo Beach (as in schedule)
+  - **description**: Odd groups depart at 13:30 by bus to Tokyo Customs.
   - **companyId**: —
   - **transport**: Bus
   - **travelMinutes**: 0
@@ -1219,9 +1219,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: 14:00
   - **endTime**: 15:00
-  - **title**: [Odd-numbered groups] Visit Tokyo Customs
+  - **title**: [Odd Groups] Visit Tokyo Customs
   - **location**: Tokyo Customs
-  - **description**: Visit time for odd-numbered groups. Even-numbered groups visit from 15:00.
+  - **description**: Visit time for odd groups. Even groups visit from 15:00.
   - **companyId**: customs
   - **transport**: —
   - **travelMinutes**: 0
@@ -1231,9 +1231,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: 14:30
   - **endTime**: —
-  - **title**: [Even-numbered groups] Depart for Tokyo Customs
-  - **location**: Deluxe Tokyo Beach (name as printed in the itinerary)
-  - **description**: Even-numbered groups depart at 14:30 and take the bus to Tokyo Customs.
+  - **title**: [Even Groups] Depart for Tokyo Customs
+  - **location**: Decks Tokyo Beach (as in schedule)
+  - **description**: Even groups depart at 14:30 by bus to Tokyo Customs.
   - **companyId**: —
   - **transport**: Bus
   - **travelMinutes**: 0
@@ -1243,9 +1243,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: 15:00
   - **endTime**: 16:00
-  - **title**: [Even-numbered groups] Visit Tokyo Customs
+  - **title**: [Even Groups] Visit Tokyo Customs
   - **location**: Tokyo Customs
-  - **description**: Visit time for even-numbered groups. Afterward, take the bus back to Deluxe Tokyo Beach (name as printed in the itinerary) to rejoin the other groups.
+  - **description**: Visit time for even groups. Afterward, return by bus to Decks Tokyo Beach to rejoin.
   - **companyId**: customs
   - **transport**: —
   - **travelMinutes**: 0
@@ -1255,9 +1255,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: 15:15
   - **endTime**: —
-  - **title**: [Odd-numbered groups] Wait inside
-  - **location**: Deluxe Tokyo Beach (name as printed in the itinerary)
-  - **description**: Odd-numbered groups return by bus and wait inside to rejoin the even-numbered groups.
+  - **title**: [Odd Groups] Stand by in Building
+  - **location**: Decks Tokyo Beach (as in schedule)
+  - **description**: Odd groups return by bus and wait inside to rejoin the even groups.
   - **companyId**: —
   - **transport**: Bus
   - **travelMinutes**: 0
@@ -1267,21 +1267,21 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: —
   - **endTime**: —
-  - **title**: Odd- and even-numbered groups reunite
-  - **location**: Deluxe Tokyo Beach (name as printed in the itinerary)
-  - **description**: Reunite after the even-numbered groups finish their visit, then take the bus to the hotel.
+  - **title**: Odd & Even Groups Rejoin
+  - **location**: Decks Tokyo Beach (as in schedule)
+  - **description**: Rejoin after even groups finish, then head to the hotel by bus.
   - **companyId**: —
   - **transport**: Bus
   - **travelMinutes**: 0
   - **order**: 16
-  - **timeNote**: After the even-numbered groups finish at 16:00 (reunion time unspecified)
+  - **timeNote**: After Even Groups visit at 16:00 (Rejoining time unannounced)
 -   - **id**: hotel-2
   - **date**: 2026-10-21
   - **startTime**: 17:00
   - **endTime**: —
-  - **title**: Arrive at hotel / free time
+  - **title**: Hotel Arrival & Disband
   - **location**: Shinagawa Prince Hotel
-  - **description**: Enjoy free time after arrival and arrange your own dinner.
+  - **description**: Free time upon arrival; arrange your own dinner.
   - **companyId**: —
   - **transport**: Bus
   - **travelMinutes**: 0
@@ -1291,7 +1291,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: 21:30
   - **endTime**: —
-  - **title**: Curfew
+  - **title**: Return to Hotel
   - **location**: Shinagawa Prince Hotel
   - **description**: Return to the hotel by 21:30.
   - **companyId**: —
@@ -1303,9 +1303,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-21
   - **startTime**: 22:00
   - **endTime**: —
-  - **title**: Roll call
+  - **title**: Attendance Check
   - **location**: Shinagawa Prince Hotel
-  - **description**: Roll call is at 22:00.
+  - **description**: Teachers will check attendance at 22:00.
   - **companyId**: —
   - **transport**: —
   - **travelMinutes**: 0
@@ -1329,7 +1329,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **endTime**: 11:30
   - **title**: Visit Renesas Electronics
   - **location**: Renesas Electronics
-  - **description**: The itinerary does not specify the exact visit site.
+  - **description**: Details of the specific visit site are not listed in the schedule.
   - **companyId**: renesas
   - **transport**: —
   - **travelMinutes**: 0
@@ -1339,9 +1339,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-22
   - **startTime**: 13:30
   - **endTime**: 16:00
-  - **title**: Visit Keio University Shonan Fujisawa Campus / lunch
-  - **location**: Keio University Shonan Fujisawa Campus
-  - **description**: Travel by bus. This time slot includes the visit and lunch at the campus cafeteria. Arrange your own lunch.
+  - **title**: Visit Keio University SFC & Lunch
+  - **location**: Keio University SFC
+  - **description**: Travel by bus. Includes visit and lunch at the cafeteria; arrange your own meal.
   - **companyId**: keio-sfc
   - **transport**: Bus
   - **travelMinutes**: 0
@@ -1351,11 +1351,11 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-22
   - **startTime**: 17:20
   - **endTime**: —
-  - **title**: Yokohama Chinatown / photos / free time
+  - **title**: Yokohama Chinatown · Photo · Disband
   - **location**: Yokohama Chinatown
-  - **description**: After photos, enjoy free time and arrange your own dinner. Return independently to Shinagawa Prince Hotel by the 21:30 curfew.
+  - **description**: Free time after group photo; arrange your own dinner. Return to Shinagawa Prince Hotel independently by 21:30.
   - **companyId**: —
-  - **transport**: Bus (return to the hotel independently)
+  - **transport**: Bus (Own transport to hotel)
   - **travelMinutes**: 0
   - **order**: 23
   - **timeNote**: 
@@ -1363,7 +1363,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-22
   - **startTime**: 21:30
   - **endTime**: —
-  - **title**: Curfew
+  - **title**: Return to Hotel
   - **location**: Shinagawa Prince Hotel
   - **description**: Return to the hotel by 21:30.
   - **companyId**: —
@@ -1375,9 +1375,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-22
   - **startTime**: 22:00
   - **endTime**: —
-  - **title**: Roll call
+  - **title**: Attendance Check
   - **location**: Shinagawa Prince Hotel
-  - **description**: Roll call is at 22:00.
+  - **description**: Teachers will check attendance at 22:00.
   - **companyId**: —
   - **transport**: —
   - **travelMinutes**: 0
@@ -1401,7 +1401,7 @@ Generated from source data and translations. Field names match the JSON files. R
   - **endTime**: 13:10
   - **title**: Visit Yomiuri Print Media
   - **location**: Yomiuri Print Media
-  - **description**: The itinerary does not specify the exact visit site. After the visit, take the bus to Tokyo Station.
+  - **description**: Details of the specific visit site are not listed. Take the bus to Tokyo Station after the visit.
   - **companyId**: yomiuri
   - **transport**: —
   - **travelMinutes**: 0
@@ -1411,9 +1411,9 @@ Generated from source data and translations. Field names match the JSON files. R
   - **date**: 2026-10-23
   - **startTime**: 14:20
   - **endTime**: —
-  - **title**: Trip ends at Tokyo Station / lunch
+  - **title**: Disband & Lunch at Tokyo Station
   - **location**: Tokyo Station
-  - **description**: Arrange your own lunch. You may also eat on the bus.
+  - **description**: Arrange your own lunch. Eating on the bus is permitted.
   - **companyId**: —
   - **transport**: Bus
   - **travelMinutes**: 0
@@ -1481,9 +1481,9 @@ Generated from source data and translations. Field names match the JSON files. R
 ### companies
 
 -   - **id**: tgs
-  - **name**: Tokyo Metropolitan Sewerage Service
-  - **legalName**: Tokyo Metropolitan Sewerage Service
-  - **industry**: Industry: Services (environmental and infrastructure maintenance / public-private enterprise)
+  - **name**: Tokyo Sewerage Service
+  - **legalName**: Tokyo Sewerage Service
+  - **industry**: Services (environmental and infrastructure maintenance / public-private enterprise)
   - **description**: Visit on October 20, 14:00–16:00.
   - **image**: /images/company.svg
   - **business**:
@@ -1504,9 +1504,9 @@ Generated from source data and translations. Field names match the JSON files. R
     - What opportunities and career paths allow young engineers to participate in overseas projects?
   - **website**: https://www.tgs-sw.co.jp
 -   - **id**: meti
-  - **name**: Ministry of Economy, Trade and Industry
-  - **legalName**: Ministry of Economy, Trade and Industry
-  - **industry**: Industry: Central government ministry
+  - **name**: METI
+  - **legalName**: METI
+  - **industry**: Government agency (central government ministry)
   - **description**: Visit on October 21, 10:00–12:00.
   - **image**: /images/company.svg
   - **business**:
@@ -1550,7 +1550,7 @@ Generated from source data and translations. Field names match the JSON files. R
 -   - **id**: renesas
   - **name**: Renesas Electronics
   - **legalName**: Renesas Electronics
-  - **industry**: Industry: Electrical equipment (semiconductor manufacturing)
+  - **industry**: Electrical equipment (semiconductor manufacturing)
   - **description**: Visit on October 22, 9:30–11:30.
   - **image**: /images/company.svg
   - **business**:
@@ -1570,9 +1570,9 @@ Generated from source data and translations. Field names match the JSON files. R
     - Which areas are priorities in developing semiconductors for next-generation EVs and autonomous driving?
   - **website**: https://www.renesas.com/ja
 -   - **id**: keio-sfc
-  - **name**: Keio University Shonan Fujisawa Campus
-  - **legalName**: Keio University Shonan Fujisawa Campus
-  - **industry**: Industry: Education and research (higher education)
+  - **name**: Keio University SFC
+  - **legalName**: Keio University SFC
+  - **industry**: Education and research institution (higher education)
   - **description**: Visit on October 22, 13:30–16:00, including lunch at the campus cafeteria.
   - **image**: /images/company.svg
   - **business**:
@@ -1594,7 +1594,7 @@ Generated from source data and translations. Field names match the JSON files. R
 -   - **id**: yomiuri
   - **name**: Yomiuri Print Media
   - **legalName**: Yomiuri Print Media
-  - **industry**: Industry: Printing and related services (Yomiuri Shimbun Group)
+  - **industry**: Printing and related industries (Yomiuri Shimbun Group)
   - **description**: Visit on October 23, 11:30–13:10.
   - **image**: /images/company.svg
   - **business**:

@@ -633,5 +633,19 @@
   "地図で表示": "Show on map",
   "進行中": "NOW",
   "開発モード（キャッシュ無効）": "Development mode (cache disabled)",
-  "業種": "Industry"
+  "業種": "Industry",
+  "インターネット関連 / 広告制作・Web制作 / 情報処理": "Internet services / advertising and web production / information processing",
+  "サービス業（ソフトウエア、情報処理、機械設計など）": "Services (software, information processing, mechanical design, etc.)",
+  "環境サービス（リサイクル業）": "Environmental services (recycling)",
+  "情報通信業 / 電気機器": "Information and communications / electrical equipment",
+  "サービス業（環境・インフラ維持管理 / 第三セクター）": "Services (environmental and infrastructure maintenance / public-private enterprise)",
+  "行政機関（国の行政機関）": "Government agency (national ministry)",
+  "行政機関（税関・財務省の地方支分部局）": "Government agency (regional branch of the Ministry of Finance / Customs)",
+  "製造業（半導体）": "Manufacturing (semiconductors)",
+  "教育・研究機関（私立大学）": "Education and research institution (private university)",
+  "製造業（新聞印刷）": "Manufacturing (newspaper printing)",
+  "中央省庁（行政機関）": "Government agency (central government ministry)",
+  "電気機器（半導体製造）": "Electrical equipment (semiconductor manufacturing)",
+  "教育・研究機関（高等教育）": "Education and research institution (higher education)",
+  "印刷・同関連業（読売新聞グループ）": "Printing and related industries (Yomiuri Shimbun Group)"
 }

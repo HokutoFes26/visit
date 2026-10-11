@@ -708,7 +708,7 @@
 -   - **id**: members
   - **name**: 株式会社メンバーズ
   - **legalName**: 株式会社メンバーズ
-  - **industry**: 業種：インターネット関連 / 広告制作・Web制作 / 情報処理
+  - **industry**: インターネット関連 / 広告制作・Web制作 / 情報処理
   - **description**: 10月21日 14:30〜16:30。14:00に晴海アイランドトリトンスクエア オフィスタワーXへ集合します。
   - **image**: /images/company.svg
   - **business**:
@@ -730,7 +730,7 @@
 -   - **id**: sus
   - **name**: 株式会社エスユーエス
   - **legalName**: 株式会社エスユーエス
-  - **industry**: 業種：サービス業（ソフトウエア、情報処理、機械設計など）
+  - **industry**: サービス業（ソフトウエア、情報処理、機械設計など）
   - **description**: 10月22日 9:20〜11:30に見学します。具体的な訪問拠点は資料に記載されていません。
   - **image**: /images/company.svg
   - **business**:
@@ -753,7 +753,7 @@
 -   - **id**: toko
   - **name**: 東港金属
   - **legalName**: 東港金属
-  - **industry**: 業種：環境サービス（リサイクル業）
+  - **industry**: 環境サービス（リサイクル業）
   - **description**: 10月22日 14:00〜16:00に千葉工場を見学します。
   - **image**: /images/company.svg
   - **business**:
@@ -773,7 +773,7 @@
 -   - **id**: nec
   - **name**: NEC
   - **legalName**: NEC
-  - **industry**: 業種：情報通信業 / 電気機器
+  - **industry**: 情報通信業 / 電気機器
   - **description**: 10月23日 10:00から見学し、12:00に現地解散します。具体的な訪問拠点は資料に記載されていません。
   - **image**: /images/company.svg
   - **business**:
@@ -1483,7 +1483,7 @@
 -   - **id**: tgs
   - **name**: 東京都下水道サービス
   - **legalName**: 東京都下水道サービス
-  - **industry**: 業種：サービス業（環境・インフラ維持管理 / 第三セクター）
+  - **industry**: サービス業（環境・インフラ維持管理 / 第三セクター）
   - **description**: 10月20日14:00〜16:00に見学します。
   - **image**: /images/company.svg
   - **business**:
@@ -1506,7 +1506,7 @@
 -   - **id**: meti
   - **name**: 経済産業省
   - **legalName**: 経済産業省
-  - **industry**: 業種：中央省庁（行政機関）
+  - **industry**: 中央省庁（行政機関）
   - **description**: 10月21日10:00〜12:00に見学します。
   - **image**: /images/company.svg
   - **business**:
@@ -1550,7 +1550,7 @@
 -   - **id**: renesas
   - **name**: ルネサスエレクトロニクス
   - **legalName**: ルネサスエレクトロニクス
-  - **industry**: 業種：電気機器（半導体製造）
+  - **industry**: 電気機器（半導体製造）
   - **description**: 10月22日9:30〜11:30に見学します。
   - **image**: /images/company.svg
   - **business**:
@@ -1572,7 +1572,7 @@
 -   - **id**: keio-sfc
   - **name**: 慶應義塾大学 湘南藤沢キャンパス
   - **legalName**: 慶應義塾大学 湘南藤沢キャンパス
-  - **industry**: 業種：教育・研究機関（高等教育）
+  - **industry**: 教育・研究機関（高等教育）
   - **description**: 10月22日13:30〜16:00に見学し、学食で昼食をとります。
   - **image**: /images/company.svg
   - **business**:
@@ -1594,7 +1594,7 @@
 -   - **id**: yomiuri
   - **name**: 読売プリントメディア
   - **legalName**: 読売プリントメディア
-  - **industry**: 業種：印刷・同関連業（読売新聞グループ）
+  - **industry**: 印刷・同関連業（読売新聞グループ）
   - **description**: 10月23日11:30〜13:10に見学します。
   - **image**: /images/company.svg
   - **business**:
