@@ -329,19 +329,14 @@ export function PwaSettings() {
             </Text>
             <Box
               p="sm"
-              style={{
-                background: "var(--surface-secondary)",
-                borderRadius: 8,
-                border: "1px solid var(--border)",
-              }}
             >
-              <Text size="xs" fw={600} mb={4}>
+              <Text size="xs" fw={600} mb={4} c="var(--blue)">
                 {t("iPhone (Safari) の場合:")}
               </Text>
               <Text size="xs" c="dimmed">
                 {t("画面下の中央にある「共有ボタン（四角から上矢印のアイコン）」を押し、メニューから「ホーム画面に追加」を選択してください。")}
               </Text>
-              <Text size="xs" fw={600} mt={8} mb={4}>
+              <Text size="xs" fw={600} mt={8} mb={4} c="var(--blue)">
                 {t("Android (Chrome) の場合:")}
               </Text>
               <Text size="xs" c="dimmed">

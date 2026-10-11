@@ -38,7 +38,6 @@ export function Sidebar({ logout }: { logout: () => void }) {
         >
           {t("ログアウト")}
         </Button>
-        <small>{t("UI change · v0.3")}</small>
       </div>
     </aside>
   );
