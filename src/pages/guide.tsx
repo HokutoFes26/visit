@@ -23,80 +23,79 @@ export default function GuidePage() {
   return (
     <>
       <PageTitle title={t("見学ガイド")} />
-      <Card mb="lg" radius="lg">
-        <Group align="flex-start" gap="md" wrap="nowrap">
-          <ThemeIcon size={46} radius="xl" color="var(--accent-neon)" variant="light">
-            <MapPin size={24} />
-          </ThemeIcon>
-          <Box style={{ flex: 1 }}>
-            <Badge
-              variant="light"
-              color="var(--accent-neon)"
-              size="md"
-              radius="xl"
-              mb={6}
-              style={{ fontWeight: 700 }}
-            >
-              {t("集合場所")}
-            </Badge>
-            <Title order={2} size="h3" mb={4}>
-              {t(event.meetingPlace)}
-            </Title>
-            <Text
-              size="sm"
-              fw={600}
-              style={{ color: "var(--accent-neon)" }}
-              mb={4}
-            >
-              {t(formatDate(event.date))} · {formatTime(event.meetingTime)}
-              {t("集合")}
-            </Text>
-            <Text size="sm" c="dimmed">
-              {t(event.meetingNote)}
-            </Text>
-          </Box>
-        </Group>
-      </Card>
-
-      <Card mb="lg" radius="lg">
-        <SectionTitle title={t("配布資料")} />
-        <Text size="sm" c="dimmed" mb="md">
-          {t("部屋割りや座席表などの資料は、個人情報保護のため学校のTeamsで閲覧できます。")}
-        </Text>
-        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
-          {guide.documents.map((document) => {
-            const linkUrl = (document as { url?: string; file?: string }).url || (document.file ? assetUrl(document.file) : "");
-            return (
-              <Box key={document.id} style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                <Title order={5}>{t(document.title)}</Title>
-                {linkUrl ? (
-                  <Group gap="sm" wrap="wrap">
-                    <Button
-                      component="a"
-                      href={linkUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      variant="light"
-                      color="var(--accent-neon)"
-                      size="sm"
-                      rightSection={<ExternalLink size={15} />}
-                    >
-                      {t("Teamsで確認")}
-                    </Button>
-                  </Group>
-                ) : (
-                  <>
-                    <Badge variant="light" color="gray" mb="xs">{t("準備中")}</Badge>
-                    <Text size="sm" c="dimmed">{t("資料は準備ができ次第、掲載します。")}</Text>
-                  </>
-                )}
-              </Box>
-            );
-          })}
-        </SimpleGrid>
-      </Card>
-
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg" mb="lg">
+        <Card radius="lg">
+          <Group align="flex-start" gap="md" wrap="nowrap">
+            <ThemeIcon size={46} radius="xl" color="var(--accent-neon)" variant="light">
+              <MapPin size={24} />
+            </ThemeIcon>
+            <Box style={{ flex: 1 }}>
+              <Badge
+                variant="light"
+                color="var(--accent-neon)"
+                size="md"
+                radius="xl"
+                mb={6}
+                style={{ fontWeight: 700 }}
+              >
+                {t("集合場所")}
+              </Badge>
+              <Title order={2} size="h3" mb={4}>
+                {t(event.meetingPlace)}
+              </Title>
+              <Text
+                size="sm"
+                fw={600}
+                style={{ color: "var(--accent-neon)" }}
+                mb={4}
+              >
+                {t(formatDate(event.date))} · {formatTime(event.meetingTime)}
+                {t("集合")}
+              </Text>
+              <Text size="sm" c="dimmed">
+                {t(event.meetingNote)}
+              </Text>
+            </Box>
+          </Group>
+        </Card>
+
+        <Card radius="lg">
+          <SectionTitle title={t("配布資料")} />
+          <Text size="sm" c="dimmed" mb="md">
+            {t("部屋割りや座席表などの資料は、個人情報保護のため学校のTeamsで閲覧できます。")}
+          </Text>
+          <SimpleGrid cols={1} spacing="lg">
+            {guide.documents.map((document) => {
+              const linkUrl = (document as { url?: string; file?: string }).url || (document.file ? assetUrl(document.file) : "");
+              return (
+                <Box key={document.id} style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <Title order={5}>{t(document.title)}</Title>
+                  {linkUrl ? (
+                    <Group gap="sm" wrap="wrap">
+                      <Button
+                        component="a"
+                        href={linkUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        variant="light"
+                        color="var(--accent-neon)"
+                        size="sm"
+                        rightSection={<ExternalLink size={15} />}
+                      >
+                        {t("Teamsで確認")}
+                      </Button>
+                    </Group>
+                  ) : (
+                    <>
+                      <Badge variant="light" color="var(--accent-neon)" size="lg" radius="xl">{t("準備中")}</Badge>
+                    </>
+                  )}
+                </Box>
+              );
+            })}
+          </SimpleGrid>
+        </Card>
+
         {guide.sections.map((section) => (
           <Card key={section.title} radius="lg">
             <SectionTitle title={t(section.title)} />
