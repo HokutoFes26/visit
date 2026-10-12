@@ -89,7 +89,7 @@ export default function SightseeingPage() {
                   size="xs"
                   variant={areaId === item.id ? "white" : "light"}
                   color="var(--accent)"
-                  circle
+                  radius="xl"
                 >
                   {count}
                 </Badge>
