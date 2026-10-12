@@ -301,6 +301,270 @@
       "sourceUrl": "https://www.tsukiji.or.jp/shoplist/cat-a/cat-1/372/"
     },
     {
+      "id": "nihonbashi-bridge",
+      "areaId": "central-tokyo",
+      "enabled": true,
+      "name": {
+        "ja": "日本橋（国重要文化財）",
+        "en": "Nihonbashi Bridge"
+      },
+      "description": {
+        "ja": "江戸時代より日本の道路網の起点となった歴史ある橋。華麗な西洋風の石像建築や「日本国道路元標」が見どころ。",
+        "en": "Historic bridge serving as Japan's zero-kilometer milestone for highway networks since the Edo period, featuring ornate stone decorations."
+      },
+      "access": {
+        "ja": "東京メトロ銀座線・東西線 日本橋駅から徒歩約3分。",
+        "en": "About 3 minutes on foot from Nihonbashi Station."
+      },
+      "cost": {
+        "ja": "見学無料",
+        "en": "Free to view"
+      },
+      "duration": {
+        "ja": "15〜30分",
+        "en": "15–30 min"
+      },
+      "note": {
+        "ja": "橋の中央にある「日本国道路元標」のレプリカと一緒に記念撮影ができます。",
+        "en": "Take photos with the 'Nihon-koku Douro Gengenhyo' monument replica in the center."
+      },
+      "latitude": 35.6852,
+      "longitude": 139.7733,
+      "website": "https://www.chuo-kanko.or.jp/spot/spot/137.html",
+      "sourceUrl": "https://www.chuo-kanko.or.jp/spot/spot/137.html"
+    },
+    {
+      "id": "nihonbashi-tamai",
+      "areaId": "central-tokyo",
+      "enabled": true,
+      "name": {
+        "ja": "日本橋 玉ゐ（あなご料理）",
+        "en": "Nihonbashi Tamai (Anago Specialty)"
+      },
+      "description": {
+        "ja": "昭和初期の趣を残す木造建築で、厳選された天然あなごを使った絶品「箱めし」を味わえる名店。",
+        "en": "Renowned independent restaurant housed in a retro Taisho-era building, serving exquisite conger eel (anago) rice boxes."
+      },
+      "access": {
+        "ja": "東京メトロ日本橋駅から徒歩約5分。",
+        "en": "About 5 minutes on foot from Nihonbashi Station."
+      },
+      "cost": {
+        "ja": "2,500円〜5,000円",
+        "en": "Approx. ¥2,500–¥5,000"
+      },
+      "duration": {
+        "ja": "45〜60分",
+        "en": "45–60 min"
+      },
+      "note": {
+        "ja": "ふっくら煮上げた「うドン」や香ばしい焼き穴子の食べ比べが人気です。",
+        "en": "Try both boiled and grilled anago styles for the ultimate experience."
+      },
+      "latitude": 35.6829,
+      "longitude": 139.7745,
+      "website": "https://www.anago-tamai.com/",
+      "sourceUrl": "https://www.anago-tamai.com/"
+    },
+    {
+      "id": "kanda-yoshida",
+      "areaId": "central-tokyo",
+      "enabled": true,
+      "name": {
+        "ja": "神田まつや",
+        "en": "Kanda Matsuya"
+      },
+      "description": {
+        "ja": "明治17年創業の老舗蕎麦店。木造建築の情緒ある店内で、職人手打ちの香り高い江戸蕎麦と名物の「ごま蕎麦」や酒肴を堪能できます。",
+        "en": "Historic soba restaurant founded in 1884, serving hand-crafted traditional Edo soba inside a charming heritage wooden building."
+      },
+      "access": {
+        "ja": "都営新宿線 小川町駅または東京メトロ淡路町駅から徒歩約2分。",
+        "en": "About 2 minutes on foot from Ogawamachi or Awajicho Station."
+      },
+      "cost": {
+        "ja": "1,200円〜2,500円",
+        "en": "Approx. ¥1,200–¥2,500"
+      },
+      "duration": {
+        "ja": "40〜60分",
+        "en": "40–60 min"
+      },
+      "note": {
+        "ja": "日曜定休。昼時は行列ができることが多いです。",
+        "en": "Closed Sundays. Expect midday queues."
+      },
+      "latitude": 35.6947,
+      "longitude": 139.7689,
+      "website": "http://www.kanda-matsuya.jp/",
+      "sourceUrl": "http://www.kanda-matsuya.jp/"
+    },
+    {
+      "id": "currency-museum",
+      "areaId": "central-tokyo",
+      "enabled": true,
+      "name": {
+        "ja": "日本銀行金融研究所 貨幣博物館",
+        "en": "Currency Museum of the Bank of Japan"
+      },
+      "description": {
+        "ja": "日本銀行の敷地隣接地にあり、古代から現代までの日本の貨幣や世界の通貨の歴史を楽しく学べる施設。",
+        "en": "Museum managed by the Bank of Japan, showcasing the fascinating monetary history of Japan from ancient coins to modern banknotes."
+      },
+      "access": {
+        "ja": "東京メトロ半蔵門線 三越前駅B1出口から徒歩約1分。",
+        "en": "About 1 minute on foot from Mitsukoshimae Station Exit B1."
+      },
+      "cost": {
+        "ja": "入館無料",
+        "en": "Free admission"
+      },
+      "duration": {
+        "ja": "45〜60分",
+        "en": "45–60 min"
+      },
+      "note": {
+        "ja": "月曜日休館（祝日の場合は翌平日休館）。本物の1億円（見本）の重さ体験も人気。",
+        "en": "Closed Mondays. Includes a popular hands-on exhibit to lift a replica 100-million-yen bundle."
+      },
+      "latitude": 35.6865,
+      "longitude": 139.7719,
+      "website": "https://www.imes.boj.or.jp/cm/",
+      "sourceUrl": "https://www.imes.boj.or.jp/cm/access/index.html"
+    },
+    {
+      "id": "ginza-shiseido-parlour",
+      "areaId": "central-tokyo",
+      "enabled": true,
+      "name": {
+        "ja": "資生堂パーラー 銀座本店",
+        "en": "Shiseido Parlour Ginza"
+      },
+      "description": {
+        "ja": "明治時代からの歴史を持つ、資生堂が手がけるハイカラな老舗洋食レストラン＆カフェ。伝統のアイスクリームや洋食が楽しめます。",
+        "en": "Historic high-end Western-style restaurant and cafe operated by Shiseido since 1902, famous for classic parfaits and cuisine."
+      },
+      "access": {
+        "ja": "東京メトロ銀座駅B5出口から徒歩約5分。",
+        "en": "About 5 minutes on foot from Ginza Station Exit B5."
+      },
+      "cost": {
+        "ja": "カフェ 2,000円〜 / レストラン 5,000円〜",
+        "en": "Cafe ¥2,000+ / Restaurant ¥5,000+"
+      },
+      "duration": {
+        "ja": "60〜90分",
+        "en": "60–90 min"
+      },
+      "note": {
+        "ja": "月曜定休（祝日の場合は営業）。美しい季節のパフェが絶品です。",
+        "en": "Closed Mondays. Their seasonal parfaits are legendary."
+      },
+      "latitude": 35.6713,
+      "longitude": 139.7642,
+      "website": "https://parlour.shiseido.co.jp/",
+      "sourceUrl": "https://parlour.shiseido.co.jp/shoplist/ginza/"
+    },
+    {
+      "id": "mitsubishi-ichigokan-museum",
+      "areaId": "central-tokyo",
+      "enabled": true,
+      "name": {
+        "ja": "三菱一号館美術館",
+        "en": "Mitsubishi Ichigokan Museum, Tokyo"
+      },
+      "description": {
+        "ja": "丸の内に復元された19世紀後半のレンガ造り建築を用いた美術館。中庭やクラシックなカフェも併設されています。",
+        "en": "Art museum housed in a faithful reconstruction of a 19th-century red-brick western building in Marunouchi, featuring a tranquil courtyard."
+      },
+      "access": {
+        "ja": "JR東京駅丸の内南口から徒歩約5分、有楽町駅から徒歩5分。",
+        "en": "About 5 minutes on foot from Tokyo Station Marunouchi South Exit or Yurakucho Station."
+      },
+      "cost": {
+        "ja": "展覧会により異なる",
+        "en": "Varies by exhibition"
+      },
+      "duration": {
+        "ja": "60〜90分",
+        "en": "60–90 min"
+      },
+      "note": {
+        "ja": "併設の「Cafe 1894」は銀行営業室を復元したクラシックな空間として人気です。",
+        "en": "The attached 'Cafe 1894' is renowned for its stunning restored banking hall interior."
+      },
+      "latitude": 35.6782,
+      "longitude": 139.7628,
+      "website": "https://mimt.jp/",
+      "sourceUrl": "https://mimt.jp/access/"
+    },
+    {
+      "id": "ginza-kimuraya",
+      "areaId": "central-tokyo",
+      "enabled": true,
+      "name": {
+        "ja": "銀座木村家 本店",
+        "en": "Ginza Kimuraya"
+      },
+      "description": {
+        "ja": "明治2年に日本で初めて「あんぱん」を考案したことで知られる、銀座の老舗ベーカリー。2階以上のカフェでは焼きたてパンや洋食を提供。",
+        "en": "The legendary Ginza bakery that invented Japan's iconic 'Anpan' (sweet red bean bun) in 1869, complete with bakery and cafe floors."
+      },
+      "access": {
+        "ja": "東京メトロ銀座駅A9出口直結。",
+        "en": "Directly connected to Ginza Station Exit A9."
+      },
+      "cost": {
+        "ja": "500円〜2,000円",
+        "en": "Approx. ¥500–¥2,000"
+      },
+      "duration": {
+        "ja": "20〜45分",
+        "en": "20–45 min"
+      },
+      "note": {
+        "ja": "定番の酒種あんぱんは手土産やその場のおやつに最適です。",
+        "en": "The signature sake-yeast anpan buns make wonderful snacks or souvenirs."
+      },
+      "latitude": 35.6713,
+      "longitude": 139.7651,
+      "website": "https://www.kimuraya-sohonten.co.jp/",
+      "sourceUrl": "https://www.kimuraya-sohonten.co.jp/directshop/ginza"
+    },
+    {
+      "id": "tsukiji-shoro",
+      "areaId": "central-tokyo",
+      "enabled": true,
+      "name": {
+        "ja": "つきじ松露（卵焼き）",
+        "en": "Tsukiji Shoro (Tamagoyaki)"
+      },
+      "description": {
+        "ja": "築地場外市場で代々続く、職人が出汁にこだわり焼き上げる極上の卵焼き専門店。ふんわりとした甘口の味わいが大人気。",
+        "en": "Beloved Tsukiji specialist shop famous for crafting luxurious, fluffy, dashi-infused rolled Japanese omelets (tamagoyaki)."
+      },
+      "access": {
+        "ja": "都営大江戸線 築地市場駅から徒歩約4分。",
+        "en": "About 4 minutes on foot from Tsukijishijo Station."
+      },
+      "cost": {
+        "ja": "200円〜1,000円",
+        "en": "Approx. ¥200–¥1,000"
+      },
+      "duration": {
+        "ja": "15〜20分",
+        "en": "15–20 min"
+      },
+      "note": {
+        "ja": "食べ歩き用の串刺し卵焼きや、お土産用のホールサイズを購入できます。",
+        "en": "Available in single-skewer portions for street snacking or whole blocks to take home."
+      },
+      "latitude": 35.6654,
+      "longitude": 139.7709,
+      "website": "https://www.shoro-net.com/",
+      "sourceUrl": "https://www.shoro-net.com/"
+    },
+    {
       "id": "meiji-jingu",
       "areaId": "shinjuku-shibuya",
       "enabled": true,
@@ -431,6 +695,204 @@
       "longitude": 139.7028,
       "website": "https://www.tunahachi.co.jp/",
       "sourceUrl": "https://www.tunahachi.co.jp/store/1/"
+    },
+    {
+      "id": "shinjuku-omoide-yokocho",
+      "areaId": "shinjuku-shibuya",
+      "enabled": true,
+      "name": {
+        "ja": "新宿西口思い出横丁",
+        "en": "Shinjuku Omoide Yokocho"
+      },
+      "description": {
+        "ja": "昭和レトロな雰囲気を色濃く残す、狭い路地に焼き鳥店や飲み屋が密集する横丁。昭和のディープな東京を体験できます。",
+        "en": "A nostalgic maze of narrow alleyways near Shinjuku Station packed with atmospheric yakitori stalls and tiny bars."
+      },
+      "access": {
+        "ja": "JR新宿駅西口から徒歩約2分。",
+        "en": "About 2 minutes on foot from JR Shinjuku Station West Exit."
+      },
+      "cost": {
+        "ja": "1,500円〜3,000円",
+        "en": "Approx. ¥1,500–¥3,000"
+      },
+      "duration": {
+        "ja": "45〜75分",
+        "en": "45–75 min"
+      },
+      "note": {
+        "ja": "現金のみ対応の店舗が多いので、少額の現金を用意しておくと安心です。",
+        "en": "Many small stalls are cash-only; bring small bills."
+      },
+      "latitude": 35.6917,
+      "longitude": 139.6994,
+      "website": "https://shinjuku-omoide.com/",
+      "sourceUrl": "https://shinjuku-omoide.com/"
+    },
+    {
+      "id": "shinjuku-golden-gai",
+      "areaId": "shinjuku-shibuya",
+      "enabled": true,
+      "name": {
+        "ja": "新宿ゴールデン街",
+        "en": "Shinjuku Golden Gai"
+      },
+      "description": {
+        "ja": "戦後のバラックの面影を残す、200軒以上の小さなバーが迷路のように密集する世界的にもユニークな一画。",
+        "en": "A unique historic drinking district featuring over 200 tiny, eccentric bars squeezed into narrow alleyways."
+      },
+      "access": {
+        "ja": "JR新宿駅東口から徒歩約5分。",
+        "en": "About 5 minutes on foot from JR Shinjuku Station East Exit."
+      },
+      "cost": {
+        "ja": "チャージ料＋一杯で 1,500円〜3,000円",
+        "en": "Cover charge + drink: ¥1,500–¥3,000"
+      },
+      "duration": {
+        "ja": "60〜90分",
+        "en": "60–90 min"
+      },
+      "note": {
+        "ja": "多くの店でチャージ料（席料）がかかります。入店前に確認するのがおすすめ。",
+        "en": "Most bars charge a seating/cover fee. Check prices before entering."
+      },
+      "latitude": 35.6939,
+      "longitude": 139.7042,
+      "website": "http://goldengai.jp/",
+      "sourceUrl": "http://goldengai.jp/"
+    },
+    {
+      "id": "tokyo-metropolitan-gov",
+      "areaId": "shinjuku-shibuya",
+      "enabled": true,
+      "name": {
+        "ja": "東京都庁 展望室",
+        "en": "Tokyo Metropolitan Government Building Observation Deck"
+      },
+      "description": {
+        "ja": "丹下健三氏が設計した新宿の高層ビル群のシンボル。地上202メートルの高さから東京の街並みを無料で一望できます。",
+        "en": "Iconic twin-tower skyscraper designed by Kenzo Tange, offering free panoramic observation decks 202 meters above ground."
+      },
+      "access": {
+        "ja": "都営大江戸線 都庁前駅からすぐ、JR新宿駅西口から徒歩約10分。",
+        "en": "Directly connected to Tochomae Station, or about 10 minutes from JR Shinjuku Station."
+      },
+      "cost": {
+        "ja": "展望室の入場は無料",
+        "en": "Free admission to the observation decks"
+      },
+      "duration": {
+        "ja": "45〜60分",
+        "en": "45–60 min"
+      },
+      "note": {
+        "ja": "南展望室と北展望室で開室時間や休室日が異なります。",
+        "en": "Opening hours and days vary between the South and North observation towers."
+      },
+      "latitude": 35.6895,
+      "longitude": 139.6917,
+      "website": "https://www.yokohama-tochou.yokoso.metro.tokyo.lg.jp/",
+      "sourceUrl": "https://www.metro.tokyo.lg.jp/tosei/hodohappyo/press/2023/12/14/14.html"
+    },
+    {
+      "id": "shibuya-sky",
+      "areaId": "shinjuku-shibuya",
+      "enabled": true,
+      "name": {
+        "ja": "SHIBUYA SKY（渋谷スカイ）",
+        "en": "SHIBUYA SKY"
+      },
+      "description": {
+        "ja": "渋谷スクランブルスクエアの屋上に位置する、オープンエアの展望施設。遮るもののない360度の東京ビューを体感できます。",
+        "en": "Open-air rooftop observation deck atop Shibuya Scramble Square, offering breathtaking 360-degree panoramic views of Tokyo."
+      },
+      "access": {
+        "ja": "JR渋谷駅直結（渋谷スクランブルスクエア上層階）。",
+        "en": "Directly connected to JR Shibuya Station inside Shibuya Scramble Square."
+      },
+      "cost": {
+        "ja": "大人 2,200円〜2,500円（事前WEB予約推奨）",
+        "en": "Adults ¥2,200–¥2,500 (Advance web booking highly recommended)"
+      },
+      "duration": {
+        "ja": "60〜90分",
+        "en": "60–90 min"
+      },
+      "note": {
+        "ja": "夕方や夜景の時間帯は人気が高いため、早めの予約が必須です。",
+        "en": "Sunset and night view slots sell out fast; book well in advance."
+      },
+      "latitude": 35.658,
+      "longitude": 139.702,
+      "website": "https://www.shibuya-scramble-square.com/sky/",
+      "sourceUrl": "https://www.shibuya-scramble-square.com/sky/ticket/"
+    },
+    {
+      "id": "menya-musashi-shinjuku",
+      "areaId": "shinjuku-shibuya",
+      "enabled": true,
+      "name": {
+        "ja": "麺屋武蔵 新宿総本店",
+        "en": "Menya Musashi Shinjuku"
+      },
+      "description": {
+        "ja": "1996年のオープン以来、東京のラーメンシーンを牽引し続ける革新的な人気ラーメン店。魚介と動物系のダブルスープが特徴。",
+        "en": "Legendary pioneer of Tokyo's modern ramen revolution since 1996, famous for its rich pork-and-seafood double broth."
+      },
+      "access": {
+        "ja": "JR新宿駅西口から徒歩約6分。",
+        "en": "About 6 minutes on foot from JR Shinjuku Station West Exit."
+      },
+      "cost": {
+        "ja": "1,000円〜1,600円",
+        "en": "Approx. ¥1,000–¥1,600"
+      },
+      "duration": {
+        "ja": "30〜45分",
+        "en": "30–45 min"
+      },
+      "note": {
+        "ja": "名物の角煮が乗った武蔵ラーメンや濃厚つけ麺が人気です。",
+        "en": "Try their signature 'Musashi Ramen' topped with melt-in-your-mouth braised pork belly."
+      },
+      "latitude": 35.6924,
+      "longitude": 139.6975,
+      "website": "http://www.menya634.co.jp/",
+      "sourceUrl": "http://www.menya634.co.jp/shoplist/shinjuku/"
+    },
+    {
+      "id": "nezu-museum",
+      "areaId": "shinjuku-shibuya",
+      "enabled": true,
+      "name": {
+        "ja": "根津美術館",
+        "en": "Nezu Museum"
+      },
+      "description": {
+        "ja": "日本および東洋の古美術品を多数収蔵。隈研吾氏設計の美しい竹の回廊アプローチと、都心とは思えない広大な日本庭園が魅力。",
+        "en": "Museum housing pre-modern Japanese and East Asian art, featuring an iconic bamboo entryway designed by Kengo Kuma and a vast stroll garden."
+      },
+      "access": {
+        "ja": "東京メトロ表参道駅A5出口から徒歩約8分。",
+        "en": "About 8 minutes on foot from Omotesando Station Exit A5."
+      },
+      "cost": {
+        "ja": "一般 1,500円（展覧会により異なる）",
+        "en": "General admission ¥1,500 (Varies by exhibition)"
+      },
+      "duration": {
+        "ja": "60〜90分",
+        "en": "60–90 min"
+      },
+      "note": {
+        "ja": "月曜日休館。庭園内には本格的な茶室もあり、静かな散策を楽しめます。",
+        "en": "Closed Mondays. The tranquil Japanese garden is perfect for a peaceful walk."
+      },
+      "latitude": 35.6625,
+      "longitude": 139.7171,
+      "website": "https://www.nezu-muse.or.jp/",
+      "sourceUrl": "https://www.nezu-muse.or.jp/guide/"
     },
     {
       "id": "sensoji",
@@ -578,7 +1040,7 @@
       },
       "access": {
         "ja": "JR秋葉原駅電気街口または東京メトロ淡路町駅から徒歩約5分。",
-        "en": "About 5 minutes on foot from Akihabara or Awajicho Station."
+        "en": "About 5 minutes on foot from Akabara or Awajicho Station."
       },
       "cost": {
         "ja": "1,500円〜3,000円",
@@ -596,6 +1058,171 @@
       "longitude": 139.7703,
       "website": "https://www.yabusoba.net/",
       "sourceUrl": "https://www.yabusoba.net/access/"
+    },
+    {
+      "id": "yanaka-ginza",
+      "areaId": "shitamachi-ueno",
+      "enabled": true,
+      "name": {
+        "ja": "谷中銀座商店街",
+        "en": "Yanaka Ginza Shopping Street"
+      },
+      "description": {
+        "ja": "昭和のレトロな下町情緒が色濃く残る商店街。夕焼けだんだんからの景色や、猫が多く暮らす温かい雰囲気が魅力。",
+        "en": "A nostalgic retro shopping street retaining the warm, old-school Shitamachi atmosphere of Tokyo, famous for sunset views and friendly stray cats."
+      },
+      "access": {
+        "ja": "JR日暮里駅西口から徒歩約5分。",
+        "en": "About 5 minutes on foot from JR Nippori Station West Exit."
+      },
+      "cost": {
+        "ja": "散策無料",
+        "en": "Free to explore"
+      },
+      "duration": {
+        "ja": "45〜60分",
+        "en": "45–60 min"
+      },
+      "note": {
+        "ja": "食べ歩きできるコロッケや和菓子店が多く軒を連ねています。",
+        "en": "Great spot for street food snacks like croquettes and traditional sweets."
+      },
+      "latitude": 35.7274,
+      "longitude": 139.7662,
+      "website": "https://www.yanakaginza.com/",
+      "sourceUrl": "https://www.yanakaginza.com/"
+    },
+    {
+      "id": "kappabashi-tools",
+      "areaId": "shitamachi-ueno",
+      "enabled": true,
+      "name": {
+        "ja": "合羽橋道具街",
+        "en": "Kappabashi Dougu Street"
+      },
+      "description": {
+        "ja": "調理器具、食器、食品サンプル、看板など料理に関するあらゆる専門店が約1kmにわたり並ぶ日本一の道具街。",
+        "en": "A specialized 1-kilometer street lined with wholesale shops for cookware, tableware, restaurant furniture, and realistic food samples."
+      },
+      "access": {
+        "ja": "つくばエクスプレス浅草駅から徒歩約5分、東京メトロ田原町駅から徒歩約5分。",
+        "en": "About 5 minutes on foot from Asakusa Station (Tsukuba Express) or Tawaramachi Station."
+      },
+      "cost": {
+        "ja": "散策無料",
+        "en": "Free to walk and browse"
+      },
+      "duration": {
+        "ja": "60〜90分",
+        "en": "60–90 min"
+      },
+      "note": {
+        "ja": "日曜日は休業している店舗が多いので注意が必要です。",
+        "en": "Many shops are closed on Sundays; plan weekday or Saturday visits."
+      },
+      "latitude": 35.7132,
+      "longitude": 139.7878,
+      "website": "https://www.kappabashi.or.jp/",
+      "sourceUrl": "https://www.kappabashi.or.jp/access/"
+    },
+    {
+      "id": "asakusa-kagetsudo",
+      "areaId": "shitamachi-ueno",
+      "enabled": true,
+      "name": {
+        "ja": "花月堂（ジャンボめろんぱん）",
+        "en": "Asakusa Kagetsudo (Jumbo Melonpan)"
+      },
+      "description": {
+        "ja": "浅草寺の近くに本店を構える、外側がサクサクで中はふわふわの巨大メロンパンが名物の行列店。",
+        "en": "Famous bakery near Senso-ji Temple renowned for its signature giant melonpan buns with a crispy crust and fluffy interior."
+      },
+      "access": {
+        "ja": "東京メトロ浅草駅から徒歩約7分。",
+        "en": "About 7 minutes on foot from Asakusa Station."
+      },
+      "cost": {
+        "ja": "250円〜600円",
+        "en": "Approx. ¥250–¥600"
+      },
+      "duration": {
+        "ja": "15〜30分",
+        "en": "15–30 min"
+      },
+      "note": {
+        "ja": "焼き立てがすぐに売り切れる大人気商品です。",
+        "en": "Fresh batches sell out quickly throughout the day."
+      },
+      "latitude": 35.7155,
+      "longitude": 139.7941,
+      "website": "https://asakusa-kagetudo.com/",
+      "sourceUrl": "https://asakusa-kagetudo.com/"
+    },
+    {
+      "id": "tokyo-national-museum",
+      "areaId": "shitamachi-ueno",
+      "enabled": true,
+      "name": {
+        "ja": "東京国立博物館",
+        "en": "Tokyo National Museum"
+      },
+      "description": {
+        "ja": "1872年創設の日本最古にして最大の博物館。国宝や重要文化財を含む日本・東洋の美術品を多数収蔵・展示。",
+        "en": "Japan's oldest and largest museum established in 1872, housing a vast collection of national treasures and Asian antiquities."
+      },
+      "access": {
+        "ja": "JR上野駅公園口から徒歩約10分。",
+        "en": "About 10 minutes on foot from JR Ueno Station Park Exit."
+      },
+      "cost": {
+        "ja": "総合文化展 大人 1,000円",
+        "en": "Regular exhibition: Adults ¥1,000"
+      },
+      "duration": {
+        "ja": "90〜120分",
+        "en": "90–120 min"
+      },
+      "note": {
+        "ja": "月曜日休館。本館や平成館など複数の建物に分かれています。",
+        "en": "Closed Mondays. Consists of several massive exhibition buildings."
+      },
+      "latitude": 35.7188,
+      "longitude": 139.7765,
+      "website": "https://www.tnm.jp/",
+      "sourceUrl": "https://www.tnm.jp/modules/r_free_page/index.php?id=107"
+    },
+    {
+      "id": "ameyoko-market",
+      "areaId": "shitamachi-ueno",
+      "enabled": true,
+      "name": {
+        "ja": "アメ横商店街",
+        "en": "Ameyoko Shopping Street"
+      },
+      "description": {
+        "ja": "上野駅から御徒町駅の高架沿いに続く活気あふれる商店街。鮮魚、乾物、衣料品、アジアの食材など約400店が軒を連ねます。",
+        "en": "Vibrant bustling open-air market running along the railway tracks between Ueno and Okachimachi stations, featuring 400+ shops."
+      },
+      "access": {
+        "ja": "JR上野駅不忍口または御徒町駅から徒歩約2〜3分。",
+        "en": "About 2–3 minutes on foot from JR Ueno or Okachimachi Station."
+      },
+      "cost": {
+        "ja": "散策無料・買い物代は別途",
+        "en": "Free to walk; shopping costs extra"
+      },
+      "duration": {
+        "ja": "30〜60分",
+        "en": "30–60 min"
+      },
+      "note": {
+        "ja": "年末やお祭りの時期は特に熱気と混雑が増します。",
+        "en": "Extremely lively atmosphere, especially crowded during year-end shopping seasons."
+      },
+      "latitude": 35.7093,
+      "longitude": 139.7745,
+      "website": "https://www.ameyoko.net/",
+      "sourceUrl": "https://www.ameyoko.net/"
     },
     {
       "id": "tokyo-tower",
@@ -697,6 +1324,171 @@
       "sourceUrl": "https://www.ukai.co.jp/shiba/access.html"
     },
     {
+      "id": "roppongi-hills-mori-tower",
+      "areaId": "roppongi-minato",
+      "enabled": true,
+      "name": {
+        "ja": "六本木ヒルズ 森タワー（展望台・美術館）",
+        "en": "Roppongi Hills Mori Tower"
+      },
+      "description": {
+        "ja": "六本木の中心にそびえ立つ超高層ビル。上層階には森美術館や、東京を一望できる屋内・屋上展望台（東京シティビュー）があります。",
+        "en": "Landmark skyscraper housing the Mori Art Museum and the stunning Tokyo City View indoor/outdoor rooftop observation decks."
+      },
+      "access": {
+        "ja": "東京メトロ日比谷線 六本木駅1Cコンコースから直結。",
+        "en": "Directly connected to Roppongi Station via underground concourse."
+      },
+      "cost": {
+        "ja": "展望台・美術館共通チケット 約2,000円〜",
+        "en": "Combined observation deck and art museum tickets from approx. ¥2,000"
+      },
+      "duration": {
+        "ja": "90〜120分",
+        "en": "90–120 min"
+      },
+      "note": {
+        "ja": "屋上「スカイデッキ」は天候不良時や強風時に閉鎖される場合があります。",
+        "en": "The open-air rooftop Sky Deck may close during bad weather or high winds."
+      },
+      "latitude": 35.6604,
+      "longitude": 139.7292,
+      "website": "https://www.roppongihills.com/",
+      "sourceUrl": "https://tcv.roppongihills.com/"
+    },
+    {
+      "id": "national-art-center",
+      "areaId": "roppongi-minato",
+      "enabled": true,
+      "name": {
+        "ja": "国立新美術館",
+        "en": "The National Art Center, Tokyo"
+      },
+      "description": {
+        "ja": "黒川紀章氏設計による、波打つガラスカーテンウォールが美しい国内最大級の美術館。コレクションを持たず多彩な企画展を開催。",
+        "en": "One of Japan's largest art exhibition venues featuring a stunning wave-glass facade designed by Kisho Kurokawa, hosting rotating special exhibits."
+      },
+      "access": {
+        "ja": "東京メトロ千代田線 乃木坂駅6出口から直結。",
+        "en": "Directly connected to Nogizaka Station Exit 6."
+      },
+      "cost": {
+        "ja": "観覧料は展覧会ごとに異なる（館内ロビーや建築鑑賞は無料）",
+        "en": "Admission varies by exhibition (lobby and architecture viewing are free)"
+      },
+      "duration": {
+        "ja": "60〜90分",
+        "en": "60–90 min"
+      },
+      "note": {
+        "ja": "火曜日休館（祝日の場合は翌平日休館）。館内の円錐形カフェも人気。",
+        "en": "Closed Tuesdays. Features a striking inverted-cone cafe suspended inside the lobby."
+      },
+      "latitude": 35.6654,
+      "longitude": 139.7279,
+      "website": "https://www.nact.jp/",
+      "sourceUrl": "https://www.nact.jp/information/access.html"
+    },
+    {
+      "id": "zojoji-temple",
+      "areaId": "roppongi-minato",
+      "enabled": true,
+      "name": {
+        "ja": "増上寺",
+        "en": "Zojoji Temple"
+      },
+      "description": {
+        "ja": "徳川家康ゆかりの浄土宗大本山。歴史ある大殿と背後にそびえ立つ東京タワーの対比が、東京らしい美しい景観を生み出しています。",
+        "en": "Head temple of the Jodo sect associated with Tokugawa Ieyasu, offering a striking photographic contrast between historic gates and Tokyo Tower."
+      },
+      "access": {
+        "ja": "都営三田線 御成門駅または芝公園駅から徒歩約3分。",
+        "en": "About 3 minutes on foot from Onarimon or Shiba-koen Station."
+      },
+      "cost": {
+        "ja": "境内散策無料（宝物展示等は有料）",
+        "en": "Free to walk the grounds; exhibition halls require a small fee"
+      },
+      "duration": {
+        "ja": "30〜45分",
+        "en": "30–45 min"
+      },
+      "note": {
+        "ja": "境内に並ぶ無数の可愛らしい「千体地蔵尊」も有名です。",
+        "en": "Famous for its rows of small stone Jizo statues dressed in red caps and bibs."
+      },
+      "latitude": 35.6575,
+      "longitude": 139.7481,
+      "website": "https://www.zojoji.or.jp/",
+      "sourceUrl": "https://www.zojoji.or.jp/access/"
+    },
+    {
+      "id": "azabudai-hills",
+      "areaId": "roppongi-minato",
+      "enabled": true,
+      "name": {
+        "ja": "麻布台ヒルズ",
+        "en": "Azabudai Hills"
+      },
+      "description": {
+        "ja": "「緑に包まれ、人と人をつなぐ広場」をコンセプトにした、日本一の高さを誇る超高層ビルを含む最新の複合街区。",
+        "en": "Modern urban complex centered around Japan's tallest skyscraper, featuring lush rooftop gardens, public art, and dining."
+      },
+      "access": {
+        "ja": "東京メトロ日比谷線 神谷町駅5番出口から直結。",
+        "en": "Directly connected to Kamiyacho Station Exit 5."
+      },
+      "cost": {
+        "ja": "街区の散策は無料",
+        "en": "Free to explore public areas and gardens"
+      },
+      "duration": {
+        "ja": "60〜90分",
+        "en": "60–90 min"
+      },
+      "note": {
+        "ja": "中央広場に設置されたオラファー・エリアソン氏などのパブリックアートが見どころ。",
+        "en": "Features prominent contemporary public art installations throughout the green plazas."
+      },
+      "latitude": 35.66,
+      "longitude": 139.7431,
+      "website": "https://www.azabudai-hills.com/",
+      "sourceUrl": "https://www.azabudai-hills.com/access/"
+    },
+    {
+      "id": "gonpachi-nishiazabu",
+      "areaId": "roppongi-minato",
+      "enabled": true,
+      "name": {
+        "ja": "権八 西麻布",
+        "en": "Gonpachi Nishiazabu"
+      },
+      "description": {
+        "ja": "映画『キル・ビル』のモデルになったことでも世界的に有名な、日本の伝統家屋風のインテリアが圧巻の創作和食レストラン。",
+        "en": "Famous atmospheric izakaya styled after traditional rustic farmhouses, serving robata grill skewers and handmade soba noodles."
+      },
+      "access": {
+        "ja": "東京メトロ六本木駅または広尾駅から徒歩約10分。",
+        "en": "About 10 minutes on foot from Roppongi or Hiroo Station."
+      },
+      "cost": {
+        "ja": "ランチ 1,500円〜 / ディナー 5,000円〜",
+        "en": "Lunch ¥1,500+ / Dinner ¥5,000+"
+      },
+      "duration": {
+        "ja": "60〜90分",
+        "en": "60–90 min"
+      },
+      "note": {
+        "ja": "国内外の著名人も多く訪れる人気のスポットです。事前予約がおすすめ。",
+        "en": "Extremely popular with international visitors and film buffs; reservations recommended."
+      },
+      "latitude": 35.6592,
+      "longitude": 139.7245,
+      "website": "https://gonpachi.jp/nishi-azabu/",
+      "sourceUrl": "https://gonpachi.jp/nishi-azabu/access/"
+    },
+    {
       "id": "odaiba-seaside-park",
       "areaId": "bay-area",
       "enabled": true,
@@ -738,7 +1530,7 @@
         "en": "Toyosu Senkyaku Banrai"
       },
       "description": {
-        "ja": "豊洲市場場外に位置する、江戸の街波を再現した食と温泉の複合施設。新鮮な海鮮グルメや無料足湯を楽しめます。",
+        "ja": "豊洲市場場外に位置する、江戸の街並みを再現した食と温泉の複合施設。新鮮な海鮮グルメや無料足湯を楽しめます。",
         "en": "A traditional Edo-period style commercial complex right next to Toyosu Market offering fresh seafood and relaxing hot springs."
       },
       "access": {
@@ -761,6 +1553,105 @@
       "longitude": 139.7828,
       "website": "https://www.tokyo-senkyakubanrai.jp/",
       "sourceUrl": "https://www.tokyo-senkyakubanrai.jp/access/"
+    },
+    {
+      "id": "teamlab-planets",
+      "areaId": "bay-area",
+      "enabled": true,
+      "name": {
+        "ja": "チームラボプラネッツ TOKYO DMM（新豊洲）",
+        "en": "teamLab Planets TOKYO"
+      },
+      "description": {
+        "ja": "「水に入るミュージアム」をコンセプトにした、全身で光のアート作品を体感できる大人気のデジタルアート空間。",
+        "en": "Immersive digital art museum where visitors walk barefoot through water and interact with breathtaking light installations."
+      },
+      "access": {
+        "ja": "新豊洲駅から徒歩約1分、市場前駅から徒歩約5分。",
+        "en": "About 1 minute on foot from Shin-Toyosu Station or 5 minutes from Shijo-mae Station."
+      },
+      "cost": {
+        "ja": "大人 3,800円〜（日時指定事前予約制）",
+        "en": "Adults ¥3,800+ (Timed-entry advance tickets required)"
+      },
+      "duration": {
+        "ja": "90〜120分",
+        "en": "90–120 min"
+      },
+      "note": {
+        "ja": "水に浸かるエリアがあるため、裾をまくりやすい服装がおすすめです。",
+        "en": "Visitors walk through water knee-deep in parts; wear easily rolled-up pants."
+      },
+      "latitude": 35.6458,
+      "longitude": 139.7912,
+      "website": "https://planets.teamlab.art/tokyo/jp/",
+      "sourceUrl": "https://planets.teamlab.art/tokyo/jp/access/"
+    },
+    {
+      "id": "tsukishima-monja-street",
+      "areaId": "bay-area",
+      "enabled": true,
+      "name": {
+        "ja": "月島もんじゃストリート（西仲通り商店街）",
+        "en": "Tsukishima Monja Street"
+      },
+      "description": {
+        "ja": "80軒以上のもんじゃ焼き店が軒を連ねる、東京下町のソウルフード「もんじゃ焼き」の聖地。",
+        "en": "A bustling street lined with over 80 specialty restaurants dedicated to Tokyo's famous pan-fried savory batter dish, Monjayaki."
+      },
+      "access": {
+        "ja": "東京メトロ有楽町線・都営大江戸線 月島駅7番出口からすぐ。",
+        "en": "Right outside Tsukishima Station Exit 7."
+      },
+      "cost": {
+        "ja": "1,200円〜2,500円",
+        "en": "Approx. ¥1,200–¥2,500 per person"
+      },
+      "duration": {
+        "ja": "60〜90分",
+        "en": "60–90 min"
+      },
+      "note": {
+        "ja": "自分で鉄板で焼く楽しさもあり、バラエティ豊かなトッピングが楽しめます。",
+        "en": "Cook your own monja on hot iron griddles with endless creative toppings."
+      },
+      "latitude": 35.6631,
+      "longitude": 139.7825,
+      "website": "https://www.monja.gr.jp/",
+      "sourceUrl": "https://www.monja.gr.jp/"
+    },
+    {
+      "id": "miraikan",
+      "areaId": "bay-area",
+      "enabled": true,
+      "name": {
+        "ja": "日本科学未来館（Miraikan）",
+        "en": "The National Museum of Emerging Science and Innovation"
+      },
+      "description": {
+        "ja": "最先端の科学技術やロボット、宇宙、地球環境について体験しながら楽しく学べるお台場の国立科学館。",
+        "en": "National science museum in Odaiba offering interactive exhibits on cutting-edge robotics, space exploration, and environmental science."
+      },
+      "access": {
+        "ja": "ゆりかもめ テルコムセンター駅または船の科学館駅から徒歩約4〜5分。",
+        "en": "About 4–5 minutes on foot from Telecom Center or Fune-no-科学kan Station."
+      },
+      "cost": {
+        "ja": "大人 630円",
+        "en": "Adults ¥630"
+      },
+      "duration": {
+        "ja": "90〜120分",
+        "en": "90–120 min"
+      },
+      "note": {
+        "ja": "火曜日休館。シンボル展示の有機EL地球ディスプレイ「ジオ・コスモス」が圧巻です。",
+        "en": "Closed Tuesdays. Features the iconic suspended organic LED globe display 'Geo-Cosmos'."
+      },
+      "latitude": 35.6185,
+      "longitude": 139.7788,
+      "website": "https://www.miraikan.jst.go.jp/",
+      "sourceUrl": "https://www.miraikan.jst.go.jp/visit/access/"
     },
     {
       "id": "shimokitazawa-reload",
@@ -827,6 +1718,105 @@
       "longitude": 139.6691,
       "website": "https://samurai-curry.com/",
       "sourceUrl": "https://samurai-curry.com/shop/shimokitazawa/"
+    },
+    {
+      "id": "nakano-broadway",
+      "areaId": "west-tokyo-subculture",
+      "enabled": true,
+      "name": {
+        "ja": "中野ブロードウェイ",
+        "en": "Nakano Broadway"
+      },
+      "description": {
+        "ja": "サブカルチャーの聖地として世界的に有名な商業ビル。レトロなおもちゃ、アニメグッズ、ヴィンテージ時計の専門店がひしめき合います。",
+        "en": "World-famous legendary multi-floor complex dedicated to pop culture, vintage toys, rare manga, and collectible watches."
+      },
+      "access": {
+        "ja": "JR中央線・東京メトロ東西線 中野駅北口から徒歩約5分（サンロード商店街を直進）。",
+        "en": "About 5 minutes on foot from Nakano Station North Exit straight through the Sun Mall shopping arcade."
+      },
+      "cost": {
+        "ja": "入館無料",
+        "en": "Free entry"
+      },
+      "duration": {
+        "ja": "60〜120分",
+        "en": "60–120 min"
+      },
+      "note": {
+        "ja": "地下1階にある「デイリーチコ」の8段ソフトクリームも名物です。",
+        "en": "Try the famous towering 8-flavor soft-serve ice cream in the basement."
+      },
+      "latitude": 35.7077,
+      "longitude": 139.6654,
+      "website": "https://www.nbw.jp/",
+      "sourceUrl": "https://www.nbw.jp/"
+    },
+    {
+      "id": "koenji-pal-shopping-street",
+      "areaId": "west-tokyo-subculture",
+      "enabled": true,
+      "name": {
+        "ja": "高円寺パル商店街・ルック商店街",
+        "en": "Koenji PAL & Look Shopping Streets"
+      },
+      "description": {
+        "ja": "古着屋やインディーズの雑貨店、レトロな喫茶店が途切れることなく続く、高円寺カルチャーを体感できる活気ある商店街。",
+        "en": "Charming retro covered shopping arcades filled with vintage clothing boutiques, independent record shops, and cozy cafes."
+      },
+      "access": {
+        "ja": "JR高円寺駅南口から徒歩約2〜3分。",
+        "en": "About 2–3 minutes on foot from JR Koenji Station South Exit."
+      },
+      "cost": {
+        "ja": "散策無料",
+        "en": "Free to explore"
+      },
+      "duration": {
+        "ja": "60〜90分",
+        "en": "60–90 min"
+      },
+      "note": {
+        "ja": "毎年8月末に開催される「高円寺阿波おどり」のメイン会場の一つでもあります。",
+        "en": "Famous as one of the main stages for Tokyo's annual Koenji Awa Odori dance festival in August."
+      },
+      "latitude": 35.7031,
+      "longitude": 139.6491,
+      "website": "https://www.koenji.or.jp/",
+      "sourceUrl": "https://www.koenji.or.jp/"
+    },
+    {
+      "id": "shimokitazawa-bonus-track",
+      "areaId": "west-tokyo-subculture",
+      "enabled": true,
+      "name": {
+        "ja": "BONUS TRACK（ボーナストラック下北沢）",
+        "en": "BONUS TRACK Shimokitazawa"
+      },
+      "description": {
+        "ja": "下北沢と世田谷代田を結ぶ線路跡地にできた、小規模な飲食店やシェアキッチン、本屋が集まるオープンなコミュニティ空間。",
+        "en": "Creative open-air community hub along the railway greenway featuring indie bookstores, craft beer stands, and shared kitchens."
+      },
+      "access": {
+        "ja": "小田急線 世田谷代田駅から徒歩約5分、下北沢駅から徒歩約7分。",
+        "en": "About 5 minutes on foot from Setagaya-Daita Station or 7 minutes from Shimokitazawa Station."
+      },
+      "cost": {
+        "ja": "入場無料",
+        "en": "Free entry"
+      },
+      "duration": {
+        "ja": "30〜45分",
+        "en": "30–45 min"
+      },
+      "note": {
+        "ja": "緑豊かなオープンスペースでイベントやマーケットが頻繁に開催されます。",
+        "en": "Frequent weekend flea markets and community events held in the green public yards."
+      },
+      "latitude": 35.6599,
+      "longitude": 139.6662,
+      "website": "https://bonus-track.net/",
+      "sourceUrl": "https://bonus-track.net/access/"
     }
   ],
   "origins": [
