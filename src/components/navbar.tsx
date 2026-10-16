@@ -46,7 +46,7 @@ export function Sidebar({ logout }: { logout: () => void }) {
 export function Navbar() {
   usePreferences();
   return (
-    <>
+    <div className="header-wrapper">
       <header className="header">
         <Group gap="sm" align="center">
           <Box
@@ -89,7 +89,7 @@ export function Navbar() {
           </Link>
         </Group>
       </header>
-    </>
+    </div>
   );
 }
 
@@ -98,10 +98,10 @@ export function BottomNavigation() {
   const { pathname } = useLocation();
 
   const tabCount = mobileLinks.length;
-  const SIDE_PADDING = 3.5;
+  const SIDE_PADDING = 2;
   const availableWidth = 100 - SIDE_PADDING * 2;
   const slotWidth = availableWidth / tabCount;
-  const indicatorWidth = 25;
+  const indicatorWidth = 22.5;
 
   const activeIndex = mobileLinks.findIndex(({ to }) => {
     if (to === "/") return pathname === "/";
